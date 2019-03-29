@@ -1,8 +1,9 @@
 import React from 'react';
+import Navbar from './components/navbar/navbar';
 
 const App = () =>
   <div>
-    <h1>SimpleStock.</h1>
+    <Navbar />
   </div>
 
 export default App;
