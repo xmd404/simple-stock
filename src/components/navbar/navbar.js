@@ -5,7 +5,7 @@ const NavbarStyle = {
   padding: '5px 15px',
   color: '#FFF',
   backgroundColor: '#000',
-}
+};
 
 const Navbar = () =>
   <div style={NavbarStyle}>
