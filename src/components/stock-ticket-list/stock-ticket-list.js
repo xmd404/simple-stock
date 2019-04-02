@@ -7,6 +7,7 @@ const StockTicketList = () =>
     <StockTicket />
     <StockTicket />
     <StockTicket />
+    <StockTicket />
   </div>
 
 export default StockTicketList;
