@@ -2,10 +2,8 @@ import React from 'react';
 
 const NewsClipStyle = {
   display: 'inline-block',
-  width: '300px',
-  maxWidth: '95%',
-  height: 'auto',
-  margin: '0',
+  maxWidth: '275px',
+  margin: '1.00em',
   padding: '5px 15px',
   color: '#000',
   backgroundColor: '#FFF',
