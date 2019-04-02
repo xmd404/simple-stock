@@ -9,7 +9,9 @@ const NavbarStyle = {
 
 const Navbar = () =>
   <div style={NavbarStyle}>
-    <h1><span role='img' aria-label='stock chart emoji'>💹 &nbsp;</span>SimpleStock</h1>
+    <h1>
+      <span role='img' aria-label='stock chart emoji'>💹 &nbsp;</span>SimpleStock
+    </h1>
   </div>
 
 export default Navbar;
