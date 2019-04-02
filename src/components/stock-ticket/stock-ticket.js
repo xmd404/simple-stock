@@ -14,4 +14,4 @@ const StockTicket = () =>
     <p>Stock Description...</p>
   </div>
 
-export default StockTicket
+export default StockTicket;

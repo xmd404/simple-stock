@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from './components/navbar/navbar';
-import StockTicket from './components/stock-ticket/stock-ticket';
+import StockTicketList from './components/stock-ticket-list/stock-ticket-list';
 
 const App = () =>
   <div>
     <Navbar />
-    <StockTicket />
+    <StockTicketList />
   </div>
 
 export default App;
