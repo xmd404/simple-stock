@@ -16,7 +16,7 @@ const Footer = () =>
         aria-label='dunder or zap emoji'>
         &nbsp;⚡️&nbsp;
       </span>
-      by Xavier Marcus Duncan.
+      in East Atlanta.
     </p>
   </div>
 
