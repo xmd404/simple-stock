@@ -1,11 +1,13 @@
 import React from 'react';
 import NewsClip from '../news-clip/news-clip';
+import ViewMoreButton from '../view-more-button/view-more-button';
 
 const NewsClipListStyle = {
   overflowX: 'none',
   margin: '0',
-  backgroundColor: '#F5F5F5'
-}
+  padding: '15px 0',
+  backgroundColor: '#F5F5F5',
+};
 
 const NewsClipList = () =>
   <div style={NewsClipListStyle}>
@@ -16,7 +18,7 @@ const NewsClipList = () =>
     <NewsClip />
     <NewsClip />
     <NewsClip />
+    <ViewMoreButton />
   </div>
-
 
 export default NewsClipList;

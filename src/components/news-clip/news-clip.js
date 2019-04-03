@@ -2,11 +2,13 @@ import React from 'react';
 
 const NewsClipStyle = {
   display: 'inline-block',
-  maxWidth: '275px',
+  width: '15%',
+  minWidth: '270px',
   margin: '1.00em',
   padding: '5px 15px',
   color: '#000',
   backgroundColor: '#FFF',
+  borderRadius: '5%',
 };
 
 const NewsClip = () =>
@@ -15,5 +17,5 @@ const NewsClip = () =>
     <p>MM/DD/YYYY @ 11:11a</p>
     <p>Short briefing / preview ...</p>
   </div>
-
+  
 export default NewsClip;
