@@ -5,7 +5,7 @@ import ViewMoreButton from '../view-more-button/view-more-button';
 const NewsClipListStyle = {
   overflowX: 'none',
   margin: '0',
-  padding: '15px 0',
+  padding: '15px 5px',
   backgroundColor: '#F5F5F5',
 };
 

@@ -1,7 +1,10 @@
 import React from 'react';
 
 const StockTicketStyle = {
+  display: 'inline-block',
   margin: '0',
+  minWidth: '240px',
+  maxWidth: '100%',
   padding: '5px 15px',
   color: '#000',
   backgroundColor: '#FFF',

@@ -1,8 +1,14 @@
 import React from 'react';
 import StockTicket from '../stock-ticket/stock-ticket';
 
+const StockTicketListStyle = {
+  overflowX: 'none',
+  margin: '0',
+  padding: '45px 25px',
+};
+
 const StockTicketList = () =>
-  <div>
+  <div style={StockTicketListStyle}>
     <StockTicket />
     <StockTicket />
     <StockTicket />
