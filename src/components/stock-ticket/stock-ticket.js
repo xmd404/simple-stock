@@ -13,8 +13,10 @@ const StockTicketStyle = {
 const StockTicket = () =>
   <div style={StockTicketStyle}>
     <h2>ABC Company</h2>
-    <p>Stock Price:</p>
-    <p>Stock description ...</p>
+    <p>Current:</p>
+    <p>High:</p>
+    <p>Low:</p>
+    {/* <p>Stock description ...</p> */}
   </div>
 
 export default StockTicket;
