@@ -2,16 +2,16 @@ import React from 'react';
 
 const NavbarStyle = {
   margin: '0',
-  padding: '5px 15px',
+  padding: '5px 25px',
   color: '#FFF',
   backgroundColor: '#000',
 };
 
 const Navbar = () =>
   <div style={NavbarStyle}>
-    <h1>
+    <h2>
       <span role='img' aria-label='stock chart emoji'>💹 &nbsp;</span>SimpleStock
-    </h1>
+    </h2>
   </div>
 
 export default Navbar;
