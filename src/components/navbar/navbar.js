@@ -27,9 +27,11 @@ const Navbar = () =>
     <div style={MenuStyle}>
       <p style={LinkStyle}>Start Here</p>
       <p style={LinkStyle}>Time & Money</p>
+      <p style={LinkStyle}>Banking 101</p>
       <p style={LinkStyle}>Stocks</p>
       <p style={LinkStyle}>Forex</p>
       <p style={LinkStyle}>Crypto</p>
+      <p style={LinkStyle}>Credit</p>
       <p style={LinkStyle}>Work Remote</p>
       <p style={LinkStyle}>Live Abroad</p>
       <p style={LinkStyle}>Pay Less Tax</p>
