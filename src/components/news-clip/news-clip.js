@@ -3,7 +3,7 @@ import React from 'react';
 const NewsClipStyle = {
   display: 'inline-block',
   width: '15%',
-  minWidth: '270px',
+  minWidth: '260px',
   margin: '1.00em',
   padding: '5px 15px',
   color: '#000',
