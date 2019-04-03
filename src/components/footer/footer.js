@@ -10,13 +10,17 @@ const FooterStyle = {
 const Footer = () =>
   <div style={FooterStyle}>
     <p>
-      VerySimpleApps, LLC &nbsp;|&nbsp; Crafted with
+      Crafted with
       <span
         role='img'
         aria-label='dunder or zap emoji'>
         &nbsp;⚡️&nbsp;
       </span>
-      in East Atlanta.
+      by Simple Little App Co.
+      &nbsp;
+      <a href="https://iexcloud.io">
+        Data provided by IEX Cloud
+      </a>.
     </p>
   </div>
 
