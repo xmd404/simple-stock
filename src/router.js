@@ -1,19 +1,19 @@
-
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import StartHerePage from './pages/start-here';
-
-const NotFound = () => <h1>404 not found</h1>
+import PageNotFound from './pages/404';
+import Navbar from './components/navbar/navbar';
+import Footer from './components/footer/footer';
 
 const Router = () =>
-    <HashRouter>
-        <div>
-        <Switch>
-            <Route exact path="/" component={StartHerePage} />
-            {/* <Route path="/categories/:id" component={CategoryScreenContainer} /> */}
-            <Route path="*" component={NotFound} />
-        </Switch>
-        </div>
-    </HashRouter>
+  <HashRouter>
+    <Navbar />
+    <Switch>
+      <Route exact path="/" component={StartHerePage} />
+      {/* <Route path="/categories/:id" component={CategoryScreenContainer} /> */}
+      <Route path="*" component={PageNotFound} />
+    </Switch>
+    <Footer />
+  </HashRouter>
 
 export default Router;
