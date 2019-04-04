@@ -26,11 +26,12 @@ const Navbar = () =>
       </h2>
     </div>
     <div style={MenuStyle}>
-      <Link style={LinkStyle} to="/">Start Here</Link>
-      <Link style={LinkStyle} to="*">Time & Money</Link>
+      <Link style={LinkStyle} to="/">Flash Briefing</Link>
       <Link style={LinkStyle} to="/stocks">Stocks</Link>
       <Link style={LinkStyle} to="/forex">Forex</Link>
       <Link style={LinkStyle} to="/crypto">Crypto</Link>
+      |
+      <Link style={LinkStyle} to="*">Time & Money</Link>
     </div>
   </div>
 
