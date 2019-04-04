@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavbarStyle = {
   margin: '0',
@@ -25,16 +26,16 @@ const Navbar = () =>
       </h2>
     </div>
     <div style={MenuStyle}>
-      <p style={LinkStyle}>Start Here</p>
-      <p style={LinkStyle}>Time & Money</p>
-      <p style={LinkStyle}>Banking 101</p>
-      <p style={LinkStyle}>Stocks</p>
-      <p style={LinkStyle}>Forex</p>
-      <p style={LinkStyle}>Crypto</p>
-      <p style={LinkStyle}>Credit</p>
-      <p style={LinkStyle}>Work Remote</p>
-      <p style={LinkStyle}>Live Abroad</p>
-      <p style={LinkStyle}>Pay Less Tax</p>
+      <Link style={LinkStyle} to="/">Start Here</Link>
+      <Link style={LinkStyle} to="*">Time & Money</Link>
+      <Link style={LinkStyle} to="*">Banking 101</Link>
+      <Link style={LinkStyle} to="*">Stocks</Link>
+      <Link style={LinkStyle} to="*">Forex</Link>
+      <Link style={LinkStyle} to="*">Crypto</Link>
+      <Link style={LinkStyle} to="*">Credit</Link>
+      <Link style={LinkStyle} to="*">Work Remote</Link>
+      <Link style={LinkStyle} to="*">Live Abroad</Link>
+      <Link style={LinkStyle} to="*">Pay Less Tax</Link>
     </div>
   </div>
 
