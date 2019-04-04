@@ -31,7 +31,7 @@ const Navbar = () =>
       <Link style={LinkStyle} to="*">Banking 101</Link>
       <Link style={LinkStyle} to="/stocks">Stocks</Link>
       <Link style={LinkStyle} to="/forex">Forex</Link>
-      <Link style={LinkStyle} to="*">Crypto</Link>
+      <Link style={LinkStyle} to="/crypto">Crypto</Link>
       <Link style={LinkStyle} to="*">Credit</Link>
       <Link style={LinkStyle} to="*">Work Remote</Link>
       <Link style={LinkStyle} to="*">Live Abroad</Link>

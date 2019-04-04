@@ -8,6 +8,7 @@ import PageNotFound from './pages/404';
 import StartHerePage from './pages/start-here';
 import StocksPage from './pages/stocks';
 import ForexPage from './pages/forex';
+import CryptoPage from './pages/crypto';
 
 const Router = () =>
   <HashRouter>
@@ -16,6 +17,7 @@ const Router = () =>
       <Route exact path="/" component={StartHerePage} />
       <Route path="/stocks" component={StocksPage} />
       <Route path="/forex" component={ForexPage} />
+      <Route path="/crypto" component={CryptoPage} />
       {/* <Route path="/categories/:id" component={CategoryScreenContainer} /> */}
       <Route path="*" component={PageNotFound} />
     </Switch>
