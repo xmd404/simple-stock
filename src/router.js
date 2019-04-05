@@ -5,7 +5,7 @@ import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 
 import PageNotFound from './pages/404';
-import StartHerePage from './pages/home';
+import HomePage from './pages/home';
 import StocksPage from './pages/stocks';
 import ForexPage from './pages/forex';
 import CryptoPage from './pages/crypto';
@@ -15,7 +15,7 @@ const Router = () =>
   <HashRouter>
     <Navbar />
     <Switch>
-      <Route exact path="/" component={StartHerePage} />
+      <Route exact path="/" component={HomePage} />
       <Route path="/stocks" component={StocksPage} />
       <Route path="/forex" component={ForexPage} />
       <Route path="/crypto" component={CryptoPage} />

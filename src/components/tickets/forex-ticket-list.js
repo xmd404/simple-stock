@@ -1,5 +1,5 @@
 import React from 'react';
-import ForexTicket from '../forex-ticket/forex-ticket';
+import ForexTicket from '../tickets/forex-ticket';
 
 const ForexTicketListStyle = {
   overflowX: 'none',

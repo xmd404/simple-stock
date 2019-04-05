@@ -1,5 +1,5 @@
 import React from 'react';
-import CryptoTicket from '../crypto-ticket/crypto-ticket';
+import CryptoTicket from './crypto-ticket';
 
 const TicketListStyle = {
   overflowX: 'none',

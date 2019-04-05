@@ -1,5 +1,5 @@
 import React from 'react';
-import StockTicket from '../stock-ticket/stock-ticket';
+import StockTicket from '../tickets/stock-ticket';
 
 const StockTicketListStyle = {
   overflowX: 'none',
