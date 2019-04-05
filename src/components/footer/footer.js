@@ -10,15 +10,11 @@ const FooterStyle = {
 const Footer = () =>
   <div style={FooterStyle}>
     <p>
-      Crafted with
-      <span
-        role='img'
-        aria-label='dunder or zap emoji'>
-        &nbsp; ❤️ &nbsp;
-      </span>
-      by Simple Little App Co.
+      Thanks for using
       &nbsp;
-      <a href="https://iexcloud.io">
+      <span role='img' aria-label='money with wings emoji'>💸 </span><b>SimpleStock</b>.
+      &nbsp;
+      <a href="https://iexcloud.io" target='_blank' rel='noopener noreferrer'>
         Data provided by IEX Cloud
       </a>.
     </p>
