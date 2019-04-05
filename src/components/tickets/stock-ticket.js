@@ -12,7 +12,7 @@ const StockTicketStyle = {
 
 const StockTicket = () =>
   <div style={StockTicketStyle}>
-    <h2>ABC Company</h2>
+    <h2>Company</h2>
     <p>Current:</p>
     <p>High:</p>
     <p>Low:</p>
