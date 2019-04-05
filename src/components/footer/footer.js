@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FooterStyle = {
   margin: '10px 0 0',
@@ -14,9 +15,9 @@ const Footer = () =>
       &nbsp;
       <span role='img' aria-label='money with wings emoji'>💸 </span><b>SimpleStock</b>.
       Question: &nbsp;
-      <a href="https://iexcloud.io" target='_blank' rel='noopener noreferrer'>
+      <Link to='/data-sources'>
         Where do we get our data from
-      </a>?
+      </Link>?
     </p>
   </div>
 
