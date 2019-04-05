@@ -1,5 +1,5 @@
 import React from 'react';
-import NewsClip from '../news-clip/news-clip';
+import NewsClip from './news-clip';
 import ViewMoreButton from '../view-more-button/view-more-button';
 
 const NewsClipListStyle = {
