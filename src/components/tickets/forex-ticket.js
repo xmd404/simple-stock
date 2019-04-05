@@ -13,7 +13,7 @@ const ForexTicketStyle = {
 const ForexTicket = () =>
   <div style={ForexTicketStyle}>
     <hr/>
-    <h2>Currensy Pair</h2>
+    <h2>$/Pair</h2>
     <p>Current:</p>
     <p>High:</p>
     <p>Low:</p>
