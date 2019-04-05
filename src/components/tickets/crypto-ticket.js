@@ -13,6 +13,7 @@ const TicketStyle = {
 
 const CryptoTicket = () =>
 <div style={TicketStyle}>
+  <hr/>
   <h2>Coin</h2>
   <p>Current:</p>
   <p>High:</p>

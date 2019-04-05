@@ -12,6 +12,7 @@ const StockTicketStyle = {
 
 const StockTicket = () =>
   <div style={StockTicketStyle}>
+    <hr/>
     <h2>Company</h2>
     <p>Current:</p>
     <p>High:</p>
