@@ -16,7 +16,6 @@ const StockTicket = () =>
     <p>Current:</p>
     <p>High:</p>
     <p>Low:</p>
-    {/* <p>Stock description ...</p> */}
   </div>
 
 export default StockTicket;

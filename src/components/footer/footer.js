@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom';
 const FooterStyle = {
   margin: '10px 0 0',
   padding: '5px 15px',
-  color: '#FFF',
+  color: '#fff',
   backgroundColor: '#000',
+};
+
+const FooterLinkStyle = {
+  color: '#fff',
 };
 
 const Footer = () =>
@@ -14,8 +18,8 @@ const Footer = () =>
       Thanks for using
       &nbsp;
       <span role='img' aria-label='money with wings emoji'>💸 </span><b>SimpleStock</b>.
-      Question: &nbsp;
-      <Link to='/data-sources'>
+      &nbsp;
+      <Link to='/data-sources' style={FooterLinkStyle}>
         Where do we get our data from
       </Link>?
     </p>
