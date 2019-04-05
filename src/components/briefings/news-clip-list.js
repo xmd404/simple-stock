@@ -1,6 +1,6 @@
 import React from 'react';
 import NewsClip from './news-clip';
-import ViewMoreButton from '../view-more-button/view-more-button';
+import ViewMoreButton from '../buttons/view-more-button';
 
 const NewsClipListStyle = {
   overflowX: 'none',
