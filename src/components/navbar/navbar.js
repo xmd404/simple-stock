@@ -12,18 +12,28 @@ const MenuStyle = {
   backgroundColor: 'yellow',
 };
 
+const LogoStyle = {
+  textDecoration: 'none',
+  color: '#fff',
+};
+
 const LinkStyle = {
   height: '100%',
   display: 'inline-block',
   padding: '1.25em 2.00em',
+  textDecoration: 'none',
+  color: '#000',
+  fontWeight: 'bold',
 };
 
 const Navbar = () =>
-  <div>
+  <div> 
     <div style={NavbarStyle}>
-      <h2>
-        <span role='img' aria-label='money with wings emoji'>💸 &nbsp;</span>SimpleStock
-      </h2>
+      <Link to="/" style={LogoStyle}>
+        <h2>
+          <span role='img' aria-label='money with wings emoji'>💸 &nbsp;</span>SimpleStock
+        </h2>
+      </Link>
     </div>
     <div style={MenuStyle}>
       <Link style={LinkStyle} to="/">Flash Briefing</Link>

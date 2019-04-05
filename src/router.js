@@ -5,7 +5,7 @@ import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 
 import PageNotFound from './pages/404';
-import StartHerePage from './pages/start-here';
+import StartHerePage from './pages/home';
 import StocksPage from './pages/stocks';
 import ForexPage from './pages/forex';
 import CryptoPage from './pages/crypto';
