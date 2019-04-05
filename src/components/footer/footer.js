@@ -13,10 +13,10 @@ const Footer = () =>
       Thanks for using
       &nbsp;
       <span role='img' aria-label='money with wings emoji'>💸 </span><b>SimpleStock</b>.
-      &nbsp;
+      Question: &nbsp;
       <a href="https://iexcloud.io" target='_blank' rel='noopener noreferrer'>
-        Data provided by IEX Cloud
-      </a>.
+        Where do we get our data from
+      </a>?
     </p>
   </div>
 
