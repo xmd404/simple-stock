@@ -8,9 +8,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+};
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+};
+
+.ticket {
+  display: inline-block;
+  margin: 0;
+  min-width: 240px;
+  max-width: 100%;
+  padding: 5px 15px;
+  color: #000;
+  background-color: #FFF;
+};
+
+.ticket-list {
+  overflow-x: none;
+  margin: 0;
+  padding: 45px 25px;
+};
