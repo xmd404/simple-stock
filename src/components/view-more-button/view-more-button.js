@@ -14,7 +14,7 @@ const ViewMoreButton = () =>
   <div style={ViewMoreButtonStyle}>
     <br/>
     <hr/>
-    <h1>View More Company News</h1>
+    <h1>View More Briefings</h1>
   </div>
   
 export default ViewMoreButton;

@@ -3,6 +3,7 @@ import React from 'react';
 const PageNotFoundStyle = {
   height: '700px',
   width: '100%',
+  margin: '15px 30px',
   backgroundColor: '#FFF',
 };
 
