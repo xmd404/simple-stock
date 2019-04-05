@@ -40,7 +40,7 @@ export default class SignUpForm extends React.Component {
     return (
       <div style={formStyle}>
         <h2><span role='img' aria-label='money with wings emoji'>💸 &nbsp;</span>SimpleStock</h2>
-        <p>Build wealth for your future self. Sign up below free access.</p>
+        <p>Build wealth for your future self. Sign-up for free access.</p>
         <br/>
         <form onSubmit={this.handleSubmit}>
           <label>
