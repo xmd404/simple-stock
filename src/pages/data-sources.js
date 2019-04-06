@@ -8,7 +8,7 @@ const DataSourcePageStyle = {
 const DataSourcePage = () =>
   <div style={DataSourcePageStyle}>
     <h1>
-      Data sources used by
+      Data sources @
       &nbsp;
       <span role='img' aria-label='money with wings emoji'>💸 &nbsp;</span>SimpleStock
     </h1>
