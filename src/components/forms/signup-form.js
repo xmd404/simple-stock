@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 const formStyle = {
   margin: '0',
@@ -11,14 +11,13 @@ const formStyle = {
 };
 
 const buttonStyle = {
-  margin: '0',
   padding: '8px 82px',
   borderRadius: '5px',
   color: '#fff',
   backgroundColor: '#000',
 };
 
-export default class SignUpForm extends React.Component {
+class SignUpForm extends Component {
   constructor(props) {
     super(props);
     this.state = {value: ''};
@@ -67,3 +66,5 @@ export default class SignUpForm extends React.Component {
     )
   }
 };
+
+export default SignUpForm;
