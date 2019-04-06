@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { fetchStockData } from '../../fetcher';
 
 const formStyle = {
   margin: '0',
@@ -33,6 +34,7 @@ class SignUpForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     alert('Thanks for subscribing ' + this.state.value);
+    fetchStockData();
   }
 
   render() {
