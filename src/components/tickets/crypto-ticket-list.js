@@ -1,5 +1,5 @@
 import React from 'react';
-import CryptoTicket from './crypto-ticket';
+import Ticket from '../tickets/ticket';
 
 const TicketListStyle = {
   overflowX: 'none',
@@ -9,11 +9,11 @@ const TicketListStyle = {
 
 const CryptoTicketList = () =>
   <div style={TicketListStyle}>
-    <CryptoTicket />
-    <CryptoTicket />
-    <CryptoTicket />
-    <CryptoTicket />
-    <CryptoTicket />
+    <Ticket />
+    <Ticket />
+    <Ticket />
+    <Ticket />
+    <Ticket />
   </div>
 
 export default CryptoTicketList;
