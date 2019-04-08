@@ -25,7 +25,7 @@ class StockTicketList extends Component {
     const api = [
       {
         id: 1,
-        name: 'Apple',
+        name: 'Amazon',
         current: '$1.23',
         high: '$1.23',
         low: '$1.23',
@@ -39,21 +39,21 @@ class StockTicketList extends Component {
       },
       {
         id: 3,
-        name: 'Microsoft',
-        current: '$1.23',
-        high: '$1.23',
-        low: '$1.23',
-      },
-      {
-        id: 4,
         name: 'Google',
         current: '$1.23',
         high: '$1.23',
         low: '$1.23',
       },
       {
+        id: 4,
+        name: 'Apple',
+        current: '$1.23',
+        high: '$1.23',
+        low: '$1.23',
+      },
+      {
         id: 5,
-        name: 'Amazon',
+        name: 'Microsoft',
         current: '$1.23',
         high: '$1.23',
         low: '$1.23',
