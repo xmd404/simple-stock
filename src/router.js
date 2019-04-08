@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
@@ -20,7 +20,6 @@ const Router = () =>
       <Route path="/forex" component={ForexPage} />
       <Route path="/crypto" component={CryptoPage} />
       <Route path="/data-sources" component={DataSourcePage} />
-      {/* <Route path="/categories/:id" component={CategoryScreenContainer} /> */}
       <Route path="*" component={PageNotFound} />
     </Switch>
     <Footer />
