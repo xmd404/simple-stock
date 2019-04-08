@@ -60,7 +60,7 @@ class CryptoTicketList extends Component {
       },
     ];
 
-  this.state = { api };
+    this.state = {api};
   }
 
   componentDidMount() {

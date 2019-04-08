@@ -60,7 +60,7 @@ class StockTicketList extends Component {
       },
     ];
 
-  this.state = { api };
+    this.state = {api};
   }
 
   componentDidMount() {
