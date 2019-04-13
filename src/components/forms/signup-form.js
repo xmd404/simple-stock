@@ -8,6 +8,7 @@ const formStyle = {
   color: '#fff',
   backgroundColor: '#000',
   textAlign: 'center',
+  fontSize: '350%',
 };
 
 const buttonStyle = {
@@ -35,14 +36,10 @@ class SignUpForm extends Component {
   render() {
     return (
       <div style={formStyle}>
-        <h2>
-          <span role='img' aria-label='money with wings emoji'>💸 &nbsp;</span>SimpleStock
-        </h2>
-        <p>
-          Build wealth for your future self <span role='img' aria-label='fire emoji'>🔥</span>. &nbsp;Sign-up below for access.
-        </p>
-        <br/>
-        <form onSubmit={this.handleSubmit}>
+        <h1>
+          <span role='img' aria-label='money with wings emoji'>💸 &nbsp;</span>
+        </h1>
+        {/* <form onSubmit={this.handleSubmit}>
           <label>
             Name:
             &nbsp;
@@ -71,7 +68,7 @@ class SignUpForm extends Component {
             style={buttonStyle}
           />
           <br/><br/>
-        </form>
+        </form> */}
       </div>
     )
   }

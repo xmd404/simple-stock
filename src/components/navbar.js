@@ -37,7 +37,7 @@ const Navbar = () =>
     </div>
     <div style={MenuStyle}>
       <Link style={LinkStyle} to="/">Flash Briefing</Link>
-      <Link style={LinkStyle} to="/stocks">Stocks</Link>
+      <Link style={LinkStyle} to="/stocks">IPOs</Link>
       <Link style={LinkStyle} to="/forex">Forex</Link>
       <Link style={LinkStyle} to="/crypto">Crypto</Link>
       |

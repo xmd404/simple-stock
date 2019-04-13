@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const FooterStyle = {
-  margin: '10px 0 0',
+  margin: '0 0 0',
   padding: '5px 15px',
   color: '#fff',
   backgroundColor: '#000',
