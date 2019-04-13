@@ -1,5 +1,5 @@
 import React from 'react';
-import ViewMoreButton from '../buttons/view-more-button';
+import { ViewMoreButton } from '../buttons';
 import { NewsListItem } from '../list-items';
 
 const NewsClipListStyle = {
