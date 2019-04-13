@@ -6,12 +6,14 @@ class StockList extends Component {
   constructor(props){
     super(props);
     this.state = {
+      error: null,
+      isLoaded: false,
       tickets: [],
     };
   }
 
   componentDidMount() {
-    const API_KEY = 'pk_f8fb41e0cff74b73b0ad93bf4a374421';
+    const API_KEY = process.env.REACT_APP_STOCK_API_KEY;
     axios.get(
       `https://cloud.iexapis.com/beta/tops
       ? token = ${API_KEY}
@@ -25,16 +27,22 @@ class StockList extends Component {
   }
 
   render() {
-    const { tickets } = this.state;
-    return (
-      <ul>
-        {tickets.map(ticket => (
-          <li key={ticket.symbol} ticket={ticket}>
-            {ticket.symbol}
-          </li>
-        ))}
-      </ul>
-    );
+    const { error, isLoaded, tickets } = this.state;
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Stock list is Loading...</div>;
+    } else {
+      return (
+        <ul>
+          {tickets.map(ticket => (
+            <li key={ticket.symbol} ticket={ticket}>
+              {ticket.symbol}
+            </li>
+          ))}
+        </ul>
+      );
+    }
   }
 };
 

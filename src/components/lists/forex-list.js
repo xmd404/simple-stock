@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 const API_KEY = process.env.REACT_APP_FOREX_API_KEY;
 
 class ForexList extends Component {
@@ -15,42 +14,22 @@ class ForexList extends Component {
     };
   }
 
-  componentDidMount() {
-    fetch(`http://data.fixer.io/api/latest
-    ? access_key = ${API_KEY}
-    & symbols = GBP`)
-      .then(res => res.json())
-      .then(
-        (result) => {
-        this.setState({
-          isLoaded: true,
-          tickets: result,
-        });
-      },
-      // Note: it's important to handle errors here
-      // instead of a catch() block so that we don't swallow
-      // exceptions from actual bugs in components.
-      (error) => {
-        this.setState({
-          isLoaded: true,
-          error,
-        });
-      }
-    )
-  }
+  componentDidMount() {}
 
   render() {
     const { error, isLoaded, tickets } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <div>Forex list is Loading...</div>;
     } else {
       return (
         <ul>
-          <li key={tickets.base}>
-            {tickets.base}
-          </li>
+          {tickets.map(ticket => (
+            <li key={ticket.base} ticket={ticket}>
+              {ticket.base}
+            </li>
+          ))}
         </ul>
       );
     }
