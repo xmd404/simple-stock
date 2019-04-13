@@ -1,16 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 import { ViewMoreButton } from '../buttons';
 import { NewsListItem } from '../list-items';
 
-const NewsClipListStyle = {
-  overflowX: 'none',
-  margin: '0',
-  padding: '15px 4px',
-  backgroundColor: '#F5F5F5',
-};
+const NewsList = styled.div`
+  overflow-x: none;
+  margin: 0;
+  padding: 15px 4px;
+  background-color: #F5F5F5;
+`
 
-const NewsClipList = () =>
-  <div style={NewsClipListStyle}>
+const News = () =>
+  <NewsList>
     <NewsListItem />
     <NewsListItem />
     <NewsListItem />
@@ -19,6 +20,6 @@ const NewsClipList = () =>
     <NewsListItem />
     <NewsListItem />
     <ViewMoreButton />
-  </div>
+  </NewsList>
 
-export default NewsClipList;
+  export default News;
