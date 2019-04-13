@@ -1,6 +1,6 @@
 import React from 'react';
 import CryptoTicketList from '../components/tickets/crypto-ticket-list';
-import NewsClipList from '../components/briefings/news-clip-list';
+import NewsClipList from '../components/briefings/news-list';
 
 const CryptoPage = () =>
   <div>

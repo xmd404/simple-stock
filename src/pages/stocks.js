@@ -1,11 +1,11 @@
 import React from 'react';
-import StockTicketList from '../components/tickets/stock-ticket-list';
-import NewsClipList from '../components/briefings/news-clip-list';
+import StockList from '../components/tickets/stock-list';
+import NewsClipList from '../components/briefings/news-list';
 
 const StocksPage = () =>
   <div>
     <NewsClipList />
-    <StockTicketList />
+    <StockList />
   </div>
 
 export default StocksPage;
