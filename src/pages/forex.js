@@ -1,11 +1,11 @@
 import React from 'react';
-import ForexTicketList from '../components/lists/forex-list';
-import NewsClipList from '../components/lists/news-list';
+import ForexList from '../components/lists/forex-list';
+import News from '../components/lists/news-list';
 
 const ForexPage = () =>
   <div>
-    <NewsClipList />
-    <ForexTicketList />
+    <News />
+    <ForexList />
   </div>
 
 export default ForexPage;
