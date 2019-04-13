@@ -1,6 +1,6 @@
 import React from 'react';
-import ForexTicketList from '../components/tickets/forex-ticket-list';
-import NewsClipList from '../components/briefings/news-list';
+import ForexTicketList from '../components/lists/forex-list';
+import NewsClipList from '../components/lists/news-list';
 
 const ForexPage = () =>
   <div>

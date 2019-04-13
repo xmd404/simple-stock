@@ -1,7 +1,8 @@
-'strict';
 import React, { Component } from 'react';
+
 const API_KEY = process.env.REACT_APP_FOREX_API_KEY;
-class ForexTicketList extends Component {
+
+class ForexList extends Component {
   constructor(props) {
     super(props);
     // Don't call this.setState() in the Constructor!
@@ -56,4 +57,4 @@ class ForexTicketList extends Component {
   }
 };
 
-export default ForexTicketList;
+export default ForexList;

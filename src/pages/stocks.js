@@ -1,6 +1,6 @@
 import React from 'react';
-import StockList from '../components/tickets/stock-list';
-import NewsClipList from '../components/briefings/news-list';
+import StockList from '../components/lists/stock-list';
+import NewsClipList from '../components/lists/news-list';
 
 const StocksPage = () =>
   <div>

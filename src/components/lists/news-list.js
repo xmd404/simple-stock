@@ -1,6 +1,6 @@
 import React from 'react';
-import ListItem from './list-item';
 import ViewMoreButton from '../buttons/view-more-button';
+import { NewsListItem } from '../list-items';
 
 const NewsClipListStyle = {
   overflowX: 'none',
@@ -11,13 +11,13 @@ const NewsClipListStyle = {
 
 const NewsClipList = () =>
   <div style={NewsClipListStyle}>
-    <ListItem />
-    <ListItem />
-    <ListItem />
-    <ListItem />
-    <ListItem />
-    <ListItem />
-    <ListItem />
+    <NewsListItem />
+    <NewsListItem />
+    <NewsListItem />
+    <NewsListItem />
+    <NewsListItem />
+    <NewsListItem />
+    <NewsListItem />
     <ViewMoreButton />
   </div>
 

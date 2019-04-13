@@ -1,8 +1,8 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 
-import Navbar from './components/navbar/navbar';
-import Footer from './components/footer/footer';
+import Navbar from './components/navbar';
+import Footer from './components/footer';
 
 import PageNotFound from './pages/404';
 import HomePage from './pages/home';

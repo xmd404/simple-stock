@@ -16,7 +16,7 @@ const TicketStyle = {
   backgroundColor: '#FFF',
 };
 
-class CryptoTicketList extends Component {
+class CryptotList extends Component {
   constructor(props){
     super(props);
     // Don't call this.setState() in the Constructor!
@@ -94,4 +94,4 @@ class CryptoTicketList extends Component {
   }
 }
 
-export default CryptoTicketList;
+export default CryptotList;
