@@ -1,20 +1,27 @@
 import React, { Component } from 'react';
-const API_KEY = process.env.REACT_APP_FOREX_API_KEY;
+import axios from 'axios';
+import { error } from '../../utility';
 
 class ForexList extends Component {
-  constructor(props) {
+  constructor(props){
     super(props);
-    // Don't call this.setState() in the Constructor!
-    // Constructor is the only place where you should assign this.state directly.
-    // In all other methods, you need to use this.setState() instead.
     this.state = {
       error: null,
       isLoaded: false,
-      tickets: {},
+      tickets: [],
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    axios.get(
+      `https://cloud.iexapis.com/beta/tops?token=pk_f8fb41e0cff74b73b0ad93bf4a374421&symbols=aapl,fb,snap`
+    )
+    .then(response => {
+      console.log(response.data);
+      this.setState({ tickets: response.data });
+    })
+    .catch(error())
+  }
 
   render() {
     const { error, isLoaded, tickets } = this.state;
@@ -26,8 +33,8 @@ class ForexList extends Component {
       return (
         <ul>
           {tickets.map(ticket => (
-            <li key={ticket.base} ticket={ticket}>
-              {ticket.base}
+            <li key={ticket.symbol} ticket={ticket}>
+              {ticket.symbol}
             </li>
           ))}
         </ul>

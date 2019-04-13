@@ -13,11 +13,8 @@ class StockList extends Component {
   }
 
   componentDidMount() {
-    const API_KEY = process.env.REACT_APP_STOCK_API_KEY;
     axios.get(
-      `https://cloud.iexapis.com/beta/tops
-      ? token = ${API_KEY}
-      & symbols = aapl,fb,snap`
+      `https://cloud.iexapis.com/beta/stock/market/batch?token=pk_f8fb41e0cff74b73b0ad93bf4a374421&symbols=aapl,fb,tsla,snap,googl&types=quote,news,chart&range=1m&last=5`
     )
     .then(response => {
       console.log(response.data);
