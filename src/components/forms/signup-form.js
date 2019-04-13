@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchStockData, fetchForexData } from '../../fetcher';
+import { fetchStockData, fetchForexData } from '../../utility';
 
 const formStyle = {
   margin: '0',
