@@ -1,17 +1,17 @@
 import React from 'react';
+import SignUpForm from '../components/forms/signup-form';
 
 const PageNotFoundStyle = {
-  height: '700px',
+  height: '100%',
   width: '100%',
-  margin: '15px 30px',
   backgroundColor: '#FFF',
+  textAlign: 'center',
 };
 
 const PageNotFound = () =>
   <div style={PageNotFoundStyle}>
     <h1>
-      <span role='img' aria-label='money with wings emoji'>💸 &nbsp;</span>
-      Whoops... that page doesn't exist!
+      <SignUpForm />
     </h1>
   </div>
 

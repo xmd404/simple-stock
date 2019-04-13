@@ -3,12 +3,11 @@ import React, { Component } from 'react';
 const formStyle = {
   margin: '0',
   padding: '50px',
-  height: '265px',
-  width: 'auto',
-  color: '#fff',
-  backgroundColor: '#000',
+  height: '100%',
+  width: '100%',
+  color: '#000',
+  backgroundColor: '#fff',
   textAlign: 'center',
-  fontSize: '350%',
 };
 
 const buttonStyle = {
@@ -39,7 +38,7 @@ class SignUpForm extends Component {
         <h1>
           <span role='img' aria-label='money with wings emoji'>💸 &nbsp;</span>
         </h1>
-        {/* <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <label>
             Name:
             &nbsp;
@@ -68,7 +67,7 @@ class SignUpForm extends Component {
             style={buttonStyle}
           />
           <br/><br/>
-        </form> */}
+        </form>
       </div>
     )
   }
