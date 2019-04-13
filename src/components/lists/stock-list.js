@@ -5,7 +5,6 @@ import { error } from '../../utility';
 class StockList extends Component {
   state = {
       tickets: [],
-      error: undefined,
     };
 
   componentDidMount() {
