@@ -30,7 +30,7 @@ class StockList extends Component {
 
   componentWillMount() {
     axios.get(
-      `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=aapl,fb,tsla,snap,googl,amzn, lyft&types=quote,news,chart&range=1m&last=5`
+      `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq&types=quote&range=1m&last=5`
     )
     .then(res => {
       let ticketsObj = res.data;
@@ -39,7 +39,7 @@ class StockList extends Component {
         tickets: ticketsArr,
         isLoaded: true,
       });
-      console.log(this.state.tickets);
+      console.log(res, this.state.tickets);
     })
     .catch(error())
   }
@@ -58,7 +58,7 @@ class StockList extends Component {
               <hr/>
               <p>{ticket.quote.companyName}</p>
               <h1>{ticket.quote.symbol}</h1>
-              <p>Current: ${ticket.quote.latestPrice}</p>
+              <h3>${ticket.quote.latestPrice}</h3>
               <p>High: ${ticket.quote.week52High}</p>
               <p>Low: ${ticket.quote.week52Low}</p>
             </div>
