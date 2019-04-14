@@ -8,7 +8,7 @@ const ListStyle = {
   padding: '45px 25px',
 };
 
-const TicketStyle = {
+const stockstyle = {
   display: 'inline-block',
   margin: '0',
   minWidth: '240px',
@@ -24,28 +24,28 @@ class StockList extends Component {
     this.state = {
       error: null,
       isLoaded: false,
-      tickets: [],
+      stocks: [],
     };
   }
 
   componentWillMount() {
     axios.get(
-      `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq&types=quote&range=1m&last=5`
+      `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq&types=quote,news`
     )
-    .then(res => {
-      let ticketsObj = res.data;
-      let ticketsArr = Object.values(ticketsObj);
+    .then(response => {
+      let stocksObj = response.data;
+      let stocksArr = Object.values(stocksObj);
       this.setState({ 
-        tickets: ticketsArr,
+        stocks: stocksArr,
         isLoaded: true,
       });
-      console.log(res, this.state.tickets);
+      // console.log({ stocksArr, response });
     })
     .catch(error())
   }
 
   render() {
-    const { error, isLoaded, tickets } = this.state;
+    const { error, isLoaded, stocks } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -53,14 +53,14 @@ class StockList extends Component {
     } else {
       return (
         <div style={ListStyle}>
-          {tickets.map(ticket => (
-            <div key={ticket.quote.symbol} ticket={ticket} style={TicketStyle}>
+          {stocks.map(stock => (
+            <div key={stock.quote.symbol} stock={stock} style={stockstyle}>
               <hr/>
-              <p>{ticket.quote.companyName}</p>
-              <h1>{ticket.quote.symbol}</h1>
-              <h3>${ticket.quote.latestPrice}</h3>
-              <p>High: ${ticket.quote.week52High}</p>
-              <p>Low: ${ticket.quote.week52Low}</p>
+              <p>{stock.quote.companyName}</p>
+              <h1>{stock.quote.symbol}</h1>
+              <h3>${stock.quote.latestPrice}</h3>
+              <p>High: ${stock.quote.week52High}</p>
+              <p>Low: ${stock.quote.week52Low}</p>
             </div>
           ))}
         </div>
