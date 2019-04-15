@@ -44,14 +44,17 @@ class News extends Component {
     .then(response => {
       let articlesObj = response.data;
       let articlesArr = Object.values(articlesObj);
-      let articles = Object.values(articlesArr[0].news);
+      let articles = [];
+      articlesArr.forEach(stock => {
+        articles = [...Object.values(stock.news)];
+      });
       this.setState({
         articles: articles,
         isLoaded: true,
       });
       console.log({ articles }, response.status);
     })
-    .catch(error())
+    .catch(error());
   }
 
   render() {
@@ -63,19 +66,20 @@ class News extends Component {
     } else {
       return (
         <NewsList>
-          {articles.map((article) =>
+          {articles.map(article => (
             <a 
-              key={article.datetime}
-              href={article.url}
-              target='_blank'
-              rel='noopener noreferrer'
+            key={article.datetime}
+            href={article.url}
+            target='_blank'
+            rel='noopener noreferrer'
+            article={article}
             >
-              <div article={article} style={ListItem}>
+              <div style={ListItem}>
                 <h2>{article.headline}</h2>
                 <p>{article.source}</p>
               </div>
             </a>
-          )}
+          ))}
           <ViewMoreButton />
         </NewsList>
       )

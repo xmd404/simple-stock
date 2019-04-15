@@ -23,10 +23,10 @@ const ListItem = styled.div`
     `};
 `
 
-export const PrimaryListItem = (data, index) =>
+export const StockListItem = (props, index) =>
   <ListItem key={index} primary>
     <hr/>
-    <h2>{data.name}</h2>
+    <h2>{this.props.name}</h2>
     <p>Current: {data.current}</p>
     <p>High: {data.high}</p>
     <p>Low: {data.low}</p>

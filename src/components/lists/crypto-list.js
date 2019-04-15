@@ -1,4 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
+import { error } from '../../utility';
 
 const ListStyle = {
   overflowX: 'none',
@@ -6,7 +8,7 @@ const ListStyle = {
   padding: '45px 25px',
 };
 
-const TicketStyle = {
+const cryptostyle = {
   display: 'inline-block',
   margin: '0',
   minWidth: '240px',
@@ -16,82 +18,53 @@ const TicketStyle = {
   backgroundColor: '#FFF',
 };
 
-class CryptotList extends Component {
+class CryptoList extends Component {
   constructor(props){
     super(props);
-    // Don't call this.setState() in the Constructor!
-    // Constructor is the only place where you should assign this.state directly.
-    // In all other methods, you need to use this.setState() instead.
-    const api = [
-      {
-        id: 1,
-        name: 'Bitcoin',
-        current: '$1.23',
-        high: '$1.23',
-        low: '$1.23',
-      },
-      {
-        id: 2,
-        name: 'Ethereum',
-        current: '$1.23',
-        high: '$1.23',
-        low: '$1.23',
-      },
-      {
-        id: 3,
-        name: 'XRP',
-        current: '$1.23',
-        high: '$1.23',
-        low: '$1.23',
-      },
-      {
-        id: 4,
-        name: 'Bitcoin Cash',
-        current: '$1.23',
-        high: '$1.23',
-        low: '$1.23',
-      },
-      {
-        id: 5,
-        name: 'Litecoin',
-        current: '$1.23',
-        high: '$1.23',
-        low: '$1.23',
-      },
-    ];
-
-    this.state = {api};
+    this.state = {
+      error: null,
+      isLoaded: false,
+      crypto: [],
+    };
   }
 
-  componentDidMount() {
-    // (async () => {
-    //   const API_KEY = process.env.REACT_APP_FOREX_API_KEY;
-    //   const res = await fetch(
-    //     `http://data.fixer.io/api/latest?access_key=${API_KEY}`
-    //   );
-    //   const api = await res.data.data.children.map(obj => obj.data);
-    //   this.setState({ api });
-    //   console.log(api);
-    // })();
+  componentWillMount() {
+    axios.get(
+      `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq&types=quote,news`
+    )
+    .then(response => {
+      let cryptoObj = response.data;
+      let cryptoArr = Object.values(cryptoObj);
+      this.setState({ 
+        crypto: cryptoArr,
+        isLoaded: true,
+      });
+      console.log({ cryptoArr, response });
+    })
+    .catch(error());
   }
 
   render() {
-    return (
-      <div style={ListStyle}>
-        {
-          this.state.api.map((data, index) => (
-            <div style={TicketStyle} key={index}>
+    const { error, isLoaded, crypto } = this.state;
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Crypto list is Loading...</div>;
+    } else {
+      return (
+        <div style={ListStyle}>
+          {crypto.map(coin => (
+            <div key={coin.quote.symbol} coin={coin} style={cryptostyle}>
               <hr/>
-              <h2>{data.name}</h2>
-              <p>Current: {data.current}</p>
-              <p>High: {data.high}</p>
-              <p>Low: {data.low}</p>
+              <p>{coin.quote.companyName}</p>
+              <h1>{coin.quote.symbol}</h1>
+              <h3>${coin.quote.latestPrice}</h3>
             </div>
-          ))
-        };
-      </div>
-    )
+          ))}
+        </div>
+      );
+    }
   }
-}
+};
 
-export default CryptotList;
+export default CryptoList;
