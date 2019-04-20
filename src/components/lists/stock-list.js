@@ -41,13 +41,13 @@ class StockList extends Component {
       });
       // console.log({ stocksArr, response });
     })
-    .catch(error())
+    .catch(error());
   }
 
   render() {
     const { error, isLoaded, stocks } = this.state;
     if (error) {
-      return <div>Error: {error.message}</div>;
+      return (<div>Error: error.message</div>);
     } else if (!isLoaded) {
       return <div>Stock list is Loading...</div>;
     } else {

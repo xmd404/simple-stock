@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { error } from '../../utility';
+import { error, getDateTime } from '../../utility';
 import { ViewMoreButton } from '../buttons';
 
 const NewsList = styled.div`
@@ -60,7 +60,7 @@ class News extends Component {
   render() {
     const { error, isLoaded, articles } = this.state;
     if (error) {
-      return <div>Error: {error.message}</div>;
+      return (<div> Error: {error.message} </div>);
     } else if (!isLoaded) {
       return <div>News list is Loading...</div>;
     } else {
@@ -75,7 +75,8 @@ class News extends Component {
             article={article}
             >
               <div style={ListItem}>
-                <h2>{article.headline}</h2>
+                <p>{getDateTime(article.datetime)}</p>
+                <h2>{article.headline.substring(0, 45)}...</h2>
                 <p>{article.source}</p>
               </div>
             </a>
