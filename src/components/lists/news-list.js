@@ -60,9 +60,9 @@ class News extends Component {
   render() {
     const { error, isLoaded, articles } = this.state;
     if (error) {
-      return (<div> Error: {error.message} </div>);
+      return (<div>Error: {error.message}</div>);
     } else if (!isLoaded) {
-      return <div>News list is Loading...</div>;
+      return (<div>News list is Loading...</div>);
     } else {
       return (
         <NewsList>
