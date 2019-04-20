@@ -39,7 +39,7 @@ class StockList extends Component {
         stocks: stocksArr,
         isLoaded: true,
       });
-      // console.log({ stocksArr, response });
+      console.log({ stocksArr, response });
     })
     .catch(error());
   }
