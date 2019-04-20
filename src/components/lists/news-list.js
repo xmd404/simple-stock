@@ -9,7 +9,7 @@ const NewsList = styled.div`
   margin: 0;
   padding: 15px 4px;
   background-color: #F5F5F5;
-`
+`;
 
 const ListItem = {
   display: 'inline-block',
@@ -20,12 +20,12 @@ const ListItem = {
   color: '#000',
   backgroundColor: '#FFF',
   borderRadius: '5%',
-}
+};
 
 let marketStatus = (signal) => {
   const status = signal === 'close' ? 'closed' : 'open';
   return `The markets are ${status}.`;
-} 
+};
 
 class News extends Component {
   constructor(props) {
