@@ -11,8 +11,8 @@ export const error = () => {
     // and an instance of http.ClientRequest in node.js
     console.log(error.request);
   } else {
-    // Something happened in setting up the request that triggered an Error
-    console.log('Error', error.message);
+    // // Something happened in setting up the request that triggered an Error
+    // console.log('Error', error.message);
   }
   // console.log(error.config);
 };
@@ -24,4 +24,9 @@ export const getDateTime = (unix_timestamp) => {
   let day = date.getDate();
   let timestamp = `${month} ${day}`;
   return timestamp;
+};
+
+export const getMarketStatus = (signal) => {
+  const status = signal === 'close' ? 'closed' : 'open';
+  return `The markets are ${status}.`;
 };
