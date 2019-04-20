@@ -22,9 +22,6 @@ export const getDateTime = (unix_timestamp) => {
   let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   let month = months[date.getMonth()];
   let day = date.getDate();
-  // let year = date.getFullYear();
-  let hour = date.getHours();
-  let min = date.getMinutes();
-  let timestamp = `${month} ${day} @ ${hour}:${min}`;
+  let timestamp = `${month} ${day}`;
   return timestamp;
 };

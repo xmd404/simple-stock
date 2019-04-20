@@ -77,7 +77,7 @@ class News extends Component {
               <div style={ListItem}>
                 <p>{getDateTime(article.datetime)}</p>
                 <h2>{article.headline.substring(0, 45)}...</h2>
-                <p>{article.source}</p>
+                <p><u>{article.source}</u></p>
               </div>
             </a>
           ))}
