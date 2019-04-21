@@ -7,13 +7,13 @@ const LargeButton = styled.a`
   min-width: 270px;
   margin: 1.00em;
   padding: 5px 15px;
-  color: #000;
-  border-radius: 5%;
+  font-size: 150%;
+  color: #fff;
 `
 
 export const ViewMoreButton = () =>
   <LargeButton>
     <br/>
     <hr/>
-    <h1>View More Briefings</h1>
+    <h1>View More Stocks</h1>
   </LargeButton>
