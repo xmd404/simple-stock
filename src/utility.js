@@ -29,11 +29,9 @@ export const getDateTime = (unix_timestamp) => {
 };
 
 export const getMarketStatus = (signal) => {
-  const statusMsg = signal === 'close' ? 
-  'Markets are closed 🌙' 
-  : 
-  'Markets are open 💹'
-  ;
+  const statusMsg = signal === 'close' ?
+    'Markets are closed 🌙' :
+    'Markets are open 💹';
   const status = `${statusMsg}`;
   return status;
 };
