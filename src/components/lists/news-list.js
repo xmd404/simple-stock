@@ -15,7 +15,7 @@ const ListItem = {
   display: 'inline-block',
   width: '100%',
   maxWidth: '250px',
-  margin: '1.15em',
+  margin: '1.75em 1.35em',
   padding: '5px 15px',
   color: '#000',
   backgroundColor: '#FFF',
