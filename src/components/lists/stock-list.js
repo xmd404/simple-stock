@@ -15,7 +15,7 @@ const stockstyle = {
   display: 'inline-block',
   margin: '1.00em',
   padding: '25px',
-  minWidth: '255px',
+  minWidth: '250px',
   maxWidth: '100%',
   color: '#000',
   backgroundColor: '#fff',
