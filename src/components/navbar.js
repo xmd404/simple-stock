@@ -10,6 +10,8 @@ const NavbarStyle = {
 
 const MenuStyle = {
   backgroundColor: 'yellow',
+  overflow: 'auto',
+  whiteSpace: 'nowrap',
 };
 
 const LogoStyle = {
