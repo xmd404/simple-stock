@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 
 const FooterStyle = {
   margin: '0 0 0',
-  padding: '5px 15px',
+  padding: '5px 45px',
   color: '#fff',
   backgroundColor: '#000',
+  textAlign: 'center',
 };
 
 const FooterLinkStyle = {
