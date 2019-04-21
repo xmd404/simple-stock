@@ -13,9 +13,9 @@ const ListStyle = {
 
 const stockstyle = {
   display: 'inline-block',
-  margin: '1.00em',
+  margin: '1.25em',
   padding: '25px',
-  minWidth: '250px',
+  minWidth: '245px',
   maxWidth: '100%',
   color: '#000',
   backgroundColor: '#fff',
