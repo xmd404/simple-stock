@@ -57,9 +57,9 @@ class StockList extends Component {
     } else {
       return (
         <div style={ListStyle}>
-          <h1 style={{textAlign: 'center'}}>
+          <h2 style={{textAlign: 'center'}}>
             {getMarketStatus(stocks[0].quote.calculationPrice)}
-          </h1>
+          </h2>
           <br /><br />
           {stocks.map(stock => (
             <div key={stock.quote.symbol} stock={stock} style={stockstyle}>
