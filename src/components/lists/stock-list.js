@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { error, symbols, getMarketStatus } from '../../utility';
+import { ViewMoreButton } from '../buttons';
 
 const ListStyle = {
   overflowX: 'none',
@@ -12,12 +13,13 @@ const ListStyle = {
 
 const stockstyle = {
   display: 'inline-block',
-  margin: '0',
-  minWidth: '240px',
+  margin: '1.00em',
+  padding: '25px',
+  minWidth: '265px',
   maxWidth: '100%',
-  padding: '5px 15px',
-  color: '#fff',
-  backgroundColor: '#000',
+  color: '#000',
+  backgroundColor: '#fff',
+  borderRadius: '5%',
 };
 
 class StockList extends Component {
@@ -63,9 +65,8 @@ class StockList extends Component {
             {getMarketStatus(stocks[0].quote.calculationPrice)}
           </h2>
           <br /><br />
-          {stocks.map(stock => (
+          {stocks.splice(0, 7).map(stock => (
             <div key={stock.quote.symbol} stock={stock} style={stockstyle}>
-              <hr/>
               <p>{stock.quote.companyName}</p>
               <h1>{stock.quote.symbol}</h1>
               <h3>${stock.quote.latestPrice}</h3>
@@ -73,6 +74,7 @@ class StockList extends Component {
               <p>Low: ${stock.quote.week52Low}</p>
             </div>
           ))}
+          <ViewMoreButton />
         </div>
       );
     }
