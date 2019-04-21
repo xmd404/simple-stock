@@ -4,8 +4,12 @@ import axios from 'axios';
 import { error, symbols, getDateTime } from '../../utility';
 import { ViewMoreButton } from '../buttons';
 
+const SideScroll = styled.div`
+  overflow: auto;
+  white-space: nowrap;
+`;
+
 const NewsList = styled.div`
-  overflow-x: none;
   margin: 0;
   padding: 15px 4px;
   background-color: #F5F5F5;
@@ -62,24 +66,25 @@ class News extends Component {
       return (<div>News list is Loading...</div>);
     } else {
       return (
-        <NewsList>
-          {articles.slice(0, 3).map(article => (
-            <a 
-            key={article.datetime}
-            href={article.url}
-            target='_blank'
-            rel='noopener noreferrer'
-            article={article}
-            >
-              <div style={ListItem}>
-                <p>{getDateTime(article.datetime)}</p>
-                <h2>{article.headline.substring(0, 45)}...</h2>
-                <p><u>{article.source}</u></p>
-              </div>
-            </a>
-          ))}
-          <ViewMoreButton />
-        </NewsList>
+          <NewsList>
+            <div className={{SideScroll}}>
+            {articles.slice(0, 4).map(article => (
+              <a 
+              key={article.datetime}
+              href={article.url}
+              target='_blank'
+              rel='noopener noreferrer'
+              article={article}
+              >
+                <div style={ListItem}>
+                  <p>{getDateTime(article.datetime)}</p>
+                  <h2>{article.headline.substring(0, 45)}...</h2>
+                  <p><u>{article.source}</u></p>
+                </div>
+              </a>
+            ))}
+            </div>
+          </NewsList>
       )
     }
   }
