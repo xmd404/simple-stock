@@ -13,7 +13,6 @@ const LargeButton = styled.a`
 
 export const ViewMoreButton = () =>
   <LargeButton>
-    <br/>
     <h1>View More Stocks</h1>
     <hr/>
   </LargeButton>
