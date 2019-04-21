@@ -6,6 +6,8 @@ const ListStyle = {
   overflowX: 'none',
   margin: '0',
   padding: '45px 25px',
+  color: '#fff',
+  backgroundColor: '#000',
 };
 
 const stockstyle = {
@@ -14,8 +16,8 @@ const stockstyle = {
   minWidth: '240px',
   maxWidth: '100%',
   padding: '5px 15px',
-  color: '#000',
-  backgroundColor: '#FFF',
+  color: '#fff',
+  backgroundColor: '#000',
 };
 
 class StockList extends Component {
