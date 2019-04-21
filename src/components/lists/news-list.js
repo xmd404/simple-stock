@@ -2,23 +2,19 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import { error, symbols, getDateTime } from '../../utility';
-import { ViewMoreButton } from '../buttons';
-
-const SideScroll = styled.div`
-  overflow: auto;
-  white-space: nowrap;
-`;
 
 const NewsList = styled.div`
   margin: 0;
   padding: 15px 4px;
   background-color: #F5F5F5;
+  overflow: auto;
+  white-space: nowrap;
 `;
 
 const ListItem = {
   display: 'inline-block',
-  width: '15%',
-  minWidth: '260px',
+  width: '100%',
+  maxWidth: '250px',
   margin: '1.00em',
   padding: '5px 15px',
   color: '#000',
@@ -66,25 +62,23 @@ class News extends Component {
       return (<div>News list is Loading...</div>);
     } else {
       return (
-          <NewsList>
-            <div className={{SideScroll}}>
-            {articles.slice(0, 4).map(article => (
-              <a 
-              key={article.datetime}
-              href={article.url}
-              target='_blank'
-              rel='noopener noreferrer'
-              article={article}
-              >
-                <div style={ListItem}>
-                  <p>{getDateTime(article.datetime)}</p>
-                  <h2>{article.headline.substring(0, 45)}...</h2>
-                  <p><u>{article.source}</u></p>
-                </div>
-              </a>
-            ))}
-            </div>
-          </NewsList>
+        <NewsList>
+          {articles.slice(0, 7).map(article => (
+            <a 
+            key={article.datetime}
+            href={article.url}
+            target='_blank'
+            rel='noopener noreferrer'
+            article={article}
+            >
+              <div style={ListItem}>
+                <p>{getDateTime(article.datetime)}</p>
+                <p>{article.headline.substring(0, 25)}...</p>
+                <p><u>{article.source}</u></p>
+              </div>
+            </a>
+          ))}
+        </NewsList>
       )
     }
   }
