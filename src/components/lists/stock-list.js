@@ -6,7 +6,7 @@ import { ViewMoreButton } from '../buttons';
 const ListStyle = {
   overflowX: 'none',
   margin: '0',
-  padding: '45px 25px',
+  padding: '25px',
   color: '#fff',
   backgroundColor: '#000',
 };
@@ -64,7 +64,6 @@ class StockList extends Component {
           <h2 style={{textAlign: 'center'}}>
             {getMarketStatus(stocks[0].quote.calculationPrice)}
           </h2>
-          <br /><br />
           {stocks.splice(0, 7).map(stock => (
             <div key={stock.quote.symbol} stock={stock} style={stockstyle}>
               <p>{stock.quote.companyName}</p>
