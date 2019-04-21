@@ -28,12 +28,12 @@ class News extends Component {
     this.state = {
       error: null,
       isLoaded: false,
-      isMarketOpen: false,
       articles: [],
     };
   }
 
   componentDidMount() {
+    console.time('Fetching articles');
     axios.get(
       `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=news`
     )
@@ -48,6 +48,7 @@ class News extends Component {
         articles: articles,
         isLoaded: true,
       });
+      console.timeEnd('Fetching articles');
       console.log({ articles }, response.status);
     })
     .catch(error());
@@ -84,4 +85,4 @@ class News extends Component {
   }
 }
 
-  export default News;
+export default News;

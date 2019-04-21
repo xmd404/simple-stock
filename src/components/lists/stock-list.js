@@ -29,6 +29,8 @@ class StockList extends Component {
   }
 
   componentWillMount() {
+    console.clear();
+    console.time('Fetching stocks');
     axios.get(
       `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
     )
@@ -40,6 +42,7 @@ class StockList extends Component {
         stocks: stocks,
         isLoaded: true,
       });
+      console.timeEnd('Fetching stocks');
       console.log({ stocks }, response.status);
     })
     .catch(error());
