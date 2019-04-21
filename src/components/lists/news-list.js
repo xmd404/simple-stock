@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { error, symbols, getDateTime, getMarketStatus } from '../../utility';
+import { error, symbols, getDateTime } from '../../utility';
 import { ViewMoreButton } from '../buttons';
 
 const NewsList = styled.div`
@@ -62,7 +62,7 @@ class News extends Component {
     } else {
       return (
         <NewsList>
-          {articles.slice(0, 7).map(article => (
+          {articles.slice(0, 3).map(article => (
             <a 
             key={article.datetime}
             href={article.url}
