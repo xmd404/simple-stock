@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { error } from '../../utility';
+import { error, symbols, getMarketStatus } from '../../utility';
 
 const ListStyle = {
   overflowX: 'none',
@@ -30,16 +30,17 @@ class StockList extends Component {
 
   componentWillMount() {
     axios.get(
-      `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq&types=quote,news`
+      `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
     )
     .then(response => {
       let stocksObj = response.data;
       let stocksArr = Object.values(stocksObj);
+      let stocks = stocksArr;
       this.setState({ 
-        stocks: stocksArr,
+        stocks: stocks,
         isLoaded: true,
       });
-      console.log({ stocksArr, response });
+      console.log({ stocks }, response.status);
     })
     .catch(error());
   }
@@ -53,6 +54,8 @@ class StockList extends Component {
     } else {
       return (
         <div style={ListStyle}>
+          <h1>{getMarketStatus(stocks[0].quote.calculationPrice)}</h1>
+          <br />
           {stocks.map(stock => (
             <div key={stock.quote.symbol} stock={stock} style={stockstyle}>
               <hr/>

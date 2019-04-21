@@ -1,3 +1,5 @@
+export const symbols = 'aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq,';
+
 export const error = () => {
   if (error.response) {
     // The request was made and the server responded with a status code
@@ -27,6 +29,11 @@ export const getDateTime = (unix_timestamp) => {
 };
 
 export const getMarketStatus = (signal) => {
-  const status = signal === 'close' ? 'closed' : 'open';
-  return `The markets are ${status}.`;
+  const statusMsg = signal === 'close' ? 
+  'Markets are closed 🌙' 
+  : 
+  'Markets are open 💹'
+  ;
+  const status = `${statusMsg}`;
+  return status;
 };

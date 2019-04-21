@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { error, getDateTime } from '../../utility';
+import { error, symbols, getDateTime, getMarketStatus } from '../../utility';
 import { ViewMoreButton } from '../buttons';
 
 const NewsList = styled.div`
@@ -21,8 +21,6 @@ const ListItem = {
   backgroundColor: '#FFF',
   borderRadius: '5%',
 };
-
-const symbols = 'aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq,';
 
 class News extends Component {
   constructor(props) {
