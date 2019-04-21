@@ -22,10 +22,7 @@ const ListItem = {
   borderRadius: '5%',
 };
 
-let marketStatus = (signal) => {
-  const status = signal === 'close' ? 'closed' : 'open';
-  return `The markets are ${status}.`;
-};
+const symbols = 'aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq,';
 
 class News extends Component {
   constructor(props) {
@@ -33,13 +30,14 @@ class News extends Component {
     this.state = {
       error: null,
       isLoaded: false,
+      isMarketOpen: false,
       articles: [],
     };
   }
 
   componentDidMount() {
     axios.get(
-      `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq&types=news`
+      `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=news`
     )
     .then(response => {
       let articlesObj = response.data;
