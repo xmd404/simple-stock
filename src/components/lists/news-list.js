@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { error, symbols, getDateTime } from '../../utility';
+import { error, symbols, getDateTime, Loading } from '../../utility';
 
 const NewsList = styled.div`
   margin: 0;
@@ -59,7 +59,7 @@ class News extends Component {
     if (error) {
       return (<div>Error: {error.message}</div>);
     } else if (!isLoaded) {
-      return (<div>News list is Loading...</div>);
+      return (<Loading />)
     } else {
       return (
         <NewsList>

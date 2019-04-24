@@ -1,22 +1,39 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { error } from '../../utility';
+import { error, Loading } from '../../utility';
 
-const ListStyle = {
+const list = {
   overflowX: 'none',
   margin: '0',
-  padding: '45px 25px',
+  padding: '25px',
+  color: '#fff',
+  backgroundColor: '#000',
 };
 
-const cryptostyle = {
+const card = {
   display: 'inline-block',
-  margin: '0',
+  margin: '1.35em',
+  padding: '25px',
   minWidth: '240px',
   maxWidth: '100%',
-  padding: '5px 15px',
   color: '#000',
-  backgroundColor: '#FFF',
+  backgroundColor: '#fff',
+  borderRadius: '5%',
 };
+
+const options = {
+  method: 'GET',
+  uri: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest',
+  qs: {
+    start: 1,
+    limit: 7,
+    convert: 'USD',
+  },
+  headers: {
+    'X-CMC_PRO_API_KEY': `${process.env.REACT_APP_CRYPTO_API_KEY}`,
+  },
+  json: true,
+}
 
 class CryptoList extends Component {
   constructor(props){
@@ -29,17 +46,18 @@ class CryptoList extends Component {
   }
 
   componentWillMount() {
-    axios.get(
-      `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq&types=quote,news`
-    )
+    console.time('Fetching crypto data')
+    axios(options)
     .then(response => {
       let cryptoObj = response.data;
       let cryptoArr = Object.values(cryptoObj);
+      let crypto = cryptoArr;
       this.setState({ 
-        crypto: cryptoArr,
+        crypto: crypto,
         isLoaded: true,
       });
-      console.log({ cryptoArr, response });
+      console.timeEnd('Fetching crypto data');
+      console.log({ crypto }, response.status );
     })
     .catch(error());
   }
@@ -49,12 +67,12 @@ class CryptoList extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Crypto list is Loading...</div>;
+      return (<Loading />)
     } else {
       return (
-        <div style={ListStyle}>
+        <div style={list}>
           {crypto.map(coin => (
-            <div key={coin.quote.symbol} coin={coin} style={cryptostyle}>
+            <div key={coin.quote.symbol} coin={coin} style={card}>
               <hr/>
               <p>{coin.quote.companyName}</p>
               <h1>{coin.quote.symbol}</h1>

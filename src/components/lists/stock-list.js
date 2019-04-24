@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { error, symbols, getMarketStatus } from '../../utility';
+import { error, symbols, getMarketStatus, Loading } from '../../utility';
 import { ViewMoreButton } from '../buttons';
 
 const list = {
@@ -58,7 +58,7 @@ class StockList extends Component {
     if (error) {
       return (<div>Error: error.message</div>);
     } else if (!isLoaded) {
-      return <div>Stock list is Loading...</div>;
+      return (<Loading />)
     } else {
       return (
         <div style={list}>

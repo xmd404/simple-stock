@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { error, pairs } from '../../utility';
+import { error, pairs, loading, Loading } from '../../utility';
 
 const section = {
   margin: '0',
@@ -18,7 +18,7 @@ const card = {
   display: 'inline-block',
   margin: '1.35em',
   padding: '25px',
-  minWidth: '175px',
+  width: '160px',
   maxWidth: '100%',
   color: '#000',
   backgroundColor: '#fff',
@@ -59,7 +59,7 @@ class ForexList extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Forex list is Loading...</div>;
+      return (<Loading />)
     } else {
       return (
         <div style={section}>
