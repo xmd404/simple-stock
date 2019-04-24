@@ -21,7 +21,7 @@ const Footer = () =>
       <span role='img' aria-label='money with wings emoji'>💸 </span><b>SimpleStock</b>.
       &nbsp;
       <Link to='/data-sources' style={FooterLinkStyle}>
-        Where do we get our data from
+        Where do we get our data
       </Link>?
     </p>
   </div>
