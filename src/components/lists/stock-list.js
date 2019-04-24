@@ -4,7 +4,7 @@ import axios from 'axios';
 import { error, symbols, getMarketStatus } from '../../utility';
 import { ViewMoreButton } from '../buttons';
 
-const ListStyle = {
+const list = {
   overflowX: 'none',
   margin: '0',
   padding: '25px',
@@ -12,7 +12,7 @@ const ListStyle = {
   backgroundColor: '#000',
 };
 
-const stockstyle = {
+const card = {
   display: 'inline-block',
   margin: '1.35em',
   padding: '25px',
@@ -61,13 +61,13 @@ class StockList extends Component {
       return <div>Stock list is Loading...</div>;
     } else {
       return (
-        <div style={ListStyle}>
+        <div style={list}>
           <h2 style={{textAlign: 'center'}}>
             {getMarketStatus(stocks[0].quote.calculationPrice)}
           </h2>
           {stocks.splice(0, 7).map(stock => (
             <Link to='/chart'>
-              <div key={stock.quote.symbol} stock={stock} style={stockstyle}>
+              <div key={stock.quote.symbol} stock={stock} style={card}>
                 <p>{stock.quote.companyName}</p>
                 <h1>{stock.quote.symbol}</h1>
                 <h3>${stock.quote.latestPrice}</h3>
