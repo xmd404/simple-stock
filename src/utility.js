@@ -46,12 +46,12 @@ export const error = () => {
 
 // handle loading
 export const Loading = () => 
-  <div style={{textAlign: 'center', margin: '5em'}}>
+  <div style={{textAlign: 'center', margin: '10em 5em'}}>
     <Loader 
       type="Rings"
       color="fuchsia"
       height={80}
       width={80}
     />
-    <p>Loading...</p>
+    <p>Loading</p>
   </div>
