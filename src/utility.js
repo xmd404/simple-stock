@@ -1,4 +1,5 @@
 export const symbols = 'aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq,';
+export const pairs = 'USD,JPY,GBP,AUD,CAD,CHF,CNY,AED,NZD';
 
 export const error = () => {
   if (error.response) {
