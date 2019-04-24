@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { error, symbols, getMarketStatus } from '../../utility';
 import { ViewMoreButton } from '../buttons';
@@ -65,13 +66,15 @@ class StockList extends Component {
             {getMarketStatus(stocks[0].quote.calculationPrice)}
           </h2>
           {stocks.splice(0, 7).map(stock => (
-            <div key={stock.quote.symbol} stock={stock} style={stockstyle}>
-              <p>{stock.quote.companyName}</p>
-              <h1>{stock.quote.symbol}</h1>
-              <h3>${stock.quote.latestPrice}</h3>
-              <p>High: ${stock.quote.week52High}</p>
-              <p>Low: ${stock.quote.week52Low}</p>
-            </div>
+            <Link to='/chart'>
+              <div key={stock.quote.symbol} stock={stock} style={stockstyle}>
+                <p>{stock.quote.companyName}</p>
+                <h1>{stock.quote.symbol}</h1>
+                <h3>${stock.quote.latestPrice}</h3>
+                <p>High: ${stock.quote.week52High}</p>
+                <p>Low: ${stock.quote.week52Low}</p>
+              </div>
+            </Link>
           ))}
           <ViewMoreButton />
         </div>
