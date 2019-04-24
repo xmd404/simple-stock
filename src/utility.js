@@ -1,3 +1,6 @@
+import React from "react";
+import Loader from 'react-loader-spinner';
+
 export const symbols = 'aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq,';
 export const pairs = 'USD,JPY,GBP,AUD,CAD,CHF,CNY,AED,NZD';
 
@@ -31,8 +34,19 @@ export const getDateTime = (unix_timestamp) => {
 
 export const getMarketStatus = (signal) => {
   const statusMsg = signal === 'close' ?
-    'Markets are closed 🌙' :
-    'Markets are open 💹';
+    `Markets are closed 🌙` :
+    `Markets are open 💹`;
   const status = `${statusMsg}`;
   return status;
 };
+
+export const Loading = () => 
+  <div style={{textAlign: 'center', margin: '5em'}}>
+    <Loader 
+      type="Rings"
+      color="fuchsia"
+      height={80}
+      width={80}
+    />
+    <p>list is loading...</p>
+  </div>
