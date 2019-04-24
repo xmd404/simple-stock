@@ -29,7 +29,7 @@ const LinkStyle = {
 };
 
 const Navbar = () =>
-  <div> 
+  <div style={{ margin: '0' }}> 
     <div style={NavbarStyle}>
       <Link to="/" style={LogoStyle}>
         <h2>
