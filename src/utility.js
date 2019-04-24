@@ -1,9 +1,30 @@
 import React from "react";
 import Loader from 'react-loader-spinner';
 
+// data used by exchange APIs
 export const symbols = 'aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq,';
 export const pairs = 'USD,JPY,GBP,AUD,CAD,CHF,CNY,AED,NZD';
 
+// convert unix timestamp into regular dates
+export const getDateTime = (unix_timestamp) => {
+  let date = new Date(unix_timestamp * 1000);
+  let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  let month = months[date.getMonth()];
+  let day = date.getDate();
+  let timestamp = `${month} ${day}`;
+  return timestamp;
+};
+
+// find out if markets are open/closed
+export const getMarketStatus = (signal) => {
+  const statusMsg = signal === 'close' ?
+    `Markets are closed 🌙` :
+    `Markets are open 💹`;
+  const status = `${statusMsg}`;
+  return status;
+};
+
+// handle errors
 export const error = () => {
   if (error.response) {
     // The request was made and the server responded with a status code
@@ -23,23 +44,7 @@ export const error = () => {
   // console.log(error.config);
 };
 
-export const getDateTime = (unix_timestamp) => {
-  let date = new Date(unix_timestamp * 1000);
-  let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  let month = months[date.getMonth()];
-  let day = date.getDate();
-  let timestamp = `${month} ${day}`;
-  return timestamp;
-};
-
-export const getMarketStatus = (signal) => {
-  const statusMsg = signal === 'close' ?
-    `Markets are closed 🌙` :
-    `Markets are open 💹`;
-  const status = `${statusMsg}`;
-  return status;
-};
-
+// handle loading
 export const Loading = () => 
   <div style={{textAlign: 'center', margin: '5em'}}>
     <Loader 
@@ -48,5 +53,5 @@ export const Loading = () =>
       height={80}
       width={80}
     />
-    <p>list is loading...</p>
+    <p>Loading...</p>
   </div>
