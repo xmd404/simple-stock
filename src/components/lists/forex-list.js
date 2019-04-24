@@ -1,6 +1,29 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { error } from '../../utility';
+import { error, pairs } from '../../utility';
+
+const section = {
+  margin: '0',
+  padding: '25px',
+  color: '#fff',
+  backgroundColor: '#000',
+}
+
+const list = {
+  overflow: 'auto',
+  whiteSpace: 'nowrap',
+};
+
+const card = {
+  display: 'inline-block',
+  margin: '1.35em',
+  padding: '25px',
+  minWidth: '175px',
+  maxWidth: '100%',
+  color: '#000',
+  backgroundColor: '#fff',
+  borderRadius: '5%',
+};
 
 class ForexList extends Component {
   constructor(props){
@@ -8,36 +31,54 @@ class ForexList extends Component {
     this.state = {
       error: null,
       isLoaded: false,
-      tickets: [],
+      pairs: [],
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
+    console.time('Fetching currensy pairs')
     axios.get(
-      `https://cloud.iexapis.com/beta/tops?token=pk_f8fb41e0cff74b73b0ad93bf4a374421&symbols=aapl,fb,snap`
+      `http://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}&symbols=${pairs}`
     )
     .then(response => {
-      console.log(response.data);
-      this.setState({ tickets: response.data });
+      let pairsObj = response.data;
+      let pairs = Object.keys(pairsObj.rates);
+      let pairsValue = Object.values(pairsObj.rates)
+      this.setState({ 
+        pairs: pairs,
+        isLoaded: true,
+      });
+      console.timeEnd('Fetching currensy pairs');
+      console.log({ pairs }, response.status);
     })
     .catch(error())
   }
 
   render() {
-    const { error, isLoaded, tickets } = this.state;
+    const { error, isLoaded, pairs} = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return <div>Forex list is Loading...</div>;
     } else {
       return (
-        <ul>
-          {tickets.map(ticket => (
-            <li key={ticket.symbol} ticket={ticket}>
-              {ticket.symbol}
-            </li>
-          ))}
-        </ul>
+        <div style={section}>
+          <h2 style={{textAlign: 'center'}}>
+            Forex Markets.
+          </h2>
+          <p style={{textAlign: 'center'}}>
+            Top <b>currency pairs</b> from across the &nbsp;🌎
+          </p>
+          <div style={list}>
+            {pairs.map(pair => (
+              <div key= {pair} pair={pair} style={card}>
+                {/* <p>{stock.quote.companyName}</p> */}
+                <h1>EUR / {pair}</h1>
+                <h3>$0.00</h3>
+            </div>
+            ))}
+          </div>
+        </div>
       );
     }
   }
