@@ -52,7 +52,7 @@ class SignUpForm extends Component {
           </label>
           <br/><br/>
           <label>
-            Email
+            Emailjj
             &nbsp;
             <input 
               type='text'
