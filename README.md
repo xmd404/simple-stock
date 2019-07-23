@@ -1,4 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f92da7aa-b1f3-4a30-a98d-dd4812fe28b6/deploy-status)](https://app.netlify.com/sites/simple-stock/deploys)
+[![CodeFactor](https://www.codefactor.io/repository/github/xmd404/simple-stock/badge)](https://www.codefactor.io/repository/github/xmd404/simple-stock)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
