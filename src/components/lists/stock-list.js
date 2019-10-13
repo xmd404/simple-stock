@@ -10,6 +10,7 @@ const list = {
   padding: '25px',
   color: '#fff',
   backgroundColor: '#000',
+  textAlign: 'center',
 };
 
 const card = {
