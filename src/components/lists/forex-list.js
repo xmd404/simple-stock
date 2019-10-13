@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { error, pairs, loading, Loading } from '../../utility';
+import { error, pairs, Loading } from '../../utility';
 
 const section = {
   margin: '0',
@@ -38,12 +38,11 @@ class ForexList extends Component {
   componentWillMount() {
     console.time('Fetching currensy pairs')
     axios.get(
-      `https://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}&symbols=${pairs}`
+      `http://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}&symbols=${pairs}`
     )
     .then(response => {
-      let pairsObj = response.data;
-      let pairs = Object.keys(pairsObj.rates);
-      let pairsValue = Object.values(pairsObj.rates)
+      let data = response.data;
+      let pairs = Object.entries(data.rates)
       this.setState({ 
         pairs: pairs,
         isLoaded: true,
@@ -71,10 +70,9 @@ class ForexList extends Component {
           </p>
           <div style={list}>
             {pairs.map(pair => (
-              <div key= {pair} pair={pair} style={card}>
-                {/* <p>{stock.quote.companyName}</p> */}
-                <h1>EUR / {pair}</h1>
-                <h3>$0.00</h3>
+              <div key={pair[0]} pair={pair} style={card}>
+                <h1>EUR / {pair[0]}</h1>
+                <h3>${pair[1]}</h3>
             </div>
             ))}
           </div>
