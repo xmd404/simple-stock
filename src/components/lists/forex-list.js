@@ -17,7 +17,7 @@ const list = {
 const card = {
   display: 'inline-block',
   margin: '1.35em',
-  padding: '25px',
+  padding: '25px 40px',
   width: '160px',
   maxWidth: '100%',
   color: '#000',
@@ -70,9 +70,9 @@ class ForexList extends Component {
           </p>
           <div style={list}>
             {pairs.map(pair => (
-              <div key={pair[0]} pair={pair} style={card}>
+              <div key={pair} pair={pair} style={card}>
                 <h1>EUR / {pair[0]}</h1>
-                <h3>${pair[1]}</h3>
+                <h4><b>$</b> {pair[1].toFixed(2)}</h4>
             </div>
             ))}
           </div>
