@@ -15,11 +15,20 @@ export const getDateTime = (unix_timestamp) => {
   return timestamp;
 };
 
-// find out if markets are open/closed
-export const getMarketStatus = (signal) => {
+// symbol for markets pen/closed
+export const getMarketSymbol = (signal) => {
+  const statusSybmol = signal === 'close' ?
+    `🌙` :
+    `💹`;
+  const symbol = `${statusSybmol}`;
+  return symbol;
+};
+
+//  message for markets open/closed
+export const getMarketMessage = (signal) => {
   const statusMsg = signal === 'close' ?
-    `Markets are closed 🌙` :
-    `Markets are open 💹`;
+    `Markets are closed` :
+    `Markets are open`;
   const status = `${statusMsg}`;
   return status;
 };

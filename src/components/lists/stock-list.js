@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { error, symbols, getMarketStatus, Loading } from '../../utility';
+import { error, symbols, getMarketSymbol, getMarketMessage, Loading } from '../../utility';
 import { ViewMoreButton } from '../buttons';
 
 const list = {
@@ -63,9 +63,13 @@ class StockList extends Component {
     } else {
       return (
         <div style={list}>
-          <h2 style={{textAlign: 'center'}}>
-            {getMarketStatus(stocks[0].quote.calculationPrice)}
+          <h1 style={{textAlign: 'center'}}>
+            {getMarketSymbol(stocks[0].quote.calculationPrice)}
+          </h1>
+          <h2>
+            {getMarketMessage(stocks[0].quote.calculationPrice)}
           </h2>
+          <br/>
           {stocks.splice(0, 7).map(stock => (
             <Link to='/chart'>
               <div key={stock.quote.symbol} stock={stock} style={card}>
