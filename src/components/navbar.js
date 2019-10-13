@@ -23,7 +23,7 @@ const LogoStyle = {
 const LinkStyle = {
   height: '100%',
   display: 'inline-block',
-  padding: '1.25em 2.00em',
+  padding: '0.25em 2.00em',
   textDecoration: 'none',
   color: '#fff',
   fontWeight: 'bold',
@@ -39,7 +39,7 @@ const Navbar = () =>
       </Link>
     </div>
     <div style={MenuStyle}>
-      <Link style={LinkStyle} to="/">Flash Briefing</Link>
+      <p style={LinkStyle}>Flash Briefing</p>
     </div>
   </div>
 
