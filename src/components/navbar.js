@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 const NavbarStyle = {
   margin: '0',
   padding: '5px 25px',
-  color: '#FFF',
+  color: '#fff',
   backgroundColor: '#000',
 };
 
 const MenuStyle = {
-  backgroundColor: 'yellow',
+  color: '#fff',
+  backgroundColor: '#44c17b',
   overflow: 'auto',
   whiteSpace: 'nowrap',
 };
@@ -24,7 +25,7 @@ const LinkStyle = {
   display: 'inline-block',
   padding: '1.25em 2.00em',
   textDecoration: 'none',
-  color: '#000',
+  color: '#fff',
   fontWeight: 'bold',
 };
 
