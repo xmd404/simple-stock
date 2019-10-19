@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { error, symbols, getDateTime, Loading } from '../../utility';
+import { error, getDateTime, Loading } from '../../utility';
 
 const NewsList = styled.div`
   margin: 0;
@@ -35,15 +35,12 @@ class News extends Component {
   componentDidMount() {
     console.time('Fetching articles');
     axios.get(
-      `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=news`
+      `https://stocknewsapi.com/api/v1/category?section=alltickers&items=50&sortby=trending&token=hevallvghgowxcdvjnkvw7jryqchlzt9agm5rxjz`
     )
     .then(response => {
-      let articlesObj = response.data;
-      let articlesArr = Object.values(articlesObj);
-      let articles = [];
-      articlesArr.forEach(stock => {
-        articles = [...Object.values(stock.news)];
-      });
+      let data = response.data;
+      let articlesArr = Object.values(data);
+      let articles = articlesArr;
       this.setState({
         articles: articles,
         isLoaded: true,
@@ -63,18 +60,18 @@ class News extends Component {
     } else {
       return (
         <NewsList>
-          {articles.slice(0, 7).map(article => (
+          {articles[0].slice(0, 12).map(article => (
             <a 
-            key={article.datetime}
-            href={article.url}
+            key={article.date}
+            href={article.news_url}
             target='_blank'
             rel='noopener noreferrer'
             article={article}
             >
               <div style={ListItem}>
-                <p>{getDateTime(article.datetime)}</p>
-                <h4>{article.headline.substring(0, 25)}...</h4>
-                <p><u>{article.source}</u></p>
+                <p>{article.date}</p>
+                <h4>{article.title.substring(0, 25)}...</h4>
+                <p><u>{article.source_name}</u></p>
               </div>
             </a>
           ))}
