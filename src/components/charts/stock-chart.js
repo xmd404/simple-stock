@@ -71,11 +71,14 @@ class StockChart extends Component {
           <br/>
           {stocks.splice(0, 7).map(stock => (
             <div key={stock.quote.symbol} stock={stock} style={card}>
+              <h2>${stock.quote.latestPrice}</h2>
+              <b><h1>{stock.quote.symbol}</h1></b>
               <p>{stock.quote.companyName}</p>
-              <h1>{stock.quote.symbol}</h1>
-              <h3>${stock.quote.latestPrice}</h3>
-              <p>High: ${stock.quote.week52High}</p>
-              <p>Low: ${stock.quote.week52Low}</p>
+              <p>
+                H: ${stock.quote.week52High}
+                &nbsp;|&nbsp;
+                L: ${stock.quote.week52Low}
+              </p>
             </div>
           ))}
           <ViewMoreButton />
