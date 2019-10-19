@@ -43,7 +43,6 @@ class ForexList extends Component {
     .then(response => {
       let data = response.data;
       let pairs = Object.entries(data.rates);
-      if(pairs === null) {return null}
       this.setState({ 
         pairs: pairs,
         isLoaded: true,
