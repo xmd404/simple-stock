@@ -38,7 +38,7 @@ class ForexList extends Component {
   componentWillMount() {
     console.time('Fetching currensy pairs')
     axios.get(
-      `http://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}&symbols=${pairs}`
+      `https://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}&symbols=${pairs}`
     )
     .then(response => {
       let data = response.data;
