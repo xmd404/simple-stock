@@ -13,6 +13,6 @@ const LargeButton = styled.a`
 
 export const ViewMoreButton = () =>
   <LargeButton>
-    <h1>View More Stocks</h1>
+    <h1 style={{textAlign: 'left'}}>View More Stocks</h1>
     <hr/>
   </LargeButton>
