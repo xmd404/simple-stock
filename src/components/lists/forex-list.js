@@ -72,7 +72,7 @@ class ForexList extends Component {
             {pairs.map(pair => (
               <div key={pair} pair={pair} style={card}>
                 <h2>EUR / {pair[0]}</h2>
-                <h5><b>€</b> {pair[1].toFixed(2)}</h5>
+                <h4><b>€</b> {pair[1].toFixed(2)}</h4>
             </div>
             ))}
           </div>
