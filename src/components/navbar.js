@@ -32,11 +32,9 @@ const LinkStyle = {
 const Navbar = () =>
   <div style={{ margin: '0' }}> 
     <div style={NavbarStyle}>
-      <Link to="/" style={LogoStyle}>
-        <h2>
-          <span role='img' aria-label='money with wings emoji'>💸 &nbsp;</span>SimpleStock
-        </h2>
-      </Link>
+      <h2 style={LogoStyle}>
+        <span role='img' aria-label='money with wings emoji'>💸 &nbsp;</span>SimpleStock
+      </h2>
     </div>
     <div style={MenuStyle}>
       <p style={LinkStyle}>Flash Briefing</p>
