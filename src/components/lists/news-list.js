@@ -69,6 +69,8 @@ class News extends Component {
             article={article}
             >
               <div style={ListItem}>
+                <br/>
+                <img src={article.image_url} style={{ width: '100%'}} />
                 <p>{article.date}</p>
                 <h4>{article.title.substring(0, 25)}...</h4>
                 <p><u>{article.source_name}</u></p>
