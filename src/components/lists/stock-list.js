@@ -72,8 +72,7 @@ class StockList extends Component {
           </h2>
           <br/>
           {stocks.splice(0, 7).map(stock => (
-            <Link to='/chart'>
-              <div key={stock.quote.symbol} stock={stock} style={card}>
+            <div key={stock.quote.symbol} stock={stock} style={card}>
               <h2>${stock.quote.latestPrice}</h2>
               <b><h1>{stock.quote.symbol}</h1></b>
               <p>{stock.quote.companyName}</p>
@@ -83,7 +82,6 @@ class StockList extends Component {
                 L: ${stock.quote.week52Low}
               </p>
             </div>
-            </Link>
           ))}
           <ViewMoreButton />
         </div>
