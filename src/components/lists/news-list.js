@@ -22,6 +22,12 @@ const ListItem = {
   borderRadius: '5%',
 };
 
+const Image = { 
+  width: '100%',
+  borderRadius: '5%',
+  padding: '0.75em 0' 
+};
+
 class News extends Component {
   constructor(props) {
     super(props);
@@ -69,8 +75,7 @@ class News extends Component {
             article={article}
             >
               <div style={ListItem}>
-                <br/>
-                <img src={article.image_url} style={{ width: '100%'}} />
+                <img src={article.image_url} style={Image} />
                 <p>{article.date}</p>
                 <h4>{article.title.substring(0, 25)}...</h4>
                 <p><u>{article.source_name}</u></p>
