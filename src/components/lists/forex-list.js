@@ -7,6 +7,7 @@ const section = {
   padding: '25px',
   color: '#fff',
   backgroundColor: '#000',
+  textAlign: 'center',
 }
 
 const list = {
@@ -69,7 +70,7 @@ class ForexList extends Component {
             Top <b>currency pairs</b> from across the &nbsp;🌎
           </p>
           <div style={list}>
-            {pairs.map(pair => (
+            {pairs.slice(0, 7).map(pair => (
               <div key={pair} pair={pair} style={card}>
                 <h2>EUR / {pair[0]}</h2>
                 <h4><b>€</b> {pair[1].toFixed(2)}</h4>
