@@ -37,7 +37,7 @@ const Navbar = () =>
       </h2>
     </div>
     <div style={MenuStyle}>
-      <p style={LinkStyle}>Flash Briefing</p>
+      <h3 style={LinkStyle}>Live, data-driven market trends & analysis&nbsp; ✨</h3>
     </div>
   </div>
 
