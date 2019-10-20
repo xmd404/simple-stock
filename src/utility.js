@@ -18,7 +18,7 @@ export const getDateTime = (unix_timestamp) => {
 // symbol for markets pen/closed
 export const getMarketSymbol = (signal) => {
   const statusSybmol = signal === 'close' ?
-    `🌙` :
+    `😴` :
     `💹`;
   const symbol = `${statusSybmol}`;
   return symbol;

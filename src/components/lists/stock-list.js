@@ -63,7 +63,8 @@ class StockList extends Component {
     } else {
       return (
         <div style={list}>
-          <h1 style={{textAlign: 'center'}}>
+          <br/>
+          <h1 style={{ fontSize: '250%', margin: '0'  }}>
             {getMarketSymbol(stocks[0].quote.calculationPrice)}
           </h1>
           <h2>
