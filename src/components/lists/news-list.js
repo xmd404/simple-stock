@@ -60,7 +60,7 @@ class News extends Component {
     } else {
       return (
         <NewsList>
-          {articles[0].slice(0, 12).map(article => (
+          {articles[0].slice(0, 7).map(article => (
             <a 
             key={article.date}
             href={article.news_url}
