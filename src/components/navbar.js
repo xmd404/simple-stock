@@ -23,7 +23,7 @@ const LogoStyle = {
 const LinkStyle = {
   height: '100%',
   display: 'inline-block',
-  padding: '0.25em 2.00em',
+  padding: '0 25px',
   textDecoration: 'none',
   color: '#fff',
   fontWeight: 'bold',
@@ -37,7 +37,7 @@ const Navbar = () =>
       </h2>
     </div>
     <div style={MenuStyle}>
-      <h3 style={LinkStyle}>Live, data-driven market trends & analysis&nbsp; ✨</h3>
+      <h4 style={LinkStyle}>Live, data-driven market trends & analysis&nbsp; ✨</h4>
     </div>
   </div>
 
