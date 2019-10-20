@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { error, symbols, getMarketSymbol, getMarketMessage, Loading } from '../../utility';
+import { error, symbols, getMarketMessage, Loading } from '../../utility';
 import { ViewMoreButton } from '../buttons';
 
 const list = {
   overflowX: 'none',
   margin: '0',
-  padding: '25px',
+  padding: '2.75em',
   color: '#fff',
   backgroundColor: '#000',
   textAlign: 'center',
@@ -64,13 +64,16 @@ class StockList extends Component {
       return (
         <div style={list}>
           <br/>
-          <h1 style={{ fontSize: '250%', margin: '0'  }}>
-            {getMarketSymbol(stocks[0].quote.calculationPrice)}
-          </h1>
           <h2>
-            {getMarketMessage(stocks[0].quote.calculationPrice)}
+            <b>Stock Market</b>
           </h2>
-          <br/>
+          <p>
+            The <b>stock market</b> is&nbsp;
+            <b>
+              {getMarketMessage(stocks[0].quote.calculationPrice)}
+            </b>
+          </p>
+          <br/><br/>
           {stocks.splice(0, 7).map(stock => (
             <div key={stock.quote.symbol} stock={stock} style={card}>
               <h2>${stock.quote.latestPrice}</h2>
@@ -83,7 +86,6 @@ class StockList extends Component {
               </p>
             </div>
           ))}
-          <ViewMoreButton />
         </div>
       );
     }

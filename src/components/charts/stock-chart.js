@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { error, symbols, getMarketSymbol, getMarketMessage, Loading } from '../../utility';
+import { error, symbols, getMarketMessage,  Loading } from '../../utility';
 import { ViewMoreButton } from '../buttons';
 
 const list = {
@@ -62,12 +62,12 @@ class StockChart extends Component {
     } else {
       return (
         <div style={list}>
-          <h1 style={{textAlign: 'center'}}>
-            {getMarketSymbol(stocks[0].quote.calculationPrice)}
-          </h1>
           <h2>
-            {getMarketMessage(stocks[0].quote.calculationPrice)}
+            Stock Market
           </h2>
+          <p style={{textAlign: 'center'}}>
+            {getMarketMessage(stocks[0].quote.calculationPrice)}
+          </p>
           <br/>
           {stocks.splice(0, 7).map(stock => (
             <div key={stock.quote.symbol} stock={stock} style={card}>

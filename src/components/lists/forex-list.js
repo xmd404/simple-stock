@@ -4,7 +4,7 @@ import { error, pairs, Loading } from '../../utility';
 
 const section = {
   margin: '0',
-  padding: '25px',
+  padding: '2.75em',
   color: '#fff',
   backgroundColor: '#000',
   textAlign: 'center',
@@ -64,11 +64,12 @@ class ForexList extends Component {
       return (
         <div style={section}>
           <h2 style={{textAlign: 'center'}}>
-            Forex Markets.
+            <b>Forex Market</b>
           </h2>
           <p style={{textAlign: 'center'}}>
             Top <b>currency pairs</b> from across the &nbsp;🌎
           </p>
+          <br/><br/>
           <div style={list}>
             {pairs.slice(0, 7).map(pair => (
               <div key={pair} pair={pair} style={card}>
