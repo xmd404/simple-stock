@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import axios from 'axios';
 import { error, symbols, getMarketMessage, Loading } from '../../utility';
-import { ViewMoreButton } from '../buttons';
 
 const list = {
   overflowX: 'none',
@@ -21,6 +20,27 @@ const card = {
   maxWidth: '100%',
   color: '#000',
   backgroundColor: '#fff',
+  borderRadius: '5%',
+};
+
+const List = styled.div`
+  margin: 0;
+  padding: 15px 4px;
+  color: #fff;
+  background-color: #000;
+  overflow: auto;
+  white-space: nowrap;
+  text-align: center;
+`;
+
+const ListItem = {
+  display: 'inline-block',
+  width: '100%',
+  maxWidth: '250px',
+  margin: '1.75em 1.35em',
+  padding: '5px 15px',
+  color: '#000',
+  backgroundColor: '#FFF',
   borderRadius: '5%',
 };
 
@@ -62,31 +82,33 @@ class StockList extends Component {
       return (<Loading />)
     } else {
       return (
-        <div style={list}>
-          <br/>
-          <h2>
-            <b>Stock Market</b>
-          </h2>
-          <p>
-            The <b>stock market</b> is&nbsp;
-            <b>
-              {getMarketMessage(stocks[0].quote.calculationPrice)}
-            </b>
-          </p>
-          <br/><br/>
-          {stocks.splice(0, 7).map(stock => (
-            <div key={stock.quote.symbol} stock={stock} style={card}>
-              <h2>${stock.quote.latestPrice}</h2>
-              <b><h1>{stock.quote.symbol}</h1></b>
-              <p>{stock.quote.companyName}</p>
+          <div>
+            <div style={list}>
+              <h2>
+                <b>Stock Market</b>
+              </h2>
               <p>
-                H: ${stock.quote.week52High}
-                &nbsp;|&nbsp;
-                L: ${stock.quote.week52Low}
+                The <b>stock market</b> is&nbsp;
+                <b>
+                  {getMarketMessage(stocks[0].quote.calculationPrice)}
+                </b>
               </p>
             </div>
-          ))}
-        </div>
+            <List>
+              {stocks.splice(0, 7).map(stock => (
+                <div key={stock.quote.symbol} stock={stock} style={ListItem}>
+                  <h2>${stock.quote.latestPrice}</h2>
+                  <b><h1>{stock.quote.symbol}</h1></b>
+                  <p>{stock.quote.companyName}</p>
+                  <p>
+                    H: ${stock.quote.week52High}
+                    &nbsp;|&nbsp;
+                    L: ${stock.quote.week52Low}
+                  </p>
+                </div>
+              ))}
+            </List>
+          </div>
       );
     }
   }
