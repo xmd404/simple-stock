@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { error, getDateTime, Loading } from '../../utility';
+import { error, Loading } from '../../utility';
 
-const NewsList = styled.div`
+const List = styled.div`
   margin: 0;
   padding: 15px 4px;
   background-color: #F5F5F5;
@@ -65,10 +65,11 @@ class News extends Component {
       return (<Loading />)
     } else {
       return (
-        <NewsList>
+        <List>
           {articles[0].slice(0, 7).map(article => (
             <a 
             key={article.date}
+            article={article}
             href={article.news_url}
             target='_blank'
             rel='noopener noreferrer'
@@ -82,7 +83,7 @@ class News extends Component {
               </div>
             </a>
           ))}
-        </NewsList>
+        </List>
       )
     }
   }
