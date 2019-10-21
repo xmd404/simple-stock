@@ -12,17 +12,6 @@ const list = {
   textAlign: 'center',
 };
 
-const card = {
-  display: 'inline-block',
-  margin: '1.35em',
-  padding: '25px',
-  minWidth: '240px',
-  maxWidth: '100%',
-  color: '#000',
-  backgroundColor: '#fff',
-  borderRadius: '5%',
-};
-
 const List = styled.div`
   margin: 0;
   padding: 15px 4px;

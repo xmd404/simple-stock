@@ -1,28 +1,35 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import axios from 'axios';
 import { error, pairs, Loading } from '../../utility';
 
-const section = {
+const list = {
+  overflowX: 'none',
   margin: '0',
   padding: '2.75em',
   color: '#fff',
   backgroundColor: '#000',
   textAlign: 'center',
-}
-
-const list = {
-  overflow: 'auto',
-  whiteSpace: 'nowrap',
 };
 
-const card = {
+const List = styled.div`
+  margin: 0;
+  padding: 15px 4px;
+  color: #fff;
+  background-color: #000;
+  overflow: auto;
+  white-space: nowrap;
+  text-align: center;
+`;
+
+const ListItem = {
   display: 'inline-block',
-  margin: '1.35em',
-  padding: '25px',
-  width: '160px',
-  maxWidth: '100%',
+  width: '100%',
+  maxWidth: '250px',
+  margin: '1.75em 1.35em',
+  padding: '5px 15px',
   color: '#000',
-  backgroundColor: '#fff',
+  backgroundColor: '#FFF',
   borderRadius: '5%',
 };
 
@@ -62,22 +69,23 @@ class ForexList extends Component {
       return (<Loading />)
     } else {
       return (
-        <div style={section}>
-          <h2 style={{textAlign: 'center'}}>
-            <b>Forex Market</b>
-          </h2>
-          <p style={{textAlign: 'center'}}>
-            Top <b>currency pairs</b> from across the &nbsp;🌎
-          </p>
-          <br/><br/>
+        <div>
           <div style={list}>
+            <h2>
+              <b>Forex Market</b>
+            </h2>
+            <p>
+              Top <b>currency pairs</b> from across the &nbsp;🌎
+            </p>
+          </div>
+          <List>
             {pairs.slice(0, 7).map(pair => (
-              <div key={pair} pair={pair} style={card}>
+              <div key={pair} pair={pair} style={ListItem}>
                 <h2>EUR / {pair[0]}</h2>
                 <h4><b>€</b> {pair[1].toFixed(2)}</h4>
             </div>
             ))}
-          </div>
+          </List>
         </div>
       );
     }
