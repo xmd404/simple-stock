@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import axios from 'axios';
 import { error, pairs, Loading } from '../../utility';
 
-const list = {
-  overflowX: 'none',
-  margin: '0',
-  padding: '2.75em',
-  color: '#fff',
-  backgroundColor: '#000',
-  textAlign: 'center',
-};
+const Header = styled.div`
+  overflow-x: none;
+  margin: 0;
+  padding: 2.75em;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+`;
 
 const List = styled.div`
   margin: 0;
@@ -70,14 +70,12 @@ class ForexList extends Component {
     } else {
       return (
         <div>
-          <div style={list}>
-            <h2>
-              <b>Forex Market</b>
-            </h2>
+          <Header>
+            <h2><b>Forex Market</b></h2>
             <p>
               Top <b>currency pairs</b> from across the &nbsp;🌎
             </p>
-          </div>
+          </Header>
           <List>
             {pairs.slice(0, 7).map(pair => (
               <div key={pair} pair={pair} style={ListItem}>

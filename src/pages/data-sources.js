@@ -35,7 +35,10 @@ const ListItem = styled.div`
 const DataSourcePage = () =>
   <div>
     <Header>
-      <h1>Data Sources</h1>
+      <h2><b>Data Sources</b></h2>
+      <p>
+        Top <b>currency pairs</b> from across the &nbsp;🌎
+      </p>
     </Header>
     <List>
       <ListItem>
