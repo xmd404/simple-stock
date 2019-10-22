@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import { error, symbols, getDateTime, Loading } from '../../utility';
-import LazyLoad from 'react-lazyload';
 
 const Title = styled.div`
   height: 80px;
