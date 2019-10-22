@@ -50,8 +50,8 @@ class StockList extends Component {
       `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
     )
     .then(response => {
-      let stocksObj = response.data;
-      let stocksArr = Object.values(stocksObj);
+      let data = response.data;
+      let stocksArr = Object.values(data);
       let stocks = stocksArr;
       this.setState({ 
         stocks: stocks,

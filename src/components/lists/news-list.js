@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { error, Loading } from '../../utility';
+import { error, symbols, getDateTime, Loading } from '../../utility';
+import LazyLoad from 'react-lazyload';
+
+const Title = styled.div`
+  height: 80px;
+`;
 
 const List = styled.div`
   margin: 0;
@@ -12,17 +17,19 @@ const List = styled.div`
 `;
 
 const ListItem = {
+  whiteSpace: 'normal',
   display: 'inline-block',
-  width: '100%',
-  maxWidth: '250px',
+  width: '250px',
   margin: '1.75em 1.35em',
   padding: '5px 15px',
   color: '#000',
   backgroundColor: '#FFF',
   borderRadius: '5%',
+  overflowWrap: 'breakWord',
 };
 
 const Image = { 
+  height: '175px',
   width: '100%',
   borderRadius: '5%',
   padding: '0.75em 0' 
@@ -39,9 +46,9 @@ class News extends Component {
   }
 
   componentDidMount() {
-    console.time('Fetching articles');
+    console.time('Fetching news');
     axios.get(
-      `https://stocknewsapi.com/api/v1/category?section=alltickers&items=50&sortby=trending&token=hevallvghgowxcdvjnkvw7jryqchlzt9agm5rxjz`
+      `https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
     )
     .then(response => {
       let data = response.data;
@@ -51,7 +58,7 @@ class News extends Component {
         articles: articles,
         isLoaded: true,
       });
-      console.timeEnd('Fetching articles');
+      console.timeEnd('Fetching news');
       console.log({ articles }, response.status);
     })
     .catch(error());
@@ -66,20 +73,21 @@ class News extends Component {
     } else {
       return (
         <List>
-          {articles[0].slice(0, 7).map(article => (
+          {articles.map(article => (
             <a 
-            key={article.date}
+            key={article.quote.symbol}
             article={article}
-            href={article.news_url}
+            href={article.news[0].url}
             target='_blank'
             rel='noopener noreferrer'
-            article={article}
             >
               <div style={ListItem}>
-                <img src={article.image_url} style={Image} />
-                <p>{article.date}</p>
-                <h2 style={{ overflow: 'hidden' }}>{article.title}</h2>
-                <p>Source:&nbsp; <u>{article.source_name}</u></p>
+                <img src={article.news[0].image} style={Image} />
+                <p>{getDateTime(article.news[0].datetime)}</p>
+                <Title>
+                  <b><p>{article.news[0].headline}</p></b>
+                </Title>
+                <p><u>{article.news[0].source}</u></p>
               </div>
             </a>
           ))}
