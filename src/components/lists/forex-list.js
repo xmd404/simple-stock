@@ -24,6 +24,7 @@ const List = styled.div`
 
 const ListItem = {
   display: 'inline-block',
+  height: '150px',
   width: '100%',
   maxWidth: '250px',
   margin: '1.75em 1.35em',
@@ -44,7 +45,7 @@ class ForexList extends Component {
   }
 
   componentWillMount() {
-    console.time('Fetching currensy pairs')
+    console.time('Fetching forex')
     axios.get(
       `https://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}&symbols=${pairs}`
     )
@@ -55,7 +56,7 @@ class ForexList extends Component {
         pairs: pairs,
         isLoaded: true,
       });
-      console.timeEnd('Fetching currensy pairs');
+      console.timeEnd('Fetching forex');
       console.log({ pairs }, response.status);
     })
     .catch(error())
