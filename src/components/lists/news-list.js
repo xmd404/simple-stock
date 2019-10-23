@@ -9,8 +9,8 @@ const Title = styled.div`
 
 const List = styled.div`
   margin: 0;
-  padding: 15px 4px;
-  background-color: #F5F5F5;
+  padding: 20px;
+  background-color: #;
   overflow: auto;
   white-space: nowrap;
 `;
@@ -25,6 +25,7 @@ const ListItem = {
   backgroundColor: '#FFF',
   borderRadius: '6%',
   overflowWrap: 'breakWord',
+  boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',
 };
 
 const Image = { 
