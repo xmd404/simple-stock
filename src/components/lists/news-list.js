@@ -4,7 +4,7 @@ import axios from 'axios';
 import { error, symbols, getDateTime, Loading } from '../../utility';
 
 const Title = styled.div`
-  height: 80px;
+  padding: 0 1.25em;
 `;
 
 const List = styled.div`
@@ -20,18 +20,18 @@ const ListItem = {
   display: 'inline-block',
   width: '250px',
   margin: '1.75em 1.35em',
-  padding: '5px 15px',
+  padding: '0',
   color: '#000',
   backgroundColor: '#FFF',
-  borderRadius: '5%',
+  borderRadius: '6%',
   overflowWrap: 'breakWord',
 };
 
 const Image = { 
   height: '175px',
   width: '100%',
-  borderRadius: '5%',
-  padding: '0.75em 0' 
+  borderRadius: '6% 6% 0 0',
+  padding: '0' 
 };
 
 class News extends Component {
@@ -82,11 +82,13 @@ class News extends Component {
             >
               <div style={ListItem}>
                 <img src={article.news[0].image} style={Image} />
-                <p>{getDateTime(article.news[0].datetime)}</p>
                 <Title>
-                  <b><p>{article.news[0].headline}</p></b>
+                  <p>{getDateTime(article.news[0].datetime)}</p>
+                  
+                  <b><p style={{ height: '100px' }}>{article.news[0].headline}</p></b>
+                  
+                  <p><u>{article.news[0].source}</u></p>
                 </Title>
-                <p><u>{article.news[0].source}</u></p>
               </div>
             </a>
           ))}
