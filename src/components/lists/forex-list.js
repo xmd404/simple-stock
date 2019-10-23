@@ -72,7 +72,7 @@ class ForexList extends Component {
       return (
         <div>
           <Header>
-            <h2><b>Forex Market</b></h2>
+            <h2><b>Forex</b></h2>
             <p>
               Top <b>currency pairs</b> from across the &nbsp;🌎
             </p>

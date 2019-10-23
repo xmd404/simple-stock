@@ -74,7 +74,7 @@ class StockList extends Component {
           <div>
             <div style={list}>
               <h2>
-                <b>Stock Market</b>
+                <b>Stocks</b>
               </h2>
               <p>
                 The <b>stock market</b> is&nbsp;
