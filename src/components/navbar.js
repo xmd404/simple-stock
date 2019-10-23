@@ -36,7 +36,7 @@ const Navbar = () =>
       </h2>
     </div>
     <div style={MenuStyle}>
-      <h4 style={LinkStyle}>Live, data-driven market trends & analysis&nbsp; ✨</h4>
+      <h4 style={LinkStyle}>Live, data-driven trends & analysis&nbsp; ✨</h4>
     </div>
   </div>
 
