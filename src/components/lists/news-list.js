@@ -10,7 +10,7 @@ const Title = styled.div`
 const List = styled.div`
   margin: 0;
   padding: 20px;
-  background-color: #;
+  background-color: #F5F5F5;
   overflow: auto;
   white-space: nowrap;
 `;
