@@ -25,7 +25,7 @@ const ListItem = {
   backgroundColor: '#FFF',
   borderRadius: '6%',
   overflowWrap: 'breakWord',
-  boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',
+  boxShadow: '0px 1px 25px rgba(0,0,0,0.1)',
 };
 
 const Image = { 
