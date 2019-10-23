@@ -1,18 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
 import SignUpForm from '../components/forms/sign-up';
 
-const PageNotFoundStyle = {
-  height: '100%',
-  width: '100%',
-  backgroundColor: '#000',
-  textAlign: 'center',
-};
+const Container = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+`;
 
 const PageNotFound = () =>
-  <div style={PageNotFoundStyle}>
+  <Container>
     <h1>
       <SignUpForm />
     </h1>
-  </div>
+  </Container>
 
 export default PageNotFound;
