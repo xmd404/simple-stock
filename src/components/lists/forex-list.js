@@ -22,17 +22,17 @@ const List = styled.div`
   text-align: center;
 `;
 
-const ListItem = {
-  display: 'inline-block',
-  height: '150px',
-  width: '100%',
-  maxWidth: '250px',
-  margin: '1.75em 1.35em',
-  padding: '5px 15px',
-  color: '#000',
-  backgroundColor: '#FFF',
-  borderRadius: '5%',
-};
+const ListItem = styled.div`
+  display: inline-block;
+  height: 150px;
+  width: 100%;
+  max-width: 250px;
+  margin: 1.75em 1.35em;
+  padding: 5px 15px;
+  color: #000;
+  background-color: #FFF;
+  border-radius: 5%;
+`;
 
 class ForexList extends Component {
   constructor(props){
@@ -79,10 +79,10 @@ class ForexList extends Component {
           </Header>
           <List>
             {pairs.slice(0, 7).map(pair => (
-              <div key={pair} pair={pair} style={ListItem}>
+              <ListItem key={pair} pair={pair}>
                 <h2>EUR / {pair[0]}</h2>
                 <h4><b>€</b> {pair[1].toFixed(2)}</h4>
-            </div>
+              </ListItem>
             ))}
           </List>
         </div>
