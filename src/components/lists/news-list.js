@@ -30,7 +30,7 @@ const ListItem = {
 const Image = { 
   height: '175px',
   width: '100%',
-  borderRadius: '6% 6% 0 0',
+  borderRadius: '5% 5% 0 0',
   padding: '0' 
 };
 
