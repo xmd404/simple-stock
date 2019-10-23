@@ -1,43 +1,37 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const NavbarStyle = {
-  margin: '0',
-  padding: '5px 25px',
-  color: '#fff',
-  backgroundColor: '#000',
-};
+const Logo = styled.div`
+  margin: 0;
+  padding: 5px 25px;
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+`;
 
-const MenuStyle = {
-  color: '#fff',
-  backgroundColor: '#44c17b',
-  overflow: 'auto',
-  whiteSpace: 'nowrap',
-};
-
-const LogoStyle = {
-  textDecoration: 'none',
-  color: '#fff',
-};
-
-const LinkStyle = {
-  height: '100%',
-  display: 'inline-block',
-  padding: '0 25px',
-  textDecoration: 'none',
-  color: '#fff',
-  fontWeight: 'bold',
-};
+const About = styled.div`
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  padding: 0 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  background-color: #44c17b;
+  overflow: auto;
+  white-space: nowrap;
+`;
 
 const Navbar = () =>
   <div style={{ margin: '0' }}> 
-    <div style={NavbarStyle}>
-      <h2 style={LogoStyle}>
+    <Logo>
+      <h2>
         <span role='img' aria-label='money with wings emoji'>💸 &nbsp;</span>SimpleStock
       </h2>
-    </div>
-    <div style={MenuStyle}>
-      <h4 style={LinkStyle}>Live, data-driven trends & analysis&nbsp; ✨</h4>
-    </div>
+    </Logo>
+    <About>
+      <h4>Live, data-driven trends & analysis&nbsp; ✨</h4>
+    </About>
   </div>
 
 export default Navbar;
