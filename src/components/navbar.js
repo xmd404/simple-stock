@@ -11,19 +11,18 @@ const Logo = styled.div`
 
 const About = styled.div`
   height: 100%;
-  width: 100%;
+  width: auto;
   display: inline-block;
   padding: 0 25px;
   text-decoration: none;
   font-weight: bold;
   color: #fff;
-  background-color: #44c17b;
   overflow: auto;
   white-space: nowrap;
 `;
 
 const Navbar = () =>
-  <div style={{ margin: '0' }}> 
+  <div style={{ margin: '0', backgroundColor: '#44c17b' }}> 
     <Logo>
       <h2>
         <span role='img' aria-label='money with wings emoji'>💸 &nbsp;</span>SimpleStock
