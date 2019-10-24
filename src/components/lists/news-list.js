@@ -82,13 +82,10 @@ class News extends Component {
               rel='noopener noreferrer'
             >
               <ListItem>
-
                 <Image src={article.news[0].image} />
                 <Title>
                   <p>{getDateTime(article.news[0].datetime)}</p>
-                  
                   <b><p style={{ height: '100px' }}>{article.news[0].headline}</p></b>
-                  
                   <p><u>{article.news[0].source}</u></p>
                 </Title>
               </ListItem>
