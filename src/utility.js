@@ -2,7 +2,7 @@ import React from "react";
 import Loader from 'react-loader-spinner';
 
 // data used by exchange APIs
-export const symbols = 'aapl,fb,tsla,snap,googl,amzn,msft,lyft,twtr,sq,';
+export const symbols = 'aapl,fb,tsla,msft,lyft,twtr,uber,';
 export const pairs = 'USD,JPY,GBP,AUD,CAD,CHF,CNY,AED,NZD';
 
 // convert unix timestamp into regular dates

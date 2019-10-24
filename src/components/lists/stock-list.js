@@ -14,7 +14,7 @@ const Header = styled.div`
 
 const List = styled.div`
   margin: 0;
-  padding: 15px 4px;
+  padding: 20px;
   color: #fff;
   background-color: #000;
   overflow: auto;
@@ -24,13 +24,13 @@ const List = styled.div`
 
 const ListItem = styled.div`
   display: inline-block;
-  width: 100%;
-  max-width: 250px;
+  width: 250px;
   margin: 1.75em 1.35em;
-  padding: 5px 15px;
+  padding: 0;
   color: #000;
   background-color: #FFF;
-  border-radius: 5%;
+  border-radius: 6%;
+  box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
 `;
 
 class StockList extends Component {
@@ -84,9 +84,15 @@ class StockList extends Component {
             <List>
               {stocks.splice(0, 7).map(stock => (
                 <ListItem key={stock.quote.symbol} stock={stock}>
-                  <h2>${stock.quote.latestPrice}</h2>
-                  <b><h1>{stock.quote.symbol}</h1></b>
+                  <b><h2>{stock.quote.symbol}</h2></b>
                   <p>{stock.quote.companyName}</p>
+                  <img 
+                    src={
+                      `https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} 
+                    height='50px'
+                    margin='20px 0'
+                  />
+                  <h3>${stock.quote.latestPrice}</h3>
                   <p>
                     H: ${stock.quote.week52High}
                     &nbsp;|&nbsp;
