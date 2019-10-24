@@ -14,7 +14,7 @@ const Header = styled.div`
 
 const List = styled.div`
   margin: 0;
-  padding: 15px 4px;
+  padding: 20px;
   color: #fff;
   background-color: #000;
   overflow: auto;
@@ -24,14 +24,13 @@ const List = styled.div`
 
 const ListItem = styled.div`
   display: inline-block;
-  height: 150px;
-  width: 100%;
-  max-width: 250px;
+  width: 250px;
   margin: 1.75em 1.35em;
-  padding: 5px 15px;
+  padding: 0;
   color: #000;
   background-color: #FFF;
-  border-radius: 5%;
+  border-radius: 6%;
+  box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
 `;
 
 class ForexList extends Component {
