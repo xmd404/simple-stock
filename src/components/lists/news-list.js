@@ -15,25 +15,25 @@ const List = styled.div`
   white-space: nowrap;
 `;
 
-const ListItem = {
-  whiteSpace: 'normal',
-  display: 'inline-block',
-  width: '250px',
-  margin: '1.75em 1.35em',
-  padding: '0',
-  color: '#000',
-  backgroundColor: '#FFF',
-  borderRadius: '6%',
-  overflowWrap: 'breakWord',
-  boxShadow: '0px 1px 25px rgba(0,0,0,0.1)',
-};
+const ListItem = styled.div`
+  white-space: normal;
+  display: inline-block;
+  width: 250px;
+  margin: 1.75em 1.35em;
+  padding: 0;
+  color: #000;
+  background-color: #FFF;
+  border-radius: 6%;
+  overflow-wrap: breakWord;
+  box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
+`;
 
-const Image = { 
-  height: '175px',
-  width: '100%',
-  borderRadius: '5% 5% 0 0',
-  padding: '0' 
-};
+const Image = styled.img` 
+  height: 175px;
+  width: 100%;
+  border-radius: 5% 5% 0 0;
+  padding: 0;
+`;
 
 class News extends Component {
   constructor(props) {
@@ -75,14 +75,15 @@ class News extends Component {
         <List>
           {articles.map(article => (
             <a 
-            key={article.quote.symbol}
-            article={article}
-            href={article.news[0].url}
-            target='_blank'
-            rel='noopener noreferrer'
+              key={article.quote.symbol}
+              article={article}
+              href={article.news[0].url}
+              target='_blank'
+              rel='noopener noreferrer'
             >
-              <div style={ListItem}>
-                <img src={article.news[0].image} style={Image} />
+              <ListItem>
+
+                <Image src={article.news[0].image} />
                 <Title>
                   <p>{getDateTime(article.news[0].datetime)}</p>
                   
@@ -90,7 +91,7 @@ class News extends Component {
                   
                   <p><u>{article.news[0].source}</u></p>
                 </Title>
-              </div>
+              </ListItem>
             </a>
           ))}
         </List>

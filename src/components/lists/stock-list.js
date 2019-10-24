@@ -33,6 +33,11 @@ const ListItem = styled.div`
   box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
 `;
 
+const Image = styled.img`
+  height: 50px;
+  margin: 20px 0;
+`;
+
 class StockList extends Component {
   constructor(props){
     super(props);
@@ -86,11 +91,9 @@ class StockList extends Component {
                 <ListItem key={stock.quote.symbol} stock={stock}>
                   <b><h2>{stock.quote.symbol}</h2></b>
                   <p>{stock.quote.companyName}</p>
-                  <img 
+                  <Image 
                     src={
-                      `https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} 
-                    height='50px'
-                    margin='20px 0'
+                      `https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`}
                   />
                   <h3>${stock.quote.latestPrice}</h3>
                   <p>
