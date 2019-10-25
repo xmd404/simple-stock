@@ -6,7 +6,8 @@ import { error, symbols, getMarketMessage, Loading } from '../../utility';
 const Header = styled.div`
   overflow-x: none;
   margin: 0;
-  text-align: center;
+  padding: 35px 35px 20px;
+  text-align: left;
 `;
 
 const List = styled.div`
@@ -74,13 +75,12 @@ class StockList extends Component {
       return (
           <div>
             <Header>
-              <h2 style={{ margin: '0', padding: '0' }}><b>Stocks</b></h2>
-              <p style={{ margin: '0', padding: '0' }}>
-                The stock market is&nbsp;
+              <h3 style={{ margin: '0', padding: '0' }}>
+                <b>Stocks</b>: &nbsp; Bullish, markets are&nbsp;
                 <b>
                   {getMarketMessage(stocks[0].quote.calculationPrice)}
                 </b>
-              </p>
+              </h3>
             </Header>
             <List>
               {stocks.splice(0, 7).map(stock => (
