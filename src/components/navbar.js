@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Logo = styled.div`
-	padding: 35px 0 25px 40px;
+const Logo = styled.nav`
+	padding: 40px 0 25px 40px;
 	text-decoration: none;
 	width: auto;
 `;
