@@ -74,7 +74,7 @@ class CryptoList extends Component {
 			return (
 				<div>
 					<Header>
-						<h1 style={{ margin: '0', padding: '0' }}>crypto</h1>
+						<h1 style={{ margin: '0', padding: '0' }}>Crypto</h1>
 						<p style={{ margin: '0', padding: '0' }}><b>disrupt</b>, break out the <b>matrix</b>&nbsp;👨🏻‍💻</p>
 					</Header>
 					<List>
