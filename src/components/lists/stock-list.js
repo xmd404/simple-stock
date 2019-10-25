@@ -76,7 +76,7 @@ class StockList extends Component {
 			return (
 				<div>
 					<Header>
-						<h1 style={{ margin: '0', padding: '0' }}>stocks</h1>
+						<h1 style={{ margin: '0', padding: '0' }}>Stocks</h1>
 						<p style={{ margin: '0', padding: '0' }}>
 							<b>bullish</b>, markets are&nbsp;
 							<b>{getMarketMessage(stocks[0].quote.calculationPrice)}</b>

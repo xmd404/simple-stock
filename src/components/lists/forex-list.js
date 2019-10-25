@@ -67,7 +67,7 @@ class ForexList extends Component {
 			return (
 				<div>
 					<Header>
-						<h1 style={{ margin: '0', padding: '0' }}>forex</h1>
+						<h1 style={{ margin: '0', padding: '0' }}>Forex</h1>
 						<p style={{ margin: '0', padding: '0' }}>
 							top <b>currency pairs</b> across the &nbsp;🌎
 						</p>
