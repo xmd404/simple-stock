@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Logo = styled.div`
-	margin: 2.75em 1.35em 2.25em;
-	padding: 0 20px;
+	padding: 35px;
 	text-decoration: none;
+	width: auto;
 `;
 
 const Navbar = () => (
