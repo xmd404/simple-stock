@@ -14,7 +14,7 @@ const Header = styled.div`
 
 const List = styled.div`
   margin: 0;
-  padding: 20px;
+  padding: 0 25px;
   color: #fff;
   background-color: #000;
   overflow: auto;
@@ -78,9 +78,9 @@ class StockList extends Component {
       return (
           <div>
             <Header>
-              <h2><b>Stocks</b></h2>
-              <p>
-                The <b>stock market</b> is&nbsp;
+              <h2 style={{ margin: '0', padding: '0' }}><b>Stocks</b></h2>
+              <p style={{ margin: '0', padding: '0' }}>
+                The stock market is&nbsp;
                 <b>
                   {getMarketMessage(stocks[0].quote.calculationPrice)}
                 </b>

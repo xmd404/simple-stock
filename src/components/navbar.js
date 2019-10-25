@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Logo = styled.div`
-	margin: 1.75em 1.35em;
-	padding: 0 20px;
+	margin: 2.75em 1.35em 2.25em;
+	padding: 0 25px;
 	color: #fff;
 	background-color: #000;
 	text-decoration: none;
@@ -11,13 +11,13 @@ const Logo = styled.div`
 
 const Navbar = () => (
 	<Logo>
-		<h1>
+		<h1 style={{ margin: '0', padding: '0' }}>
 			<span role="img" aria-label="money with wings emoji">
 				💸 &nbsp;
 			</span>SimpleStock
 		</h1>
-		<p>
-			<b>Live</b>, data-driven <b>trends</b> & <b>analysis</b>&nbsp; ✨
+		<p style={{ margin: '0', padding: '0' }}>
+			✨ &nbsp;<b>Live</b>, data-driven <b>trends</b> & <b>analysis</b>&nbsp; ✨
 		</p>
 	</Logo>
 );
