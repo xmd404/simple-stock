@@ -41,15 +41,14 @@ class StockList extends Component {
 		this.state = {
 			error: null,
 			isLoaded: false,
-			stocks: []
+			stocks: [],
 		};
 	}
 
 	componentWillMount() {
 		console.clear();
 		console.time('Fetching stocks');
-		axios
-			.get(
+		axios.get(
 				`https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env
 					.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
 			)
@@ -59,7 +58,7 @@ class StockList extends Component {
 				let stocks = stocksArr;
 				this.setState({
 					stocks: stocks,
-					isLoaded: true
+					isLoaded: true,
 				});
 				console.timeEnd('Fetching stocks');
 				console.log({ stocks }, response.status);
@@ -70,16 +69,16 @@ class StockList extends Component {
 	render() {
 		const { error, isLoaded, stocks } = this.state;
 		if (error) {
-			return <div>Error: error.message</div>;
+			return <div>Error: {error.message}</div>;
 		} else if (!isLoaded) {
 			return <Loading />;
 		} else {
 			return (
 				<div>
 					<Header>
-						<h2 style={{ margin: '0', padding: '0' }}>Stocks</h2>
+						<h1 style={{ margin: '0', padding: '0' }}>stocks</h1>
 						<p style={{ margin: '0', padding: '0' }}>
-							Bullish, markets are&nbsp;
+							bullish, markets are&nbsp;
 							<b>{getMarketMessage(stocks[0].quote.calculationPrice)}</b>
 						</p>
 					</Header>
@@ -87,9 +86,9 @@ class StockList extends Component {
 						{stocks.splice(0, 7).map((stock) => (
 							<ListItem key={stock.quote.symbol} stock={stock}>
 								<b>
-									<h2>{stock.quote.symbol}</h2>
+									<h2>{stock.quote.symbol.toLowerCase()}</h2>
 								</b>
-								<p>{stock.quote.companyName}</p>
+								<p>{stock.quote.companyName.toLowerCase()}</p>
 								<Image src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
 								<h3>${stock.quote.latestPrice}</h3>
 								<p>

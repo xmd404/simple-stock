@@ -37,14 +37,13 @@ class News extends Component {
 		this.state = {
 			error: null,
 			isLoaded: false,
-			articles: []
+			articles: [],
 		};
 	}
 
 	componentDidMount() {
 		console.time('Fetching news');
-		axios
-			.get(
+		axios.get(
 				`https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env
 					.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
 			)
@@ -85,10 +84,10 @@ class News extends Component {
 									<Title>
 										<p>{getDateTime(article.news[0].datetime)}</p>
 										<b>
-											<p style={{ height: '100px' }}>{article.news[0].headline}</p>
+											<p style={{ height: '100px' }}>{article.news[0].headline.toLowerCase().substring(0, 105)}</p>
 										</b>
 										<p>
-											<u>{article.news[0].source}</u>
+											<u>{article.news[0].source.toLowerCase()}</u>
 										</p>
 									</Title>
 								</ListItem>
