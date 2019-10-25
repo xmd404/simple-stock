@@ -14,7 +14,7 @@ const Header = styled.div`
 
 const List = styled.div`
 	margin: 0;
-	padding: 0 25px;
+	padding: 0 20px;
 	color: #fff;
 	background-color: #000;
 	overflow: auto;

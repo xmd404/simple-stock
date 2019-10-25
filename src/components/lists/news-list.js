@@ -7,7 +7,7 @@ const Title = styled.div`padding: 0 1.25em;`;
 
 const List = styled.div`
 	margin: 0;
-	padding: 0 25px;
+	padding: 0 20px;
 	overflow: auto;
 	white-space: nowrap;
 `;
