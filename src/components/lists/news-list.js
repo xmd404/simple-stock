@@ -21,8 +21,7 @@ const ListItem = styled.div`
 	color: #FFF;
 	background-color: #17141d;
 	border-radius: 6%;
-	overflow-wrap: breakWord;
-	box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
 `;
 
 const Image = styled.img`
