@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 const FooterStyle = {
   margin: '0',
   padding: '5px 45px',
-  color: '#fff',
-  backgroundColor: '#000',
   textAlign: 'center',
 };
 

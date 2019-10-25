@@ -18,8 +18,8 @@ const ListItem = styled.div`
 	width: 250px;
 	margin: 1.75em 1.35em;
 	padding: 0;
-	color: #000;
-	background-color: #fff;
+	color: #FFF;
+	background-color: #17141d;
 	border-radius: 6%;
 	overflow-wrap: breakWord;
 	box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.1);

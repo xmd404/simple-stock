@@ -8,8 +8,6 @@ const Container = styled.div`
   height: 700px;
   width: auto;
   min-height: 100%;
-  color: #fff;
-  background-color: #000;
   text-align: center;
   font-size: 150%;
 `;
@@ -18,7 +16,7 @@ const PageNotFound = () =>
   <Container>
     <br/><br/>
     <h1 style={{ margin: '0', padding: '0' }}>404</h1>
-    <p>page not found, brought this though:</p>
+    <p>page not found, brought this instead</p>
 
   </Container>
 

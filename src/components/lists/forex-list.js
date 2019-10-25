@@ -7,16 +7,12 @@ const Header = styled.div`
 	overflow-x: none;
 	margin: 0;
 	padding: 2.75em;
-	color: #fff;
-	background-color: #000;
 	text-align: center;
 `;
 
 const List = styled.div`
 	margin: 0;
 	padding: 0 20px;
-	color: #fff;
-	background-color: #000;
 	overflow: auto;
 	white-space: nowrap;
 	text-align: center;
@@ -27,8 +23,8 @@ const ListItem = styled.div`
 	width: 250px;
 	margin: 1.75em 1.35em;
 	padding: 0;
-	color: #000;
-	background-color: #fff;
+	color: #FFF;
+	background-color: #17141d;
 	border-radius: 6%;
 	box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.1);
 `;
