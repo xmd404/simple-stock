@@ -9,11 +9,11 @@ const Logo = styled.div`
 
 const Navbar = () => (
 	<Logo>
-		<h1 style={{ margin: '0', padding: '0' }}>
+		<h2 style={{ margin: '0', padding: '0' }}>
 			<span role="img" aria-label="money with wings emoji">
 				💸 &nbsp;
 			</span>SimpleStock
-		</h1>
+		</h2>
 		<p style={{ margin: '0', padding: '0' }}>
 			✨ Data-driven <b>trends</b> & <b>analysis</b>. ✨
 		</p>
