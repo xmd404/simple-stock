@@ -6,7 +6,7 @@ import { error, pairs, Loading } from '../../utility';
 const Header = styled.div`
 	overflow-x: none;
 	margin: 0;
-	padding: 35px 35px 20px;
+	padding: 35px 0 25px 50px;
 `;
 
 const List = styled.div`
@@ -66,12 +66,10 @@ class ForexList extends Component {
 			return (
 				<div>
 					<Header>
-						<h2 style={{ margin: '0', padding: '0' }}>
-							Forex
-						</h2>
+						<h2 style={{ margin: '0', padding: '0' }}>Forex</h2>
 						<p style={{ margin: '0', padding: '0' }}>
 							Top <b>currency pairs</b> across the &nbsp;🌎
-							</p>
+						</p>
 					</Header>
 					<List>
 						{pairs.slice(0, 7).map((pair) => (
