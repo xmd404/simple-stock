@@ -75,7 +75,7 @@ class CryptoList extends Component {
 				<div>
 					<Header>
 						<h1 style={{ margin: '0', padding: '0' }}>crypto</h1>
-						<p style={{ margin: '0', padding: '0' }}>bitcoin balling with the homies &nbsp;🏀</p>
+						<p style={{ margin: '0', padding: '0' }}>bitcoin balling with the homies &nbsp;🤑</p>
 					</Header>
 					<List>
 						{cryptos.splice(0, 7).map((crypto) => (
