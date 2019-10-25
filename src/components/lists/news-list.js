@@ -10,9 +10,17 @@ const Title = styled.div`
 const List = styled.div`
   margin: 0;
   padding: 20px;
-  background-color: #F5F5F5;
   overflow: auto;
   white-space: nowrap;
+`;
+
+const ListHeader = styled.div`
+  overflow-x: none;
+  margin: 0;
+  padding: 2.75em;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
 `;
 
 const ListItem = styled.div`
@@ -72,26 +80,33 @@ class News extends Component {
       return (<Loading />)
     } else {
       return (
-        <List>
-          {articles.map(article => (
-            <a 
-              key={article.quote.symbol}
-              article={article}
-              href={article.news[0].url}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <ListItem>
-                <Image src={article.news[0].image} />
-                <Title>
-                  <p>{getDateTime(article.news[0].datetime)}</p>
-                  <b><p style={{ height: '100px' }}>{article.news[0].headline}</p></b>
-                  <p><u>{article.news[0].source}</u></p>
-                </Title>
-              </ListItem>
-            </a>
-          ))}
-        </List>
+        <div>
+          <ListHeader>
+            <p>
+              <b>Live</b>, data-driven <b>trends</b> & <b>analysis</b>&nbsp; ✨
+            </p>
+          </ListHeader>
+          <List>
+            {articles.map(article => (
+              <a 
+                key={article.quote.symbol}
+                article={article}
+                href={article.news[0].url}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <ListItem>
+                  <Image src={article.news[0].image} />
+                  <Title>
+                    <p>{getDateTime(article.news[0].datetime)}</p>
+                    <b><p style={{ height: '100px' }}>{article.news[0].headline}</p></b>
+                    <p><u>{article.news[0].source}</u></p>
+                  </Title>
+                </ListItem>
+              </a>
+            ))}
+          </List>
+        </div>
       )
     }
   }
