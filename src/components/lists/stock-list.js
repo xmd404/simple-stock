@@ -6,12 +6,11 @@ import { error, symbols, getMarketMessage, Loading } from '../../utility';
 const Header = styled.div`
   overflow-x: none;
   margin: 0;
-  padding: 2.75em;
   text-align: center;
 `;
 
 const List = styled.div`
-  margin: 0;
+  margin: 1.75em 0.75em;
   padding: 0 20px;
   overflow: auto;
   white-space: nowrap;
@@ -19,9 +18,10 @@ const List = styled.div`
 `;
 
 const ListItem = styled.div`
+  white-space: normal;
   display: inline-block;
   width: 250px;
-  margin: 1.75em 1.35em;
+  margin 0 1.75em 0 0;
   padding: 0;
   color: #FFF;
   background-color: #17141d;
