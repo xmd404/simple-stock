@@ -18,8 +18,8 @@ export const getDateTime = (unix_timestamp) => {
 //  message for markets open/closed
 export const getMarketMessage = (signal) => {
   const statusMsg = signal === 'close' ?
-    `😴 closed` :
-    `💹 open`;
+    `🛑 closed` :
+    `open 💹 `;
   const status = `${statusMsg}`;
   return status;
 };
