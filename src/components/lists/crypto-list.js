@@ -75,16 +75,21 @@ class CryptoList extends Component {
 				<div>
 					<Header>
 						<h1 style={{ margin: '0', padding: '0' }}>crypto</h1>
-						<p style={{ margin: '0', padding: '0' }}>bitcoin balling with the homies &nbsp;🤑</p>
+						<p style={{ margin: '0', padding: '0' }}><b>disrupt</b>, break out the <b>matrix</b> &nbsp;🤑</p>
 					</Header>
 					<List>
 						{cryptos.splice(0, 7).map((crypto) => (
 							<ListItem key={crypto.symbol} crypto={crypto}>
-                <Image src={crypto.image} />
 								<b>
 									<h2>{crypto.symbol}</h2>
 								</b>
                 <p>{crypto.id}</p>
+                <Image src={crypto.image} />
+                <h3>${crypto.current_price.toFixed(2)}</h3>
+                <p>
+									H: ${crypto.high_24h.toFixed(2)}
+									&nbsp;|&nbsp; L: ${crypto.low_24h.toFixed(2)}
+								</p>
 							</ListItem>
 						))}
 					</List>

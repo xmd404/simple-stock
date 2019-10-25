@@ -7,8 +7,8 @@ import CryptoList from '../components/lists/crypto-list';
 const HomePage = () =>
   <div>
     <News />
-    <StockList />
     <ForexList />
+    <StockList />
     <CryptoList />
   </div>
 
