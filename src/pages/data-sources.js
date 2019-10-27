@@ -18,7 +18,7 @@ const List = styled.div`
 
 const ListItem = styled.div`
 	display: inline-block;
-	height: 250px;
+	height: 375px;
 	width: 100%;
 	max-width: 250px;
 	margin: 1.75em 1.35em;
@@ -26,6 +26,11 @@ const ListItem = styled.div`
 	color: #fff;
 	background-color: #17141d;
 	border-radius: 5%;
+`;
+
+const Image = styled.img`
+	max-height: 250px;
+	width: auto;
 `;
 
 const DataSourcePage = () => (
@@ -40,6 +45,8 @@ const DataSourcePage = () => (
 		</Header>
 		<List>
 			<ListItem>
+				<br/>
+				<Image src={'../assets/stock_news_api_logo.svg'} />
 				<h2>Stock News API</h2>
 				<a href="https://stocknewsapi.com" target="_blank" rel="noopener noreferrer">
 					Website
@@ -50,6 +57,8 @@ const DataSourcePage = () => (
 				</a>
 			</ListItem>
 			<ListItem>
+				<br/>
+				<Image src={'../assets/iex_cloud_api_logo.png'} />
 				<h2>IEX Cloud</h2>
 				<a href="https://iexcloud.io/" target="_blank" rel="noopener noreferrer">
 					Website
@@ -60,6 +69,8 @@ const DataSourcePage = () => (
 				</a>
 			</ListItem>
 			<ListItem>
+				<br/>
+				<Image src={'../assets/fixer_api_logo.png'} />
 				<h2>Fixer</h2>
 				<a href="https://fixer.io/" target="_blank" rel="noopener noreferrer">
 					Website
@@ -70,12 +81,14 @@ const DataSourcePage = () => (
 				</a>
 			</ListItem>
 			<ListItem>
-				<h2>CoinMarketCap</h2>
-				<a href="https://coinmarketcap.com/" target="_blank" rel="noopener noreferrer">
+				<br/>
+				<Image src={'../assets/coingecko_logo.png'} />
+				<h2>CoinGecko</h2>
+				<a href="https://www.coingecko.com/" target="_blank" rel="noopener noreferrer">
 					Website
 				</a>
 				&nbsp; | &nbsp;
-				<a href="https://coinmarketcap.com/api/documentation/v1/" target="_blank" rel="noopener noreferrer">
+				<a href="https://www.coingecko.com/api/documentations/v3#/" target="_blank" rel="noopener noreferrer">
 					Docs
 				</a>
 			</ListItem>
