@@ -84,7 +84,7 @@ class StockList extends Component {
 						</p>
 					</Header>
 					<List>
-						{stocks.splice(0, 7).map((stock) => (
+						{stocks.splice(0, 10).map((stock) => (
 							<ListItem key={stock.quote.symbol} stock={stock}>
 								<b>
 									<h2>{stock.quote.symbol.toLowerCase()}</h2>

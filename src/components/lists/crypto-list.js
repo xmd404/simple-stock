@@ -78,7 +78,7 @@ class CryptoList extends Component {
 						<p style={{ margin: '0', padding: '0' }}><b>disrupt</b>, break out the <b>matrix</b>&nbsp;👨🏻‍💻</p>
 					</Header>
 					<List>
-						{cryptos.splice(0, 7).map((crypto) => (
+						{cryptos.splice(0, 10).map((crypto) => (
 							<ListItem key={crypto.symbol} crypto={crypto}>
 								<b>
 									<h2>{crypto.symbol}</h2>
