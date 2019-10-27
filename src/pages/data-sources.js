@@ -39,9 +39,6 @@ const DataSourcePage = () => (
 			<h2 style={{ margin: '0', padding: '0' }}>
 				<b>Data Sources</b>
 			</h2>
-			<p style={{ margin: '0', padding: '0' }}>
-				Top <b>currency pairs</b> from across the &nbsp;🌎
-			</p>
 		</Header>
 		<List>
 			<ListItem>
