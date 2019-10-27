@@ -13,7 +13,7 @@ const Container = styled.div`
 `;
 
 const Image = styled.img`
-  maxheight: 500px;
+  height: 350px;
   width: auto;
 `;
 
@@ -21,8 +21,8 @@ const PageNotFound = () =>
   <Container>
     <br/><br/>
     <h1 style={{ margin: '0', padding: '0' }}>404</h1>
-    <p>page not found, brought this instead</p>
-    <Image src={'pigsfly.gif'} />
+    <p >page not found, brought this instead</p>
+    <Image src={'../assets/pigsfly.gif'} />
   </Container>
 
 export default PageNotFound;
