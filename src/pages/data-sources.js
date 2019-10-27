@@ -48,11 +48,11 @@ const DataSourcePage = () => (
 				<br/>
 				<Image src={'../assets/stock_news_api_logo.svg'} />
 				<h2>Stock News API</h2>
-				<a href="https://stocknewsapi.com" target="_blank" rel="noopener noreferrer">
+				<a href="https://stocknewsapi.com" target="_blank" rel="noopener noreferrer" style={{ color: '#fff' }}>
 					Website
 				</a>
 				&nbsp; | &nbsp;
-				<a href="https://stocknewsapi.com/documentation" target="_blank" rel="noopener noreferrer">
+				<a href="https://stocknewsapi.com/documentation" target="_blank" rel="noopener noreferrer" style={{ color: '#fff' }}>
 					Docs
 				</a>
 			</ListItem>
@@ -60,11 +60,11 @@ const DataSourcePage = () => (
 				<br/>
 				<Image src={'../assets/iex_cloud_api_logo.png'} />
 				<h2>IEX Cloud</h2>
-				<a href="https://iexcloud.io/" target="_blank" rel="noopener noreferrer">
+				<a href="https://iexcloud.io/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff' }}>
 					Website
 				</a>
 				&nbsp; | &nbsp;
-				<a href="https://iexcloud.io/docs/api/" target="_blank" rel="noopener noreferrer">
+				<a href="https://iexcloud.io/docs/api/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff' }}>
 					Docs
 				</a>
 			</ListItem>
@@ -72,11 +72,11 @@ const DataSourcePage = () => (
 				<br/>
 				<Image src={'../assets/fixer_api_logo.png'} />
 				<h2>Fixer</h2>
-				<a href="https://fixer.io/" target="_blank" rel="noopener noreferrer">
+				<a href="https://fixer.io/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff' }}>
 					Website
 				</a>
 				&nbsp; | &nbsp;
-				<a href="https://fixer.io/documentation" target="_blank" rel="noopener noreferrer">
+				<a href="https://fixer.io/documentation" target="_blank" rel="noopener noreferrer" style={{ color: '#fff' }}>
 					Docs
 				</a>
 			</ListItem>
@@ -84,11 +84,11 @@ const DataSourcePage = () => (
 				<br/>
 				<Image src={'../assets/coingecko_logo.png'} />
 				<h2>CoinGecko</h2>
-				<a href="https://www.coingecko.com/" target="_blank" rel="noopener noreferrer">
+				<a href="https://www.coingecko.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff' }}>
 					Website
 				</a>
 				&nbsp; | &nbsp;
-				<a href="https://www.coingecko.com/api/documentations/v3#/" target="_blank" rel="noopener noreferrer">
+				<a href="https://www.coingecko.com/api/documentations/v3#/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff' }}>
 					Docs
 				</a>
 			</ListItem>
