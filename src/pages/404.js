@@ -22,10 +22,10 @@ const Image = styled.img`
 const PageNotFound = () =>
   <Container>
     <br/><br/>
-    <h1 style={{ margin: '0', padding: '0' }}>404</h1>
-    <p style={{ margin: '0', padding: '0' }}>
-      page not found&nbsp; ;-)
-    </p>
+    <h1 style={{ margin: '0', padding: '0' }}>💸🐷💸</h1>
+    <h2 style={{ margin: '0', padding: '0' }}>
+      page not found
+    </h2>
     <br/>
     <Image src={'../assets/pigsfly.gif'} />
   </Container>
