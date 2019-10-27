@@ -36,10 +36,10 @@ const Image = styled.img`
 const DataSourcePage = () => (
 	<div>
 		<Header>
-			<h2>
+			<h2 style={{ margin: '0', padding: '0' }}>
 				<b>Data Sources</b>
 			</h2>
-			<p>
+			<p style={{ margin: '0', padding: '0' }}>
 				Top <b>currency pairs</b> from across the &nbsp;🌎
 			</p>
 		</Header>
