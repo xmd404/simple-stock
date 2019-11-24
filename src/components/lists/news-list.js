@@ -44,8 +44,7 @@ class News extends Component {
 	componentDidMount() {
 		console.time('Fetching news');
 		axios.get(
-				`https://stocknewsapi.com/api/v1?tickers=${symbols}&items=50&token=${process.env
-				.REACT_APP_NEWS_API_KEY}&sortby=trending&sentiment=positive&type=video`
+				`https://stocknewsapi.com/api/v1?tickers=${symbols}&items=50&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&sentiment=positive&type=video`
 			)
 			.then((response) => {
 				let data = response.data;
