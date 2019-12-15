@@ -41,7 +41,6 @@ class CryptoList extends Component {
 				<div>
 					<Title>
 						<h1 style={{ margin: '0', padding: '0' }}>Crypto</h1>
-						<p style={{ margin: '0', padding: '0' }}>diversify outside the <b>matrix</b>&nbsp;👨🏻‍💻</p>
 					</Title>
 					<List>
 						{cryptos.splice(0, 10).map((crypto) => (

@@ -14,9 +14,9 @@ const Navbar = () => (
 				💸 &nbsp;
 			</span>SimpleStock
 		</h1>
-		<p style={{ margin: '0', padding: '0' }}>
-			data-driven <b>trends</b> & <b>analysis</b> ✨
-		</p>
+		<h5 style={{ margin: '0', padding: '0' }}>
+			data-driven market analysis
+		</h5>
 	</Logo>
 );
 

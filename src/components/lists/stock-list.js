@@ -43,11 +43,11 @@ class StockList extends Component {
 				<div>
 					<Title>
 						<h1 style={{ margin: '0', padding: '0' }}>Stocks</h1>
-						<p style={{ margin: '0', padding: '0' }}>
+						<h5 style={{ margin: '0', padding: '0' }}>
 							markets are&nbsp;
 							<b>{getMarketMessage(stocks[0].quote.calculationPrice)}</b>
 							&nbsp; 💹
-						</p>
+						</h5>
 					</Title>
 					<List>
 						{stocks.splice(0, 10).map((stock) => (

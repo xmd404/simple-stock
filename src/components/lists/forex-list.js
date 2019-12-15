@@ -41,9 +41,6 @@ class ForexList extends Component {
 				<div>
 					<Title>
 						<h1 style={{ margin: '0', padding: '0' }}>Forex</h1>
-						<p style={{ margin: '0', padding: '0' }}>
-							currency <b>pairs</b> across the &nbsp;🌎
-						</p>
 					</Title>
 					<List>
 						{pairs.slice(0, 10).map((pair) => (
