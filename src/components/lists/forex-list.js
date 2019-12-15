@@ -45,8 +45,7 @@ class ForexList extends Component {
 			`https://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}&symbols=${pairs}`
 			)
 			.then((response) => {
-				let data = response.data;
-				let pairs = Object.entries(data.rates);
+				let pairs = Object.entries(response.data.rates);
 				this.setState({
 					pairs: pairs,
 					isLoaded: true

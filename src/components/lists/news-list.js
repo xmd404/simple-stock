@@ -47,9 +47,7 @@ class News extends Component {
 				`https://stocknewsapi.com/api/v1?tickers=${symbols}&items=50&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&sentiment=positive&type=video`
 			)
 			.then((response) => {
-				let data = response.data;
-				let articlesArr = Object.values(data);
-				let articles = articlesArr;
+				let articles = Object.values(response.data);
 				this.setState({
 					articles: articles,
 					isLoaded: true

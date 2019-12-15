@@ -53,9 +53,7 @@ class StockList extends Component {
 					.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
 			)
 			.then((response) => {
-				let data = response.data;
-				let stocksArr = Object.values(data);
-				let stocks = stocksArr;
+				let stocks = Object.values(response.data);
 				this.setState({
 					stocks: stocks,
 					isLoaded: true,
