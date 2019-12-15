@@ -1,33 +1,7 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import axios from 'axios';
+import { List, Title, Card } from '../list';
 import { error, pairs, Loading } from '../../utility';
-
-const Header = styled.div`
-	overflow-x: none;
-	margin: 0;
-	padding: 35px 0 25px 50px;
-`;
-
-const List = styled.div`
-	margin: 1.75em 0.75em;
-	padding: 0 20px;
-	overflow: auto;
-	white-space: nowrap;
-	text-align: center;
-`;
-
-const ListItem = styled.div`
-	white-space: normal;
-	display: inline-block;
-	width: 250px;
-	margin 0 1.75em 0 0;
-	padding: 0;
-	color: #FFF;
-	background-color: #17141d;
-	border-radius: 6%;
-	box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.1);
-`;
+import axios from 'axios';
 
 class ForexList extends Component {
 	constructor(props) {
@@ -65,20 +39,20 @@ class ForexList extends Component {
 		} else {
 			return (
 				<div>
-					<Header>
+					<Title>
 						<h1 style={{ margin: '0', padding: '0' }}>Forex</h1>
 						<p style={{ margin: '0', padding: '0' }}>
 							currency <b>pairs</b> across the &nbsp;🌎
 						</p>
-					</Header>
+					</Title>
 					<List>
 						{pairs.slice(0, 10).map((pair) => (
-							<ListItem key={pair} pair={pair}>
+							<Card key={pair} pair={pair}>
 								<h2>eur / {pair[0].toLowerCase()}</h2>
 								<h4>
 									<b>€</b> {pair[1].toFixed(2)}
 								</h4>
-							</ListItem>
+							</Card>
 						))}
 					</List>
 				</div>

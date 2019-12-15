@@ -1,39 +1,7 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import axios from 'axios';
+import { List, Title, Card, Logo } from '../list';
 import { error, symbols, getMarketMessage, Loading } from '../../utility';
-
-const Header = styled.div`
-	overflow-x: none;
-	margin: 0;
-	padding: 35px 0 25px 50px;
-	text-align: left;
-`;
-
-const List = styled.div`
-	margin: 1.75em 0.75em;
-	padding: 0 20px;
-	overflow: auto;
-	white-space: nowrap;
-	text-align: center;
-`;
-
-const ListItem = styled.div`
-  white-space: normal;
-  display: inline-block;
-  width: 250px;
-  margin 0 1.75em 0 0;
-  padding: 0;
-  color: #FFF;
-  background-color: #17141d;
-  border-radius: 6%;
-  box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
-`;
-
-const Image = styled.img`
-	height: 35px;
-	margin: 20px 0;
-`;
+import axios from 'axios';
 
 class StockList extends Component {
 	constructor(props) {
@@ -73,28 +41,28 @@ class StockList extends Component {
 		} else {
 			return (
 				<div>
-					<Header>
+					<Title>
 						<h1 style={{ margin: '0', padding: '0' }}>Stocks</h1>
 						<p style={{ margin: '0', padding: '0' }}>
 							markets are&nbsp;
 							<b>{getMarketMessage(stocks[0].quote.calculationPrice)}</b>
 							&nbsp; 💹
 						</p>
-					</Header>
+					</Title>
 					<List>
 						{stocks.splice(0, 10).map((stock) => (
-							<ListItem key={stock.quote.symbol} stock={stock}>
+							<Card key={stock.quote.symbol} stock={stock}>
 								<b>
 									<h2>{stock.quote.symbol.toLowerCase()}</h2>
 								</b>
 								<p>{stock.quote.companyName.toLowerCase()}</p>
-								<Image src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
+								<Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
 								<h3>${stock.quote.latestPrice}</h3>
 								<p>
 									H: ${stock.quote.week52High}
 									&nbsp;|&nbsp; L: ${stock.quote.week52Low}
 								</p>
-							</ListItem>
+							</Card>
 						))}
 					</List>
 				</div>

@@ -1,35 +1,7 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import axios from 'axios';
+import { List, Card, Headline, Thumbnail } from '../list';
 import { error, symbols, Loading } from '../../utility';
-
-const Title = styled.div`padding: 0 1.25em;`;
-
-const List = styled.div`
-	margin: 1.75em 0.75em;
-	padding: 0 20px;
-	overflow: auto;
-	white-space: nowrap;
-`;
-
-const ListItem = styled.div`
-	white-space: normal;
-	display: inline-block;
-	width: 250px;
-	margin 0 1.75em 0 0;
-	padding: 0;
-	color: #FFF;
-	background-color: #17141d;
-	border-radius: 6%;
-	box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
-`;
-
-const Image = styled.img`
-	height: 175px;
-	width: 100%;
-	border-radius: 5% 5% 0 0;
-	padding: 0;
-`;
+import axios from 'axios';
 
 class News extends Component {
 	constructor(props) {
@@ -76,9 +48,9 @@ class News extends Component {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<ListItem>
-									<Image src={article.image_url} />
-									<Title>
+								<Card news>
+									<Thumbnail src={article.image_url} />
+									<Headline>
 										<p>{article.date.substring(0, 16)}</p>
 										<b>
 											<p style={{ height: '100px' }}>{article.title.substring(0, 105)}</p>
@@ -86,8 +58,8 @@ class News extends Component {
 										<p>
 											<u>{article.source_name.toLowerCase()}</u>
 										</p>
-									</Title>
-								</ListItem>
+									</Headline>
+								</Card>
 							</a>
 						))}
 					</List>
