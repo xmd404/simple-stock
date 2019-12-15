@@ -59,6 +59,7 @@ class News extends Component {
 											<u>{article.source_name.toLowerCase()}</u>
 										</p>
 									</Headline>
+									<br/>
 								</Card>
 							</a>
 						))}

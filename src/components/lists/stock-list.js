@@ -43,11 +43,11 @@ class StockList extends Component {
 				<div>
 					<Title>
 						<h1 style={{ margin: '0', padding: '0' }}>Stocks</h1>
-						<h5 style={{ margin: '0', padding: '0' }}>
+						<p style={{ margin: '0', padding: '0' }}>
 							markets are&nbsp;
 							<b>{getMarketMessage(stocks[0].quote.calculationPrice)}</b>
 							&nbsp; 💹
-						</h5>
+						</p>
 					</Title>
 					<List>
 						{stocks.splice(0, 10).map((stock) => (
@@ -62,6 +62,7 @@ class StockList extends Component {
 									H: ${stock.quote.week52High}
 									&nbsp;|&nbsp; L: ${stock.quote.week52Low}
 								</p>
+								<br/>
 							</Card>
 						))}
 					</List>

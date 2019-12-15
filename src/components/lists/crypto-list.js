@@ -55,6 +55,7 @@ class CryptoList extends Component {
 									H: ${crypto.high_24h.toFixed(2)}
 									&nbsp;|&nbsp; L: ${crypto.low_24h.toFixed(2)}
 								</p>
+								<br/>
 							</Card>
 						))}
 					</List>
