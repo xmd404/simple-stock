@@ -42,7 +42,10 @@ class CryptoList extends Component {
 					<Title>
 						<h1 style={{ margin: '0', padding: '0' }}>Crypto</h1>
 					</Title>
-					<List>
+					<List
+						className="App"
+						ref="myscroll"
+					>
 						{cryptos.splice(0, 10).map((crypto) => (
 							<Card key={crypto.symbol} crypto={crypto}>
 								<b>

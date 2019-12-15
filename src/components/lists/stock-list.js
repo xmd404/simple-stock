@@ -49,7 +49,10 @@ class StockList extends Component {
 							&nbsp; 💹
 						</p>
 					</Title>
-					<List>
+					<List
+						className="App"
+						ref="myscroll"
+					>
 						{stocks.splice(0, 10).map((stock) => (
 							<Card key={stock.quote.symbol} stock={stock}>
 								<b>

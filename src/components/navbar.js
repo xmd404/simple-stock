@@ -5,6 +5,7 @@ const Logo = styled.nav`
 	padding: 40px 0 25px 40px;
 	text-decoration: none;
 	width: auto;
+	text-align: center;
 `;
 
 const Navbar = () => (

@@ -16,7 +16,7 @@ class News extends Component {
 	componentDidMount() {
 		console.time('Fetching news');
 		axios.get(
-				`https://stocknewsapi.com/api/v1?tickers=${symbols}&items=50&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&sentiment=positive&type=video`
+				`https://stocknewsapi.com/api/v1?tickers=${symbols}&items=25&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&sentiment=positive&type=video`
 			)
 			.then((response) => {
 				let articles = Object.values(response.data);
@@ -40,7 +40,7 @@ class News extends Component {
 			return (
 				<div>
 					<List>
-						{articles[0].slice(0, 25).map((article) => (
+						{articles[0].map((article) => (
 							<a
 								key={article.date}
 								article={article}

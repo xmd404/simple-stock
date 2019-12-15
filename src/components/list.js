@@ -2,8 +2,9 @@ import styled, { css } from 'styled-components';
 
 export const Title = styled.div`
 	overflow-x: none;
-	margin: 35px 0 25px 50px;
-  padding: 0;
+	margin: 35px 0 35px 50px;
+	padding: 0;
+	text-align: center;
 `;
 
 export const List = styled.div`
