@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Logo = styled.nav`
-	padding: 40px 0 25px 40px;
-	text-decoration: none;
+	margin: 50px 0;
+	padding: 0;
 	width: auto;
+	text-decoration: none;
 	text-align: center;
 `;
 
