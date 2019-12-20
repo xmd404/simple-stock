@@ -16,10 +16,7 @@ const Footer = () => (
 			<span role="img" aria-label="money with wings emoji">
 				💸{' '}
 			</span>
-			<b>SimpleStock</b>. &nbsp;
-			<Link to="/data-sources" style={{ color: '#fff' }}>
-				Where do we get our data
-			</Link>?
+			<b>SimpleStock</b>.
 		</p>
 	</Foot>
 );
