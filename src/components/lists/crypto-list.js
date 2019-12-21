@@ -48,17 +48,12 @@ class CryptoList extends Component {
 					>
 						{cryptos.splice(0, 10).map((crypto) => (
 							<Card key={crypto.symbol} crypto={crypto}>
+								<Logo src={crypto.image}/>
 								<b>
 									<h2>{crypto.symbol}</h2>
 								</b>
                 <p>{crypto.id}</p>
-                <Logo src={crypto.image} />
                 <h3>${crypto.current_price.toFixed(2)}</h3>
-                <p>
-									H: ${crypto.high_24h.toFixed(2)}
-									&nbsp;|&nbsp; L: ${crypto.low_24h.toFixed(2)}
-								</p>
-								<br/>
 							</Card>
 						))}
 					</List>

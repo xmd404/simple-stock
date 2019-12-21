@@ -45,10 +45,11 @@ class ForexList extends Component {
 					<List>
 						{pairs.slice(0, 10).map((pair) => (
 							<Card key={pair} pair={pair}>
+								<br/>
 								<h2>eur / {pair[0].toLowerCase()}</h2>
-								<h4>
+								<h3>
 									<b>€</b> {pair[1].toFixed(2)}
-								</h4>
+								</h3>
 							</Card>
 						))}
 					</List>

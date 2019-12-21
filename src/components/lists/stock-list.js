@@ -55,17 +55,12 @@ class StockList extends Component {
 					>
 						{stocks.splice(0, 10).map((stock) => (
 							<Card key={stock.quote.symbol} stock={stock}>
+								<Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
 								<b>
 									<h2>{stock.quote.symbol.toLowerCase()}</h2>
 								</b>
 								<p>{stock.quote.companyName.toLowerCase()}</p>
-								<Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
 								<h3>${stock.quote.latestPrice}</h3>
-								<p>
-									H: ${stock.quote.week52High}
-									&nbsp;|&nbsp; L: ${stock.quote.week52Low}
-								</p>
-								<br/>
 							</Card>
 						))}
 					</List>
