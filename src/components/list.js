@@ -8,7 +8,7 @@ export const Title = styled.div`
 `;
 
 export const List = styled.div`
-	margin: 1.75em 0.75em;
+	margin: 1.75em 0.5em;
 	padding: 0 20px;
 	overflow: auto;
 	white-space: nowrap;
@@ -18,7 +18,7 @@ export const Card = styled.div`
 	white-space: normal;
 	display: inline-block;
 	width: 200px;
-	margin 0 1.75em 0 0;
+	margin 0 0.75em 0 0;
 	padding: 5px 0 5px 20px;
 	color: #FFF;
 	background-color: #17141d;
