@@ -7,6 +7,7 @@ import Footer from './components/footer';
 import PageNotFound from './pages/404';
 import HomePage from './pages/home';
 import ChartPage from './pages/charts';
+import ThumbBar from './components/thumb-bar';
 
 const Router = () =>
   <HashRouter>
@@ -17,6 +18,7 @@ const Router = () =>
       <Route path="*" component={PageNotFound} />
     </Switch>
     <Footer />
+    <ThumbBar />
   </HashRouter>
 
 export default Router;
