@@ -40,7 +40,7 @@ export const Thumbnail = styled.img`
 `;
 
 export const Logo = styled.img`
-  height: 35px;
+  height: 37px;
 	margin: 20px 0;
 `;
 
