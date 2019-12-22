@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 const ThumbBar = () =>
 <div class="navbar">
-  <Link to="/" class="active">HOME</Link>
-  <Link to="/stocks">STOCKS</Link>
-  <Link to="/crypto">FOREX</Link>
-  <Link to="/forex">CRYPTO</Link>
+  <Link to="/">Trends</Link>
+  <Link to="/stocks">Analysis</Link>
+  <Link to="/crypto">Search</Link>
+  <Link to="/forex">Profile</Link>
 </div>
 
 export default ThumbBar;
