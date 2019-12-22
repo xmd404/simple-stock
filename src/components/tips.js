@@ -7,7 +7,8 @@ const Container = styled.div`
   text-align: center;
 `
 
-const Tip = styled.h3`
+const Tip = styled.h4`
+font-weight: 400;
 `
 
 const Tips = () => 
