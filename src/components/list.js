@@ -41,7 +41,7 @@ export const Thumbnail = styled.img`
 `;
 
 export const Logo = styled.img`
-  height: 37px;
+  height: 27px;
 	margin: 20px 0;
 `;
 
