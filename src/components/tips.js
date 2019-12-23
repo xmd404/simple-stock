@@ -3,11 +3,11 @@ import styled, { css } from 'styled-components';
 
 const Container = styled.div`
   margin: 0;
-  padding: 50px 25px;
+  padding: 25px;
   text-align: center;
 `
 
-const Tip = styled.h4`
+const Tip = styled.p`
 font-weight: 400;
 `
 

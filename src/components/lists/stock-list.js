@@ -58,7 +58,7 @@ class StockList extends Component {
 								<b>
 									<h2>{stock.quote.symbol.toLowerCase()}</h2>
 								</b>
-								<p>{stock.quote.companyName.toLowerCase()}</p>
+								<p>{stock.quote.companyName.toLowerCase().split(', inc.')}</p>
 								<h3>${stock.quote.latestPrice}</h3>
 							</Card>
 						))}

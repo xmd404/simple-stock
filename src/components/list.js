@@ -17,7 +17,7 @@ export const List = styled.div`
 export const Card = styled.div`
 	white-space: normal;
 	display: inline-block;
-	width: 200px;
+	width: 165px;
 	margin 0 0.75em 0 0;
 	padding: 5px 0 5px 20px;
 	color: #FFF;
