@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Title = styled.div`
-	margin: 35px 0;
+	margin: 35px 0 40px;
 	padding: 0;	
 	overflow-x: none;
 	text-align: center;
