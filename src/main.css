@@ -17,7 +17,7 @@ h2, p {
 }
 
 p {
-	font-size: 95%;
+	font-size: 90%;
 }
 
 code {
@@ -67,7 +67,7 @@ code {
   position: fixed;
   bottom: 0;
 	width: 100%;
-	border-top: #17141d 3px solid;
+	border-top: #17141d 1px solid;
 }
 
 .navbar a {
@@ -77,13 +77,12 @@ code {
   text-align: center;
   text-decoration: none;
 	font-size: 17px;
-	width: 24%;
+	width: 19.6%;
 	border: #17141d 1px solid;
 }
 
 .navbar a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: magenta;
 }
 
 .navbar a.active {

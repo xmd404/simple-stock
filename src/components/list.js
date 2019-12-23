@@ -8,8 +8,8 @@ export const Title = styled.div`
 `;
 
 export const List = styled.div`
-	margin: 50px 0;
-	padding: 0 25px;
+	margin: 25px 0;
+	padding: 0 15px;
 	overflow: auto;
 	white-space: nowrap;
 `;

@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Foot = styled.footer`
 	width: auto;
 	margin: 0 0 50px;
-	padding: 35px;
+	padding: 15px 35px 35px 35px;
 	text-align: center;
 `;
 
