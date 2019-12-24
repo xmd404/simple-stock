@@ -14,7 +14,7 @@ font-weight: 400;
 const Tips = () => 
   <Container>
     <Tip>
-      🌿 <b>Simple Tip</b> &nbsp;~&nbsp; Save 10% of your income. Compound interest is the *th wonder of the world.
+      🌿 <b>Simple Tip</b> &nbsp;~&nbsp; Save & invest 10% of your income. Compound interest is the *th wonder of the world.
     </Tip>
   </Container>
 

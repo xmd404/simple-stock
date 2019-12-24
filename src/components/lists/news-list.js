@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List, Card, Headline, Thumbnail } from '../list';
+import { List, NewsCard, Headline, Thumbnail } from '../list';
 import { error, symbols, Loading } from '../../utility';
 import axios from 'axios';
 
@@ -16,7 +16,7 @@ class News extends Component {
 	componentDidMount() {
 		console.time('Fetching news');
 		axios.get(
-				`https://stocknewsapi.com/api/v1?tickers=${symbols}&items=25&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&sentiment=positive&type=video`
+				`https://stocknewsapi.com/api/v1?tickers=${symbols}&items=15&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&sentiment=positive&type=video`
 			)
 			.then((response) => {
 				let articles = Object.values(response.data);
@@ -48,19 +48,22 @@ class News extends Component {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<Card news>
+								<NewsCard news>
 									<Thumbnail src={article.image_url} />
 									<Headline>
+										<br/>
 										<p>{article.date.substring(0, 16)}</p>
+										<br/>
 										<b>
 											<p style={{ height: '100px' }}>{article.title.substring(0, 105)}</p>
 										</b>
+										<br/>
 										<p>
 											<u>{article.source_name.toLowerCase()}</u>
 										</p>
 									</Headline>
 									<br/>
-								</Card>
+								</NewsCard>
 							</a>
 						))}
 					</List>
