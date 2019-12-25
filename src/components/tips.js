@@ -8,7 +8,9 @@ const Container = styled.div`
 `
 
 const Tip = styled.p`
-font-weight: 400;
+  font-weight: 400;
+  max-width: 360px;
+  margin 0 auto;
 `
 
 const Tips = () => 

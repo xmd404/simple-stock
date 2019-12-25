@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { List, Title, Card, Logo } from '../list';
 import { error, symbols, getMarketMessage, Loading } from '../../utility';
 import axios from 'axios';
+import Tips from '../tips';
 
 class StockList extends Component {
 	constructor(props) {
@@ -41,12 +42,14 @@ class StockList extends Component {
 		} else {
 			return (
 				<div>
+					<br/>
+					<p style={{ margin: '0', padding: '0', textAlign: 'center'}}>
+						Markets are&nbsp;
+						<b>{getMarketMessage(stocks[0].quote.calculationPrice)}</b>.
+					</p>
+					<Tips />
 					<Title>
 						<h1 style={{ margin: '0', padding: '0' }}>Stocks</h1>
-						<p style={{ margin: '0', padding: '0' }}>
-							markets are&nbsp;
-							<b>{getMarketMessage(stocks[0].quote.calculationPrice)}</b>.
-						</p>
 					</Title>
 					<List
 						className="App"

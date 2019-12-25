@@ -8,7 +8,6 @@ import Tips from '../components/tips';
 const HomePage = () =>
   <div>
     <News />
-    <Tips />
     <StockList />
     <CryptoList />
     <ForexList />
