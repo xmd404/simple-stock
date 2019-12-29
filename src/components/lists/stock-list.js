@@ -55,23 +55,13 @@ class StockList extends Component {
 						className="App"
 						ref="myscroll"
 					>
-						{stocks.splice(0, 10).map((stock) => (
+						{stocks.map((stock) => (
 							<Card key={stock.quote.symbol} stock={stock}>
 								<Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
 								<b>
 									<h2>{stock.quote.symbol.toLowerCase()}</h2>
 								</b>
-								<p>{stock.quote.companyName.toLowerCase().split(', inc.')}</p>
-								<h3>${stock.quote.latestPrice}</h3>
-							</Card>
-						))}
-						{stocks.splice(4, 10).map((stock) => (
-							<Card key={stock.quote.symbol} stock={stock}>
-								<Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
-								<b>
-									<h2>{stock.quote.symbol.toLowerCase()}</h2>
-								</b>
-								<p>{stock.quote.companyName.toLowerCase()}</p>
+								<p style={{ height: '75px'}}>{stock.quote.companyName.toLowerCase().split(', inc.')}</p>
 								<h3>${stock.quote.latestPrice}</h3>
 							</Card>
 						))}

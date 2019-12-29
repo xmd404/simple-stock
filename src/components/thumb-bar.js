@@ -14,14 +14,11 @@ const ThumbBar = () => (
         Home
       </p>
 		</Link>
-		<Link to="/charts">
-			<p>Charts</p>
+		<Link to="/discover">
+			<p>Discover</p>
 		</Link>
-    <Link to="/analysis">
-			<p>Analysis</p>
-		</Link>
-		<Link to="/search">
-			<p>Search</p>
+    <Link to="/profile">
+			<p>Profile</p>
 		</Link>
 	</div>
 );

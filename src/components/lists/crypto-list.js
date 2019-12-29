@@ -16,7 +16,7 @@ class CryptoList extends Component {
 	componentDidMount() {
 		console.time('Fetching cryptos');
 		axios.get(
-      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false
+      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false
       `)
 			.then((response) => {
 				let cryptos = response.data;
@@ -46,13 +46,13 @@ class CryptoList extends Component {
 						className="App"
 						ref="myscroll"
 					>
-						{cryptos.splice(0, 10).map((crypto) => (
+						{cryptos.splice(0, 20).map((crypto) => (
 							<Card key={crypto.symbol} crypto={crypto}>
 								<Logo src={crypto.image}/>
 								<b>
 									<h2>{crypto.symbol}</h2>
 								</b>
-                <p>{crypto.id}</p>
+                <p style={{ height: '75px'}}>{crypto.id}</p>
                 <h3>${crypto.current_price.toFixed(2)}</h3>
 							</Card>
 						))}

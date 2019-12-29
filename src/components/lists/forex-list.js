@@ -16,7 +16,7 @@ class ForexList extends Component {
 	componentWillMount() {
 		console.time('Fetching forex');
 		axios.get(
-			`https://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}&symbols=${pairs}`
+			`https://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}`
 			)
 			.then((response) => {
 				let pairs = Object.entries(response.data.rates);
@@ -43,7 +43,7 @@ class ForexList extends Component {
 						<h1 style={{ margin: '0', padding: '0' }}>Forex</h1>
 					</Title>
 					<List>
-						{pairs.slice(0, 10).map((pair) => (
+						{pairs.slice(0, 20).map((pair) => (
 							<Card key={pair} pair={pair}>
 								<br/>
 								<h2>eur / {pair[0].toLowerCase()}</h2>
