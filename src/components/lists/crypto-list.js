@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { List, Title, Card, Logo } from '../list';
-import { error, Loading } from '../../utility';
+import { error, Loading, randomPairs } from '../../utility';
 import axios from 'axios';
 
 class CryptoList extends Component {

@@ -49,3 +49,22 @@ export const Loading = () => (
 		<p>Loading</p>
 	</div>
 );
+
+export let shuffle = (unsorted) => {
+  var currentIndex = unsorted.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = unsorted[currentIndex];
+    unsorted[currentIndex] = unsorted[randomIndex];
+    unsorted[randomIndex] = temporaryValue;
+  }
+
+  return unsorted;
+}

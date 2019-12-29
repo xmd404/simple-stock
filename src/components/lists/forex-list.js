@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { List, Title, Card } from '../list';
-import { error, pairs, Loading } from '../../utility';
+import { error, pairs, Loading, shuffle } from '../../utility';
 import axios from 'axios';
 
 class ForexList extends Component {
@@ -19,7 +19,8 @@ class ForexList extends Component {
 			`https://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}&base=USD`
 			)
 			.then((response) => {
-				let pairs = Object.entries(response.data.rates);
+				let unsorted = Object.entries(response.data.rates);
+				let pairs = shuffle(unsorted);
 				this.setState({
 					pairs: pairs,
 					isLoaded: true

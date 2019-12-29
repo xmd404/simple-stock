@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { List, Title, Card, Logo } from '../list';
-import { error, symbols, getMarketMessage, Loading } from '../../utility';
+import { error, symbols, getMarketMessage, Loading, shuffle } from '../../utility';
 import axios from 'axios';
 import Tips from '../tips';
 
@@ -22,7 +22,8 @@ class StockList extends Component {
 					.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
 			)
 			.then((response) => {
-				let stocks = Object.values(response.data);
+				let unsorted = Object.values(response.data);
+				let stocks = shuffle(unsorted);
 				this.setState({
 					stocks: stocks,
 					isLoaded: true,
