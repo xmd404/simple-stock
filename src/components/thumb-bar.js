@@ -9,15 +9,15 @@ library.add(fas);
 const ThumbBar = () => (
 	<div class="navbar">
 		<Link to="/">
-			<p>
-        <FontAwesomeIcon icon={[ 'fas', 'fa-home' ]} />
-        Home
-      </p>
+			<FontAwesomeIcon icon={[ 'fas', 'home' ]} />
+			<p>Home</p>
 		</Link>
 		<Link to="/discover">
+			<FontAwesomeIcon icon={[ 'fas', 'search' ]} />
 			<p>Discover</p>
 		</Link>
-    <Link to="/profile">
+		<Link to="/profile">
+			<FontAwesomeIcon icon={[ 'fas', 'user' ]} />
 			<p>Profile</p>
 		</Link>
 	</div>
