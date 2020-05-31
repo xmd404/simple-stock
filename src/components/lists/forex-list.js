@@ -47,6 +47,7 @@ class ForexList extends Component {
 						{pairs.slice(0, 20).map((pair) => (
 							<Card key={pair} pair={pair}>
 								<br/>
+								<img src={"https://www.countryflags.io/us/flat/32.png"}/>
 								<h2>usd / {pair[0].toLowerCase()}</h2>
 								<h3>
 									<b>$</b> {pair[1].toFixed(2)}
