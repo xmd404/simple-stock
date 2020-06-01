@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { List, Title, Card, Logo } from '../list';
-import { error, symbols, getMarketMessage, Loading, shuffle } from '../../utility';
+import { error, symbols, getStock, getMarketMessage, Loading, shuffle } from '../../utility';
 import axios from 'axios';
 import Tips from '../tips';
 
@@ -57,10 +57,10 @@ class StockList extends Component {
 						ref="myscroll"
 					>
 						{stocks.map((stock) => (
-							<Card key={stock.quote.symbol} stock={stock}>
+							<Card key={stock.quote.symbol} stock={stock} onClick={getStock}>
 								<Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
 								<b>
-									<h2>{stock.quote.symbol.toLowerCase()}</h2>
+									<h2 className="stockSymbol">{stock.quote.symbol.toLowerCase()}</h2>
 								</b>
 								<p style={{ height: '75px'}}>{stock.quote.companyName.toLowerCase().split(', inc.')}</p>
 								<h3>${stock.quote.latestPrice}</h3>
