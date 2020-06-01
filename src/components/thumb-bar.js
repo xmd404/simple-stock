@@ -7,7 +7,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
 
 const ThumbBar = () => (
-	<div class="navbar">
+	<div className="navbar">
 		<Link to="/">
 			<FontAwesomeIcon icon={[ 'fas', 'home' ]} size="lg" />
 			<p>Home</p>
