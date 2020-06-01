@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { List, Title, Card, Logo } from '../list';
-import { error, Loading, randomPairs } from '../../utility';
+import { error, Loading, getCardTicker, randomPairs } from '../../utility';
 import axios from 'axios';
 
 class CryptoList extends Component {
@@ -47,10 +47,10 @@ class CryptoList extends Component {
 						ref="myscroll"
 					>
 						{cryptos.splice(0, 20).map((crypto) => (
-							<Card key={crypto.symbol} crypto={crypto}>
+							<Card key={crypto.symbol} crypto={crypto} onClick={getCardTicker}>
 								<Logo src={crypto.image}/>
 								<b>
-									<h2>{crypto.symbol}</h2>
+									<h2 className="cardTicker">{crypto.symbol}</h2>
 								</b>
                 <p style={{ height: '75px'}}>{crypto.id}</p>
                 <h3>${crypto.current_price.toFixed(2)}</h3>
