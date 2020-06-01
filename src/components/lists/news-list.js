@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { List, NewsCard, Headline, Thumbnail } from '../list';
-import { error, symbols, Loading } from '../../utility';
+import { error, symbols, Loading, } from '../../utility';
+import { getVideoSrc } from '../draggable';
 import axios from 'axios';
 
 class News extends Component {
@@ -47,6 +48,8 @@ class News extends Component {
 								href={article.news_url}
 								target="_blank"
 								rel="noopener noreferrer"
+								onClick={getVideoSrc}
+								className="videoSrc"
 							>
 								<NewsCard news>
 									<Thumbnail src={article.image_url} />

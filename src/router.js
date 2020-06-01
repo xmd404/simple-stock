@@ -14,7 +14,7 @@ const Router = () =>
     <Navbar />
     <Switch>
       <Route exact path="/" component={HomePage} />
-      <Route path="/chart" component={ChartPage} />
+      <Route path="/chart/:ticker" component={ChartPage} />
       <Route path="*" component={PageNotFound} />
     </Switch>
     <Footer />
