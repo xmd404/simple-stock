@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { List, Title, Card } from '../list';
-import { error, pairs, Loading, shuffle } from '../../utility';
+import { error, pairs, Loading, shuffle, getCardTicker } from '../../utility';
 import axios from 'axios';
 
 class ForexList extends Component {
@@ -45,11 +45,11 @@ class ForexList extends Component {
 					</Title>
 					<List>
 						{pairs.slice(0, 20).map((pair) => (
-							<Card key={pair} pair={pair}>
+							<Card key={pair} pair={pair} onClick={getCardTicker}>
 								<br/>
 								<img src={"https://www.countryflags.io/us/flat/32.png"}/>
 								<br/><br/>
-								<h2>usd / {pair[0].toLowerCase()}</h2>
+								<h2>usd / <span className="cardTicker">{pair[0].toLowerCase()}</span></h2>
 								<h3>
 									<b>$</b> {pair[1].toFixed(2)}
 								</h3>
