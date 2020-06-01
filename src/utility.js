@@ -70,6 +70,7 @@ export let shuffle = (unsorted) => {
 };
 
 export const getStock = (e) => {
-	const selStockSymbol = e.currentTarget.getElementsByClassName('stockSymbol').textContent;
+	const selStockSymbol = e.currentTarget.getElementsByClassName('stockSymbol')[0].innerText;
 	console.log(selStockSymbol);
+	return selStockSymbol;
 };
