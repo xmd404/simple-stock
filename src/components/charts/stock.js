@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List, Title, Card, Logo } from '../lists/components';
+import { List, Title, Card, Logo } from './components';
 import { error, symbols, getChart, Loading } from '../../utility';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
@@ -57,26 +57,21 @@ class StockChart extends Component {
 		} else {
 			return (
 				<div style={container}>
-					<Title>
-						<h2 style={{ margin: '0', padding: '0' }}>
-							<span style={ticker}>{window.location.href.split("/")[5]}</span> &nbsp;news + insights
-						</h2>
-					</Title>
-					<List
-						className="list-scroll"
-						ref="myscroll"
-					>
-						{stocks.map((stock) => (
-							<Card key={stock.quote.symbol} stock={stock} onClick={getChart}>
+					{stocks.map((stock) => (
+						<Card key={stock.quote.symbol} stock={stock} onClick={getChart}>
+							<div style={{ float: 'left', width: '50%' }}>
 								<Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
 								<b>
 									<h2 className="cardTicker">{stock.quote.symbol.toLowerCase()}</h2>
 								</b>
 								<p style={{ height: '75px'}}>{stock.quote.companyName.toLowerCase().split(', inc.')}</p>
-								<h3>${stock.quote.latestPrice}</h3>
-							</Card>
-						))}
-					</List>
+							</div>
+							<div style={{ float: 'right', width: '50%', textAlign: 'right' }}>
+								<br/>
+								<h2>${stock.quote.latestPrice}</h2>
+							</div>
+						</Card>
+					))}
 					<br/>
 					<News />
 					<ViewMoreButton />

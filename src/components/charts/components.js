@@ -15,16 +15,12 @@ export const List = styled.div`
 `;
 
 export const Card = styled.div`
-	white-space: normal;
-	display: inline-block;
-	width: 165px;
-	margin 0 0.75em 0 0;
-	padding: 5px 0 5px 20px;
+	display: flex;
+	justify-cotent: space-around;
+	width: auto;
+	margin: 0 auto;
+	padding: 0 20px;
 	color: #FFF;
-	background-color: #17141d;
-	border-radius: 6%;
-  	box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
-	text-align: left;
 	cursor: pointer
 
   ${(props) => props.news && css`text-align: left;`}
