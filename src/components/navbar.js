@@ -1,25 +1,26 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
-const Logo = styled.nav`
-	margin: 50px 0;
-	padding: 0;
-	width: auto;
-	text-decoration: none;
-	text-align: center;
-`;
+library.add(fas);
 
 const Navbar = () => (
-	<Logo>
-		<h1 style={{ margin: '0', padding: '0' }}>
-			<span role="img" aria-label="money with wings emoji">
-				💸 &nbsp;
-			</span>SimpleStock
-		</h1>
-		<p style={{ margin: '0', padding: '0' }}>
-			Finance for the Rest of Us.
-		</p>
-	</Logo>
+	<div className="navbar">
+		<Link to="/">
+			<FontAwesomeIcon icon={[ 'fas', 'home' ]} size="lg" />
+			<p>Home</p>
+		</Link>
+		<Link to="/discover">
+			<FontAwesomeIcon icon={[ 'fas', 'search' ]} size="lg" />
+			<p>Discover</p>
+		</Link>
+		<Link to="/profile">
+			<FontAwesomeIcon icon={[ 'fas', 'user' ]} size="lg" />
+			<p>Profile</p>
+		</Link>
+	</div>
 );
 
 export default Navbar;

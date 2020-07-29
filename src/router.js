@@ -1,19 +1,19 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 
-import Navbar from './components/navbar';
+import Header from './components/header';
 import Footer from './components/footer';
+import Navbar from './components/navbar';
 
 import PageNotFound from './pages/404';
 import HomePage from './pages/home';
 import DiscoverPage from './pages/discover';
 import ProfilePage from './pages/profile';
 import ChartPage from './pages/charts';
-import ThumbBar from './components/thumb-bar';
 
 const Router = () =>
   <HashRouter>
-    <Navbar />
+    <Header />
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route path="/discover" component={DiscoverPage} />
@@ -22,7 +22,7 @@ const Router = () =>
       <Route path="*" component={PageNotFound} />
     </Switch>
     <Footer />
-    <ThumbBar />
+    <Navbar />
   </HashRouter>
 
 export default Router;
