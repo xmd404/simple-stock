@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { List, Title, Card, Logo } from '../lists/components';
 import { error, symbols, getMarketMessage, Loading } from '../../utility';
 import { ViewMoreButton } from '../buttons';
+import axios from 'axios';
 
 const list = {
 	overflowX: 'none',

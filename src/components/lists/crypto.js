@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List, Title, Card, Logo } from '../list';
+import { List, Title, Card, Logo } from './components';
 import { error, Loading, getChart, randomPairs } from '../../utility';
 import axios from 'axios';
 

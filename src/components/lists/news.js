@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List, NewsCard, Headline, Thumbnail } from '../list';
+import { List, NewsCard, Headline, Thumbnail } from './components';
 import { error, symbols, Loading } from '../../utility';
 import axios from 'axios';
 

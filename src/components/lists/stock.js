@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List, Title, Card, Logo } from '../list';
+import { List, Title, Card, Logo } from './components';
 import { error, symbols, getChart, getMarketMessage, Loading, shuffle } from '../../utility';
 import axios from 'axios';
 import Tips from '../tips';

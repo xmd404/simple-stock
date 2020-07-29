@@ -58,5 +58,3 @@ export const Logo = styled.img`
   height: 27px;
 	margin: 20px 0;
 `;
-
-export default List;
