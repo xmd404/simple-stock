@@ -23,8 +23,9 @@ export const Card = styled.div`
 	color: #FFF;
 	background-color: #17141d;
 	border-radius: 6%;
-  box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
-  text-align: left;
+  	box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
+	text-align: left;
+	cursor: pointer;
 
   ${(props) => props.news && css`text-align: left;`}
 `;
