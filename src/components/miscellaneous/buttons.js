@@ -7,7 +7,7 @@ const LargeButton = styled.a`
   min-width: 270px;
   margin: 1.00em;
   padding: 5px 15px;
-  font-size: 150%;
+  font-size: 135%;
   color: #fff;
 `
 
