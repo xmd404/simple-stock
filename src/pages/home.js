@@ -3,7 +3,7 @@ import StockList from '../components/lists/stock';
 import News from '../components/lists/news';
 import ForexList from '../components/lists/forex';
 import CryptoList from '../components/lists/crypto';
-import Tips from '../components/tips';
+import Tips from '../components/miscellaneous/tips';
 
 const HomePage = () =>
   <div>

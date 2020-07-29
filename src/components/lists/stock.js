@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { List, Title, Card, Logo } from './components';
 import { error, symbols, getChart, getMarketMessage, Loading, shuffle } from '../../utility';
 import axios from 'axios';
-import Tips from '../tips';
+import Tips from '../miscellaneous/tips';
 
 class StockList extends Component {
 	constructor(props) {

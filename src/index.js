@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Router from './router';
-import './main.css';
+import './styles/main.css';
 
 let App = <Router />;
 

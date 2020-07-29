@@ -1,5 +1,5 @@
 import React from 'react';
-import Beta from '../components/beta';
+import Beta from '../components/miscellaneous/beta';
 
 let DiscoverPage = () => <Beta />
 
