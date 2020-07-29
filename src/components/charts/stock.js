@@ -3,6 +3,7 @@ import { List, Title, Card, Logo } from '../lists/components';
 import { error, symbols, getChart, Loading } from '../../utility';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
+import News from './news';
 
 const ticker = {
 	color: 'magenta',
@@ -77,6 +78,7 @@ class StockChart extends Component {
 						))}
 					</List>
 					<br/>
+					<News />
 					<ViewMoreButton />
 				</div>
 			);
