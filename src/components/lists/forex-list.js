@@ -43,7 +43,10 @@ class ForexList extends Component {
 					<Title>
 						<h1 style={{ margin: '0', padding: '0' }}>Forex</h1>
 					</Title>
-					<List>
+					<List
+						className="list-scroll"
+						ref="myscroll"
+					>
 						{pairs.slice(0, 20).map((pair) => (
 							<Card key={pair} pair={pair} onClick={getCardTicker}>
 								<br/>

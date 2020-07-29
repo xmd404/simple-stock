@@ -53,7 +53,7 @@ class StockList extends Component {
 						<h1 style={{ margin: '0', padding: '0' }}>Stocks</h1>
 					</Title>
 					<List
-						className="App"
+						className="list-scroll"
 						ref="myscroll"
 					>
 						{stocks.map((stock) => (

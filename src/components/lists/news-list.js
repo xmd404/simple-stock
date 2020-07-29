@@ -39,7 +39,10 @@ class News extends Component {
 		} else {
 			return (
 				<div>
-					<List>
+					<List
+						className="list-scroll"
+						ref="myscroll"
+					>
 						{articles[0].map((article) => (
 							<a
 								key={article.date}

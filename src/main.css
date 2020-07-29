@@ -96,3 +96,14 @@ code {
 .navbar p {
 	padding: 5px 0 0;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.list-scroll::-webkit-scrollbar {
+	display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .list-scroll {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+  }
