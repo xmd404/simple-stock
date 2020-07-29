@@ -1,22 +1,17 @@
 import React, { Component } from 'react';
 import { List, Title, Card, Logo } from '../lists/components';
-import { error, symbols, getMarketMessage, Loading } from '../../utility';
+import { error, symbols, getChart, Loading } from '../../utility';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
 
-const list = {
-	overflowX: 'none',
-	margin: '0',
-	padding: '25px',
-	textAlign: 'center'
+const ticker = {
+	color: 'magenta',
 };
 
-const card = {
-	display: 'inline-block',
-	margin: '1.35em',
-	padding: '25px',
-	minWidth: '240px',
-	maxWidth: '100%',
+const container = {
+	margin: '0 auto',
+	width: '100%',
+	maxWidth: '650px',
 	color: '#fff',
 	backgroundColor: '#17141d',
 	borderRadius: '5%'
@@ -62,20 +57,28 @@ class StockChart extends Component {
 			return <Loading />;
 		} else {
 			return (
-				<div style={list}>
-					{stocks.splice(0, 7).map((stock) => (
-						<div key={stock.quote.symbol} stock={stock} style={card}>
-							<h2>${stock.quote.latestPrice}</h2>
-							<b>
-								<h1>{stock.quote.symbol}</h1>
-							</b>
-							<p>{stock.quote.companyName}</p>
-							<p>
-								H: ${stock.quote.week52High}
-								&nbsp;|&nbsp; L: ${stock.quote.week52Low}
-							</p>
-						</div>
-					))}
+				<div style={container}>
+					<br/>
+					<Title>
+						<h1 style={{ margin: '0', padding: '0' }}>
+							<span style={ticker}>{window.location.href.split("/")[5]}</span> | data + news
+						</h1>
+					</Title>
+					<List
+						className="list-scroll"
+						ref="myscroll"
+					>
+						{stocks.map((stock) => (
+							<Card key={stock.quote.symbol} stock={stock} onClick={getChart}>
+								<Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
+								<b>
+									<h2 className="cardTicker">{stock.quote.symbol.toLowerCase()}</h2>
+								</b>
+								<p style={{ height: '75px'}}>{stock.quote.companyName.toLowerCase().split(', inc.')}</p>
+								<h3>${stock.quote.latestPrice}</h3>
+							</Card>
+						))}
+					</List>
 					<ViewMoreButton />
 				</div>
 			);
