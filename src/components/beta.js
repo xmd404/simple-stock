@@ -11,7 +11,7 @@ const BetaMessage = styled.div`
 let Beta = () =>
     <BetaMessage>
         <p>
-            This is an open beta... so some features are not available yet.
+            This is a private beta feature 🔒
             <br/><br/>
             Signup below to join our waitlist + participate in future releases.
         </p>
