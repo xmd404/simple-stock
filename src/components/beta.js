@@ -14,12 +14,12 @@ let Beta = () =>
     <BetaMessage>
         <p>This is an open beta + some features are not available yet. Signup to join our waitlist + participate in future releases.</p>
         <br/>
-        <form name="contact" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field" hidden>
+        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
             <input type="text" name="name" />
             <input type="email" name="email" />
             <textarea name="message"></textarea>
         </form>
-        <form name="contact" method="post" data-netlify="true" data-netlify-recaptcha="true">
+        <form name="contact" method="post">
             <input type="hidden" name="form-name" value="contact" />
             <p>
                 <label>Name:
