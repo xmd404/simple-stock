@@ -12,8 +12,6 @@ const container = {
 	margin: '0 auto',
 	width: '100%',
 	maxWidth: '650px',
-	color: '#fff',
-	backgroundColor: '#17141d',
 	borderRadius: '5%'
 };
 
@@ -58,7 +56,6 @@ class StockChart extends Component {
 		} else {
 			return (
 				<div style={container}>
-					<br/>
 					<Title>
 						<h1 style={{ margin: '0', padding: '0' }}>
 							<span style={ticker}>{window.location.href.split("/")[5]}</span> | data + news
