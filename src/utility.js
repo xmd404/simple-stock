@@ -69,8 +69,9 @@ export let shuffle = (unsorted) => {
   return unsorted;
 };
 
-export const getCardTicker = (e) => {
-	const selCardTicker = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
-	console.log(selCardTicker);
-	return selCardTicker;
+export const getChart = (e) => {
+	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
+	window.location = `/#/charts/${chartID}`;
+	console.log(chartID);
+	return chartID;
 };

@@ -37,7 +37,7 @@ class StockChart extends Component {
 		axios
 			.get(
 				`https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env
-					.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
+					.REACT_APP_STOCK_API_KEY}&symbols=${window.location.href.split("/")[5]}&types=quote,news`
 			)
 			.then((response) => {
 				let stocksObj = response.data;
@@ -62,9 +62,6 @@ class StockChart extends Component {
 		} else {
 			return (
 				<div style={list}>
-					<h2>Stock Market</h2>
-					<p style={{ textAlign: 'center' }}>{getMarketMessage(stocks[0].quote.calculationPrice)}</p>
-					<br />
 					{stocks.splice(0, 7).map((stock) => (
 						<div key={stock.quote.symbol} stock={stock} style={card}>
 							<h2>${stock.quote.latestPrice}</h2>

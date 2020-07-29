@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { List, Title, Card } from '../list';
-import { error, pairs, Loading, shuffle, getCardTicker } from '../../utility';
+import { error, Loading, shuffle, getChart } from '../../utility';
 import axios from 'axios';
 
 class ForexList extends Component {
@@ -48,7 +48,7 @@ class ForexList extends Component {
 						ref="myscroll"
 					>
 						{pairs.slice(0, 20).map((pair) => (
-							<Card key={pair} pair={pair} onClick={getCardTicker}>
+							<Card key={pair} pair={pair} onClick={getChart}>
 								<br/>
 								<img src={"https://www.countryflags.io/us/flat/32.png"}/>
 								<br/><br/>

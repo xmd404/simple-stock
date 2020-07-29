@@ -18,7 +18,7 @@ const Router = () =>
       <Route exact path="/" component={HomePage} />
       <Route path="/discover" component={DiscoverPage} />
       <Route path="/profile" component={ProfilePage} />
-      <Route path="/chart" component={ChartPage} />
+      <Route path="/charts/:id" component={ChartPage} />
       <Route path="*" component={PageNotFound} />
     </Switch>
     <Footer />
