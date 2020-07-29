@@ -59,16 +59,16 @@ class StockChart extends Component {
 				<div style={container}>
 					{stocks.map((stock) => (
 						<Card key={stock.quote.symbol} stock={stock} onClick={getChart}>
-							<div style={{ float: 'left', width: '50%', textAlign: 'left' }}>
-								<br/>
-								<h2>${stock.quote.latestPrice}</h2>
-							</div>
-							<div style={{ float: 'right', width: '50%', textAlign: 'right' }}>
+							<div style={{ float: 'left', width: '50%' }}>
 								<Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
 								<b>
 									<h2 className="cardTicker">{stock.quote.symbol.toLowerCase()}</h2>
 								</b>
 								<p style={{ height: '75px'}}>{stock.quote.companyName.toLowerCase().split(', inc.')}</p>
+							</div>
+							<div style={{ float: 'right', width: '50%', textAlign: 'right' }}>
+								<br/>
+								<h2>${stock.quote.latestPrice}</h2>
 							</div>
 						</Card>
 					))}
