@@ -3,16 +3,19 @@ import styled from 'styled-components';
 
 const LargeButton = styled.a`
   display: inline-block;
-  width: 15%;
-  min-width: 270px;
-  margin: 1.00em;
-  padding: 5px 15px;
-  font-size: 135%;
+  width: 100%;
+  max-width: 250px;
+  margin: 1.25em;
+  font-size: 150%;
   color: #fff;
 `
 
 export const ViewMoreButton = () =>
   <LargeButton>
-    <h1 style={{textAlign: 'left'}}>View More Stocks</h1>
+    <h2 style={{textAlign: 'left'}}>
+      View More
+      <br/>
+      Stocks
+    </h2>
     <hr/>
   </LargeButton>

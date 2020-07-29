@@ -58,7 +58,7 @@ class StockChart extends Component {
 				<div style={container}>
 					<Title>
 						<h2 style={{ margin: '0', padding: '0' }}>
-							<span style={ticker}>{window.location.href.split("/")[5]}</span> news + insights
+							<span style={ticker}>{window.location.href.split("/")[5]}</span> &nbsp;news + insights
 						</h2>
 					</Title>
 					<List
