@@ -2,17 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 const BetaMessage = styled.div`
-    margin: auto;
-    width: 100%;
-    max-width: 250px;
-    border: 1px solid #fff;
-    border-radius: 2%;
+    margin: 0 auto;
     padding: 10px;
+    width: 100%;
+    max-width: 275px;
 `
 
 let Beta = () =>
     <BetaMessage>
-        <p>This is an open beta + some features are not available yet. Signup to join our waitlist + participate in future releases.</p>
+        <h2>
+            This is an open beta... so some features are not available yet.
+            <br/><br/>
+            Signup below to join our waitlist + participate in future releases.
+        </h2>
         <br/>
         <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
             <input type="text" name="name" />
@@ -21,23 +23,21 @@ let Beta = () =>
         </form>
         <form name="contact" method="post">
             <input type="hidden" name="form-name" value="contact" />
-            <p>
-                <label>Name:
+            <h2>
+                <label>Name
                     <br/>
-                    <input type="text" name="name"/>
+                    <input type="text" name="name" className="form-input" placeholder="Alex Smith"/>
                 </label>
-            </p>
+            </h2>
             <br/>
-            <p>
-                <label>Email:
+            <h2>
+                <label>Email
                     <br/>
-                    <input type="email" name="email"/>
+                    <input type="email" name="email" className="form-input" placeholder="your@email.com"/>
                 </label>
-            </p>
+            </h2>
             <br/>
-            <p>
-                <button type="submit">Send</button>
-            </p>
+            <button type="submit" className="btn submit">Join Waitlist</button>
             <br/>
         </form>
     </BetaMessage>
