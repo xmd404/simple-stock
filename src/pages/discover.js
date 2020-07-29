@@ -1,9 +1,6 @@
 import React from 'react';
 import Beta from '../components/beta';
 
-let DiscoverPage = () =>
-    <div>
-        <Beta />
-    </div>
+let DiscoverPage = () => <Beta />
 
 export default DiscoverPage;
