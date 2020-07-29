@@ -10,11 +10,11 @@ const BetaMessage = styled.div`
 
 let Beta = () =>
     <BetaMessage>
-        <h2>
+        <p>
             This is an open beta... so some features are not available yet.
             <br/><br/>
             Signup below to join our waitlist + participate in future releases.
-        </h2>
+        </p>
         <br/>
         <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
             <input type="text" name="name" />
@@ -23,19 +23,21 @@ let Beta = () =>
         </form>
         <form name="contact" method="post">
             <input type="hidden" name="form-name" value="contact" />
-            <h2>
+            <p>
                 <label>Name
                     <br/>
                     <input type="text" name="name" className="form-input" placeholder="Alex Smith"/>
                 </label>
-            </h2>
+            </p>
             <br/>
-            <h2>
+            <p>
                 <label>Email
                     <br/>
                     <input type="email" name="email" className="form-input" placeholder="your@email.com"/>
                 </label>
-            </h2>
+            </p>
+            <br/>
+            <hr/>
             <br/>
             <button type="submit" className="btn submit">Join Waitlist</button>
             <br/>
