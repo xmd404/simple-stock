@@ -17,7 +17,7 @@ class NewsChart extends Component {
 	componentDidMount() {
 		console.time('Fetching news');
 		axios.get(
-				`https://stocknewsapi.com/api/v1?tickers=${window.location.href.split("/")[5]}&items=10&token=${process.env.REACT_APP_NEWS_API_KEY}`)
+				`https://stocknewsapi.com/api/v1?tickers=${window.location.href.split("/")[6]}&items=10&token=${process.env.REACT_APP_NEWS_API_KEY}`)
 			.then((response) => {
 				let articles = Object.values(response.data);
 				this.setState({

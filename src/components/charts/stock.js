@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { List, Title, Card, Logo } from './components';
-import { error, symbols, getChart, Loading } from '../../utility';
+import { error, symbols, getStockChart, Loading } from '../../utility';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
 import News from './news';
@@ -32,7 +32,7 @@ class StockChart extends Component {
 		axios
 			.get(
 				`https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env
-					.REACT_APP_STOCK_API_KEY}&symbols=${window.location.href.split("/")[5]}&types=quote,news`
+					.REACT_APP_STOCK_API_KEY}&symbols=${window.location.href.split("/")[6]}&types=quote,news`
 			)
 			.then((response) => {
 				let stocksObj = response.data;
@@ -58,7 +58,7 @@ class StockChart extends Component {
 			return (
 				<div style={container}>
 					{stocks.map((stock) => (
-						<Card key={stock.quote.symbol} stock={stock} onClick={getChart}>
+						<Card key={stock.quote.symbol} stock={stock} onClick={getStockChart}>
 							<div style={{ float: 'left', width: '50%' }}>
 								<Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
 								<b>

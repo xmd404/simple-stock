@@ -69,9 +69,23 @@ export let shuffle = (unsorted) => {
   return unsorted;
 };
 
-export const getChart = (e) => {
+export const getStockChart = (e) => {
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
-	window.location = `/#/charts/${chartID}`;
+	window.location = `/#/chart/stock/${chartID}`;
+	console.log(chartID);
+	return chartID;
+};
+
+export const getCryptoChart = (e) => {
+	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
+	window.location = `/#/chart/crypto/${chartID}`;
+	console.log(chartID);
+	return chartID;
+};
+
+export const getForexChart = (e) => {
+	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
+	window.location = `/#/chart/forex/${chartID}`;
 	console.log(chartID);
 	return chartID;
 };
