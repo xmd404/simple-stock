@@ -9,12 +9,12 @@ const ticker = {
 	color: 'magenta',
 };
 
-const container = {
-	margin: '0 auto',
-	width: '100%',
-	maxWidth: '650px',
-	borderRadius: '5%'
-};
+// const container = {
+// 	margin: '0 auto',
+// 	width: '100%',
+// 	maxWidth: '650px',
+// 	borderRadius: '5%'
+// };
 
 class CryptoChart extends Component {
 	constructor(props) {
@@ -51,17 +51,20 @@ class CryptoChart extends Component {
 			return <Loading />;
 		} else {
 			return (
-				<div style={container}>
-                        <Card key={crypto.symbol} crypto={crypto}>
+				<div>
+                    <Card key={crypto.symbol} crypto={crypto}>
+                        <div style={{ float: 'left', width: '50%' }}>
                             <Logo src={crypto.image.thumb}/>
-                            <br/>
                             <b>
                                 <h2>{crypto.symbol}</h2>
                             </b>
-                            <br/>
                             <p className="cardTicker" style={{ height: '75px'}}>{crypto.id}</p>
-                            {/* <h3>${crypto.current_price.toFixed(2)}</h3> */}
-                        </Card>
+                        </div>
+                        <div style={{ float: 'right', width: '50%', textAlign: 'right' }}>
+                            <br/>
+							<h2>${crypto.market_data.current_price.usd}</h2>
+                        </div>
+                    </Card>
 					<br/>
 					<News />
 					<ViewMoreButton />
