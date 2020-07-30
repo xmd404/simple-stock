@@ -17,7 +17,7 @@ const Header = () => (
 			</span>SimpleStock
 		</h1>
 		<p style={{ margin: '0', padding: '0' }}>
-			Finance for the Rest of Us.
+			Generational wealth, for all.
 		</p>
 	</Logo>
 );
