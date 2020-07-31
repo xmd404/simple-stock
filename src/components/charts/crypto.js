@@ -65,7 +65,6 @@ class CryptoChart extends Component {
 							<h2>${crypto.market_data.current_price.usd}</h2>
                         </div>
                     </Card>
-					<br/>
 					<News />
 					<ViewMoreButton />
 				</div>

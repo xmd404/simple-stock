@@ -72,7 +72,6 @@ class StockChart extends Component {
 							</div>
 						</Card>
 					))}
-					<br/>
 					<News />
 					<ViewMoreButton />
 				</div>
