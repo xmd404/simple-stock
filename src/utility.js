@@ -1,5 +1,8 @@
 import React from 'react';
 import Loader from 'react-loader-spinner';
+var mixpanel = require('mixpanel-browser');
+
+mixpanel.init("b59ca805a95a568c14bebb64fc0049c5");
 
 // data used by exchange APIs
 export const symbols = 'hulu,nflx,dis,qtwo,fb,tsla,nke,twtr,lyft,uber,,real,work,vff,cara,msft,aapl,googl,cgc,acb';
@@ -72,6 +75,13 @@ export let shuffle = (unsorted) => {
 export const getStockChart = (e) => {
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/stock/${chartID}`;
+	mixpanel.track(
+		"Interacted with card",
+		{
+			"asset": "stock",
+			"id": `${chartID}`
+		}
+	);
 	console.log(chartID);
 	return chartID;
 };
@@ -79,6 +89,13 @@ export const getStockChart = (e) => {
 export const getCryptoChart = (e) => {
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/crypto/${chartID}`;
+	mixpanel.track(
+		"Interacted with card",
+		{
+			"asset": "crypto",
+			"id": `${chartID}`
+		}
+	);
 	console.log(chartID);
 	return chartID;
 };
@@ -86,6 +103,13 @@ export const getCryptoChart = (e) => {
 export const getForexChart = (e) => {
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/forex/${chartID}`;
+	mixpanel.track(
+		"Interacted with card",
+		{
+			"asset": "forex",
+			"id": `${chartID}`
+		}
+	);
 	console.log(chartID);
 	return chartID;
 };
