@@ -76,7 +76,7 @@ export const getStockChart = (e) => {
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/stock/${chartID}`;
 	mixpanel.track(
-		"Interacted with card",
+		"Interacted w/ stock card",
 		{
 			"asset": "stock",
 			"id": `${chartID}`
@@ -90,7 +90,7 @@ export const getCryptoChart = (e) => {
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/crypto/${chartID}`;
 	mixpanel.track(
-		"Interacted with card",
+		"Interacted w/ crypto card",
 		{
 			"asset": "crypto",
 			"id": `${chartID}`
@@ -104,7 +104,7 @@ export const getForexChart = (e) => {
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/forex/${chartID}`;
 	mixpanel.track(
-		"Interacted with card",
+		"Interacted w/ forex card",
 		{
 			"asset": "forex",
 			"id": `${chartID}`
@@ -112,4 +112,34 @@ export const getForexChart = (e) => {
 	);
 	console.log(chartID);
 	return chartID;
+};
+
+export const getHomePage = () => {
+	mixpanel.track(
+		"Went to HomePage",
+		{
+			"id": `HomePage`
+		}
+	);
+	console.log("Went to HomePage");
+};
+
+export const getDiscoverPage = () => {
+	mixpanel.track(
+		"Went to DiscoverPage",
+		{
+			"id": `DiscoverPage`
+		}
+	);
+	console.log("Went to DiscoverPage");
+};
+
+export const getProfilePage = () => {
+	mixpanel.track(
+		"Went to ProfilePage",
+		{
+			"id": `ProfilePage`
+		}
+	);
+	console.log("Went to ProfilePage");
 };
