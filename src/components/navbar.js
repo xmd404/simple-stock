@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import { getDiscoverPage, getProfilePage } from '../utility';
+import { getHomePage, getDiscoverPage, getProfilePage } from '../utility';
 
 library.add(fas);
 
 const Navbar = () => (
 	<div className="navbar">
-		<Link to="/">
+		<Link to="/" onClick={getHomePage}>
 			<FontAwesomeIcon icon={[ 'fas', 'home' ]} size="lg" />
 			<p>Home</p>
 		</Link>
