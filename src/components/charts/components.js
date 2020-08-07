@@ -30,7 +30,7 @@ export const NewsCard = styled.div`
 	white-space: normal;
 	display: inline-block;
 	width: 250px;
-	margin 0 0.75em 0.75em 0;
+	margin: 0 0.75em 0.75em 0;
 	color: #FFF;
 	background-color: #17141d;
 	border-radius: 6%;
