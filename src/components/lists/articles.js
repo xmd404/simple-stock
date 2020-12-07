@@ -13,13 +13,13 @@ const Articles = () => {
         axios
             .get(`http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${process.env.REACT_APP_ARTICLES_API_KEY}`)
             .then(res => {
-                console.log(res);
                 setArticles(res.data.articles);
                 setLoaded(true);
+                console.log({ res }, res.status);
             })
             .catch(err => {
-                console.log(err);
                 setError(true);
+                console.log(err);
             })
     }, []);
     // return error, loading, or success state
