@@ -1,24 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { Title, List, NewsCard, Headline, Thumbnail } from './components';
-import { error, symbols, Loading } from '../../utility';
+import { Loading } from '../../utility';
 import axios from 'axios';
 
 const Articles = () => {
+    // set state
     const [error, setError] = useState(false);
     const [isLoaded, setLoaded] = useState(false);
     const [articles, setArticles] = useState([]);
-
+    // fetch data from api
     useEffect(() => {
         axios
             .get(`http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${process.env.REACT_APP_ARTICLES_API_KEY}`)
             .then(res => {
                 console.log(res);
                 setArticles(res.data.articles);
+                setLoaded(true);
             })
             .catch(err => {
                 console.log(err);
+                setError(true);
             })
     }, []);
+    // return error, loading, or success state
     if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
