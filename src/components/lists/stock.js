@@ -16,8 +16,8 @@ const StockList = () => {
 				`https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env
 					.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
 			)
-			.then((response) => {
-				let unsorted = Object.values(response.data);
+			.then(res => {
+				let unsorted = Object.values(res.data);
 				let stocks = shuffle(unsorted);
 				setStocks(stocks);
 				setLoaded(true);
