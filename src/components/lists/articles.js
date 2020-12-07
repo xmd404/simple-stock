@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Title, List, NewsCard, Headline, Thumbnail } from './components';
-import { symbols } from '../../utility';
 import axios from 'axios';
-
-const regex = /T/gi;
 
 const Articles = () => {
     // const [hasError, setError] = useState(false);
@@ -24,9 +21,9 @@ const Articles = () => {
     
     return (
         <div>
-            <Title>
+            {/* <Title>
                 <h1 style={{ margin: '0', padding: '0' }}>Articles</h1>
-            </Title>
+            </Title> */}
             <List
                 className="list-scroll"
             >
