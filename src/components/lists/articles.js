@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Title, List, NewsCard, Headline, Thumbnail } from './components';
+import { List, NewsCard, Headline } from './components';
 import { Loading } from '../../utility';
 import axios from 'axios';
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { List, Title, Card, Logo } from './components';
-import { error, symbols, getMarketMessage, getStockChart, Loading, shuffle } from '../../utility';
+import { symbols, getMarketMessage, getStockChart, Loading, shuffle } from '../../utility';
 import axios from 'axios';
 import Tips from '../miscellaneous/tips';
 
