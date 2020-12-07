@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { List, NewsCard, Headline, Thumbnail } from './components';
+import { Title, List, NewsCard, Headline, Thumbnail } from './components';
+import { symbols } from '../../utility';
 import axios from 'axios';
 
 const regex = /T/gi;
@@ -23,6 +24,9 @@ const Articles = () => {
     
     return (
         <div>
+            <Title>
+                <h1 style={{ margin: '0', padding: '0' }}>Articles</h1>
+            </Title>
             <List
                 className="list-scroll"
             >
@@ -35,15 +39,13 @@ const Articles = () => {
                         rel="noopener noreferrer"
                     >
                         <NewsCard news>
-                            <Thumbnail src={article.urlToImage} />
+                            {/* <Thumbnail src={article.urlToImage} /> */}
                             <Headline>
-                                <br/>
-                                <p>{article.publishedAt.substring(0, 16).replace(regex, ' @ ')}</p>
                                 <br/>
                                 <b>
                                     <p style={{ height: '100px' }}>{article.title.substring(0, 105)}</p>
                                 </b>
-                                <br/>
+                                {/* <p>{article.publishedAt.substring(0, 16).replace(regex, ' @ ')}</p> */}
                                 <p>
                                     <u>{article.source.name.toLowerCase()}</u>
                                 </p>
