@@ -50,6 +50,7 @@ export const Headline = styled.div`
 
 export const Thumbnail = styled.img`
 	height: auto;
+	max-height: 125px;
 	width: 100%;
 	border-radius: 5% 5% 0 0;
 	padding: 0;

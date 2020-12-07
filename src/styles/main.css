@@ -100,13 +100,13 @@ code {
 /* Hide scrollbar for Chrome, Safari and Opera */
 .list-scroll::-webkit-scrollbar {
 	display: none;
-  }
+}
   
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .list-scroll {
+/* Hide scrollbar for IE, Edge and Firefox */
+.list-scroll {
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
-  }
+}
 
 .form-input {
 	margin: 10px 0 0;
