@@ -11,7 +11,7 @@ const Articles = () => {
     // fetch data from api
     useEffect(() => {
         axios
-            .get(`http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${process.env.REACT_APP_ARTICLES_API_KEY}`)
+            .get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${process.env.REACT_APP_ARTICLES_API_KEY}`)
             .then(res => {
                 setArticles(res.data.articles);
                 setLoaded(true);
