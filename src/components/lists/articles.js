@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { List, NewsCard, Headline } from './components';
-import { Loading } from '../../utility';
+import { symbols, Loading } from '../../utility';
 import axios from 'axios';
 
 const Articles = () => {
@@ -11,16 +11,16 @@ const Articles = () => {
     // fetch data from api
     useEffect(() => {
         axios
-            .get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${process.env.REACT_APP_ARTICLES_API_KEY}`)
+            .get(`https://cloud-sse.iexapis.com/stable/news-stream?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=${symbols}`)
             .then(res => {
-                setArticles(res.data.articles);
+                setArticles(res.data.articles)
                 setLoaded(true);
                 console.log({ res }, res.status);
             })
             .catch(err => {
                 setError(true);
                 console.log(err);
-            })
+            });
     }, []);
     // return error, loading, or success state
     if (error) {

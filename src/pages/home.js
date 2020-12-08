@@ -5,7 +5,6 @@ import CryptoList from '../components/lists/crypto';
 
 const HomePage = () =>
   <div>
-    <Articles />
     <StockList />
     <CryptoList />
   </div>
