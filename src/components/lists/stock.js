@@ -12,21 +12,22 @@ const StockList = () => {
 	const scrollRef = useRef("myscroll");
 	// fetch data from api
 	useEffect(() => {
-		axios.get(
-				`https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env
-					.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
-			)
-			.then(res => {
-				let unsorted = Object.values(res.data);
-				let stocks = shuffle(unsorted);
-				setStocks(stocks);
-				setLoaded(true);
-			})
-			.catch(err => {
-				setError(true);
-				console.log(err);
+		axios
+			.get(
+					`https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env
+						.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
+				)
+				.then(res => {
+					let unsorted = Object.values(res.data);
+					let stocks = shuffle(unsorted);
+					setStocks(stocks);
+					setLoaded(true);
+				})
+				.catch(err => {
+					setError(true);
+					console.log(err);
 
-			});
+				});
 	}, []);
 	// render error, loading, or success state
 	if (error) {
