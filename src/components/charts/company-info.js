@@ -3,7 +3,7 @@ import { Container, Card } from './components';
 import { Loading } from '../../utility';
 import axios from 'axios';
 
-const NewsChart = () => {
+const CompanyInfo = () => {
 	// set state
 	const [error, setError] = useState(false);
 	const [isLoaded, setLoaded] = useState(false);
@@ -48,4 +48,4 @@ const NewsChart = () => {
 	};
 };
 
-export default NewsChart;
+export default CompanyInfo;

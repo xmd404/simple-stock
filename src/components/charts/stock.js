@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Card, Logo } from './components';
 import { getStockChart, Loading } from '../../utility';
+import CompanyInfo from './company-info';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
-import News from './news';
 
 const StockChart = () => {
 	// set state
@@ -52,7 +52,7 @@ const StockChart = () => {
 						</div>
 					</Card>
 				))}
-				<News />
+				<CompanyInfo />
 				<ViewMoreButton />
 			</Container>
 		);
