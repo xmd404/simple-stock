@@ -10,9 +10,10 @@ let CryptoNews = () => {
     const [newsArray, setNews] = useState({});
     const scrollRef = useRef("myscroll");
     // fetch data from api
+    const corsProxy = 'https://my-little-cors-proxy.herokuapp.com/'
     useEffect(() => {
         axios
-            .get(`https://cryptopanic.com/api/v1/posts/?auth_token=${process.env.REACT_APP_CRYPTO_NEWS_KEY}&currencies=${window.location.href.split("/")[7]}&public=true`)
+            .get(`${corsProxy}https://cryptopanic.com/api/v1/posts/?auth_token=${process.env.REACT_APP_CRYPTO_NEWS_KEY}&currencies=${window.location.href.split("/")[7]}&public=true`)
                 .then(res => {
                     console.log(res.data.results);
                     setNews(res.data.results);
