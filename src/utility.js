@@ -140,7 +140,7 @@ export const getProfilePage = () => {
 };
 
 // snow / confetti / cash micro-interaction
-var duration = 5 * 1000;
+var duration = 3 * 1000;
 var animationEnd = Date.now() + duration;
 var skew = 1;
 
@@ -157,7 +157,7 @@ function randomInRange(min, max) {
     particleCount: 1,
     startVelocity: 0,
     ticks: ticks,
-    gravity: 0.5,
+    gravity: 0.7,
     origin: {
       x: Math.random(),
       // since particles fall down, skew start toward the top
