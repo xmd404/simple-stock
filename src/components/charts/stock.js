@@ -17,11 +17,8 @@ const StockChart = () => {
 				`https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env
 					.REACT_APP_STOCK_API_KEY}&symbols=${window.location.href.split("/")[6]}&types=quote,news`
 			)
-			.then((response) => {
-				let stocksObj = response.data;
-				let stocksArr = Object.values(stocksObj);
-				let stocks = stocksArr;
-				setStocks(stocks);
+			.then(res => {
+				setStocks(Object.values(res.data));
 				setLoaded(true);
 			})
 			.catch(err => {

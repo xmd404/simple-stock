@@ -16,9 +16,7 @@ const ForexList = () => {
 				`https://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}&base=USD`
 				)
 				.then(res => {
-					let unsorted = Object.entries(res.data.rates);
-					let pairs = shuffle(unsorted);
-					setPairs(pairs);
+					setPairs(shuffle(Object.entries(res.data.rates)));
 					setLoaded(true);
 
 				})

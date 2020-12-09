@@ -18,9 +18,7 @@ const StockList = () => {
 						.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
 				)
 				.then(res => {
-					let unsorted = Object.values(res.data);
-					let stocks = shuffle(unsorted);
-					setStocks(stocks);
+					setStocks(shuffle(Object.values(res.data)));
 					setLoaded(true);
 				})
 				.catch(err => {

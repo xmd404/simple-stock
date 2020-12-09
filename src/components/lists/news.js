@@ -16,8 +16,7 @@ const News = () => {
 					`https://stocknewsapi.com/api/v1?tickers=${symbols}&items=20&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&sentiment=positive&type=video`
 				)
 				.then(res => {
-					let articles = Object.values(res.data);
-					setArticles(articles);
+					setArticles(Object.values(res.data));
 					setLoaded(true);
 				})
 				.catch(err => {
