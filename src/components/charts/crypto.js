@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { List, Title, Card, Logo } from './components';
 import { error, symbols, getCryptoChart, Loading } from '../../utility';
 import { ViewMoreButton } from '../miscellaneous/buttons';

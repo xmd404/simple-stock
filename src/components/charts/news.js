@@ -1,7 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { List, NewsCard, Headline, Thumbnail } from './components';
+import { List, NewsCard, Headline, Thumbnail, Card } from './components';
 import { error, symbols, Loading } from '../../utility';
 import axios from 'axios';
+
+const container = {
+	margin: '0 auto',
+	width: '100%',
+	maxWidth: '650px',
+	borderRadius: '5%'
+};
 
 const NewsChart = () => {
 	// set state
@@ -31,12 +38,23 @@ const NewsChart = () => {
 		return <Loading />;
 	} else {
 		return (
-			<div>
-				<h5>{company.Exchange} &nbsp; &middot; &nbsp; {company.Country} &nbsp; &middot; &nbsp; {company.Industry}</h5>
-				<p>{company.Description}</p>
+			<div style={container}>
+				<hr/>
+				<br/>
+				<b>
+					<p style={{ textAlign : 'center' }}>
+						{company.Exchange} &nbsp; &middot; &nbsp; {company.Country} &nbsp; &middot; &nbsp; {company.Industry}
+					</p>
+				</b>
+				<br/>
+				<Card>
+					<br/>
+					<p>{company.Description}</p>
+				</Card>
+				<br/>
 			</div>
 		);
 	};
-;}
+};
 
 export default NewsChart;
