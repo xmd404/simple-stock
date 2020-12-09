@@ -18,7 +18,6 @@ const CryptoList = () => {
 				let cryptos = res.data;
 				setCryptos(cryptos);
 				setLoaded(true);
-				console.log({ cryptos }, res.status);
 			})
 			.catch(err => {
 				setError(true);

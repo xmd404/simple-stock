@@ -15,7 +15,6 @@ const Articles = () => {
             .then(res => {
                 setArticles(res.data.articles)
                 setLoaded(true);
-                console.log({ res }, res.status);
             })
             .catch(err => {
                 setError(true);

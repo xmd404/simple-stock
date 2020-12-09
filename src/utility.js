@@ -82,7 +82,6 @@ export const getStockChart = (e) => {
 			"id": `${chartID}`
 		}
 	);
-	console.log(chartID);
 	return chartID;
 };
 
@@ -96,7 +95,6 @@ export const getCryptoChart = (e) => {
 			"id": `${chartID}`
 		}
 	);
-	console.log(chartID);
 	return chartID;
 };
 
@@ -110,7 +108,6 @@ export const getForexChart = (e) => {
 			"id": `${chartID}`
 		}
 	);
-	console.log(chartID);
 	return chartID;
 };
 
@@ -121,7 +118,6 @@ export const getHomePage = () => {
 			"id": `HomePage`
 		}
 	);
-	console.log("Went to HomePage");
 };
 
 export const getDiscoverPage = () => {
@@ -131,7 +127,6 @@ export const getDiscoverPage = () => {
 			"id": `DiscoverPage`
 		}
 	);
-	console.log("Went to DiscoverPage");
 };
 
 export const getProfilePage = () => {
@@ -141,11 +136,9 @@ export const getProfilePage = () => {
 			"id": `ProfilePage`
 		}
 	);
-	console.log("Went to ProfilePage");
 };
 
-// snow
-
+// snow / confetti / cash micro-interaction
 var duration = 5 * 1000;
 var animationEnd = Date.now() + duration;
 var skew = 1;

@@ -22,7 +22,6 @@ const NewsChart = () => {
 			.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${window.location.href.split("/")[6]}&apikey=${process.env.REACT_APP_ALPHA_API_KEY}`)
 				.then(res => {
 					let company = res.data;
-					console.log(res.data);
 					setCompany(company);
 					setLoaded(true);
 				})

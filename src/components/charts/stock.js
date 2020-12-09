@@ -34,7 +34,6 @@ const StockChart = () => {
 				let stocks = stocksArr;
 				setStocks(stocks);
 				setLoaded(true);
-				console.log({ stocks }, response.status);
 			})
 			.catch(err => {
 				setError(true);
