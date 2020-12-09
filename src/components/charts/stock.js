@@ -4,6 +4,8 @@ import { getStockChart, Loading } from '../../utility';
 import CompanyInfo from './company-info';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
+import LatestFromReddit from '../news/reddit';
+
 
 const StockChart = () => {
 	// set state
@@ -49,6 +51,7 @@ const StockChart = () => {
 						</div>
 					</Card>
 				))}
+				<LatestFromReddit />
 				<CompanyInfo />
 				<ViewMoreButton />
 			</Container>
