@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { List, NewsCard, Headline, Thumbnail } from './components';
-import { symbols, Loading } from '../../utility';
+import { List, NewsCard, Headline } from './components';
+import { Loading } from '../../utility';
 import axios from 'axios';
 
 let CryptoNews = () => {
@@ -12,7 +12,7 @@ let CryptoNews = () => {
     // fetch data from api
     useEffect(() => {
         axios
-            .get(`https://cryptopanic.com/api/v1/posts/?auth_token=694796c907073a435fc55884ece1f1dca7e7ad58&currencies=${window.location.href.split("/")[7]}`)
+            .get(`https://cryptopanic.com/api/v1/posts/?auth_token=${process.env.REACT_APP_CRYPTO_NEWS_KEY}&currencies=${window.location.href.split("/")[7]}&public=true`)
                 .then(res => {
                     console.log(res.data.results);
                     setNews(res.data.results);
