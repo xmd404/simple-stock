@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Logo } from './components';
+import { Container, Card, Logo } from './components';
 import { Loading } from '../../utility';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
@@ -31,7 +31,7 @@ const CryptoChart = () => {
 		return <Loading />;
 	} else {
 		return (
-			<div>
+			<Container>
 				<Card key={crypto.symbol} crypto={crypto}>
 					<div style={{ float: 'left', width: '50%' }}>
 						<Logo src={crypto.image.thumb}/>
@@ -48,7 +48,7 @@ const CryptoChart = () => {
 				<LatestFromReddit />
 				<CryptoNews />
 				<ViewMoreButton />
-			</div>
+			</Container>
 		);
 	};
 };

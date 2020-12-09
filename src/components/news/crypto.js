@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { List, NewsCard, Headline } from './components';
-import { Loading } from '../../utility';
+import { corsProxy, Loading } from '../../utility';
 import axios from 'axios';
 
 let CryptoNews = () => {
@@ -10,7 +10,6 @@ let CryptoNews = () => {
     const [newsArray, setNews] = useState({});
     const scrollRef = useRef("myscroll");
     // fetch data from api
-    const corsProxy = 'https://my-little-cors-proxy.herokuapp.com/'
     useEffect(() => {
         axios
             .get(`${corsProxy}https://cryptopanic.com/api/v1/posts/?auth_token=${process.env.REACT_APP_CRYPTO_NEWS_KEY}&currencies=${window.location.href.split("/")[7]}&public=true`)

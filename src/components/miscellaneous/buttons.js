@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const LargeButton = styled.div`
   margin: 1.25em auto;
-  width: 50%;
+  width: 99%;
+  max-width: 300px;
   border: 2px solid white;
   background-color: transparent;
   color: white;
@@ -14,5 +15,8 @@ const LargeButton = styled.div`
 
 export const ViewMoreButton = () =>
   <LargeButton>
-    View More Stocks
+    <p>
+      {`View More ${window.location.href.split("/")[5]}`.toUpperCase()}
+    </p>
   </LargeButton>
+    
