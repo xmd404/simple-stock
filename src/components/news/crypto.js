@@ -32,6 +32,11 @@ let CryptoNews = () => {
     } else {
         return (
             <div>
+                <b>
+                    <p style={{ textAlign: 'center' }}>
+                        Other News
+                    </p>
+                </b>
                 <List
 					className="list-scroll"
 					ref={scrollRef}

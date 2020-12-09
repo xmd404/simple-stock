@@ -1,7 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { List, NewsCard, Headline } from './components';
 import { Loading } from '../../utility';
 import axios from 'axios';
+
+library.add(fab, faCheckSquare, faCoffee)
 
 const LatestFromReddit = () => {
     // set state
@@ -31,6 +38,11 @@ const LatestFromReddit = () => {
 	} else {
 	    return (
             <div>
+                <b>
+                    <p style={{ textAlign: 'center' }}>
+                        Latest from <FontAwesomeIcon icon={["fab", "reddit"]} /> Reddit
+                    </p>
+                </b>
                 <List
 					className="list-scroll"
 					ref={scrollRef}
