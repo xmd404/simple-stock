@@ -1,5 +1,12 @@
 import styled, { css } from 'styled-components';
 
+export const Container = styled.div`
+	margin: 0 auto;
+	width: 100%;
+	max-width: 650px;
+	border-radius: 5%;
+`;
+
 export const Title = styled.div`
 	margin: 35px 0 40px;
 	padding: 0;	

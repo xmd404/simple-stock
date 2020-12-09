@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Logo } from './components';
+import { Container, Card, Logo } from './components';
 import { getStockChart, Loading } from '../../utility';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
 import News from './news';
-
-const container = {
-	margin: '0 auto',
-	width: '100%',
-	maxWidth: '650px',
-	borderRadius: '5%'
-};
 
 const StockChart = () => {
 	// set state
@@ -43,7 +36,7 @@ const StockChart = () => {
 		return <Loading />;
 	} else {
 		return (
-			<div style={container}>
+			<Container>
 				{stocks.map((stock) => (
 					<Card key={stock.quote.symbol} stock={stock} onClick={getStockChart}>
 						<div style={{ float: 'left', width: '50%' }}>
@@ -61,7 +54,7 @@ const StockChart = () => {
 				))}
 				<News />
 				<ViewMoreButton />
-			</div>
+			</Container>
 		);
 	};
 };
