@@ -34,7 +34,7 @@ const CryptoChart = () => {
 					console.log(err);
 					setError(true);
 				});
-	});
+	}, []);
 	// render error, loading, or success state
 	if (error) {
 		return <div>Error: {error.message}</div>;
@@ -56,7 +56,6 @@ const CryptoChart = () => {
 						<h2>${crypto.market_data.current_price.usd}</h2>
 					</div>
 				</Card>
-				<News />
 				<ViewMoreButton />
 			</div>
 		);
