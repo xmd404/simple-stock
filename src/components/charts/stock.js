@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { List, Title, Card, Logo } from './components';
+import { Card, Logo } from './components';
 import { getStockChart, Loading } from '../../utility';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
 import News from './news';
-
-const ticker = {
-	color: 'magenta',
-};
 
 const container = {
 	margin: '0 auto',

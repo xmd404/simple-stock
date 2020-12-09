@@ -2,6 +2,7 @@ import React from 'react';
 import Loader from 'react-loader-spinner';
 var mixpanel = require('mixpanel-browser');
 
+// init mixpanel
 mixpanel.init("b59ca805a95a568c14bebb64fc0049c5");
 
 // data used by exchange APIs

@@ -1,20 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { List, Title, Card, Logo } from './components';
-import { error, symbols, getCryptoChart, Loading } from '../../utility';
+import { Card, Logo } from './components';
+import { Loading } from '../../utility';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
-import News from './news';
-
-const ticker = {
-	color: 'magenta',
-};
-
-// const container = {
-// 	margin: '0 auto',
-// 	width: '100%',
-// 	maxWidth: '650px',
-// 	borderRadius: '5%'
-// };
 
 const CryptoChart = () => {
 	// set state

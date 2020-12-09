@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { List, NewsCard, Headline, Thumbnail, Card } from './components';
-import { error, symbols, Loading } from '../../utility';
+import React, { useEffect, useState } from 'react';
+import { Card } from './components';
+import { Loading } from '../../utility';
 import axios from 'axios';
 
 const container = {
@@ -15,7 +15,6 @@ const NewsChart = () => {
 	const [error, setError] = useState(false);
 	const [isLoaded, setLoaded] = useState(false);
 	const [company, setCompany] = useState({});
-	const [ticker, setTicker] = useState(window.location.href.split("/")[5]);
 	// fetch data from api
 	useEffect(() => {
 		axios

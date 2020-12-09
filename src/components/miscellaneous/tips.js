@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const Container = styled.div`
 	margin: 0;
@@ -16,7 +16,7 @@ const Tip = styled.p`
 const Tips = () => (
 	<Container>
 		<Tip>
-			🌿 <b>Simple Tip</b> &nbsp;~&nbsp;{' '}
+		<span role="img" aria-label="leaf emoji">🌿</span> <b>Simple Tip</b> &nbsp;~&nbsp;{' '}
 			<span id="">Save & invest 10% of your income. Compound interest is the 8th wonder of the world.</span>
 		</Tip>
 	</Container>

@@ -11,7 +11,7 @@ const BetaMessage = styled.div`
 let Beta = () =>
     <BetaMessage>
         <p>
-            This is a private beta feature 🔒
+            This is a private beta feature <span role="img" aria-label="lock emoji">🔒</span>
             <br/><br/>
             Signup below to join our waitlist + participate in future releases.
         </p>
