@@ -39,11 +39,11 @@ const NewsChart = () => {
 	} else {
 		return (
 			<div style={container}>
-				<hr/>
-				<br/>
 				<b>
 					<p style={{ textAlign : 'center' }}>
-						{company.Exchange} &nbsp; &middot; &nbsp; {company.Country} &nbsp; &middot; &nbsp; {company.Industry}
+						{company.Industry}
+						<br/>
+						{company.Exchange} &nbsp; &middot; &nbsp; {company.Country}
 					</p>
 				</b>
 				<br/>
