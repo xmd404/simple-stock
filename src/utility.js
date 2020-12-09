@@ -87,8 +87,9 @@ export const getStockChart = (e) => {
 };
 
 export const getCryptoChart = (e) => {
+	const newsID = e.currentTarget.getElementsByClassName('cardSymbol')[0].innerText;
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
-	window.location = `/#/chart/crypto/${chartID}`;
+	window.location = `/#/chart/crypto/${chartID}/${newsID}`;
 	mixpanel.track(
 		"Interacted w/ crypto card",
 		{
@@ -96,6 +97,7 @@ export const getCryptoChart = (e) => {
 			"id": `${chartID}`
 		}
 	);
+	console.log({ chartID })
 	return chartID;
 };
 

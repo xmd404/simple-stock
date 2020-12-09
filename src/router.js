@@ -21,7 +21,7 @@ const Router = () =>
       <Route path="/discover" component={DiscoverPage} />
       <Route path="/profile" component={ProfilePage} />
       <Route path="/chart/stock/:id" component={StockChart} />
-      <Route path="/chart/crypto/:id" component={CryptoChart} />
+      <Route path="/chart/crypto/:id/:name" component={CryptoChart} />
       {/* <Route path="/chart/forex/:id" component={ForexChart} /> */}
       <Route path="*" component={PageNotFound} />
     </Switch>

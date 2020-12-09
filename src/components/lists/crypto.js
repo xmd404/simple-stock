@@ -42,7 +42,7 @@ const CryptoList = () => {
 						<Card key={crypto.symbol} crypto={crypto} onClick={getCryptoChart}>
 							<Logo src={crypto.image}/>
 							<b>
-								<h2>{crypto.symbol}</h2>
+								<h2 className="cardSymbol">{crypto.symbol}</h2>
 							</b>
 							<p className="cardTicker" style={{ height: '75px'}}>{crypto.id}</p>
 							<h3>${crypto.current_price.toFixed(2)}</h3>

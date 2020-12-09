@@ -3,6 +3,7 @@ import { Card, Logo } from './components';
 import { Loading } from '../../utility';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
+import CryptoNews from '../news/crypto';
 
 const CryptoChart = () => {
 	// set state
@@ -14,8 +15,7 @@ const CryptoChart = () => {
 		axios
 			.get(`https://api.coingecko.com/api/v3/coins/${window.location.href.split("/")[6]}`)
 				.then(res => {
-					let crypto = res.data;
-					setCrypto(crypto);
+					setCrypto(res.data);
 					setLoaded(true);
 				})
 				.catch(err => {
@@ -44,6 +44,7 @@ const CryptoChart = () => {
 						<h2>${crypto.market_data.current_price.usd}</h2>
 					</div>
 				</Card>
+				<CryptoNews />
 				<ViewMoreButton />
 			</div>
 		);
