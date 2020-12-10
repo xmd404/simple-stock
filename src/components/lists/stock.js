@@ -54,7 +54,7 @@ const StockList = () => {
 							<b>
 								<h2 className="cardTicker">{stock.quote.symbol.toLowerCase()}</h2>
 							</b>
-							<p style={{ height: '75px'}}>{stock.quote.companyName.toLowerCase().split(', inc.')}</p>
+							<p style={{ height: '75px'}}>{stock.quote.companyName.toLowerCase().split(' ', 2)[0] + ' ' + stock.quote.companyName.toLowerCase().split(' ', 2)[1]}</p>
 							<h3>${stock.quote.latestPrice}</h3>
 						</Card>
 					))}
