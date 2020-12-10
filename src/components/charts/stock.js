@@ -52,7 +52,6 @@ const StockChart = () => {
 						</div>
 					</Card>
 				))}
-				<Articles />
 				<LatestFromReddit />
 				<CompanyInfo />
 				<ViewMoreButton />

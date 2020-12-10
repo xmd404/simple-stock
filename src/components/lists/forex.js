@@ -57,8 +57,11 @@ const ForexList = () => {
 					{pairs.slice(0, 20).map((pair) => (
 						<Card key={pair} pair={pair} onClick={getForexChart}>
 							<br/>
-							<img src={"https://www.countryflags.io/eu/flat/32.png"}/>
-							<br/><br/>
+							{/* <img src={"https://www.countryflags.io/eu/flat/32.png"}/> */}
+							<h2>
+								<span role="img" aria-label="euro">💶</span>
+							</h2>
+							<br/>
 							<h2>
 								euro 
 								<br/>

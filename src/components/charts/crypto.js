@@ -46,7 +46,6 @@ const CryptoChart = () => {
 						<h2>${crypto.market_data.current_price.usd}</h2>
 					</div>
 				</Card>
-				<Articles />
 				<LatestFromReddit />
 				<CryptoNews />
 				<ViewMoreButton />
