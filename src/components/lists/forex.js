@@ -8,7 +8,7 @@ const ForexList = () => {
 	const [error, setError] = useState(false);
 	const [isLoaded, setLoaded] = useState(false);
 	const [pairs, setPairs] = useState([]);
-	const [country, setCountry] = useState({});
+	// const [country, setCountry] = useState({});
 	const scrollRef = useRef("myscroll");
 	// fetch data from api
 	useEffect(() => {
@@ -26,19 +26,19 @@ const ForexList = () => {
 					console.log(err);
 				});
 	}, []);
-	useEffect(() => {
-		axios
-			.get(
-				`${corsProxy}http://data.fixer.io/api/symbols?access_key=${process.env.REACT_APP_FOREX_API_KEY}`
-				)
-				.then(res => {
-					let countries = res.data.symbols
-					setCountry(countries);
-					console.log(res.data.symbols);
-					console.log({ country });
+	// useEffect(() => {
+	// 	axios
+	// 		.get(
+	// 			`${corsProxy}http://data.fixer.io/api/symbols?access_key=${process.env.REACT_APP_FOREX_API_KEY}`
+	// 			)
+	// 			.then(res => {
+	// 				let countries = res.data.symbols
+	// 				setCountry(countries);
+	// 				console.log(res.data.symbols);
+	// 				console.log({ country });
 
-				})
-	}, []);
+	// 			})
+	// }, []);
 	// render error, loading, or success state
 	if (error) {
 		return <div></div>;

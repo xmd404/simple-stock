@@ -10,18 +10,27 @@ export const corsProxy = 'https://my-little-cors-proxy.herokuapp.com/'
 // data used by exchange APIs
 export const symbols = 'hulu,nflx,dis,tsla,nke,twtr,lyft,uber,real,work,vff,cara,msft,aapl,googl,cgc,acb';
 export const forex = {
-	'USD': 'United Arab Emirates Dirham',
+	'USD': 'United States Dollar',
 	'JPY': 'Japanese Yin',
 	'GBP': 'British Pound Sterling',
 	'AUD': 'Australian Dollar',
 	'CAD': 'Canadian Dollar',
 	'CHF': 'Swiss Franc',
 	'CNY': 'Chinese Yuan',
-	'AED': 'United Arab Emirates Dinar',
+	'AED': 'United Arab Emirates Dirham',
 	'NZD': 'New Zealand Dollar',
 	'SGD': 'Singapore Dollar',
 	'MXN': 'Mexican Peso',
 	'KRW': 'South Korean Won',
+	"BRL": "Brazilian Real",
+	"CUP": "Cuban Peso",
+	"COP": "Colombian Peso",
+	"HKD": "Hong Kong Dollar",
+	"INR": "Indian Rupee",
+	"NGN": "Nigerian Naira",
+	"RUB": "Russian Ruble",
+	"XAG": "Silver (troy ounce)",
+    "XAU": "Gold (troy ounce)",
 };
 console.log({ forex });
 // convert unix timestamp into regular dates
