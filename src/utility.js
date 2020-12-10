@@ -8,7 +8,7 @@ mixpanel.init("b59ca805a95a568c14bebb64fc0049c5");
 export const corsProxy = 'https://my-little-cors-proxy.herokuapp.com/'
 
 // data used by exchange APIs
-export const symbols = 'hulu,nflx,dis,qtwo,fb,tsla,nke,twtr,lyft,uber,,real,work,vff,cara,msft,aapl,googl,cgc,acb';
+export const symbols = 'hulu,nflx,dis,tsla,nke,twtr,lyft,uber,real,work,vff,cara,msft,aapl,googl,cgc,acb';
 export const pairs = 'EUR,JPY,GBP,AUD,CAD,CHF,CNY,AED,NZD';
 
 // convert unix timestamp into regular dates

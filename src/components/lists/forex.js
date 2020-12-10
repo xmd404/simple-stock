@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { List, Title, Card } from './components';
-import { Loading, shuffle, getForexChart } from '../../utility';
+import { Loading, shuffle, getForexChart, corsProxy } from '../../utility';
 import axios from 'axios';
 
 const ForexList = () => {
@@ -13,9 +13,10 @@ const ForexList = () => {
 	useEffect(() => {
 		axios
 			.get(
-				`https://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}&base=USD`
+				`${corsProxy}http://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}`
 				)
 				.then(res => {
+					console.log({res});
 					setPairs(shuffle(Object.entries(res.data.rates)));
 					setLoaded(true);
 
@@ -43,9 +44,9 @@ const ForexList = () => {
 					{pairs.slice(0, 20).map((pair) => (
 						<Card key={pair} pair={pair} onClick={getForexChart}>
 							<br/>
-							<img src={"https://www.countryflags.io/us/flat/32.png"}/>
+							<img src={"https://www.countryflags.io/eu/flat/32.png"}/>
 							<br/><br/>
-							<h2>usd / <span className="cardTicker">{pair[0].toLowerCase()}</span></h2>
+							<h2>eur / <span className="cardTicker">{pair[0].toLowerCase()}</span></h2>
 							<h3>
 								<b>$</b> {pair[1].toFixed(2)}
 							</h3>

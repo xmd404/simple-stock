@@ -11,7 +11,9 @@ const Articles = () => {
     // fetch data from api
     useEffect(() => {
         axios
-            .get(`https://cloud-sse.iexapis.com/stable/news-stream?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=${symbols}`)
+            .get(
+                `https://cloud-sse.iexapis.com/stable/news-stream?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=${symbols}`
+            )
             .then(res => {
                 setArticles(res.data.articles)
                 setLoaded(true);
@@ -23,7 +25,7 @@ const Articles = () => {
     }, []);
     // return error, loading, or success state
     if (error) {
-        return <div>Error: {error.message}</div>;
+        return <div></div>;
     } else if (!isLoaded) {
         return <Loading />;
     } else {
