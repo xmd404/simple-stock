@@ -29,8 +29,8 @@ export const forex = {
 	"INR": "Indian Rupee",
 	"NGN": "Nigerian Naira",
 	"RUB": "Russian Ruble",
-	"XAG": "Silver (troy ounce)",
-    "XAU": "Gold (troy ounce)",
+	"ZAR": "South African Rand",
+	"THB": "Thai Baht",
 };
 console.log({ forex });
 // convert unix timestamp into regular dates
