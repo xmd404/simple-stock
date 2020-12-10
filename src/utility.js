@@ -5,10 +5,11 @@ var mixpanel = require('mixpanel-browser');
 // init mixpanel
 mixpanel.init("b59ca805a95a568c14bebb64fc0049c5");
 
+// my little cors proxy (via @radishmouse)
 export const corsProxy = 'https://my-little-cors-proxy.herokuapp.com/'
 
 // data used by exchange APIs
-export const symbols = 'hulu,nflx,dis,tsla,nke,twtr,lyft,grub,amzn,real,lulu,work,vff,cara,msft,aapl,googl,cgc,acb,bidu,snap,';
+export const symbols = 'hulu,nflx,dis,tsla,nke,twtr,lyft,grub,amzn,real,lulu,work,vff,cara,msft,aapl,googl,cgc,acb,bidu,snap,sbux,sq,zm';
 export const forex = {
 	'USD': 'United States Dollar',
 	'JPY': 'Japanese Yin',

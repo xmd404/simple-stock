@@ -37,7 +37,7 @@ const StockChart = () => {
 	} else {
 		return (
 			<Container>
-				{stocks.map((stock) => (
+				{stocks.slice(0, 20).map((stock) => (
 					<Card key={stock.quote.symbol} stock={stock} onClick={getStockChart}>
 						<div style={{ float: 'left', width: '50%' }}>
 							<Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
