@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { List, Title, Card } from './components';
-import { Loading, shuffle, getForexChart, corsProxy } from '../../utility';
+import { Loading, shuffle, getForexChart, corsProxy, forex } from '../../utility';
 import axios from 'axios';
 
 const ForexList = () => {
@@ -8,15 +8,15 @@ const ForexList = () => {
 	const [error, setError] = useState(false);
 	const [isLoaded, setLoaded] = useState(false);
 	const [pairs, setPairs] = useState([]);
+	const [country, setCountry] = useState({});
 	const scrollRef = useRef("myscroll");
 	// fetch data from api
 	useEffect(() => {
 		axios
 			.get(
-				`${corsProxy}http://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}`
+				`${corsProxy}http://data.fixer.io/api/latest?access_key=${process.env.REACT_APP_FOREX_API_KEY}&symbols=${Object.keys(forex)}`
 				)
 				.then(res => {
-					console.log({res});
 					setPairs(shuffle(Object.entries(res.data.rates)));
 					setLoaded(true);
 
@@ -26,9 +26,22 @@ const ForexList = () => {
 					console.log(err);
 				});
 	}, []);
+	useEffect(() => {
+		axios
+			.get(
+				`${corsProxy}http://data.fixer.io/api/symbols?access_key=${process.env.REACT_APP_FOREX_API_KEY}`
+				)
+				.then(res => {
+					let countries = res.data.symbols
+					setCountry(countries);
+					console.log(res.data.symbols);
+					console.log({ country });
+
+				})
+	}, []);
 	// render error, loading, or success state
 	if (error) {
-		return <div>Error: {error.message}</div>;
+		return <div></div>;
 	} else if (!isLoaded) {
 		return <Loading />;
 	} else {
@@ -46,9 +59,14 @@ const ForexList = () => {
 							<br/>
 							<img src={"https://www.countryflags.io/eu/flat/32.png"}/>
 							<br/><br/>
-							<h2>eur / <span className="cardTicker">{pair[0].toLowerCase()}</span></h2>
+							<h2>
+								euro 
+								<br/>
+								→ <span className="cardTicker">{pair[0].toLowerCase()}</span>
+							</h2>
+							<p style={{ height: '75px'}}>{forex[pair[0]].toLowerCase()}</p>
 							<h3>
-								<b>$</b> {pair[1].toFixed(2)}
+								<b>€</b> {pair[1].toFixed(2)}
 							</h3>
 						</Card>
 					))}

@@ -9,8 +9,21 @@ export const corsProxy = 'https://my-little-cors-proxy.herokuapp.com/'
 
 // data used by exchange APIs
 export const symbols = 'hulu,nflx,dis,tsla,nke,twtr,lyft,uber,real,work,vff,cara,msft,aapl,googl,cgc,acb';
-export const pairs = 'EUR,JPY,GBP,AUD,CAD,CHF,CNY,AED,NZD';
-
+export const forex = {
+	'USD': 'United Arab Emirates Dirham',
+	'JPY': 'Japanese Yin',
+	'GBP': 'British Pound Sterling',
+	'AUD': 'Australian Dollar',
+	'CAD': 'Canadian Dollar',
+	'CHF': 'Swiss Franc',
+	'CNY': 'Chinese Yuan',
+	'AED': 'United Arab Emirates Dinar',
+	'NZD': 'New Zealand Dollar',
+	'SGD': 'Singapore Dollar',
+	'MXN': 'Mexican Peso',
+	'KRW': 'South Korean Won',
+};
+console.log({ forex });
 // convert unix timestamp into regular dates
 export const getDateTime = (unix_timestamp) => {
 	let date = new Date(unix_timestamp * 1000);

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { List, NewsCard, Headline } from './components';
+import { Title, List, NewsCard, Headline } from './components';
 import { symbols, Loading } from '../../utility';
 import axios from 'axios';
 
@@ -7,15 +7,16 @@ const Articles = () => {
     // set state
     const [error, setError] = useState(false);
     const [isLoaded, setLoaded] = useState(false);
-    const [articles, setArticles] = useState([]);
+    const [articles, setArticles] = useState({});
     // fetch data from api
     useEffect(() => {
         axios
             .get(
-                `https://cloud-sse.iexapis.com/stable/news-stream?token=${process.env.REACT_APP_STOCK_API_KEY}&symbols=${symbols}`
+                `https://api.currentsapi.services/v1/latest-news?language=us&apiKey=${process.env.REACT_APP_CURRENT_NEWS_KEY}`
             )
             .then(res => {
-                setArticles(res.data.articles)
+                setArticles(res.json().news);
+                console.log({ articles });
                 setLoaded(true);
             })
             .catch(err => {
@@ -31,21 +32,21 @@ const Articles = () => {
     } else {
         return (
             <div>
-                {/* <Title>
+                <Title>
                     <h1 style={{ margin: '0', padding: '0' }}>Articles</h1>
-                </Title> */}
+                </Title>
                 <List
                     className="list-scroll"
                 >
                     {articles.map((article) => (
                         <a
-                            key={article.url}
+                            key={article.id}
                             article={article}
                             href={article.url}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <NewsCard news>
+                            <NewsCard article>
                                 {/* <Thumbnail src={article.urlToImage} /> */}
                                 <Headline>
                                     <br/>
@@ -54,7 +55,7 @@ const Articles = () => {
                                     </b>
                                     {/* <p>{article.publishedAt.substring(0, 16).replace(regex, ' @ ')}</p> */}
                                     <p>
-                                        <u>{article.source.name.toLowerCase()}</u>
+                                        <u>{article.author.toLowerCase()}</u>
                                     </p>
                                 </Headline>
                                 <br/>

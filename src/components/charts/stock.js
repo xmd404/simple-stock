@@ -5,6 +5,7 @@ import CompanyInfo from './company-info';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
 import LatestFromReddit from '../news/reddit';
+import Articles from '../lists/articles';
 
 
 const StockChart = () => {
@@ -51,6 +52,7 @@ const StockChart = () => {
 						</div>
 					</Card>
 				))}
+				<Articles />
 				<LatestFromReddit />
 				<CompanyInfo />
 				<ViewMoreButton />

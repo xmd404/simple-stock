@@ -44,7 +44,7 @@ const News = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<NewsCard news>
+							<NewsCard article>
 								<Thumbnail src={article.image_url} />
 								<Headline>
 									<br/>

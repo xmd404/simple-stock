@@ -5,6 +5,7 @@ import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
 import CryptoNews from '../news/crypto';
 import LatestFromReddit from '../news/reddit';
+import Articles from '../lists/articles';
 
 const CryptoChart = () => {
 	// set state
@@ -45,6 +46,7 @@ const CryptoChart = () => {
 						<h2>${crypto.market_data.current_price.usd}</h2>
 					</div>
 				</Card>
+				<Articles />
 				<LatestFromReddit />
 				<CryptoNews />
 				<ViewMoreButton />

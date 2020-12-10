@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -21,7 +20,6 @@ const LatestFromReddit = () => {
         axios
             .get(`${corsProxy}https://www.reddit.com/r/${window.location.href.split("/")[6]}/hot.json`)
                 .then(res => {
-                    console.log({ res });
                     setPosts(res.data.data.children);
                     setLoaded(true);
                 })
