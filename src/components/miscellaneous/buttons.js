@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { capitalize } from '../../utility';
 
 const LargeButton = styled.div`
   margin: 1.25em auto;
@@ -15,8 +16,10 @@ const LargeButton = styled.div`
 
 export const ViewMoreButton = () =>
   <LargeButton>
-    <p>
-      {`View More ${window.location.href.split("/")[5]}`.toUpperCase()}
-    </p>
+    <b>
+      <p>
+        {`View More ${capitalize(window.location.href.split("/")[5])}`}
+      </p>
+    </b>
   </LargeButton>
     

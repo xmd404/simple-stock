@@ -52,6 +52,19 @@ export const getMarketMessage = (signal) => {
 	return status;
 };
 
+// capitalize first letter in string
+export const capitalize = (s) => {
+	if (typeof s !== 'string') return ''
+	return s.charAt(0).toUpperCase() + s.slice(1)
+};
+
+// convert string to rendered HTML
+export const stringToHTML = function (str) {
+	var parser = new DOMParser();
+	var doc = parser.parseFromString(str, 'text/html');
+	return doc.body;
+};
+
 // handle errors
 export const error = () => {
 	if (error.response) {

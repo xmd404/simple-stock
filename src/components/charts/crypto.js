@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Card, Logo } from './components';
-import { Loading } from '../../utility';
+import { capitalize, Loading } from '../../utility';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
 import CryptoNews from '../news/crypto';
@@ -45,8 +45,17 @@ const CryptoChart = () => {
 						<br/>
 						<h2>${crypto.market_data.current_price.usd}</h2>
 					</div>
+					<br/>
 				</Card>
 				<LatestFromReddit />
+				<b>
+						<p style={{ textAlign: 'center' }}>What is {capitalize(crypto.id)}?</p>
+					</b>
+					<br/>
+				<Card>
+					<p>{crypto.description.en}</p>
+				</Card>
+				<br/><br/>
 				<CryptoNews />
 				<ViewMoreButton />
 			</Container>
