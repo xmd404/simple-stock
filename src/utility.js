@@ -8,7 +8,7 @@ mixpanel.init("b59ca805a95a568c14bebb64fc0049c5");
 export const corsProxy = 'https://my-little-cors-proxy.herokuapp.com/'
 
 // data used by exchange APIs
-export const symbols = 'hulu,nflx,dis,tsla,nke,twtr,lyft,uber,real,work,vff,cara,msft,aapl,googl,cgc,acb';
+export const symbols = 'hulu,nflx,dis,tsla,nke,twtr,lyft,grub,amzn,real,lulu,work,vff,cara,msft,aapl,googl,cgc,acb,bidu,snap,';
 export const forex = {
 	'USD': 'United States Dollar',
 	'JPY': 'Japanese Yin',
@@ -33,6 +33,7 @@ export const forex = {
 	"THB": "Thai Baht",
 };
 console.log({ forex });
+
 // convert unix timestamp into regular dates
 export const getDateTime = (unix_timestamp) => {
 	let date = new Date(unix_timestamp * 1000);
