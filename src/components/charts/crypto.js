@@ -47,15 +47,17 @@ const CryptoChart = () => {
 					</div>
 					<br/>
 				</Card>
-				<LatestFromReddit />
-				<b>
+				<div>
+					<b>
 						<p style={{ textAlign: 'center' }}>What is {capitalize(crypto.id)}?</p>
 					</b>
 					<br/>
+				</div>
 				<Card>
-					<p>{crypto.description.en}</p>
+					<p>{`${crypto.description.en.substring(0, 555)}...`}</p>
 				</Card>
 				<br/><br/>
+				<LatestFromReddit />
 				<CryptoNews />
 				<ViewMoreButton />
 			</Container>
