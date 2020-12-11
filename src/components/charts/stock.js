@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Card, Logo } from './components';
-import { getStockChart, Loading } from '../../utility';
+import { getStockChart, formatMoney, Loading } from '../../utility';
 import CompanyInfo from './company-info';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
@@ -48,7 +48,7 @@ const StockChart = () => {
 						</div>
 						<div style={{ float: 'right', width: '50%', textAlign: 'right' }}>
 							<br/>
-							<h2>${stock.quote.latestPrice}</h2>
+							<h2>{formatMoney(stock.quote.latestPrice2)}</h2>
 						</div>
 					</Card>
 				))}

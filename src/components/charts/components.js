@@ -55,7 +55,7 @@ export const Tint = styled.div`
 	background-color: #000;
 	color: #FFF;
 	border-radius: 6%;
-	opacity: 0.9;
+	opacity: 0.8;
 	z-index: 2;
 `;
 
