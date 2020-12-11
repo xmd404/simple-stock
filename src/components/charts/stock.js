@@ -31,7 +31,7 @@ const StockChart = () => {
 	}, []);
 	// return error, loading, or success state
 	if (error) {
-		return <div>Error: error.message</div>;
+		return <div></div>;
 	} else if (!isLoaded) {
 		return <Loading />;
 	} else {
