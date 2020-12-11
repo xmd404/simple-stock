@@ -39,7 +39,7 @@ export const NewsCard = styled.div`
 	width: 250px;
 	margin: 0 0.75em 0.75em 0;
 	color: #FFF;
-	background-color: #17141d;
+	background-color: rgb(14, 17, 22);
 	background-repeat: no-repeat;
     background-size: cover;
 	border-radius: 6%;

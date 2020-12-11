@@ -28,7 +28,7 @@ export const Card = styled.div`
 	margin 0 0.75em 0 0;
 	padding: 5px 0 5px 20px;
 	color: #FFF;
-	background-color: #17141d;
+	background-color: rgb(14, 17, 22);
 	border-radius: 6%;
   	box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
 	text-align: left;
@@ -43,7 +43,7 @@ export const NewsCard = styled.div`
 	width: 250px;
 	margin 0 0.75em 0.75em 0;
 	color: #FFF;
-	background-color: #17141d;
+	background-color: rgb(14, 17, 22);
 	border-radius: 6%;
   	box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
   	text-align: left;
