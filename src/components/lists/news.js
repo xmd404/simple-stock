@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { List, NewsCard, Headline, Thumbnail } from './components';
+import { List, NewsCard, Headline, Tint, Thumbnail } from './components';
 import { symbols, Loading } from '../../utility';
 import axios from 'axios';
 
@@ -44,21 +44,22 @@ const News = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<NewsCard article>
-								<Thumbnail src={article.image_url} />
-								<Headline>
+							<NewsCard style={{ backgroundImage: `url(${article.image_url})` }} article>
+								<Tint>
+									<Headline>
+										<br/>
+										<p>{article.date.substring(0, 16)}</p>
+										<br/>
+										<b>
+											<p style={{ height: '100px' }}>{article.title.substring(0, 105)}</p>
+										</b>
+										<br/>
+										<p>
+											<u>{article.source_name.toLowerCase()}</u>
+										</p>
+									</Headline>
 									<br/>
-									<p>{article.date.substring(0, 16)}</p>
-									<br/>
-									<b>
-										<p style={{ height: '100px' }}>{article.title.substring(0, 105)}</p>
-									</b>
-									<br/>
-									<p>
-										<u>{article.source_name.toLowerCase()}</u>
-									</p>
-								</Headline>
-								<br/>
+								</Tint>
 							</NewsCard>
 						</a>
 					))}

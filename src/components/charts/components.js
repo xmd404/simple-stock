@@ -40,6 +40,8 @@ export const NewsCard = styled.div`
 	margin: 0 0.75em 0.75em 0;
 	color: #FFF;
 	background-color: #17141d;
+	background-repeat: no-repeat;
+    background-size: cover;
 	border-radius: 6%;
   	box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
   	text-align: left;
@@ -47,8 +49,19 @@ export const NewsCard = styled.div`
   ${(props) => props.news && css`text-align: left;`}
 `;
 
+export const Tint = styled.div`
+	height: 100%
+	width: 100%;
+	background-color: #000;
+	color: #FFF;
+	border-radius: 6%;
+	opacity: 0.9;
+	z-index: 2;
+`;
+
 export const Headline = styled.div`
   padding: 0 1.25em;
+  z-index: 3;
 `;
 
 export const Thumbnail = styled.img`

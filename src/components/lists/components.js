@@ -51,8 +51,19 @@ export const NewsCard = styled.div`
   ${(props) => props.news && css`text-align: left;`}
 `;
 
+export const Tint = styled.div`
+	height: 100%
+	width: 100%;
+	background-color: #000;
+	color: #FFF;
+	border-radius: 6%;
+	opacity: 0.9;
+	z-index: 2;
+`;
+
 export const Headline = styled.div`
   padding: 0 1.25em;
+  z-index: 3;
 `;
 
 export const Thumbnail = styled.img`
