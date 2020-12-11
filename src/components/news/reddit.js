@@ -38,7 +38,7 @@ const LatestFromReddit = () => {
             <div>
                 <b>
                     <p style={{ textAlign: 'center' }}>
-                        Latest from <FontAwesomeIcon icon={["fab", "reddit"]} /> Reddit
+                        Latest from &nbsp;<FontAwesomeIcon icon={["fab", "reddit"]} /> Reddit
                     </p>
                 </b>
                 <List
