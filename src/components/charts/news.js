@@ -57,7 +57,6 @@ const News = () => {
 							rel="noopener noreferrer"
 						>
 							<NewsCard style={{ backgroundImage: `url(${article.image_url})` }} article>
-								{/* <Thumbnail src={} /> */}
                                 <Tint>
                                     <Headline>
                                         <br/>
