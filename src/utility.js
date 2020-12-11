@@ -88,7 +88,7 @@ export const error = () => {
 // handle loading
 export const Loading = () => (
 	<div style={{ textAlign: 'center', margin: '10em 5em' }}>
-		<Loader type="Rings" color="fuchsia" height={80} width={80} />
+		<Loader type="Rings" color="rgb(66, 139, 223)" height={80} width={80} />
 		<p>Loading</p>
 	</div>
 );

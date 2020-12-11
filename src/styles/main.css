@@ -85,15 +85,15 @@ code {
 }
 
 .navbar a:hover {
-  color: magenta;
+  color: rgb(66, 139, 223);
 }
 
 .navbar a.active {
-  color: magenta;
+  color: rgb(66, 139, 223);
 }
 
 .navbar .icon {
-  color: magenta;
+  color: rgb(66, 139, 223);
 }
 
 .navbar p {
@@ -125,6 +125,6 @@ code {
   font-weight: bolder;
 }
 .submit {
-  background-color: magenta;
+  background-color: rgb(66, 139, 223);
   color: #fff;
 }
