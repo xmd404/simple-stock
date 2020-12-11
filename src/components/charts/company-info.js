@@ -40,7 +40,7 @@ const CompanyInfo = () => {
 				<br/>
 				<Card>
 					<br/>
-					<p>{company.Description}</p>
+					<p>{`${company.Description.substring(0, 1000)}...`}</p>
 				</Card>
 				<br/>
 			</Container>

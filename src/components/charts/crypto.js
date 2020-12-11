@@ -54,7 +54,7 @@ const CryptoChart = () => {
 					<br/>
 				</div>
 				<Card>
-					<p>{`${crypto.description.en.substring(0, 555)}...`}</p>
+					<p>{`${crypto.description.en.replace(/<.*>/g, '').substring(0, 1000)}...`}</p>
 				</Card>
 				<br/><br/>
 				<LatestFromReddit />
