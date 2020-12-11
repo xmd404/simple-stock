@@ -7,17 +7,17 @@ const MetalsList = () => {
 	// set state
 	const [error, setError] = useState(false);
 	const [isLoaded, setLoaded] = useState(false);
-	const [metals, setMetals] = useState([]);
+	const [commodities, setCommodities] = useState([]);
 	const scrollRef = useRef("myscroll");
 	// fetch data from api
 	useEffect(() => {
 		axios
 			.get(
-				`${corsProxy}https://metals-api.com/api/latest?access_key=${process.env.REACT_APP_METALS_API_KEY}&base=USD&symbols=XAU%2CXAG%2CXPD%2CXPT%2CXRH`
+				`${corsProxy}https://public.opendatasoft.com/api/records/1.0/search/?dataset=commodity-prices&q=&facet=date&facet=commodity&refine.date=2016%2F02`
 				)
 				.then(res => {
-                    setMetals(shuffle(Object.entries(res.data.rates)));
-                    console.log(res.data);
+                    setCommodities(shuffle(res.data.records));
+                    console.log(res.data.records);
 					setLoaded(true);
 
 				})
@@ -41,24 +41,18 @@ const MetalsList = () => {
 					className="list-scroll"
 					ref={scrollRef}
 				>
-					{metals.slice(0, 20).map((metal) => (
-						<Card key={metal} metal={metal}>
-							<br/>
-							{/* <img src={"https://www.countryflags.io/eu/flat/32.png"}/> */}
-							<h2>
-								<span role="img" aria-label="diamond">🗿</span>
-							</h2>
+					{commodities.slice(0, 20).map((commodity) => (
+						<Card key={commodity} commodity={commodity}>
 							<br/>
 							<h2>
-                                <span className="cardTicker">{metal[0].toLowerCase()}
-                            </span>
+                                <span className="cardTicker">
+                                    {`${commodity.fields.commodity.toLowerCase().split(' ', 2)[0]}`}
+                                </span>
 							</h2>
-							{/* <p style={{ height: '75px'}}>{Metals[metal[0]].toLowerCase()}</p> */}
+                            <p style={{ height: '75px'}}>{commodity.fields.commodity.toLowerCase()}</p>
 							<h3>
-								<b>$</b> {metal[1].toFixed(5)}
+								<b>$</b> {commodity.fields.price_index.toFixed(2)}
 							</h3>
-                            <p>per ounce</p>
-                            <br/>
 						</Card>
 					))}
 				</List>
