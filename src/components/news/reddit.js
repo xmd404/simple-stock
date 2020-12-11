@@ -7,7 +7,7 @@ import { List, NewsCard, Headline } from './components';
 import { corsProxy, Loading } from '../../utility';
 import axios from 'axios';
 
-library.add(fab, faCheckSquare, faCoffee)
+library.add(fab, faCheckSquare, faCoffee);
 
 const LatestFromReddit = () => {
     // set state

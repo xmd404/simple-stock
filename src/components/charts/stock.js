@@ -5,7 +5,7 @@ import CompanyInfo from './company-info';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
 import LatestFromReddit from '../news/reddit';
-import Articles from '../lists/articles';
+import News from '../charts/news';
 
 
 const StockChart = () => {
@@ -54,6 +54,7 @@ const StockChart = () => {
 				))}
 				<CompanyInfo />
 				<br/>
+				<News />
 				<LatestFromReddit />
 				<ViewMoreButton />
 			</Container>

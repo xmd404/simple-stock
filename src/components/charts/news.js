@@ -1,7 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { List, NewsCard, Headline, Thumbnail } from './components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { symbols, Loading } from '../../utility';
 import axios from 'axios';
+
+library.add(fab, far, faCheckSquare, faCoffee)
 
 const News = () => {
 	// set state
@@ -13,7 +20,7 @@ const News = () => {
 	useEffect(() => {
 		axios
 			.get(
-					`https://stocknewsapi.com/api/v1?tickers=${symbols}&items=20&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&type=video`
+					`https://stocknewsapi.com/api/v1?tickers=${window.location.href.split("/")[6]}&items=20&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&type=video`
 				)
 				.then(res => {
 					setArticles(Object.values(res.data));
@@ -32,6 +39,11 @@ const News = () => {
 	} else {
 		return (
 			<div>
+                <b>
+                    <p style={{ textAlign: 'center' }}>
+                        <FontAwesomeIcon icon={["far", "newspaper"]} /> &nbsp; Breaking News
+                    </p>
+                </b>
 				<List
 					className="list-scroll"
 					ref={scrollRef}
