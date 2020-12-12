@@ -4,11 +4,15 @@ import styled from 'styled-components';
 import { getHomePage } from '../utility';
 
 const Logo = styled.header`
-	margin: 50px 0;
-	padding: 0;
+	position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+	margin: 0;
+	padding: 45px 0px;
 	width: auto;
 	text-decoration: none;
 	text-align: center;
+	background-color: rgb(7, 9, 14); 
 `;
 
 const Header = () => (
