@@ -14,11 +14,12 @@ const Logo = styled.header`
 	text-align: center;
 	background-color: rgb(7, 9, 14); 
 	z-index: 100;
+	transition: 0.2s
 `;
 
 const Header = () => (
 	<Link to="/" onClick={getHomePage} style={{ textDecoration: 'none', color: '#fff' }}>
-		<Logo>
+		<Logo id="header">
 			<h1 style={{ margin: '0', padding: '0' }}>
 				<span role="img" aria-label="money with wings emoji">
 					💸 &nbsp;

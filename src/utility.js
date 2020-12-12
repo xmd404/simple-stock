@@ -194,6 +194,17 @@ export const getProfilePage = () => {
 	);
 };
 
+// shrink header on scroll
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header").style.padding = "20px 0 25px";
+  } else {
+    document.getElementById("header").style.padding = "45px 0";
+  }
+}
+
 // snow / confetti / cash micro-interaction
 var duration = 3 * 1000;
 var animationEnd = Date.now() + duration;
