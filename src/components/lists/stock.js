@@ -51,7 +51,7 @@ const StockList = () => {
 				<Tips />
 				<Title>
 					<h2 style={{ margin: '0', padding: '0' }}>
-						<FontAwesomeIcon icon={["fas", "file-contract"]} /> &nbsp; Stocks
+						<FontAwesomeIcon icon={["fas", "file-invoice-dollar"]} /> &nbsp; Stocks
 					</h2>
 				</Title>
 				<List
