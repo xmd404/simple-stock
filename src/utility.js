@@ -197,13 +197,15 @@ export const getProfilePage = () => {
 // shrink header onscroll
 window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
+let scrollFunction = () => {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("header").style.padding = "20px 0 25px";
+	document.getElementById("header").style.padding = "20px 0 25px";
+	document.getElementById("header-title").style.fontSize = "150%";
   } else {
-    document.getElementById("header").style.padding = "45px 0";
+	document.getElementById("header").style.padding = "45px 0";
+	document.getElementById("header-title").style.fontSize = "198%";
   }
-}
+};
 
 // snow / confetti / cash micro-interaction
 var duration = 3 * 1000;
@@ -212,7 +214,7 @@ var skew = 1;
 
 function randomInRange(min, max) {
   return Math.random() * (max - min) + min;
-}
+};
 
 (function frame() {
   var timeLeft = animationEnd - Date.now();

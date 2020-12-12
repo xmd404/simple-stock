@@ -20,7 +20,7 @@ const Logo = styled.header`
 const Header = () => (
 	<Link to="/" onClick={getHomePage} style={{ textDecoration: 'none', color: '#fff' }}>
 		<Logo id="header">
-			<h1 style={{ margin: '0', padding: '0' }}>
+			<h1 style={{ margin: '0', padding: '0' }} id="header-title">
 				<span role="img" aria-label="money with wings emoji">
 					💸 &nbsp;
 				</span>SimpleStock
