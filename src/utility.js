@@ -129,6 +129,7 @@ export let shuffle = (unsorted) => {
 export const getStockChart = (e) => {
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/stock/${chartID}`;
+	document.getElementById("my-bar").style.width = "0%"
 	mixpanel.track(
 		"Interacted w/ stock card",
 		{
@@ -143,6 +144,7 @@ export const getCryptoChart = (e) => {
 	const newsID = e.currentTarget.getElementsByClassName('cardSymbol')[0].innerText;
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/crypto/${chartID}/${newsID}`;
+	document.getElementById("my-bar").style.width = "0%"
 	mixpanel.track(
 		"Interacted w/ crypto card",
 		{
@@ -157,6 +159,7 @@ export const getCryptoChart = (e) => {
 export const getForexChart = (e) => {
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/forex/${chartID}`;
+	document.getElementById("my-bar").style.width = "0%"
 	mixpanel.track(
 		"Interacted w/ forex card",
 		{
@@ -168,6 +171,7 @@ export const getForexChart = (e) => {
 };
 
 export const getHomePage = () => {
+	document.getElementById("my-bar").style.width = "0%"
 	mixpanel.track(
 		"Went to HomePage",
 		{
@@ -177,6 +181,7 @@ export const getHomePage = () => {
 };
 
 export const getDiscoverPage = () => {
+	document.getElementById("my-bar").style.width = "0%"
 	mixpanel.track(
 		"Went to DiscoverPage",
 		{
@@ -186,6 +191,7 @@ export const getDiscoverPage = () => {
 };
 
 export const getProfilePage = () => {
+	document.getElementById("my-bar").style.width = "0%"
 	mixpanel.track(
 		"Went to ProfilePage",
 		{
