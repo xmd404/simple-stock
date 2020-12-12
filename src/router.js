@@ -16,16 +16,18 @@ import CryptoChart from './components/charts/crypto';
 const Router = () =>
   <HashRouter>
     <Header />
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/discover/" component={DiscoverPage} />
-      <Route path="/profile/" component={ProfilePage} />
-      <Route path="/chart/stock/:id/" component={StockChart} />
-      <Route path="/chart/crypto/:id/:name/" component={CryptoChart} />
-      {/* <Route path="/chart/forex/:id/:name" component={ForexChart} /> */}
-      <Route path="*" component={PageNotFound} />
-    </Switch>
-    <Footer />
+    <div className="header-padding">
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/discover/" component={DiscoverPage} />
+        <Route path="/profile/" component={ProfilePage} />
+        <Route path="/chart/stock/:id/" component={StockChart} />
+        <Route path="/chart/crypto/:id/:name/" component={CryptoChart} />
+        {/* <Route path="/chart/forex/:id/:name" component={ForexChart} /> */}
+        <Route path="*" component={PageNotFound} />
+      </Switch>
+      <Footer />
+    </div>
     <Navbar />
   </HashRouter>
 

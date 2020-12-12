@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import { getHomePage } from '../utility';
 
 const Logo = styled.header`
-	position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+	position: fixed;
+	right: 0;
+	left: 0;
 	margin: 0;
 	padding: 45px 0px;
 	width: auto;

@@ -28,6 +28,10 @@ code {
     monospace;
 }
 
+.header-padding {
+  padding-top: 155px;
+}
+
 #loader {
   position: absolute;
   left: 50%;
