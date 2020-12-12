@@ -194,7 +194,7 @@ export const getProfilePage = () => {
 	);
 };
 
-// shrink header on scroll
+// shrink header onscroll
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -203,6 +203,16 @@ function scrollFunction() {
   } else {
     document.getElementById("header").style.padding = "45px 0";
   }
+}
+
+// show progress bar onscroll
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
+    document.getElementById("my-bar").style.width = scrolled + "%"
 }
 
 // snow / confetti / cash micro-interaction

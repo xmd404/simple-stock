@@ -29,6 +29,11 @@ const Header = () => (
 				Generational wealth, for all.
 			</p>
 		</Logo>
+		<div class="indicator">
+			<div class="progress-container">
+				<div class="progress-bar" id="my-bar"></div>
+			</div>
+		</div>
 	</Link>
 );
 
