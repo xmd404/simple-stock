@@ -40,9 +40,9 @@ const News = () => {
 		return (
 			<div>
 				<b>
-                    <p style={{ textAlign: 'center' }}>
+                    <h2 style={{ textAlign: 'center' }}>
                         <FontAwesomeIcon icon={["far", "newspaper"]} /> &nbsp; Breaking News
-                    </p>
+                    </h2>
                 </b>
 				<List
 					className="list-scroll"
