@@ -8,7 +8,7 @@ import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { symbols, Loading } from '../../utility';
 import axios from 'axios';
 
-library.add(fab, far, faCheckSquare, faCoffee)
+library.add(fab, far, faCheckSquare, faCoffee);
 
 const News = () => {
 	// set state
