@@ -28,6 +28,10 @@ code {
     monospace;
 }
 
+.header-title {
+  transition: 0.2s;
+}
+
 .header-padding {
   padding-top: 155px;
 }
