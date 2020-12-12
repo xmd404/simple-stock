@@ -129,7 +129,6 @@ export let shuffle = (unsorted) => {
 export const getStockChart = (e) => {
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/stock/${chartID}`;
-	document.getElementById("my-bar").style.width = "0%"
 	mixpanel.track(
 		"Interacted w/ stock card",
 		{
@@ -144,7 +143,6 @@ export const getCryptoChart = (e) => {
 	const newsID = e.currentTarget.getElementsByClassName('cardSymbol')[0].innerText;
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/crypto/${chartID}/${newsID}`;
-	document.getElementById("my-bar").style.width = "0%"
 	mixpanel.track(
 		"Interacted w/ crypto card",
 		{
@@ -159,7 +157,6 @@ export const getCryptoChart = (e) => {
 export const getForexChart = (e) => {
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/forex/${chartID}`;
-	document.getElementById("my-bar").style.width = "0%"
 	mixpanel.track(
 		"Interacted w/ forex card",
 		{
@@ -171,7 +168,6 @@ export const getForexChart = (e) => {
 };
 
 export const getHomePage = () => {
-	document.getElementById("my-bar").style.width = "0%"
 	mixpanel.track(
 		"Went to HomePage",
 		{
@@ -181,7 +177,6 @@ export const getHomePage = () => {
 };
 
 export const getDiscoverPage = () => {
-	document.getElementById("my-bar").style.width = "0%"
 	mixpanel.track(
 		"Went to DiscoverPage",
 		{
@@ -191,7 +186,6 @@ export const getDiscoverPage = () => {
 };
 
 export const getProfilePage = () => {
-	document.getElementById("my-bar").style.width = "0%"
 	mixpanel.track(
 		"Went to ProfilePage",
 		{
@@ -209,16 +203,6 @@ function scrollFunction() {
   } else {
     document.getElementById("header").style.padding = "45px 0";
   }
-}
-
-// show progress bar onscroll
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrolled = (winScroll / height) * 100;
-    document.getElementById("my-bar").style.width = scrolled + "%"
 }
 
 // snow / confetti / cash micro-interaction
