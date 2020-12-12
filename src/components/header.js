@@ -13,6 +13,7 @@ const Logo = styled.header`
 	text-decoration: none;
 	text-align: center;
 	background-color: rgb(7, 9, 14); 
+	z-index: 100;
 `;
 
 const Header = () => (
