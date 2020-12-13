@@ -48,7 +48,7 @@ const StockChart = () => {
 						</div>
 						<div style={{ float: 'right', width: '50%', textAlign: 'right' }}>
 							<br/>
-							<h2>{stock.quote.latestPrice}</h2>
+							<h2>${stock.quote.latestPrice}</h2>
 						</div>
 					</Card>
 				))}
