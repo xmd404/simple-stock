@@ -57,7 +57,7 @@ const ForexList = () => {
 					ref={scrollRef}
 				>
 					{pairs.slice(0, 20).map((pair) => (
-						<Card key={pair} pair={pair} onClick={getForexChart}>
+						<Card key={pair} pair={pair}>
 							<br/>
 							{/* <img src={"https://www.countryflags.io/eu/flat/32.png"}/> */}
 							<h2>
