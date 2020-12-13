@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { getHomePage, getDiscoverPage, getProfilePage } from '../utility';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fas);
 
 const Navbar = () => (
 	<div className="navbar">
