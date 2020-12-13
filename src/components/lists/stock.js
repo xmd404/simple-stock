@@ -3,14 +3,6 @@ import { List, Title, Card, Logo } from './components';
 import { symbols, getMarketMessage, getStockChart, Loading, shuffle } from '../../utility';
 import axios from 'axios';
 import Tips from '../miscellaneous/tips';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
-
-library.add(fab, far, faCheckSquare, faCoffee);
-
 
 const StockList = () => {
 	// set state
@@ -51,7 +43,7 @@ const StockList = () => {
 				<Tips />
 				<Title>
 					<h2 style={{ margin: '0', padding: '0' }}>
-						<FontAwesomeIcon icon={["fas", "file-invoice-dollar"]} /> &nbsp; Stocks
+						Stocks
 					</h2>
 				</Title>
 				<List

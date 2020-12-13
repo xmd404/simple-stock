@@ -2,14 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { List, Title, Card } from './components';
 import { Loading, shuffle, getForexChart, corsProxy, forex } from '../../utility';
 import axios from 'axios';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
-
-library.add(fab, far, fas, faCheckSquare, faCoffee);
 
 const ForexList = () => {
 	// set state
@@ -57,7 +49,7 @@ const ForexList = () => {
 			<div>
 				<Title>
 				<h2 style={{ margin: '0', padding: '0' }}>
-					<FontAwesomeIcon icon={["fas", "exchange-alt"]} /> &nbsp; Forex
+					Forex
 				</h2>
 				</Title>
 				<List

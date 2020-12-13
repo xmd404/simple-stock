@@ -2,13 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { List, Title, Card, Logo } from './components';
 import { Loading, getCryptoChart } from '../../utility';
 import axios from 'axios';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
-
-library.add(fab, far, faCheckSquare, faCoffee);
 
 const CryptoList = () => {
 	// set state
@@ -40,7 +33,7 @@ const CryptoList = () => {
 			<div>
 				<Title>
 					<h2 style={{ margin: '0', padding: '0' }}>
-						<FontAwesomeIcon icon={["fas", "coins"]} /> &nbsp; Crypto
+						Crypto
 					</h2>
 				</Title>
 				<List
