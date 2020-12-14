@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Card, Logo } from './components';
-import { getStockChart, formatMoney, Loading } from '../../utility';
+import { getStockChart, Loading } from '../../utility';
 import CompanyInfo from './company-info';
 import { ViewMoreButton } from '../miscellaneous/buttons';
-import axios from 'axios';
 import LatestFromReddit from '../news/reddit';
 import News from '../charts/news';
-
+import axios from 'axios';
 
 const StockChart = () => {
 	// set state
