@@ -40,7 +40,7 @@ const CryptoList = () => {
 					className="list-scroll"
 					ref={scrollRef}
 				>
-					{cryptos.splice(0, 20).map((crypto) => (
+					{cryptos.slice(0, 20).map((crypto) => (
 						<Card key={crypto.symbol} crypto={crypto} onClick={getCryptoChart}>
 							<Logo src={crypto.image}/>
 							<b>
