@@ -5,7 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
-import { symbols, Loading } from '../../utility';
+import { symbols, Loading, corsProxy } from '../../utility';
 import axios from 'axios';
 
 library.add(fab, far, faCheckSquare, faCoffee);
@@ -20,7 +20,7 @@ const News = () => {
 	useEffect(() => {
 		axios
 			.get(
-					`https://stocknewsapi.com/api/v1?tickers=${symbols}&items=20&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&type=video`
+					`${corsProxy}https://stocknewsapi.com/api/v1?tickers=${symbols}&items=20&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&type=video`
 				)
 				.then(res => {
 					setArticles(Object.values(res.data));

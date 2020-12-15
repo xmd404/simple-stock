@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { List, Title, Card, Logo } from './components';
-import { symbols, getMarketMessage, getStockChart, Loading, shuffle } from '../../utility';
+import { symbols, getMarketMessage, getStockChart, Loading, shuffle, corsProxy } from '../../utility';
 import axios from 'axios';
 import Tips from '../miscellaneous/tips';
 
@@ -15,7 +15,7 @@ const StockList = () => {
 		axios
 			.get(
 					`https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env
-						.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote,news`
+						.REACT_APP_STOCK_API_KEY}&symbols=${symbols}&types=quote`
 				)
 				.then(res => {
 					setStocks(shuffle(Object.values(res.data)));
