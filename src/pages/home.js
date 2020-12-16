@@ -7,7 +7,6 @@ import News from '../components/lists/news';
 
 const HomePage = () =>
   <div>
-    <News />
     <StockList />
     <CryptoList />
     <ForexList />
