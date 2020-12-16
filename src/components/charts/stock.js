@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Card, Logo } from './components';
-import { getStockChart, Loading } from '../../utility';
+import { Loading } from '../../utility';
 import CompanyInfo from './company-info';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import LatestFromReddit from '../news/reddit';
 import News from '../charts/news';
 import axios from 'axios';
+import { getStockChart } from '../../api';
 
 const StockChart = () => {
 	// set state
@@ -15,18 +16,15 @@ const StockChart = () => {
 	// fetch data from api
 	useEffect(() => {
 		axios
-			.get(
-				`https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env
-					.REACT_APP_STOCK_API_KEY}&symbols=${window.location.href.split("/")[6]}&types=quote,news`
-			)
-			.then(res => {
-				setStocks(Object.values(res.data));
-				setLoaded(true);
-			})
-			.catch(err => {
-				setError(true);
-				console.log(err);
-			});
+			.get(getStockChart)
+				.then(res => {
+					setStocks(Object.values(res.data));
+					setLoaded(true);
+				})
+				.catch(err => {
+					setError(true);
+					console.log(err);
+				});
 	}, []);
 	// return error, loading, or success state
 	if (error) {
@@ -37,7 +35,7 @@ const StockChart = () => {
 		return (
 			<Container>
 				{stocks.slice(0, 20).map((stock) => (
-					<Card key={stock.quote.symbol} stock={stock} onClick={getStockChart}>
+					<Card key={stock.quote.symbol} stock={stock}>
 						<div style={{ float: 'left', width: '50%' }}>
 							<Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
 							<b>
