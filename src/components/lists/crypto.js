@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { List, Title, Card, Logo } from './components';
-import { Loading, getCryptoChart } from '../../utility';
+import { Loading, showCryptoChart } from '../../utility';
 import axios from 'axios';
 
 const CryptoList = () => {
@@ -41,7 +41,7 @@ const CryptoList = () => {
 					ref={scrollRef}
 				>
 					{cryptos.slice(0, 20).map((crypto) => (
-						<Card key={crypto.symbol} crypto={crypto} onClick={getCryptoChart}>
+						<Card key={crypto.symbol} crypto={crypto} onClick={showCryptoChart}>
 							<Logo src={crypto.image}/>
 							<b>
 								<h2 className="cardSymbol">{crypto.symbol}</h2>

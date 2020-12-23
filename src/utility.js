@@ -112,7 +112,7 @@ export let shuffle = (unsorted) => {
   return unsorted;
 };
 
-export const getStockChart = (e) => {
+export const showStockChart = (e) => {
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/stock/${chartID}`;
 	mixpanel.track(
@@ -125,7 +125,7 @@ export const getStockChart = (e) => {
 	return chartID;
 };
 
-export const getCryptoChart = (e) => {
+export const showCryptoChart = (e) => {
 	const newsID = e.currentTarget.getElementsByClassName('cardSymbol')[0].innerText;
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/crypto/${chartID}/${newsID}`;
@@ -140,7 +140,7 @@ export const getCryptoChart = (e) => {
 	return chartID;
 };
 
-export const getForexChart = (e) => {
+export const showForexChart = (e) => {
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
 	window.location = `/#/chart/forex/${chartID}`;
 	mixpanel.track(

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { List, Title, Card, Logo } from './components';
-import { symbols, getMarketMessage, getStockChart, Loading, shuffle, corsProxy } from '../../utility';
+import { symbols, getMarketMessage, Loading, shuffle, corsProxy, showStockChart } from '../../utility';
 import axios from 'axios';
 import Tips from '../miscellaneous/tips';
 import { getStockList, testStockList } from '../../api';
@@ -14,7 +14,7 @@ const StockList = () => {
 	// fetch data from api
 	useEffect(() => {
 		axios
-			.get(testStockList)
+			.get(getStockList)
 				.then(res => {
 					setStocks(shuffle(Object.values(res.data)));
 					setLoaded(true);
@@ -49,7 +49,7 @@ const StockList = () => {
 					ref={scrollRef}
 				>
 					{stocks.map((stock) => (
-						<Card key={stock.quote.symbol} stock={stock} onClick={getStockChart}>
+						<Card key={stock.quote.symbol} stock={stock} onClick={showStockChart}>
 							<Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
 							<b>
 								<h2 className="cardTicker">{stock.quote.symbol.toLowerCase()}</h2>

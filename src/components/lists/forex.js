@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { List, Title, Card } from './components';
-import { Loading, shuffle, getForexChart, corsProxy, forex } from '../../utility';
+import { Loading, shuffle, showForexChart, corsProxy, forex } from '../../utility';
 import axios from 'axios';
 
 const ForexList = () => {
