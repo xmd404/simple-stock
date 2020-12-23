@@ -9,8 +9,8 @@ import PageNotFound from './pages/404';
 import HomePage from './pages/home';
 import DiscoverPage from './pages/discover';
 import ProfilePage from './pages/profile';
-import StockChart from './components/charts/stock';
-import CryptoChart from './components/charts/crypto';
+import StockChartContainer from './components/charts/StockChartContainer';
+import CryptoChartContainer from './components/charts/CryptoChartContainer';
 // import ForexChart from './components/charts/forex';
 
 const Router = () =>
@@ -21,8 +21,8 @@ const Router = () =>
         <Route exact path="/" component={HomePage} />
         <Route path="/discover/" component={DiscoverPage} />
         <Route path="/profile/" component={ProfilePage} />
-        <Route path="/chart/stock/:id/" component={StockChart} />
-        <Route path="/chart/crypto/:id/:name/" component={CryptoChart} />
+        <Route path="/chart/stock/:id/" component={StockChartContainer} />
+        <Route path="/chart/crypto/:id/:name/" component={CryptoChartContainer} />
         {/* <Route path="/chart/forex/:id/:name" component={ForexChart} /> */}
         <Route path="*" component={PageNotFound} />
       </Switch>

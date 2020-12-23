@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Card, Logo } from './components';
-import { capitalize, Loading } from '../../utility';
+import { Container } from './components';
+import { Loading } from '../../utility';
 import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
 import CryptoNews from '../news/crypto';
 import LatestFromReddit from '../news/reddit';
-import Articles from '../lists/articles';
+import CryptoChart from './CryptoChart';
 
-const CryptoChart = () => {
+const CryptoChartContainer = () => {
 	// set state
 	const [error, setError] = useState(false);
 	const [isLoaded, setLoaded] = useState(false);
@@ -19,6 +19,7 @@ const CryptoChart = () => {
 				.then(res => {
 					setCrypto(res.data);
 					setLoaded(true);
+					console.log(res.data);
 				})
 				.catch(err => {
 					console.log(err);
@@ -33,29 +34,7 @@ const CryptoChart = () => {
 	} else {
 		return (
 			<Container>
-				<Card key={crypto.symbol} crypto={crypto}>
-					<div style={{ float: 'left', width: '50%' }}>
-						<Logo src={crypto.image.thumb}/>
-						<b>
-							<h2>{crypto.symbol}</h2>
-						</b>
-						<p className="cardTicker" style={{ height: '75px'}}>{crypto.id}</p>
-					</div>
-					<div style={{ float: 'right', width: '50%', textAlign: 'right' }}>
-						<br/>
-						<h2>${crypto.market_data.current_price.usd}</h2>
-					</div>
-					<br/>
-				</Card>
-				<div>
-					<b>
-						<p style={{ textAlign: 'center' }}>What is {capitalize(crypto.id)}?</p>
-					</b>
-					<br/>
-				</div>
-				<Card>
-					<p>{`${crypto.description.en.replace(/<.*>/g, '').substring(0, 1000)}...`}</p>
-				</Card>
+				<CryptoChart crypto={crypto} />
 				<br/><br/>
 				<LatestFromReddit />
 				<CryptoNews />
@@ -65,4 +44,4 @@ const CryptoChart = () => {
 	};
 };
 
-export default CryptoChart;
+export default CryptoChartContainer;

@@ -3,7 +3,7 @@ import { List, Title, Card, Logo } from './components';
 import { symbols, getMarketMessage, getStockChart, Loading, shuffle, corsProxy } from '../../utility';
 import axios from 'axios';
 import Tips from '../miscellaneous/tips';
-import { getStockList } from '../../api';
+import { getStockList, testStockList } from '../../api';
 
 const StockList = () => {
 	// set state
@@ -14,7 +14,7 @@ const StockList = () => {
 	// fetch data from api
 	useEffect(() => {
 		axios
-			.get(getStockList)
+			.get(testStockList)
 				.then(res => {
 					setStocks(shuffle(Object.values(res.data)));
 					setLoaded(true);
