@@ -7,7 +7,7 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { symbols, Loading, corsProxy } from '../../utility';
 import axios from 'axios';
-import ArticlesContainer from './ArticlesContainer';
+import ArticlesContainer from './ArticlesListContainer';
 
 library.add(fab, far, faCheckSquare, faCoffee);
 

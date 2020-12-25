@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Loading } from '../../utility';
 import axios from 'axios';
-import Articles from './Articles';
+import Articles from './ArticlesList';
 
 const ArticlesContainer = () => {
     // set state
