@@ -17,7 +17,7 @@ const StockChartContainer = () => {
 	// fetch data from api
 	useEffect(() => {
 		axios
-			.get(testStockChart)
+			.get(getStockChart)
 				.then(res => {
 					setStocks(Object.values(res.data));
 					setLoaded(true);
