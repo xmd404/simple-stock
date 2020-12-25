@@ -1,14 +1,14 @@
 import React from 'react';
-import StockList from '../components/lists/stock';
-import CryptoList from '../components/lists/crypto';
+import StockListContainer from '../components/lists/StockListContainer';
+import CryptoListContainer from '../components/lists/CryptoListContainer';
 import ForexList from '../components/lists/forex';
 import MetalsList from '../components/lists/metals';
 import News from '../components/lists/news';
 
 const HomePage = () =>
   <div>
-    <StockList />
-    <CryptoList />
+    <StockListContainer />
+    <CryptoListContainer />
     <ForexList />
     <MetalsList />
   </div>

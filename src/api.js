@@ -11,5 +11,3 @@ export const getStockChart = `https://cloud.iexapis.com/beta/stock/market/batch?
 
 export const testStockChart = `https://sandbox.iexapis.com/beta/stock/market/batch?token=${process.env
 .REACT_APP_STOCK_TEST_API_KEY}&symbols=${window.location.href.split("/")[6]}&types=quote`;
-
-
