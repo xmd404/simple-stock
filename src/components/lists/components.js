@@ -46,7 +46,10 @@ export const NewsCard = styled.div`
 	background-color: rgb(14, 17, 22);
 	border-radius: 6%;
   	box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
-  	text-align: left;
+	  text-align: left;
+	  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 
   ${(props) => props.news && css`text-align: left;`}
 `;

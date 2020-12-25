@@ -1,53 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import { Title, List, NewsCard, Headline } from './components';
-import { symbols, Loading } from '../../utility';
-import axios from 'axios';
+import React from 'react';
+import { List, NewsCard, Headline, Tint } from './components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
 
-const Articles = () => {
-    // set state
-    const [error, setError] = useState(false);
-    const [isLoaded, setLoaded] = useState(false);
-    const [articles, setArticles] = useState({});
-    // fetch data from api
-    useEffect(() => {
-        axios
-            .get(
-                `https://api.currentsapi.services/v1/latest-news?language=us&apiKey=${process.env.REACT_APP_CURRENT_NEWS_KEY}`
-            )
-            .then(res => {
-                setArticles(res.json().news);
-                console.log({ articles });
-                setLoaded(true);
-            })
-            .catch(err => {
-                setError(true);
-                console.log(err);
-            });
-    }, []);
-    // return error, loading, or success state
-    if (error) {
-        return <div></div>;
-    } else if (!isLoaded) {
-        return <Loading />;
-    } else {
-        return (
-            <div>
-                <Title>
-                    <h1 style={{ margin: '0', padding: '0' }}>Articles</h1>
-                </Title>
-                <List
-                    className="list-scroll"
-                >
-                    {articles.map((article) => (
-                        <a
-                            key={article.id}
-                            article={article}
-                            href={article.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <NewsCard article>
-                                {/* <Thumbnail src={article.urlToImage} /> */}
+library.add(fab, far, faCheckSquare, faCoffee);
+
+const Articles = ({ articles }) => {
+    // render to page
+    return (
+        <div>
+            <b>
+                <h2 style={{ textAlign: 'center' }}>
+                    <FontAwesomeIcon icon={["far", "newspaper"]} /> &nbsp; Breaking News
+                </h2>
+            </b>
+            <List
+                className="list-scroll"
+            >
+                {articles.map((article) => (
+                    <a
+                        key={article.id}
+                        article={article}
+                        href={article.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <NewsCard style={{ backgroundImage: `url(${article.image})` }}>
+                            <Tint>
                                 <Headline>
                                     <br/>
                                     <b>
@@ -59,13 +41,13 @@ const Articles = () => {
                                     </p>
                                 </Headline>
                                 <br/>
-                            </NewsCard>
-                        </a>
-                    ))}
-                </List>
-            </div>
-        );
-    };
+                            </Tint>
+                        </NewsCard>
+                    </a>
+                ))};
+            </List>
+        </div>
+    );
 };
 
 export default Articles;

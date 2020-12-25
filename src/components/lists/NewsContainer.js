@@ -7,10 +7,11 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { symbols, Loading, corsProxy } from '../../utility';
 import axios from 'axios';
+import ArticlesContainer from './ArticlesContainer';
 
 library.add(fab, far, faCheckSquare, faCoffee);
 
-const News = () => {
+const NewsContainer = () => {
 	// set state
 	const [error, setError] = useState(false);
 	const [isLoaded, setLoaded] = useState(false);
@@ -33,7 +34,7 @@ const News = () => {
 	}, []);
 	// render error, loading, or success state
 	if (error) {
-		return <div></div>;
+		return <ArticlesContainer />;
 	} else if (!isLoaded) {
 		return <Loading />;
 	} else {
@@ -81,4 +82,4 @@ const News = () => {
 	};
 };
 
-export default News;
+export default NewsContainer;
