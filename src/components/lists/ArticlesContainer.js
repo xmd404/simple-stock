@@ -12,7 +12,7 @@ const ArticlesContainer = () => {
     useEffect(() => {
         axios
             .get(
-                `https://api.currentsapi.services/v1/latest-news?language=en&apiKey=${process.env.REACT_APP_CURRENT_NEWS_KEY}`
+                `https://api.currentsapi.services/v1/search?keywords=stocks&language=en&apiKey=${process.env.REACT_APP_CURRENT_NEWS_KEY}`
             )
             .then(res => {
                 setArticles(res.data.news);
