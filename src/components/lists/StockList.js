@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import { Title, List, Card, Logo } from './components';
-import Tips from '../miscellaneous/tips';
+import { Title, List, ListCard, Logo } from '../components';
+import { Tips } from '../components';
 import { getMarketMessage, showStockChart } from '../../utility';
 
 const StockList = ({ stocks }) => {
@@ -25,7 +25,7 @@ const StockList = ({ stocks }) => {
                 ref={scrollRef}
             >
                 {stocks.map((stock) => (
-                    <Card key={stock.quote.symbol} stock={stock} onClick={showStockChart}>
+                    <ListCard key={stock.quote.symbol} stock={stock} onClick={showStockChart}>
                         <Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
                         <b>
                             <h2 className="cardTicker">{stock.quote.symbol.toLowerCase()}</h2>
@@ -34,7 +34,7 @@ const StockList = ({ stocks }) => {
                             {stock.quote.companyName.toLowerCase().split(' ', 2)[0] + ' ' + stock.quote.companyName.toLowerCase().split(' ', 2)[1]}
                         </p>
                         <h3>${stock.quote.latestPrice}</h3>
-                    </Card>
+                    </ListCard>
                 ))}
             </List>
         </>

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { List, Title, Card } from './components';
+import { List, Title, ListCard } from '../components';
 import { forex } from '../../utility';
 
 const ForexList = ({ pairs }) => {
@@ -18,7 +18,7 @@ const ForexList = ({ pairs }) => {
                 ref={scrollRef}
             >
                 {pairs.slice(0, 20).map((pair) => (
-                    <Card key={pair}>
+                    <ListCard key={pair}>
                         <br/>
                         {/* <img src={"https://www.countryflags.io/eu/flat/32.png"}/> */}
                         <h2>
@@ -34,7 +34,7 @@ const ForexList = ({ pairs }) => {
                         <h3>
                             <b>€</b> {pair[1].toFixed(2)}
                         </h3>
-                    </Card>
+                    </ListCard>
                 ))}
             </List>
         </div>

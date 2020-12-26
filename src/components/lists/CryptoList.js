@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { showCryptoChart } from '../../utility';
-import { List, Title, Card, Logo } from './components';
+import { List, Title, ListCard, Logo } from '../components';
 
 const CryptoList = ({ cryptos }) => {
     // set state
@@ -18,14 +18,14 @@ const CryptoList = ({ cryptos }) => {
                 ref={scrollRef}
             >
                 {cryptos.slice(0, 20).map((crypto) => (
-                    <Card key={crypto.symbol} crypto={crypto} onClick={showCryptoChart}>
+                    <ListCard key={crypto.symbol} crypto={crypto} onClick={showCryptoChart}>
                         <Logo src={crypto.image}/>
                         <b>
                             <h2 className="cardSymbol">{crypto.symbol}</h2>
                         </b>
                         <p className="cardTicker" style={{ height: '75px'}}>{crypto.id}</p>
                         <h3>${crypto.current_price.toFixed(2)}</h3>
-                    </Card>
+                    </ListCard>
                 ))}
             </List>
         </div>

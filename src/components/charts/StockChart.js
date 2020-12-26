@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card, Logo } from './components';
+import { ChartCard, Logo } from '../components';
 
 let StockChart = ({ stocks }) =>
     stocks.slice(0, 20).map((stock) => (
-        <Card key={stock.quote.symbol}>
+        <ChartCard key={stock.quote.symbol}>
             <div style={{ float: 'left', width: '50%' }}>
                 <Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />
                 <b>
@@ -15,7 +15,7 @@ let StockChart = ({ stocks }) =>
                 <br/>
                 <h2>${stock.quote.latestPrice}</h2>
             </div>
-        </Card>
+        </ChartCard>
     ));
 
 export default StockChart;

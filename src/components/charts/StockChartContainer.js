@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Container } from './components';
+import { Container, RobinhoodLink, ViewMoreButton } from '../components';
 import { Loading } from '../../utility';
 import CompanyInfo from './company-info';
-import { ViewMoreButton } from '../miscellaneous/buttons';
 import LatestFromReddit from '../news/reddit';
-import News from './news';
 import axios from 'axios';
 import { getStockChart, testStockChart } from '../../api';
 import StockChart from './StockChart.js'
-import NewsContainer from '../lists/NewsContainer';
+import NewsListContainer from '../lists/NewsListContainer';
 
 const StockChartContainer = () => {
 	// set state
@@ -39,9 +37,9 @@ const StockChartContainer = () => {
 				<StockChart stocks={stocks} />
 				<CompanyInfo />
 				<br/>
-				<NewsContainer />
+				<NewsListContainer />
 				<LatestFromReddit />
-				<ViewMoreButton />
+				<RobinhoodLink stocks={stocks} />
 			</Container>
 		);
 	};

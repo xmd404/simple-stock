@@ -3,11 +3,11 @@ import StockListContainer from '../components/lists/StockListContainer';
 import CryptoListContainer from '../components/lists/CryptoListContainer';
 import ForexListContainer from '../components/lists/ForexListContainer';
 import CommoditiesListContainer from '../components/lists/CommoditiesListContainer';
-import NewsContainer from '../components/lists/NewsContainer';
+import NewsListContainer from '../components/lists/NewsListContainer';
 
 const HomePage = () =>
   <div>
-    <NewsContainer />
+    <NewsListContainer />
     <StockListContainer />
     <CryptoListContainer />
     <ForexListContainer />

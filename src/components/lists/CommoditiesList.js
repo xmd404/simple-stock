@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { List, Title, Card } from './components';
+import { List, Title, ListCard } from '../components';
 
 const CommoditiesList = ({ commodities }) => {
     // set state
@@ -17,7 +17,7 @@ const CommoditiesList = ({ commodities }) => {
                 ref={scrollRef}
             >
                 {commodities.slice(0, 20).map((commodity) => (
-                    <Card key={commodity} commodity={commodity}>
+                    <ListCard key={commodity} commodity={commodity}>
                         <br/>
                         <h2>
                             <span className="cardTicker">
@@ -28,7 +28,7 @@ const CommoditiesList = ({ commodities }) => {
                         <h3>
                             <b>$</b> {commodity.fields.price_index.toFixed(2)}
                         </h3>
-                    </Card>
+                    </ListCard>
                 ))}
             </List>
         </div>

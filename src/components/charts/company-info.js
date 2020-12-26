@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Card } from './components';
+import { Container, ChartCard } from '../components';
 import { Loading } from '../../utility';
 import axios from 'axios';
 
@@ -38,10 +38,10 @@ const CompanyInfo = () => {
 					</p>
 				</b>
 				<br/>
-				<Card>
+				<ChartCard>
 					<br/>
 					<p>{`${company.Description.substring(0, 1000)}...`}</p>
-				</Card>
+				</ChartCard>
 				<br/>
 			</Container>
 		);

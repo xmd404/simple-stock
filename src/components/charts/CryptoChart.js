@@ -1,10 +1,10 @@
 import React from 'react';
-import { Card, Logo } from './components';
+import { ChartCard, Logo } from '../components';
 import { capitalize } from '../../utility';
 
 const CryptoChart = ({ crypto }) =>
     <div>
-        <Card key={crypto.symbol}>
+        <ChartCard key={crypto.symbol}>
             <div style={{ float: 'left', width: '50%' }}>
                 <Logo src={crypto.image.thumb}/>
                 <b>
@@ -17,16 +17,16 @@ const CryptoChart = ({ crypto }) =>
                 <h2>${crypto.market_data.current_price.usd}</h2>
             </div>
             <br/>
-        </Card>
+        </ChartCard>
         <div>
             <b>
                 <p style={{ textAlign: 'center' }}>What is {capitalize(crypto.id)}?</p>
             </b>
             <br/>
         </div>
-        <Card>
+        <ChartCard>
             <p>{`${crypto.description.en.replace(/<.*>/g, '').substring(0, 1000)}...`}</p>
-        </Card>
+        </ChartCard>
     </div>
 
 export default CryptoChart;

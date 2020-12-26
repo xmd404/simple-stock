@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Container } from './components';
+import { Container, CoinbaseLink } from '../components';
 import { Loading } from '../../utility';
-import { ViewMoreButton } from '../miscellaneous/buttons';
 import axios from 'axios';
 import CryptoNews from '../news/crypto';
 import LatestFromReddit from '../news/reddit';
@@ -38,7 +37,7 @@ const CryptoChartContainer = () => {
 				<br/><br/>
 				<LatestFromReddit />
 				<CryptoNews />
-				<ViewMoreButton />
+				<CoinbaseLink crypto={crypto} />
 			</Container>
 		);
 	};
