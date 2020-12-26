@@ -39,7 +39,9 @@ const Articles = ({ articles }) => {
                                                     <p style={{ height: '100px' }}>{article.title.substring(0, 105)}</p>
                                                 </b>
                                                 <p>
-                                                    <u>{article.author.toLowerCase()}</u>
+                                                    <u>
+                                                        {`${article.author.toLowerCase().split(' ', 2)[0]} ${article.author.toLowerCase().split(' ', 2)[1]}`.split('undefined')}
+                                                    </u>
                                                 </p>
                                             </Headline>
                                             <br/>

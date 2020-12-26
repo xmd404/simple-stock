@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, RobinhoodLink, ViewMoreButton } from '../components';
+import { Container, RobinhoodLink } from '../components';
 import { Loading } from '../../utility';
 import CompanyInfo from './company-info';
 import LatestFromReddit from '../news/reddit';
