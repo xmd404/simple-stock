@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { capitalize } from '../utility';
 
@@ -153,14 +153,34 @@ const Tip = styled.p`
   margin 0 auto;
 `;
 
-export const Tips = () => (
-	<TipContainer>
+
+export const tips = [
+  `Save & invest 10% of your income. Compound interest is the 8th wonder of the world.`,
+  `Pay off high interest debt first. You will pay less over time and get out of debt sooner.`,
+  `Keep your credit utilization under 30%. This makes up a third of your credit score.`,
+  `Stocks, crypto, & forex are volatile assets. Only invest money you can afford to lose.`,
+  `Time in the market beats timing the market. Invest consistantly and hold for 4-7 years.`,
+  `Use dollar-cost averaging to minimize risk when investing in volatile assests. `,
+];
+
+export const Tips = () => {
+  // set state
+  const [tip, setTip] = useState([]);
+  // 
+  useEffect(() => {
+    const randomNumber = Math.floor(Math.random() * tips.length);
+	  setTip(tips[randomNumber]);
+  }, []);
+  // render tip
+  return (
+    <TipContainer>
 		<Tip>
 		<span role="img" aria-label="leaf emoji">🌿</span> <b>Simple Tip</b> &nbsp;~&nbsp;{' '}
-			<span id="">Save & invest 10% of your income. Compound interest is the 8th wonder of the world.</span>
+			<span id="tip">{tip}</span>
 		</Tip>
 	</TipContainer>
-);
+  );
+};
 
 const BetaMessage = styled.div`
     margin: 0 auto;
