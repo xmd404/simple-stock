@@ -10,10 +10,10 @@ const StockList = ({ stocks }) => {
     return (
         <>
             <br/>
-            <p style={{ margin: '0', padding: '0', textAlign: 'center'}}>
+            <h2 style={{ margin: '0', padding: '0', textAlign: 'center'}}>
                 Markets are&nbsp;
-                <b>{getMarketMessage(stocks[0].quote.calculationPrice)}</b>.
-            </p>
+                <b>{getMarketMessage(stocks[0].quote.calculationPrice)}</b>
+            </h2>
             <Tips />
             <Title>
                 <h2 style={{ margin: '0', padding: '0' }}>

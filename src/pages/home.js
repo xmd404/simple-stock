@@ -11,7 +11,6 @@ const HomePage = () =>
     <StockListContainer />
     <CryptoListContainer />
     <ForexListContainer />
-    <CommoditiesListContainer />
   </div>
 
 export default HomePage;
