@@ -13,10 +13,10 @@ const Navbar = () => (
 			<FontAwesomeIcon icon={[ 'fas', 'home' ]} size="lg" />
 			<p>Home</p>
 		</Link>
-		<Link to="/discover" onClick={getDiscoverPage}>
+		{/* <Link to="/discover" onClick={getDiscoverPage}>
 			<FontAwesomeIcon icon={[ 'fas', 'search' ]} size="lg" />
 			<p>Discover</p>
-		</Link>
+		</Link> */}
 		<Link to="/profile" onClick={getProfilePage}>
 			<FontAwesomeIcon icon={[ 'fas', 'user' ]} size="lg" />
 			<p>Profile</p>
