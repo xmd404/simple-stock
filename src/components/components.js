@@ -186,39 +186,33 @@ const BetaMessage = styled.div`
     margin: 0 auto;
     padding: 10px;
     width: 100%;
-    max-width: 275px;
+    max-width: 300px;
 `
 
 export const Beta = () =>
     <BetaMessage>
-        <p>
-            This is a private beta feature <span role="img" aria-label="lock emoji">🔒</span>
+        <br/><br/>
+        <h2>
+            Sorry,
             <br/><br/>
-            Signup below to join our waitlist + participate in future releases.
-        </p>
+            This is an exclusive private beta feature &nbsp;<span role="img" aria-label="lock emoji">🔒</span>
+            <br/><br/>
+            Signup to join our waitlist:
+        </h2>
         <br/>
-        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-            <input type="text" name="name" />
-            <input type="email" name="email" />
-            <textarea name="message"></textarea>
-        </form>
-        <form name="contact" method="post">
-            <input type="hidden" name="form-name" value="contact" />
-            <p>
+        <form name="beta-signup" action="https://formspree.io/f/xjvppjjp" method="POST">
+            <h3>
                 <label>Name
                     <br/>
                     <input type="text" name="name" className="form-input" placeholder="Alex Smith"/>
                 </label>
-            </p>
-            <br/>
-            <p>
+            </h3>
+            <h3>
                 <label>Email
                     <br/>
                     <input type="email" name="email" className="form-input" placeholder="your@email.com"/>
                 </label>
-            </p>
-            <br/>
-            <hr/>
+            </h3>
             <br/>
             <button type="submit" className="btn submit">Join Waitlist</button>
             <br/>
