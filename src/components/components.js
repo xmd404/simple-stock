@@ -191,7 +191,6 @@ const BetaMessage = styled.div`
 
 export const Beta = () =>
     <BetaMessage>
-        <br/><br/>
         <h2>
             Sorry,
             <br/><br/>
