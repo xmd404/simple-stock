@@ -192,8 +192,6 @@ const BetaMessage = styled.div`
 export const Beta = () =>
     <BetaMessage>
         <h2>
-            Sorry,
-            <br/><br/>
             This is an exclusive private beta feature &nbsp;<span role="img" aria-label="lock emoji">🔒</span>
             <br/><br/>
             Signup to join our waitlist:
@@ -203,13 +201,13 @@ export const Beta = () =>
             <h3>
                 <label>Name
                     <br/>
-                    <input type="text" name="name" className="form-input" placeholder="Alex Smith"/>
+                    <input type="text" name="name" className="form-input" placeholder="Alex Smith" required/>
                 </label>
             </h3>
             <h3>
                 <label>Email
                     <br/>
-                    <input type="email" name="email" className="form-input" placeholder="your@email.com"/>
+                    <input type="email" name="email" className="form-input" placeholder="your@email.com" required/>
                 </label>
             </h3>
             <br/>
