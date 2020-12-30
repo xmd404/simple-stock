@@ -31,11 +31,11 @@ const CompanyInfo = () => {
 		return (
 			<Container>
 				<b>
-					<p style={{ textAlign : 'center' }}>
+					<h2 style={{ textAlign : 'center' }}>
 						{company.Industry}
 						<br/>
 						{company.Exchange} &nbsp; &middot; &nbsp; {company.Country}
-					</p>
+					</h2>
 				</b>
 				<br/>
 				<ChartCard>

@@ -42,6 +42,7 @@ const News = () => {
                         <FontAwesomeIcon icon={["far", "newspaper"]} /> &nbsp; Breaking News
                     </p>
                 </b>
+				<br/>
 				<List
 					className="list-scroll"
 					ref={scrollRef}

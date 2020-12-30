@@ -2,7 +2,7 @@ import React from 'react';
 import { ChartCard, Logo } from '../components';
 
 let StockChart = ({ stocks }) =>
-    stocks.slice(0, 20).map((stock) => (
+    stocks.slice(0, 1).map((stock) => (
         <ChartCard key={stock.quote.symbol}>
             <div style={{ float: 'left', width: '50%' }}>
                 <Logo src={`https://storage.googleapis.com/iex/api/logos/${stock.quote.symbol}.png`} />

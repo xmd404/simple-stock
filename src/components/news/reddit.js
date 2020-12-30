@@ -36,10 +36,11 @@ const LatestFromReddit = () => {
 	    return (
             <div>
                 <b>
-                    <p style={{ textAlign: 'center' }}>
+                    <h2 style={{ textAlign: 'center' }}>
                         Latest from &nbsp;<FontAwesomeIcon icon={["fab", "reddit"]} /> Reddit
-                    </p>
+                    </h2>
                 </b>
+                <br/>
                 <List
 					className="list-scroll"
 					ref={scrollRef}

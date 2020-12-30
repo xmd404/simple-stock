@@ -32,10 +32,11 @@ let CryptoNews = () => {
         return (
             <div>
                 <b>
-                    <p style={{ textAlign: 'center' }}>
+                    <h2 style={{ textAlign: 'center' }}>
                         Other News
-                    </p>
+                    </h2>
                 </b>
+                <br/>
                 <List
 					className="list-scroll"
 					ref={scrollRef}
