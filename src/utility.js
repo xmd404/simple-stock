@@ -186,8 +186,10 @@ window.onscroll = function() {scrollFunction()};
 
 let scrollFunction = () => {
   if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+	document.getElementById("header").style.padding = "20px 0 25px";
 	document.getElementById("header-title").style.fontSize = "150%";
   } else {
+	document.getElementById("header").style.padding = "25px 0";
 	document.getElementById("header-title").style.fontSize = "198%";
   }
 };
