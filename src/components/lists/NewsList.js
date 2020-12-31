@@ -31,7 +31,7 @@ const NewsList = ({ news }) => {
                         rel="noopener noreferrer"
                     >
                         <NewsCard style={{ backgroundImage: `url(${newsItem.image_url})` }} newsItem>
-                            
+                            <Tint>
                                 <Headline>
                                     <br/>
                                     <p>{newsItem.date.substring(0, 16)}</p>
@@ -45,7 +45,7 @@ const NewsList = ({ news }) => {
                                     </p>
                                 </Headline>
                                 <br/>
-                            
+                            </Tint>
                         </NewsCard>
                     </a>
                 ))}

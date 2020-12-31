@@ -46,7 +46,7 @@ export const NewsCard = styled.div`
 	background-color: rgb(14, 17, 22);
 	border-radius: 6%;
   	box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
-  	text-align: left;
+	text-align: left;
 
   ${(props) => props.news && css`text-align: left;`}
 `;
