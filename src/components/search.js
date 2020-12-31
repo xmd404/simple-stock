@@ -31,7 +31,7 @@ const SearchBar = () => {
             <input 
                 style={BarStyling}
                 key="random1"
-                placeholder={'🔍   Search for news, symbols, or companies'}
+                placeholder={'🔍   Search for stocks, crypto, or currensy'}
                 id="myInput"
                 onKeyUp={searchFilter}
             />

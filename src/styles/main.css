@@ -8,6 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
   /* background-color: #100e17; */
   background-color: rgb(7, 9, 14);
   color: white;
@@ -136,4 +137,12 @@ code {
 .submit {
   background-color: rgb(13, 178, 120);
   color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
 }
