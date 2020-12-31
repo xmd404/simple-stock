@@ -8,7 +8,7 @@ const Logo = styled.header`
 	right: 0;
 	left: 0;
 	margin: 0;
-	padding: 45px 0px;
+	padding: 25px 0;
 	width: auto;
 	text-decoration: none;
 	text-align: center;

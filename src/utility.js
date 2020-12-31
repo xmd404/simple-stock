@@ -185,11 +185,9 @@ export const getProfilePage = () => {
 window.onscroll = function() {scrollFunction()};
 
 let scrollFunction = () => {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-	document.getElementById("header").style.padding = "20px 0 25px";
+  if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
 	document.getElementById("header-title").style.fontSize = "150%";
   } else {
-	document.getElementById("header").style.padding = "45px 0";
 	document.getElementById("header-title").style.fontSize = "198%";
   }
 };
