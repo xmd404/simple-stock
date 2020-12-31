@@ -5,6 +5,7 @@ import axios from 'axios';
 import CryptoNews from '../news/crypto';
 import LatestFromReddit from '../news/reddit';
 import CryptoChart from './CryptoChart';
+import LatestFromTwitter from '../news/twitter';
 
 const CryptoChartContainer = () => {
 	// set state
@@ -35,6 +36,7 @@ const CryptoChartContainer = () => {
 			<Container>
 				<CryptoChart crypto={crypto} />
 				<br/><br/>
+				<LatestFromTwitter />
 				<LatestFromReddit />
 				<CryptoNews />
 				<CoinbaseLink crypto={crypto} />
