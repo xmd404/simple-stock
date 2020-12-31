@@ -33,7 +33,7 @@ const Articles = ({ articles }) => {
                                     rel="noopener noreferrer"
                                 >
                                     <NewsCard style={{ backgroundImage: `url(${article.image})` }}>
-                                        <Tint>
+                                        
                                             <Headline>
                                                 <br/>
                                                 <b>
@@ -46,7 +46,7 @@ const Articles = ({ articles }) => {
                                                 </p>
                                             </Headline>
                                             <br/>
-                                        </Tint>
+                                        
                                     </NewsCard>
                                 </a>
                             </>

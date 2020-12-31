@@ -25,9 +25,9 @@ const CommoditiesList = ({ commodities }) => {
                             </span>
                         </h2>
                         <p style={{ height: '75px'}}>{commodity.fields.commodity.toLowerCase()}</p>
-                        <h3>
+                        <h2>
                             <b>$</b> {commodity.fields.price_index.toFixed(2)}
-                        </h3>
+                        </h2>
                     </ListCard>
                 ))}
             </List>

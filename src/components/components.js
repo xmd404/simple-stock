@@ -57,7 +57,7 @@ export const NewsCard = styled.div`
 	width: 250px;
 	margin 0 0.75em 0.75em 0;
 	color: #FFF;
-	background-color: rgb(14, 17, 22);
+	background-color: rgb(13, 178, 120);
 	border-radius: 6%;
   box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
 	text-align: left;
@@ -78,9 +78,10 @@ export const Tint = styled.div`
 	z-index: 2;
 `;
 
-export const Headline = styled.div`
+export const Headline = styled.p`
   padding: 0 1.25em;
-  z-index: 3;
+  opacity: 1;
+  z-index: 5;
 `;
 
 export const Thumbnail = styled.img`
@@ -198,18 +199,18 @@ export const Beta = () =>
         </h2>
         <br/>
         <form name="beta-signup" action="https://formspree.io/f/xjvppjjp" method="POST">
-            <h3>
+            <h2>
                 <label>Name
                     <br/>
                     <input type="text" name="name" className="form-input" placeholder="Alex Smith" required/>
                 </label>
-            </h3>
-            <h3>
+            </h2>
+            <h2>
                 <label>Email
                     <br/>
                     <input type="email" name="email" className="form-input" placeholder="your@email.com" required/>
                 </label>
-            </h3>
+            </h2>
             <br/>
             <button type="submit" className="btn submit">Join Waitlist</button>
             <br/>

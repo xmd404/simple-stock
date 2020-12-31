@@ -33,7 +33,7 @@ const StockList = ({ stocks }) => {
                         <p style={{ height: '75px'}} className="stock-name">
                             {stock.quote.companyName.toLowerCase().split(' ', 2)[0] + ' ' + stock.quote.companyName.toLowerCase().split(' ', 2)[1]}
                         </p>
-                        <h3>${stock.quote.latestPrice}</h3>
+                        <h2>${stock.quote.latestPrice}</h2>
                     </ListCard>
                 ))}
             </List>
