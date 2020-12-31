@@ -25,6 +25,7 @@ const CryptoList = ({ cryptos }) => {
                         </b>
                         <p className="cardTicker" style={{ height: '75px'}}>{crypto.id}</p>
                         <h2>${crypto.current_price.toFixed(2)}</h2>
+                        <br/>
                     </ListCard>
                 ))}
             </List>

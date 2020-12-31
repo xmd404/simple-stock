@@ -34,6 +34,7 @@ const ForexList = ({ pairs }) => {
                         <h2>
                             <b>€</b> {pair[1].toFixed(2)}
                         </h2>
+                        <br/>
                     </ListCard>
                 ))}
             </List>

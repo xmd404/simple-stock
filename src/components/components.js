@@ -74,14 +74,13 @@ export const Tint = styled.div`
 	background-color: #000;
 	color: #FFF;
 	border-radius: 6%;
-	opacity: 0.8;
+	opacity: 0.7;
 	z-index: 2;
 `;
 
-export const Headline = styled.p`
+export const Headline = styled.div`
   padding: 0 1.25em;
-  opacity: 1;
-  z-index: 5;
+  z-index: 3;
 `;
 
 export const Thumbnail = styled.img`
@@ -199,18 +198,18 @@ export const Beta = () =>
         </h2>
         <br/>
         <form name="beta-signup" action="https://formspree.io/f/xjvppjjp" method="POST">
-            <h2>
+            <h3>
                 <label>Name
                     <br/>
                     <input type="text" name="name" className="form-input" placeholder="Alex Smith" required/>
                 </label>
-            </h2>
-            <h2>
+            </h3>
+            <h3>
                 <label>Email
                     <br/>
                     <input type="email" name="email" className="form-input" placeholder="your@email.com" required/>
                 </label>
-            </h2>
+            </h3>
             <br/>
             <button type="submit" className="btn submit">Join Waitlist</button>
             <br/>

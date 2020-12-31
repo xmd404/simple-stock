@@ -34,6 +34,7 @@ const StockList = ({ stocks }) => {
                             {stock.quote.companyName.toLowerCase().split(' ', 2)[0] + ' ' + stock.quote.companyName.toLowerCase().split(' ', 2)[1]}
                         </p>
                         <h2>${stock.quote.latestPrice}</h2>
+                        <br/>
                     </ListCard>
                 ))}
             </List>

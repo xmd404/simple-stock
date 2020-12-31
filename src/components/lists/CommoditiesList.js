@@ -28,6 +28,7 @@ const CommoditiesList = ({ commodities }) => {
                         <h2>
                             <b>$</b> {commodity.fields.price_index.toFixed(2)}
                         </h2>
+                        <br/>
                     </ListCard>
                 ))}
             </List>
