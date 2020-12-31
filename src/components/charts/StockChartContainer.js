@@ -7,6 +7,7 @@ import axios from 'axios';
 import { getStockChart, testStockChart } from '../../api';
 import StockChart from './StockChart.js'
 import NewsListContainer from '../lists/NewsListContainer';
+import LatestFromTwitter from '../news/twitter';
 
 const StockChartContainer = () => {
 	// set state
@@ -40,6 +41,7 @@ const StockChartContainer = () => {
 				<CompanyInfo />
 				<br/>
 				<NewsListContainer />
+				<LatestFromTwitter />
 				<LatestFromReddit />
 				<RobinhoodLink stocks={stocks} />
 			</Container>

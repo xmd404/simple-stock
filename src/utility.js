@@ -113,8 +113,9 @@ export let shuffle = (unsorted) => {
 };
 
 export const showStockChart = (e) => {
+	const stockName = e.currentTarget.getElementsByClassName('stock-name')[0].innerText;
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
-	window.location = `/#/chart/stock/${chartID}`;
+	window.location = `/#/chart/stock/${chartID}/${stockName}`;
 	mixpanel.track(
 		"Interacted w/ stock card",
 		{
@@ -122,7 +123,7 @@ export const showStockChart = (e) => {
 			"id": `${chartID}`
 		}
 	);
-	return chartID;
+	return chartID, stockName;
 };
 
 export const showCryptoChart = (e) => {
