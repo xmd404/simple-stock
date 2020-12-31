@@ -30,7 +30,7 @@ const NewsList = ({ news }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <NewsCard style={{ backgroundImage: `url(${newsItem.image_url})` }} newsItem>
+                        <NewsCard newsItem>
                             <Tint>
                                 <Headline>
                                     <br/>

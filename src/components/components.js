@@ -23,7 +23,7 @@ export const List = styled.div`
 	white-space: nowrap;
 `;
 
-export const ListCard = styled.div`
+export const ListCard = styled.li`
 	white-space: normal;
 	display: inline-block;
 	width: 165px;
@@ -51,7 +51,7 @@ export const ChartCard = styled.div`
   ${(props) => props.news && css`text-align: left;`}
 `;
 
-export const NewsCard = styled.div`
+export const NewsCard = styled.li`
 	white-space: normal;
 	display: inline-block;
 	width: 250px;

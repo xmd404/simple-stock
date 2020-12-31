@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Title, List, ListCard, Logo } from '../components';
 import { Tips } from '../components';
 import { getMarketMessage, showStockChart } from '../../utility';
+import SearchBar from '../search';
 
 const StockList = ({ stocks }) => {
     // set state
@@ -9,12 +10,15 @@ const StockList = ({ stocks }) => {
     // render list
     return (
         <>
-            <br/>
-            <h2 style={{ margin: '0', padding: '0', textAlign: 'center'}}>
-                Markets are&nbsp;
-                <b>{getMarketMessage(stocks[0].quote.calculationPrice)}</b>
-            </h2>
-            <Tips />
+            <div style={{ backgroundColor: 'rgb(14, 17, 22)', padding: '40px 0' }}>
+                <h2 style={{ margin: '0', padding: '0', textAlign: 'center'}}>
+                    Markets are&nbsp;
+                    <b>{getMarketMessage(stocks[0].quote.calculationPrice)}</b>
+                </h2>
+                <Tips />
+                <br/>
+                <SearchBar />
+            </div>
             <Title>
                 <h2 style={{ margin: '0', padding: '0' }}>
                     Stocks
