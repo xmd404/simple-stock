@@ -18,7 +18,7 @@ const LatestFromTwitter = () => {
     useEffect(() => {
         axios
             .get(
-                `http://api.twitter.com/2/tweets/search/recent?query=${window.location.href.split("/")[7]} stock`,
+                `https://api.twitter.com/2/tweets/search/recent?query=${window.location.href.split("/")[7]} stock`,
                 { headers: { 'Authorization': `Bearer ${process.env.REACT_APP_TWITTER_BEARER_TOKEN}` } }
                 )
                 .then(res => {
