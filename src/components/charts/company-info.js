@@ -13,8 +13,7 @@ const CompanyInfo = () => {
 		axios
 			.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${window.location.href.split("/")[6]}&apikey=${process.env.REACT_APP_ALPHA_API_KEY}`)
 				.then(res => {
-					let company = res.data;
-					setCompany(company);
+					setCompany(res.data);
 					setLoaded(true);
 				})
 				.catch(err => {

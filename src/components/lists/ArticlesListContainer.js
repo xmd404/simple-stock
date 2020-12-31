@@ -16,7 +16,6 @@ const ArticlesContainer = () => {
             )
             .then(res => {
                 setArticles(res.data.news);
-                console.log({ articles });
                 setLoaded(true);
             })
             .catch(err => {

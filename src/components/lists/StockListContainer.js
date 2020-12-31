@@ -12,7 +12,7 @@ const StockListContainer = () => {
 	// fetch data from api
 	useEffect(() => {
 		axios
-			.get(getStockList)
+			.get(testStockList)
 				.then(res => {
 					setStocks(shuffle(Object.values(res.data)));
 					setLoaded(true);

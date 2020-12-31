@@ -16,9 +16,11 @@ const StockChartContainer = () => {
 	// fetch data from api
 	useEffect(() => {
 		axios
-			.get(getStockChart)
+			.get(`https://cloud.iexapis.com/beta/stock/market/batch?token=${process.env
+			.REACT_APP_STOCK_API_KEY}&symbols=${window.location.href.split("/")[6]}&types=quote`)
 				.then(res => {
 					setStocks(Object.values(res.data));
+					console.log(Object.values(res.data));
 					setLoaded(true);
 				})
 				.catch(err => {
