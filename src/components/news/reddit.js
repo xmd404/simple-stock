@@ -53,7 +53,7 @@ const LatestFromReddit = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <NewsCard post>
+                            <NewsCard post style={{ backgroundColor: 'rgb(236, 84, 40)' }}>
                                 <Headline>
                                     <br/>
 									<b>
