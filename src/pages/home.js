@@ -9,8 +9,8 @@ import SearchBar from '../components/search';
 
 const HomePage = () =>
   <div>
+    <NewsListContainer />
     <ul id="myUL" style={{ margin: 0, padding: 0 }}>
-      <NewsListContainer />
       <StockListContainer />
       <CryptoListContainer />
       <ForexListContainer />
