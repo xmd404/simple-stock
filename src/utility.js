@@ -218,8 +218,8 @@ function randomInRange(min, max) {
       // since particles fall down, skew start toward the top
       y: (Math.random() * skew) - 0.2
     },
-    colors: ['#ffffff'],
-    shapes: ['circle'],
+    colors: ['#85bb65'],
+    shapes: ['square'],
     scalar: randomInRange(0.4, 1)
   });
 
