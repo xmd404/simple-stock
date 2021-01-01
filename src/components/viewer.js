@@ -20,7 +20,7 @@ const Viewer = () => {
     return (
         <ViewerWindow >
             <br/>
-            <a href={`#`} onClick={toggleViewer}>{toggle}</a>
+            <a onClick={toggleViewer} style={{ cursor: `pointer` }}>{toggle}</a>
             <br/>
             <div id="player">
                 <br/>
