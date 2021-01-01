@@ -1628,6 +1628,13 @@
     "@svgr/plugin-svgo" "^4.0.3"
     loader-utils "^1.1.0"
 
+"@trendmicro/react-iframe@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@trendmicro/react-iframe/-/react-iframe-1.0.1.tgz#8707e8fc4d6069946eef1137fa61fd9a7810bcab"
+  integrity sha512-t+Dzx+RcXt/SAD5BjHH3/XP4RMMUAV2iOCTNjAv763RRwYtR5/FA5IWFrENPlco129anPObciDCLQ4EfG06JAQ==
+  dependencies:
+    prop-types "^15.5.8"
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.3.tgz#4ba8ddb720221f432e443bd5f9117fd22cfd4762"
@@ -9121,7 +9128,7 @@ prompts@^0.1.9:
     kleur "^2.0.1"
     sisteransi "^0.1.1"
 
-prop-types@^15.5.4, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==

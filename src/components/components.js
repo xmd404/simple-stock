@@ -215,3 +215,12 @@ export const Beta = () =>
             <br/>
         </form>
     </BetaMessage>
+
+  export const ViewerWindow = styled.div`
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.9;
+    z-index: 100;
+    position: relative;
+  `;

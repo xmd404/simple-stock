@@ -6,6 +6,7 @@ import CommoditiesListContainer from '../components/lists/CommoditiesListContain
 import NewsListContainer from '../components/lists/NewsListContainer';
 import Footer from '../components/footer';
 import SearchBar from '../components/search';
+import Viewer from '../components/viewer';
 
 const HomePage = () =>
   <div>
@@ -14,6 +15,7 @@ const HomePage = () =>
       <StockListContainer />
       <CryptoListContainer />
       <ForexListContainer />
+      <Viewer />
     </ul>
   </div>
 
