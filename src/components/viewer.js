@@ -8,16 +8,16 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 library.add(fab);
 
 const Viewer = () => {
-    const [toggle, setToggle] = useState('Hide Player')
+    const [toggle, setToggle] = useState('Hide Playlist')
     const toggleViewer = () => {
         let toggle;
         var x = document.getElementById("player");
         if (x.style.display === "none") {
           x.style.display = "inline-block";
-          setToggle("Hide Player");
+          setToggle("Hide Playlist");
         } else {
           x.style.display = "none";
-          setToggle("Show Player");
+          setToggle("Show Playlist");
         };
         return toggle;
     };
