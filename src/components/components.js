@@ -217,10 +217,17 @@ export const Beta = () =>
     </BetaMessage>
 
   export const ViewerWindow = styled.div`
-    height: 100%;
+    height: auto;
     width: 100%;
     background-color: #000;
     opacity: 0.9;
     z-index: 100;
-    position: relative;
+  `;
+
+  export const ViewerPlayer= styled.iframe`
+    height: auto;
+    width: auto;
+    background-color: #000;
+    opacity: 0.9;
+    z-index: 100;
   `;

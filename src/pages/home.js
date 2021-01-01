@@ -15,7 +15,6 @@ const HomePage = () =>
       <StockListContainer />
       <CryptoListContainer />
       <ForexListContainer />
-      <Viewer />
     </ul>
   </div>
 
