@@ -30,16 +30,17 @@ const CompanyInfo = () => {
 		return (
 			<Container>
 				<b>
-					<h2 style={{ textAlign : 'center' }}>
-						{company.Industry}
-						<br/>
-						{company.Exchange} &nbsp; &middot; &nbsp; {company.Country}
+					<h2 style={{ textAlign : 'center', margin: '0' }}>
+						{`${company.Industry.split(' ', 2)[0]} ${company.Industry.split(' ', 2)[1]}`.split('undefined')}
 					</h2>
+					<p style={{ textAlign : 'center', margin: '0' }}>
+						{company.Exchange} &nbsp; &middot; &nbsp; {company.Country}
+					</p>
 				</b>
 				<br/>
 				<ChartCard>
 					<br/>
-					<p>{`${company.Description.substring(0, 1000)}...`}</p>
+					<p>{`${company.Description}`}</p>
 				</ChartCard>
 				<br/>
 			</Container>
