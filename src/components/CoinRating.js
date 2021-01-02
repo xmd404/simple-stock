@@ -19,7 +19,9 @@ const CoinRating = ({ symbol }) => {
     // render
     if (rating) {
         return (
-            <span style={{ padding: '8px 16px', color: 'black', backgroundColor: '#fff', borderRadius: '5px' }}>{rating}</span>
+            <span style={{ padding: '8px 16px', color: 'black', backgroundColor: '#fff', borderRadius: '20px' }}>
+                {rating.toLowerCase()}
+            </span>
         );
     } else {
         return (
