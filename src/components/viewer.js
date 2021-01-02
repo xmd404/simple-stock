@@ -8,31 +8,30 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 library.add(fab);
 
 const Viewer = () => {
-    const [toggle, setToggle] = useState('Hide Playlist')
+    const [toggle, setToggle] = useState('⚡️ Open Playlist')
     const toggleViewer = () => {
-        let toggle;
         var x = document.getElementById("player");
-        if (x.style.display === "none") {
+        if (x.style.display == "none") {
           x.style.display = "inline-block";
-          setToggle("Hide Playlist");
+          setToggle("↓ Hide Playlist");
         } else {
           x.style.display = "none";
-          setToggle("Show Playlist");
+          setToggle("⚡️ Open Playlist");
         };
-        return toggle;
     };
 
     return (
         <ViewerWindow >
-            <br/>
-            <a onClick={toggleViewer} style={{ cursor: `pointer`, border: `none` }}><FontAwesomeIcon icon={["fab", "youtube"]} /> &nbsp; {toggle}</a>
-            <br/>
+            <div onClick={toggleViewer} style={{ backgroundColor: 'rgb(13, 178, 120)', cursor: `pointer`, padding: '10px 0 15px', border: `none` }}>
+                <p>
+                    {toggle}
+                </p>
+            </div>
             <div id="player">
                 <br/>
                 <ViewerPlayer src="https://www.youtube.com/embed/_PXFVNWINQc" />
-                <br/>
+                <br/><br/>
             </div>
-            <br/>
         </ViewerWindow>
         
     );
