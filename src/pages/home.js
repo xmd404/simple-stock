@@ -12,9 +12,9 @@ import { Container } from '../components/components';
 const HomePage = () =>
   <Container style={{ maxWidth: '1000px' }}>
     <SearchBar />
-    <br/><br/>
-    <NewsListContainer />
     <ul id="myUL" style={{ margin: 0, padding: 0 }}>
+      <br/><br/>
+      <NewsListContainer />
       <StockListContainer />
       <CryptoListContainer />
       <ForexListContainer />
