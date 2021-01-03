@@ -151,3 +151,7 @@ code {
   display: none;
   background-color: rgb(7, 9, 14);
 }
+
+input[type="search"] {
+  -webkit-appearance: none;
+}

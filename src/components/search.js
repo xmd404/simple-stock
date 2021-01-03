@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -7,6 +7,7 @@ import { textChangeRangeIsUnchanged } from 'typescript';
 library.add(fas);
 
 const SearchBar = () => {
+    const [text, setText] = useState('')
     const BarStyling = {width:"85%", maxWidth:"400px", background:"#F2F1F9", border:"none", padding:"1rem 1rem", margin:"0 auto"};
     
     let searchFilter = () => {
@@ -32,6 +33,7 @@ const SearchBar = () => {
                 style={BarStyling}
                 key="random1"
                 placeholder={'🔍   Search for stocks, crypto, or currensy'}
+                type="search"
                 id="myInput"
                 onKeyUp={searchFilter}
             />
