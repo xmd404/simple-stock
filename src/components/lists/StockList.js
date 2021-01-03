@@ -21,8 +21,6 @@ const StockList = ({ stocks }) => {
                     <b>{getMarketMessage(stocks[0].quote.calculationPrice)}</b>
                 </h2>
                 <Tips />
-                <br/>
-                <SearchBar />
             </div>
             <Title>
                 <h2 style={{ margin: '0', padding: '0' }}>
