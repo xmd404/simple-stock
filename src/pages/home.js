@@ -11,6 +11,7 @@ import { Container } from '../components/components';
 
 const HomePage = () =>
   <Container style={{ maxWidth: '1200px' }}>
+    <br/><br/>
     <NewsListContainer />
     <ul id="myUL" style={{ margin: 0, padding: 0 }}>
       <StockListContainer />
