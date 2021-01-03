@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, ChartCard } from '../components';
 import { Loading } from '../../utility';
 import axios from 'axios';
+import ChartWidget from '../chart-widget';
 
 const CompanyInfo = () => {
 	// set state
@@ -29,6 +30,8 @@ const CompanyInfo = () => {
 	} else {
 		return (
 			<Container>
+				<ChartWidget company={company} />
+				<br/><br/>
 				<b>
 					<h2 style={{ textAlign : 'center', margin: '0' }}>
 						{`${company.Industry.split(' ', 2)[0]} ${company.Industry.split(' ', 2)[1]}`.split('undefined')}

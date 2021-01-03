@@ -38,8 +38,6 @@ const StockChartContainer = () => {
 		return (
 			<Container>
 				<StockChart stocks={stocks} />
-				<ChartWidget />
-				<br/><br/>
 				<CompanyInfo />
 				<br/>
 				<NewsListContainer />
