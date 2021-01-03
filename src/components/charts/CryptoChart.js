@@ -23,9 +23,9 @@ const CryptoChart = ({ crypto }) =>
             <br/>
         </ChartCard>
         <div>
-            <b>
-                <h2 style={{ textAlign: 'center' }}>What is {capitalize(crypto.id)}?</h2>
-            </b>
+            <div style={{ padding: '0 0 0 20px' }}>
+                <h2>What is {capitalize(crypto.id)}?</h2>
+            </div>
             <br/>
         </div>
         <ChartCard>

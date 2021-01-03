@@ -31,11 +31,11 @@ let CryptoNews = () => {
     } else {
         return (
             <div>
-                <b>
-                    <h2 style={{ textAlign: 'center' }}>
+                <div style={{ padding: '0 0 0 20px' }}>
+                    <h2>
                         Other News
                     </h2>
-                </b>
+                </div>
                 <br/>
                 <List
 					className="list-scroll"
