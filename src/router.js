@@ -11,6 +11,7 @@ import DiscoverPage from './pages/discover';
 import ProfilePage from './pages/profile';
 import StockChartContainer from './components/charts/StockChartContainer';
 import CryptoChartContainer from './components/charts/CryptoChartContainer';
+import ForexChartContainer from './components/charts/ForexChartContainer';
 // import ForexChart from './components/charts/forex';
 
 const Router = () =>
@@ -23,7 +24,7 @@ const Router = () =>
         <Route path="/profile/" component={ProfilePage} />
         <Route path="/chart/stock/:id/" component={StockChartContainer} />
         <Route path="/chart/crypto/:id/:name/" component={CryptoChartContainer} />
-        {/* <Route path="/chart/forex/:id/:name" component={ForexChart} /> */}
+        <Route path="/chart/forex/:id/:name" component={ForexChartContainer} />
         <Route path="*" component={PageNotFound} />
       </Switch>
       <Footer />

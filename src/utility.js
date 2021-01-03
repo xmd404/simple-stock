@@ -142,8 +142,9 @@ export const showCryptoChart = (e) => {
 };
 
 export const showForexChart = (e) => {
+	const currensyName = e.currentTarget.getElementsByClassName('currensy-name')[0].innerText;
 	const chartID = e.currentTarget.getElementsByClassName('cardTicker')[0].innerText;
-	window.location = `/#/chart/forex/${chartID}`;
+	window.location = `/#/chart/forex/${chartID}/${currensyName}`;
 	mixpanel.track(
 		"Interacted w/ forex card",
 		{

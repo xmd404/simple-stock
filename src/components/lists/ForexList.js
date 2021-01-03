@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { List, Title, ListCard } from '../components';
-import { forex } from '../../utility';
+import { forex, showForexChart } from '../../utility';
 
 const ForexList = ({ pairs }) => {
     //
@@ -18,7 +18,7 @@ const ForexList = ({ pairs }) => {
                 ref={scrollRef}
             >
                 {pairs.slice(0, 20).map((pair) => (
-                    <ListCard key={pair}>
+                    <ListCard key={pair} onClick={showForexChart}>
                         <br/>
                         {/* <img src={"https://www.countryflags.io/eu/flat/32.png"}/> */}
                         <h2>
@@ -30,7 +30,7 @@ const ForexList = ({ pairs }) => {
                             <br/>
                             → <span className="cardTicker">{pair[0].toLowerCase()}</span>
                         </h2>
-                        <p style={{ height: '75px'}}>{forex[pair[0]].toLowerCase()}</p>
+                        <p className="currensy-name" style={{ height: '75px'}}>{forex[pair[0]].toLowerCase()}</p>
                         <h2>
                             <b>€</b> {pair[1].toFixed(2)}
                         </h2>
