@@ -53,7 +53,7 @@ export const ChartCard = styled.div`
 export const NewsCard = styled.li`
 	white-space: normal;
 	display: inline-block;
-	width: 250px;
+	width: 225px;
 	margin 0 0.75em 0.75em 0;
 	color: #FFF;
 	background-color: rgb(13, 178, 120);
