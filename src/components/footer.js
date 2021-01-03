@@ -17,6 +17,7 @@ const Footer = () => (
 			</span>
 			<b>SimpleStock</b>.
 		</p>
+		<br/><br/>
 	</Foot>
 );
 

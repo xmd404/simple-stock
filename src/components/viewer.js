@@ -7,22 +7,23 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 library.add(fab);
 
-const Viewer = () => {
-    const [toggle, setToggle] = useState('⚡️ Open Playlist')
+const Viewer = () => 
+    {// setState
+    const [toggle, setToggle] = useState('Open Playlist')
     const toggleViewer = () => {
         var x = document.getElementById("player");
         if (x.style.display == "none") {
           x.style.display = "inline-block";
-          setToggle("↓ Hide Playlist");
+          setToggle("Hide Playlist");
         } else {
           x.style.display = "none";
-          setToggle("⚡️ Open Playlist");
+          setToggle("Open Playlist");
         };
     };
-
+    // render to page
     return (
         <ViewerWindow >
-            <div onClick={toggleViewer} style={{ backgroundColor: 'rgb(13, 178, 120)', cursor: `pointer`, padding: '10px 0 15px', border: `none` }}>
+            <div onClick={toggleViewer} style={{ backgroundColor: 'rgb(15, 17, 22)', cursor: `pointer`, padding: '10px 0 15px', borderTop: `2px solid #fff` }}>
                 <p>
                     {toggle}
                 </p>
