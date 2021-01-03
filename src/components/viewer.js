@@ -23,7 +23,14 @@ const Viewer = () =>
     // render to page
     return (
         <ViewerWindow >
-            <div onClick={toggleViewer} style={{ backgroundColor: 'rgb(15, 17, 22)', cursor: `pointer`, padding: '10px 0 15px', borderTop: `2px solid #fff` }}>
+            <div 
+                onClick={toggleViewer}
+                style={{ 
+                    backgroundColor: 'rgb(15, 17, 22)', 
+                    cursor: `pointer`, 
+                    padding: '10px 0 15px', 
+                    borderTop: `2px solid rgb(13, 178, 120)` }}
+            >
                 <p>
                     {toggle}
                 </p>
