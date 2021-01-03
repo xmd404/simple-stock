@@ -24,7 +24,6 @@ const SearchBar = () => {
             li[i].style.display = "none";
             }
         }
-        console.log({ input });
     };
     
     return (

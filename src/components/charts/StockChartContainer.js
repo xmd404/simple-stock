@@ -8,6 +8,7 @@ import { getStockChart, testStockChart } from '../../api';
 import StockChart from './StockChart.js'
 import NewsListContainer from '../lists/NewsListContainer';
 import LatestFromTwitter from '../news/twitter';
+import ChartWidget from '../chart-widget';
 
 const StockChartContainer = () => {
 	// set state
@@ -37,6 +38,8 @@ const StockChartContainer = () => {
 		return (
 			<Container>
 				<StockChart stocks={stocks} />
+				<ChartWidget />
+				<br/><br/>
 				<CompanyInfo />
 				<br/>
 				<NewsListContainer />
