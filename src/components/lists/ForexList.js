@@ -1,6 +1,11 @@
 import React, { useRef } from 'react';
 import { List, Title, ListCard } from '../components';
 import { forex, showForexChart } from '../../utility';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
 
 const ForexList = ({ pairs }) => {
     //
@@ -10,7 +15,7 @@ const ForexList = ({ pairs }) => {
         <div>
             <Title>
             <h2 style={{ margin: '0', padding: '0' }}>
-                Forex
+                <FontAwesomeIcon icon={["fas", "exchange-alt"]} /> &nbsp; Forex
             </h2>
             </Title>
             <List

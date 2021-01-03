@@ -37,11 +37,11 @@ const News = () => {
 	} else {
 		return (
 			<div>
-                <b>
-                    <p style={{ textAlign: 'center' }}>
-                        <FontAwesomeIcon icon={["far", "newspaper"]} /> &nbsp; Breaking News
-                    </p>
-                </b>
+                <div style={{ padding: '0 0 0 20px' }}>
+					<h2>
+						<FontAwesomeIcon icon={["far", "newspaper"]} /> &nbsp; Breaking News
+					</h2>
+				</div>
 				<br/>
 				<List
 					className="list-scroll"

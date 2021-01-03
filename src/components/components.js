@@ -10,10 +10,9 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.div`
-	margin: 35px 0 40px;
+	margin: 35px 0 40px 20px;
 	padding: 0;	
 	overflow-x: none;
-	text-align: center;
 `;
 
 export const List = styled.div`

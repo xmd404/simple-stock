@@ -35,12 +35,12 @@ const LatestFromReddit = () => {
 	} else {
 	    return (
             <div>
-                <b>
-                    <h2 style={{ textAlign: 'center' }}>
-                        Latest from &nbsp;<FontAwesomeIcon icon={["fab", "reddit"]} /> Reddit
+                <div style={{ padding: '0 0 0 20px' }}>
+                    <h2>
+                        Social Ramblings
                     </h2>
-                </b>
-                <br/>
+                    <br/>
+                </div>
                 <List
 					className="list-scroll"
 					ref={scrollRef}
@@ -53,7 +53,7 @@ const LatestFromReddit = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <NewsCard post style={{ backgroundColor: 'rgb(236, 84, 40)' }}>
+                            <NewsCard post>
                                 <Headline>
                                     <br/>
 									<b>
@@ -61,7 +61,9 @@ const LatestFromReddit = () => {
 									</b>
 									<br/>
 									<p>
-										<u>{post.data.domain}</u>
+                                        <u>{post.data.domain}</u>
+                                        <br/>
+                                        via <FontAwesomeIcon icon={["fab", "reddit"]} style={{ color: 'rgb(236, 84, 40)' }} /> Reddit
 									</p>
                                     <br/>
                                 </Headline>

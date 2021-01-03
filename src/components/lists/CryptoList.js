@@ -1,6 +1,11 @@
 import React, { useRef } from 'react';
 import { showCryptoChart } from '../../utility';
 import { List, Title, ListCard, Logo } from '../components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
 
 const CryptoList = ({ cryptos }) => {
     // set state
@@ -10,7 +15,7 @@ const CryptoList = ({ cryptos }) => {
         <div>
             <Title>
                 <h2 style={{ margin: '0', padding: '0' }}>
-                    Crypto
+                    <FontAwesomeIcon icon={["fas", "coins"]} /> &nbsp; Crypto
                 </h2>
             </Title>
             <List

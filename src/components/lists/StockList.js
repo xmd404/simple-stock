@@ -3,6 +3,11 @@ import { Title, List, ListCard, Logo } from '../components';
 import { Tips } from '../components';
 import { getMarketMessage, showStockChart } from '../../utility';
 import SearchBar from '../search';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
 
 const StockList = ({ stocks }) => {
     // set state
@@ -21,7 +26,7 @@ const StockList = ({ stocks }) => {
             </div>
             <Title>
                 <h2 style={{ margin: '0', padding: '0' }}>
-                    Stocks
+                    <FontAwesomeIcon icon={["fas", "chart-line"]} /> &nbsp; Stocks
                 </h2>
             </Title>
             <List

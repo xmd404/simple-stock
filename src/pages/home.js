@@ -7,15 +7,16 @@ import NewsListContainer from '../components/lists/NewsListContainer';
 import Footer from '../components/footer';
 import SearchBar from '../components/search';
 import Viewer from '../components/viewer';
+import { Container } from '../components/components';
 
 const HomePage = () =>
-  <div>
+  <Container style={{ maxWidth: '1200px' }}>
     <NewsListContainer />
     <ul id="myUL" style={{ margin: 0, padding: 0 }}>
       <StockListContainer />
       <CryptoListContainer />
       <ForexListContainer />
     </ul>
-  </div>
+  </Container>
 
 export default HomePage;

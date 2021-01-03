@@ -32,14 +32,16 @@ const CompanyInfo = () => {
 			<Container>
 				<ChartWidget company={company} />
 				<br/><br/>
-				<b>
-					<h2 style={{ textAlign : 'center', margin: '0' }}>
+				<div style={{ padding: '0 0 0 20px' }}>
+					<h2 style={{ margin: '0' }} textAli>
 						{`${company.Industry.split(' ', 2)[0]} ${company.Industry.split(' ', 2)[1]}`.split('undefined')}
 					</h2>
-					<p style={{ textAlign : 'center', margin: '0' }}>
-						{company.Exchange} &nbsp; &middot; &nbsp; {company.Country}
-					</p>
-				</b>
+					<b>
+						<p style={{ margin: '0' }}>
+							{company.Exchange} &nbsp; &middot; &nbsp; {company.Country}
+						</p>
+					</b>
+				</div>
 				<br/>
 				<ChartCard>
 					<br/>

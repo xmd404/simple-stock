@@ -12,11 +12,11 @@ const Articles = ({ articles }) => {
     // render to pages
     return (
         <div>
-            <b>
-                <h2 style={{ textAlign: 'center' }}>
+            <div style={{ padding: '0 0 0 20px' }}>
+                <h2>
                     <FontAwesomeIcon icon={["far", "newspaper"]} /> &nbsp; Breaking News
                 </h2>
-            </b>
+            </div>
             <br/>
             <List
                 className="list-scroll"
