@@ -12,7 +12,7 @@ import { Container } from '../components/components';
 const HomePage = () =>
   <Container style={{ maxWidth: '1000px' }}>
     <SearchBar />
-    <br/><br/><br/>
+    <br/><br/>
     <NewsListContainer />
     <ul id="myUL" style={{ margin: 0, padding: 0 }}>
       <StockListContainer />
