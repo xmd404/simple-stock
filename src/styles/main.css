@@ -152,6 +152,8 @@ code {
   background-color: rgb(7, 9, 14);
 }
 
-input[type="search"] {
+input[type="search"],
+input[type="select"],
+input[type="option"] {
   -webkit-appearance: none;
 }
