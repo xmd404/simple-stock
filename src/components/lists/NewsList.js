@@ -29,7 +29,7 @@ const NewsList = ({ news }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <NewsCard newsItem>
+                        <NewsCard style={{ backgroundImage: `url(${newsItem.image_url})` }}  newsItem>
                             <Tint>
                                 <Headline>
                                     <br/>
@@ -40,7 +40,9 @@ const NewsList = ({ news }) => {
                                     </b>
                                     <br/>
                                     <p>
-                                        <u>{newsItem.source_name.toLowerCase()}</u>
+                                    <u>
+                                        {`${newsItem.source_name.toLowerCase().split(' ', 2)[0]} ${newsItem.source_name.toLowerCase().split(' ', 2)[1]}`.split('undefined')}
+                                    </u>
                                     </p>
                                 </Headline>
                                 <br/>

@@ -9,6 +9,7 @@ import StockChart from './StockChart.js'
 import NewsListContainer from '../lists/NewsListContainer';
 import LatestFromTwitter from '../news/twitter';
 import StockChartWidget from '../StockChartWidget';
+import News from './NewsChart';
 
 const StockChartContainer = () => {
 	// set state
@@ -39,7 +40,7 @@ const StockChartContainer = () => {
 			<Container>
 				<StockChart stocks={stocks} />
 				<CompanyInfo />
-				<NewsListContainer />
+				<News />
 				<LatestFromTwitter />
 				<LatestFromReddit />
 				<RobinhoodLink stocks={stocks} />

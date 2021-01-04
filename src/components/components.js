@@ -29,7 +29,7 @@ export const ListCard = styled.li`
 	margin 0 0.75em 0 0;
 	padding: 5px 0 5px 20px;
 	color: #FFF;
-	background-color: rgb(20, 24, 33);
+	background-color: rgb(14,17,22);
 	border-radius: 6%;
   box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
 	text-align: left;
@@ -219,7 +219,7 @@ export const Beta = () =>
   export const ViewerWindow = styled.div`
     height: auto;
     width: 100%;
-    background-color: #000;
+    background-color: rgb(14,17,22);
     opacity: 0.9;
     z-index: 100;
   `;
@@ -227,7 +227,7 @@ export const Beta = () =>
   export const ViewerPlayer= styled.iframe`
     height: auto;
     width: auto;
-    background-color: #000;
+    background-color: rgb(14,17,22);
     opacity: 0.9;
     z-index: 100;
   `;

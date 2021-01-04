@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { List, NewsCard, Headline, Tint, Thumbnail } from './components';
+import { Title, List, NewsCard, Headline, Tint, Thumbnail } from '../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { far } from '@fortawesome/free-regular-svg-icons';
@@ -8,7 +8,7 @@ import axios from 'axios';
 
 library.add(far);
 
-const News = () => {
+const NewsChart = () => {
 	// set state
 	const [error, setError] = useState(false);
 	const [isLoaded, setLoaded] = useState(false);
@@ -54,8 +54,8 @@ const News = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<NewsCard style={{ backgroundImage: `url(${article.image_url})` }} article>
-                                
+							<NewsCard style={{ backgroundImage: `url(${article.image_url})`}} article>
+								<Tint>
                                     <Headline>
                                         <br/>
                                         <p>{article.date.substring(0, 16)}</p>
@@ -65,11 +65,13 @@ const News = () => {
                                         </b>
                                         <br/>
                                         <p>
-                                            <u>{article.source_name.toLowerCase()}</u>
+											<u>
+												{`${article.source_name.toLowerCase().split(' ', 2)[0]} ${article.source_name.toLowerCase().split(' ', 2)[1]}`.split('undefined')}
+											</u>
                                         </p>
                                     </Headline>
                                     <br/>
-                                
+								</Tint>
 							</NewsCard>
 						</a>
 					))}
@@ -79,4 +81,4 @@ const News = () => {
 	};
 };
 
-export default News;
+export default NewsChart;

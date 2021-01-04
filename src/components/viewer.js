@@ -26,7 +26,7 @@ const Viewer = () =>
             <div 
                 onClick={toggleViewer}
                 style={{ 
-                    backgroundColor: 'rgb(20, 23, 33)', 
+                    backgroundColor: 'rgb(14,17,22)', 
                     cursor: `pointer`, 
                     padding: '10px 0 15px', 
                     borderTop: `3px solid rgb(54, 118, 203)` }}

@@ -14,7 +14,7 @@ const StockList = ({ stocks }) => {
     // render list
     return (
         <>
-            <div style={{ backgroundColor: 'rgb(20, 24, 33)', padding: '40px 0' }}>
+            <div style={{ backgroundColor: 'rgb(14,17,22)', padding: '40px 0' }}>
                 <h2 style={{ margin: '0', padding: '0', textAlign: 'center'}}>
                     Markets are&nbsp;
                     <b>{getMarketMessage(stocks[0].quote.calculationPrice)}</b>
