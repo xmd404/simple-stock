@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, ChartCard } from '../components';
 import { Loading } from '../../utility';
 import axios from 'axios';
-import ChartWidget from '../chart-widget';
+import StockChartWidget from '../StockChartWidget';
 
 const CompanyInfo = () => {
 	// set state
@@ -30,7 +30,7 @@ const CompanyInfo = () => {
 	} else {
 		return (
 			<Container>
-				<ChartWidget company={company} />
+				<StockChartWidget company={company} />
 				<br/><br/>
 				<div style={{ padding: '0 0 0 20px' }}>
 					<h2 style={{ margin: '0' }} textAli>

@@ -8,7 +8,7 @@ import { getStockChart, testStockChart } from '../../api';
 import StockChart from './StockChart.js'
 import NewsListContainer from '../lists/NewsListContainer';
 import LatestFromTwitter from '../news/twitter';
-import ChartWidget from '../chart-widget';
+import StockChartWidget from '../StockChartWidget';
 
 const StockChartContainer = () => {
 	// set state

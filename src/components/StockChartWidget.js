@@ -1,7 +1,7 @@
 import React from 'react';
 import TradingViewWidget, { Themes } from 'react-tradingview-widget';
 
-const ChartWidget = ({ company }) => (
+const StockChartWidget = ({ company }) => (
     <div style={{ height: '300px', width: '90%', margin: '0 auto' }}>
         <TradingViewWidget
             symbol={`${company.Exchange}:${window.location.href.split("/")[6]}`}
@@ -12,4 +12,4 @@ const ChartWidget = ({ company }) => (
     </div>
 );
 
-export default ChartWidget;
+export default StockChartWidget;

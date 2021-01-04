@@ -4,6 +4,7 @@ import axios from 'axios';
 import ForexChart from './ForexChart';
 import { Container } from '../components';
 import LatestFromReddit from '../news/reddit';
+import ForexChartWidget from '../ForexChartWidget';
 
 const ForexChartContainer = () => {
 	// set state
@@ -36,6 +37,8 @@ const ForexChartContainer = () => {
 		return (
 			<Container>
 				<ForexChart pairs={pairs} />
+				<ForexChartWidget />
+				<br/><br/>
 				<LatestFromReddit />
 			</Container>
 		);

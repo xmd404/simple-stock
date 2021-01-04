@@ -28,7 +28,6 @@ export const forex = {
 	"COP": "Colombian Peso",
 	"HKD": "Hong Kong Dollar",
 	"INR": "Indian Rupee",
-	"NGN": "Nigerian Naira",
 	"RUB": "Russian Ruble",
 	"ZAR": "South African Rand",
 	"THB": "Thai Baht",
