@@ -47,7 +47,6 @@ const CompanyInfo = () => {
 					<br/>
 					<p>{`${company.Description}`}</p>
 				</ChartCard>
-				<br/>
 			</Container>
 		);
 	};

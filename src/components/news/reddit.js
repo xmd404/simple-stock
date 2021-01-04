@@ -6,6 +6,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { Title } from '../components';
 
 library.add(fas);
 
@@ -36,12 +37,11 @@ const LatestFromReddit = () => {
 	} else {
 	    return (
             <div>
-                <div style={{ padding: '0 0 0 20px' }}>
+                <Title>
                     <h2>
                         <FontAwesomeIcon icon={["fas", "retweet"]} /> &nbsp; Social Media
                     </h2>
-                    <br/>
-                </div>
+                </Title>
                 <List
 					className="list-scroll"
 					ref={scrollRef}

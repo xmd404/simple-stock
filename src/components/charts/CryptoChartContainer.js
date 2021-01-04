@@ -35,7 +35,6 @@ const CryptoChartContainer = () => {
 		return (
 			<Container>
 				<CryptoChart crypto={crypto} />
-				<br/><br/>
 				<LatestFromTwitter />
 				<LatestFromReddit />
 				<CryptoNews />

@@ -39,7 +39,6 @@ const StockChartContainer = () => {
 			<Container>
 				<StockChart stocks={stocks} />
 				<CompanyInfo />
-				<br/>
 				<NewsListContainer />
 				<LatestFromTwitter />
 				<LatestFromReddit />

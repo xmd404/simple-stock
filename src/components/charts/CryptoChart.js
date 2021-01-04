@@ -32,7 +32,7 @@ const CryptoChart = ({ crypto }) =>
             <br/>
         </div>
         <ChartCard>
-            <p>{`${crypto.description.en.replace(/<.*>/g, '').substring(0, 1000)}...`}</p>
+            <p>{`${crypto.description.en.replace(/<.*>/g, '')}`}</p>
         </ChartCard>
     </div>
 

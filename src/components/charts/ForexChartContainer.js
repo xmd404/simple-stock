@@ -38,7 +38,7 @@ const ForexChartContainer = () => {
 			<Container>
 				<ForexChart pairs={pairs} />
 				<ForexChartWidget />
-				<br/><br/>
+				<br/>
 				<LatestFromReddit />
 			</Container>
 		);
