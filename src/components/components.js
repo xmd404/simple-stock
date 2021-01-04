@@ -56,7 +56,7 @@ export const NewsCard = styled.li`
 	width: 225px;
 	margin 0 0.75em 0.75em 0;
 	color: #FFF;
-	background-color: rgb(64, 148, 136);
+	background-color: rgb(54, 118, 203);
 	border-radius: 6%;
   box-shadow: 0px 1px 25px rgba(0,0,0,0.1);
 	text-align: left;
@@ -99,10 +99,11 @@ const LargeButton = styled.div`
   margin: 1.25em auto;
   width: 99%;
   max-width: 300px;
-  border: 2px solid white;
-  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(54, 118, 203);
   color: white;
-  padding: 14px 28px;
+  padding: 16px 24px;
   cursor: pointer;
   text-align: center;
 `

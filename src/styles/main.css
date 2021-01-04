@@ -95,15 +95,15 @@ code {
 }
 
 .navbar a:hover {
-  color: rgb(64, 148, 136);
+  color: rgb(54, 118, 203);
 }
 
 .navbar a.active {
-  color: rgb(64, 148, 136);
+  color: rgb(54, 118, 203);
 }
 
 .navbar .icon {
-  color: rgb(64, 148, 136);
+  color: rgb(54, 118, 203);
 }
 
 .navbar p {
@@ -135,7 +135,7 @@ code {
   font-weight: bolder;
 }
 .submit {
-  background-color: rgb(64, 148, 136);
+  background-color: rgb(54, 118, 203);
   color: #fff;
 }
 
