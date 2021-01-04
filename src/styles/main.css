@@ -10,7 +10,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   /* background-color: #100e17; */
-  background-color: rgb(7, 9, 14);
+  background-color: rgb(23, 27, 37);
   color: white;
 }
 
@@ -76,11 +76,11 @@ code {
 .navbar {
   text-align: center;
   overflow: hidden;
-  background-color: rgb(7, 9, 14);
+  background-color: rgb(23, 27, 37);
   position: fixed;
   bottom: 0;
   width: 100%;
-  border-top: rgb(14, 17, 22) 1px solid;
+  border-top: rgb(20, 24, 33) 1px solid;
 }
 
 .navbar a {
@@ -91,19 +91,19 @@ code {
   text-decoration: none;
   font-size: 0.75em;
   width: 45%;
-  border: rgb(14, 17, 22) 1px solid;
+  border: rgb(20, 24, 33) 1px solid;
 }
 
 .navbar a:hover {
-  color: rgb(13, 178, 120);
+  color: rgb(64, 148, 136);
 }
 
 .navbar a.active {
-  color: rgb(13, 178, 120);
+  color: rgb(64, 148, 136);
 }
 
 .navbar .icon {
-  color: rgb(13, 178, 120);
+  color: rgb(64, 148, 136);
 }
 
 .navbar p {
@@ -135,7 +135,7 @@ code {
   font-weight: bolder;
 }
 .submit {
-  background-color: rgb(13, 178, 120);
+  background-color: rgb(64, 148, 136);
   color: #fff;
 }
 
@@ -149,7 +149,7 @@ code {
 
 #player {
   display: none;
-  background-color: rgb(7, 9, 14);
+  background-color: rgb(23, 27, 37);
 }
 
 input[type="search"],

@@ -26,10 +26,10 @@ const Viewer = () =>
             <div 
                 onClick={toggleViewer}
                 style={{ 
-                    backgroundColor: 'rgb(15, 17, 22)', 
+                    backgroundColor: 'rgb(20, 23, 33)', 
                     cursor: `pointer`, 
                     padding: '10px 0 15px', 
-                    borderTop: `2px solid rgb(13, 178, 120)` }}
+                    borderTop: `2px solid rgb(64, 148, 136)` }}
             >
                 <p>
                     {toggle}

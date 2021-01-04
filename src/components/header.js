@@ -12,7 +12,7 @@ const Logo = styled.header`
 	width: auto;
 	text-decoration: none;
 	text-align: center;
-	background-color: rgb(7, 9, 14); 
+	background-color: rgb(23, 27, 37); 
 	z-index: 100;
 	transition: 0.2s
 `;
