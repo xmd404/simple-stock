@@ -39,7 +39,7 @@ let CryptoNews = () => {
             <div>
                 <div style={{ padding: '0 0 0 20px' }}>
                     <h2>
-                        <FontAwesomeIcon icon={["fas", "file-alt"]} /> &nbsp; Other News
+                        <FontAwesomeIcon icon={["fas", "newspaper"]} /> &nbsp; Other News
                     </h2>
                 </div>
                 <br/>

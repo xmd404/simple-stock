@@ -39,7 +39,7 @@ const News = () => {
 			<div>
                 <div style={{ padding: '0 0 0 20px' }}>
 					<h2>
-						<FontAwesomeIcon icon={["far", "newspaper"]} /> &nbsp; Breaking News
+						<FontAwesomeIcon icon={["far", "newspaper"]} /> &nbsp; News
 					</h2>
 				</div>
 				<br/>

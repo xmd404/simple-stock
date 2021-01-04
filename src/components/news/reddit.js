@@ -38,7 +38,7 @@ const LatestFromReddit = () => {
             <div>
                 <div style={{ padding: '0 0 0 20px' }}>
                     <h2>
-                        <FontAwesomeIcon icon={["fas", "retweet"]} /> &nbsp; Social Ramblings
+                        <FontAwesomeIcon icon={["fas", "retweet"]} /> &nbsp; Social
                     </h2>
                     <br/>
                 </div>
