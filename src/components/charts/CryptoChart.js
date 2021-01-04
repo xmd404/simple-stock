@@ -2,6 +2,7 @@ import React from 'react';
 import { ChartCard, Logo } from '../components';
 import { capitalize } from '../../utility';
 import CoinRating from '../CoinRating';
+import CryptoChartWidget from '../CryptoChartWidget';
 
 const CryptoChart = ({ crypto }) =>
     <div>
@@ -22,6 +23,8 @@ const CryptoChart = ({ crypto }) =>
             </div>
             <br/>
         </ChartCard>
+        <CryptoChartWidget />
+        <br/><br/>
         <div>
             <div style={{ padding: '0 0 0 20px' }}>
                 <h2>What is {capitalize(crypto.id)}?</h2>
