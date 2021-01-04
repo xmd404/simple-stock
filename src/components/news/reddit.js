@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
 import { List, NewsCard, Headline } from './components';
 import { corsProxy, Loading } from '../../utility';
 import axios from 'axios';
 
-library.add(fab);
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
 
 const LatestFromReddit = () => {
     // set state
@@ -37,7 +38,7 @@ const LatestFromReddit = () => {
             <div>
                 <div style={{ padding: '0 0 0 20px' }}>
                     <h2>
-                        Social Ramblings
+                        <FontAwesomeIcon icon={["fas", "retweet"]} /> &nbsp; Social Ramblings
                     </h2>
                     <br/>
                 </div>

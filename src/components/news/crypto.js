@@ -3,6 +3,12 @@ import { List, NewsCard, Headline } from './components';
 import { corsProxy, Loading } from '../../utility';
 import axios from 'axios';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
+
 let CryptoNews = () => {
     // init state
     const [error, setError] = useState(false);
@@ -33,7 +39,7 @@ let CryptoNews = () => {
             <div>
                 <div style={{ padding: '0 0 0 20px' }}>
                     <h2>
-                        Other News
+                        <FontAwesomeIcon icon={["fas", "file-alt"]} /> &nbsp; Other News
                     </h2>
                 </div>
                 <br/>
