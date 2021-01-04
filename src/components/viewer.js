@@ -29,7 +29,7 @@ const Viewer = () =>
                     backgroundColor: 'rgb(20, 23, 33)', 
                     cursor: `pointer`, 
                     padding: '10px 0 15px', 
-                    borderTop: `2px solid rgb(54, 118, 203)` }}
+                    borderTop: `3px solid rgb(54, 118, 203)` }}
             >
                 <p>
                     {toggle}
