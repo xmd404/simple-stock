@@ -37,12 +37,11 @@ const News = () => {
 	} else {
 		return (
 			<div>
-                <div style={{ padding: '0 0 0 20px' }}>
+                <Title>
 					<h2>
 						<FontAwesomeIcon icon={["far", "newspaper"]} /> &nbsp; News
 					</h2>
-				</div>
-				<br/>
+				</Title>
 				<List
 					className="list-scroll"
 					ref={scrollRef}

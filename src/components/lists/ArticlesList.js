@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, NewsCard, Headline, Tint } from '../components';
+import { List, NewsCard, Headline, Tint, Title } from '../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -12,12 +12,11 @@ const Articles = ({ articles }) => {
     // render to pages
     return (
         <div>
-            <div style={{ padding: '0 0 0 20px' }}>
+            <Title>
                 <h2>
                     <FontAwesomeIcon icon={["far", "newspaper"]} /> &nbsp; News
                 </h2>
-            </div>
-            <br/>
+            </Title>
             <List
                 className="list-scroll"
             >
