@@ -63,7 +63,7 @@ const LatestFromReddit = () => {
 									<p>
                                         <u>{post.data.domain}</u>
                                         <br/>
-                                        via <FontAwesomeIcon icon={["fab", "reddit"]} style={{ color: 'rgb(236, 84, 40)' }} /> Reddit
+                                        via &nbsp;<FontAwesomeIcon icon={["fab", "reddit"]} style={{ color: 'rgb(236, 84, 40)' }} /> <b>Reddit</b>
 									</p>
                                     <br/>
                                 </Headline>
