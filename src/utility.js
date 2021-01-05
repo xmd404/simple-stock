@@ -227,3 +227,8 @@ function randomInRange(min, max) {
     requestAnimationFrame(frame);
   }
 }());
+
+// export const getAnalysis = () => {
+// 	let analysis = document.getElementsByClassName("speedometerSignal-pyzN--tL")[0].innerText;
+// 	return analysis
+// };
