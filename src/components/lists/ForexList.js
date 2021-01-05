@@ -35,7 +35,7 @@ const ForexList = ({ pairs }) => {
                             <br/>
                             → <span className="cardTicker">{pair[0].toLowerCase()}</span>
                         </h2>
-                        <p className="currensy-name" style={{ height: '75px'}}>{forex[pair[0]].toLowerCase()}</p>
+                        <p className="currency-name" style={{ height: '75px'}}>{forex[pair[0]].toLowerCase()}</p>
                         <h2>
                             <b>€</b> {pair[1].toFixed(2)}
                         </h2>

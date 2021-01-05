@@ -33,7 +33,7 @@ const CompanyInfo = () => {
 				<StockChartWidget company={company} />
 				<br/><br/>
 				<div style={{ padding: '0 0 0 20px' }}>
-					<h2 style={{ margin: '0' }} textAli>
+					<h2 style={{ margin: '0' }}>
 						{`${company.Industry.split(' ', 2)[0]} ${company.Industry.split(' ', 2)[1]}`.split('undefined')}
 					</h2>
 					<b>

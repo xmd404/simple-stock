@@ -54,7 +54,7 @@ const NewsChart = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<NewsCard style={{ backgroundImage: `url(${article.image_url})`}} article>
+							<NewsCard article>
 								<Tint>
                                     <Headline>
                                         <br/>

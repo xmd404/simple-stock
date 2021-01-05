@@ -12,7 +12,7 @@ const NewsListContainer = () => {
 	// fetch data from api
 	useEffect(() => {
 		axios
-			.get(`${corsProxy}https://stocknewsapi.com/api/v1?tickers=${symbols}&items=20&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&type=video`)
+			.get(`https://stocknewsapi.com/api/v1?tickers=${symbols}&items=20&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&type=video`)
 				.then(res => {
 					setNews(Object.values(res.data));
 					setLoaded(true);
