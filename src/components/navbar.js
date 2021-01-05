@@ -13,17 +13,17 @@ const Navbar = () => (
 		
 		<div className="navbar">
 			<Viewer />
-			<Link to="/" onClick={getHomePage}>
+			{/* <Link to="/" onClick={getHomePage}>
 				<FontAwesomeIcon icon={[ 'fas', 'home' ]} size="lg" />
 				<p>Home</p>
-			</Link>
-			{/* <Link to="/discover" onClick={getDiscoverPage}>
+			</Link> */}
+			<Link to="/" onClick={getHomePage}>
 				<FontAwesomeIcon icon={[ 'fas', 'search' ]} size="lg" />
 				<p>Discover</p>
-			</Link> */}
+			</Link>
 			<Link to="/profile" onClick={getProfilePage}>
-				<FontAwesomeIcon icon={[ 'fas', 'user' ]} size="lg" />
-				<p>Profile</p>
+				<FontAwesomeIcon icon={[ 'fas', 'sign-in-alt' ]} size="lg" />
+				<p>Signup</p>
 			</Link>
 		</div>
 	</>
