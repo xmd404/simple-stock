@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Title, List, NewsCard, Headline, Tint, Thumbnail } from '../components';
+import { Title, List, NewsCard, Headline, Tint, Thumbnail, Logo } from '../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { far } from '@fortawesome/free-regular-svg-icons';
@@ -55,21 +55,30 @@ const NewsChart = () => {
 							rel="noopener noreferrer"
 						>
 							<NewsCard article>
-                                    <Headline>
-                                        <br/>
-                                        <p>{article.date.substring(0, 16)}</p>
-                                        <br/>
-                                        <b>
-                                            <p style={{ height: '100px' }}>{article.title.substring(0, 105)}</p>
-                                        </b>
-                                        <br/>
-                                        <p>
-											<u>
-												{`${article.source_name.toLowerCase().split(' ', 2)[0]} ${article.source_name.toLowerCase().split(' ', 2)[1]}`.split('undefined')}
-											</u>
-                                        </p>
-                                    </Headline>
-                                    <br/>
+									<Headline>
+										<br/><br/>
+										<Logo src={`../assets/${article.source_name.toLowerCase().split(' ', 2)[0]}_logo.png`} style={{ display: 'block', margin: 0 }}/>
+										{/* <p>
+											<b>
+												{`${article.source_name.toLowerCase().split(' ', 2)[0]}`}
+												${article.source_name.toLowerCase().split(' ', 2)[1]}`.split('undefined')
+											</b>
+										</p> */}
+										<br/>
+										<p>{article.date.substring(0, 16)}</p>
+										<br/>
+										<b>
+											<p style={{ height: '100px' }}>{article.title.substring(0, 105)}</p>
+										</b>
+										<br/>
+										<span style={{ marginRight: '10px', padding: '4px 8px', color: '#000', backgroundColor: '#fff', borderRadius: '5px', borderColor: 'none' }}>
+											{`${article.tickers[0]}`}
+										</span>
+										{/* <span style={{ padding: '4px 8px', color: '#000', backgroundColor: '#fff', borderRadius: '5px', borderColor: 'none' }}>
+											{`${article.tickers[1]}`.split('undefined')}
+										</span> */}
+									</Headline>
+									<br/><br/>
 							</NewsCard>
 						</a>
 					))}
