@@ -3,6 +3,7 @@ import { List, NewsCard, Headline, Tint, Title } from '../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import { isNamedExportBindings, isNoSubstitutionTemplateLiteral } from 'typescript';
 
 library.add(far);
 
@@ -30,7 +31,6 @@ const NewsList = ({ news }) => {
                         rel="noopener noreferrer"
                     >
                         <NewsCard newsItem>
-                            <Tint>
                                 <Headline>
                                     <br/>
                                     <p>{newsItem.date.substring(0, 16)}</p>
@@ -44,9 +44,16 @@ const NewsList = ({ news }) => {
                                         {`${newsItem.source_name.toLowerCase().split(' ', 2)[0]} ${newsItem.source_name.toLowerCase().split(' ', 2)[1]}`.split('undefined')}
                                     </u>
                                     </p>
+                                    <br/>
+                                    <span style={{ marginRight: '10px', padding: '4px 8px', color: '#000', backgroundColor: '#fff', borderRadius: '5px', borderColor: 'none' }}>
+                                        {`${newsItem.tickers[0]}`}
+                                    </span>
+
+                                    {/* <span style={{ padding: '4px 8px', color: '#000', backgroundColor: '#fff', borderRadius: '5px', borderColor: 'none' }}>
+                                        {`${newsItem.tickers[1]}`.split('undefined')}
+                                    </span> */}
                                 </Headline>
-                                <br/>
-                            </Tint>
+                                <br/><br/>
                         </NewsCard>
                     </a>
                 ))}
