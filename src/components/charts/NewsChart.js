@@ -55,7 +55,6 @@ const NewsChart = () => {
 							rel="noopener noreferrer"
 						>
 							<NewsCard article>
-								<Tint>
                                     <Headline>
                                         <br/>
                                         <p>{article.date.substring(0, 16)}</p>
@@ -71,7 +70,6 @@ const NewsChart = () => {
                                         </p>
                                     </Headline>
                                     <br/>
-								</Tint>
 							</NewsCard>
 						</a>
 					))}
