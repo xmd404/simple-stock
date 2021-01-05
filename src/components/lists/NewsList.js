@@ -49,7 +49,6 @@ const NewsList = ({ news }) => {
                                     <b>
                                         <p style={{ height: '100px' }}>{newsItem.title.substring(0, 105)}</p>
                                     </b>
-                                    <br/>
                                     <span style={{ marginRight: '10px', padding: '4px 8px', color: '#000', backgroundColor: '#fff', borderRadius: '5px', borderColor: 'none' }}>
                                         {`${newsItem.tickers[0]}`}
                                     </span>
