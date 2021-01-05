@@ -28,7 +28,7 @@ let StockChart = ({ stocks }) => {
                         <h2>${stock.quote.latestPrice}</h2>
                         <br/>
                         <br/>
-                        <span style={{ padding: '12px 24px', color: '#fff', backgroundColor: 'rgb(69, 119, 197', borderRadius: '5px', borderColor: 'none' }}>
+                        <span style={{ padding: '8px 24px', color: '#fff', backgroundColor: 'rgb(69, 119, 197', borderRadius: '5px', borderColor: 'none' }}>
                             Analyze
                         </span>
                     </div>
