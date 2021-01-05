@@ -26,7 +26,9 @@ let StockChart = ({ stocks }) => {
                     <div style={{ float: 'right', width: '50%', textAlign: 'right' }}>
                         <br/>
                         <h2>${stock.quote.latestPrice}</h2>
-                        <br/>
+                        <p>
+                            {(stock.quote.changePercent * 100).toFixed(3)}% YTD
+                        </p>
                         <br/>
                         <span style={{ padding: '8px 24px', color: '#fff', backgroundColor: 'rgb(69, 119, 197', borderRadius: '5px', borderColor: 'none' }}>
                             Analyze
