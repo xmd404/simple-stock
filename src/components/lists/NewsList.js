@@ -1,11 +1,6 @@
 import React, { useRef } from 'react';
 import { List, NewsCard, Headline, Tint, Title, Thumbnail, Logo } from '../components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { far } from '@fortawesome/free-regular-svg-icons';
 import { loadVideo } from '../../utility';
-
-library.add(far);
 
 const NewsList = ({ news }) => {
     // set state
@@ -13,11 +8,6 @@ const NewsList = ({ news }) => {
     // render news list
     return (
         <div>
-            <Title>
-                <h2>
-                    <FontAwesomeIcon icon={["far", "newspaper"]} /> &nbsp; News
-                </h2>
-            </Title>
             <List
                 className="list-scroll"
                 ref={scrollRef}
