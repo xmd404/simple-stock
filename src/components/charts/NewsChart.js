@@ -56,8 +56,8 @@ const NewsChart = () => {
 						>
 							<NewsCard article>
 									<Headline>
-										<br/><br/>
-										<Logo src={`../assets/${article.source_name.toLowerCase().split(' ', 2)[0]}_logo.png`} style={{ display: 'block', margin: 0 }}/>
+										<br/>
+										<Logo src={`../assets/${article.source_name.toLowerCase().split(' ', 2)[0]}_logo.png`} style={{ display: 'block', margin: '5px 0 0' }}/>
 										{/* <p>
 											<b>
 												{`${article.source_name.toLowerCase().split(' ', 2)[0]}`}
