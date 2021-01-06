@@ -19,7 +19,7 @@ const NewsListContainer = () => {
 	// fetch data from api
 	useEffect(() => {
 		axios
-			.get(`https://stocknewsapi.com/api/v1?tickers=${symbols}&items=20&token=${process.env.REACT_APP_NEWS_API_KEY}&sortby=trending&type=${newsType}`)
+			.get(`https://stocknewsapi.com/api/v1?tickers=${symbols}&items=20&token=${process.env.REACT_APP_NEWS_API_KEY}&type=${newsType}`)
 				.then(res => {
 					setNews(Object.values(res.data));
 					setLoaded(true);
@@ -29,9 +29,10 @@ const NewsListContainer = () => {
 					console.log(err);
 				});
 	}, []);
-	function handleChange(e) {
-		const value = e.target.value;
-		setNewsType(value);
+	const handleChange = () => {
+		setNewsType(`${document.getElementById('selectMenu').value}`);
+		console.log(newsType);
+		console.log(`${document.getElementById('selectMenu').value}`);
 	};
 	// render error, loading, or success state
 	if (error) {
@@ -45,11 +46,11 @@ const NewsListContainer = () => {
 					<h2 style={{ float: 'left', width: '50%', textAlign: 'left' }}>
 						<FontAwesomeIcon icon={["far", "newspaper"]} /> &nbsp; News
 					</h2>
-					<select value={newsType} onChange={handleChange} 
-					style={{ float: 'right', width: 'auto', textAlign: 'right', padding: '3px 6px' }}>
+					{/* <select value={newsType} onChange={handleChange} id="selectMenu"
+					style={{ float: 'right', width: 'auto', textAlign: 'right', padding: '3px 6px', backgroundColor: 'transparent', color: '#fff', borderColor: '#fff' }}>
 						<option value="video">Videos</option>
 						<option value="article">Articles</option>
-					</select>
+					</select> */}
 				</Title>
 				<br/><br/>
 				<NewsList news={news} />

@@ -157,3 +157,7 @@ input[type="select"],
 input[type="option"] {
   -webkit-appearance: none;
 }
+
+select {
+  -webkit-appearance: menulist;
+}
