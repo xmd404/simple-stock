@@ -35,8 +35,8 @@ const NewsList = ({ news }) => {
                     >
                         <NewsCard newsItem>
                                 <Headline>
-                                    <br/><br/>
-                                    <Logo src={`../assets/${newsItem.source_name.toLowerCase().split(' ', 2)[0]}_logo.png`} style={{ display: 'block', margin: 0 }}/>
+                                    <br/>
+                                    <Logo src={`../assets/${newsItem.source_name.toLowerCase().split(' ', 2)[0]}_logo.png`} style={{ display: 'block', margin: '5px 0 0' }}/>
                                     {/* <p>
                                         <b>
                                             {`${newsItem.source_name.toLowerCase().split(' ', 2)[0]}`}
