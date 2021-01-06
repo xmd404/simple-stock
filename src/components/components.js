@@ -192,7 +192,7 @@ const BetaMessage = styled.div`
 export const Beta = () =>
     <BetaMessage>
         <h2>
-            This is an exclusive private beta feature &nbsp;<span role="img" aria-label="lock emoji">🔒</span>
+            Sorry, we're still getting our s#!t together &nbsp;<span role="img" aria-label="lock emoji">😅</span>
             <br/><br/>
             Signup to join our waitlist:
         </h2>
