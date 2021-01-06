@@ -9,15 +9,15 @@ library.add(fab);
 
 const Viewer = () => {
     // setState
-    const [toggle, setToggle] = useState('Open Playlist')
+    const [toggle, setToggle] = useState('Items selected from "News" section will play here.')
     const toggleViewer = () => {
-        var x = document.getElementById("player");
-        if (x.style.display == "none") {
+        const x = document.getElementById("player");
+        if (x.style.display == 'none') {
           x.style.display = "inline-block";
-          setToggle("Hide Playlist");
+          setToggle("Click here to minimize player");
         } else {
           x.style.display = "none";
-          setToggle("Open Playlist");
+          setToggle('Items selected from "News" section will play here.');
         };
     };
     // render to page
@@ -31,14 +31,15 @@ const Viewer = () => {
                     padding: '10px 0 15px', 
                     borderTop: `3px solid rgb(54, 118, 203)` }}
             >
-                <p>
+                <p id="toggle">
                     {toggle}
                 </p>
             </div>
             <div id="player">
                 <br/>
-                <ViewerPlayer id="viewer" src={"https://www.youtube.com/embed/_PXFVNWINQc"}  donotallowfullscreen />
-                <br/><br/>
+                <ViewerPlayer id="viewer" src={""} />
+                <br/>
+                <br/>
             </div>
         </ViewerWindow>
         

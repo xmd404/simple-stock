@@ -23,7 +23,7 @@ const LatestFromTwitter = () => {
                     }
                 })
                 .then(res => {
-                    setPosts(res.data);
+                    setPosts(res.data.statuses);
                     setLoaded(true);
                 })
                 .catch(err => {
@@ -51,7 +51,7 @@ const LatestFromTwitter = () => {
 				>
                     {posts.map(post =>
                         <a
-                            key={post.data.id}
+                            key={post.id}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -59,7 +59,7 @@ const LatestFromTwitter = () => {
                                 <Headline>
                                     <br/>
 									<b>
-										<p style={{ height: '100px' }}>{post.data.text.substring(0, 105)}</p>
+										<p style={{ height: '100px' }}>{post.text.substring(0, 105)}</p>
 									</b>
                                     <br/>
                                 </Headline>

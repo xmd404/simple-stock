@@ -160,7 +160,7 @@ export let loadVideo = (e) => {
 	for (var i = 0, len = g.children.length; i < len; i++) {
 		(function(index){
 			g.children[i].onclick = function(){
-				document.getElementById('viewer').src = `https://www.youtube.com/embed/${document.getElementsByTagName('a')[index+1].href.split('=')[1]}?&autoplay=1&mute=1&rel=0&controls=1&showinfo=0`;
+				document.getElementById('viewer').src = `https://www.youtube.com/embed/${document.getElementsByTagName('a')[index+1].href.split('=')[1]}?&autoplay=1&mute=1&rel=0&controls=1&showinfo=0&playsinline=1`;
 				document.getElementById("player").style.display = "inline-block";
 			}    
 		})(i);
@@ -173,7 +173,7 @@ export let loadVideoChart = (e) => {
 	for (var i = 0, len = g.children.length; i < len; i++) {
 		(function(index){
 			g.children[i].onclick = function(){
-				document.getElementById('viewer').src = `https://www.youtube.com/embed/${document.getElementsByTagName('a')[index+1].href.split('=')[1]}?&autoplay=1&mute=1&rel=0&controls=1&showinfo=0`;
+				document.getElementById('viewer').src = `https://www.youtube.com/embed/${document.getElementsByTagName('a')[index+1].href.split('=')[1]}?&autoplay=1&mute=1&rel=0&controls=1&showinfo=0&playsinline=1`;
 				document.getElementById("player").style.display = "inline-block";
 			}    
 		})(i);
