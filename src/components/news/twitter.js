@@ -17,10 +17,11 @@ const LatestFromTwitter = () => {
     // fetch data from api
     useEffect(() => {
         axios
-            .get(
-                    `https://api.twitter.com/2/tweets/search/recent?query=${window.location.href.split("/")[7]} stock`,
-                    { headers: { 'Authorization': `Bearer ${process.env.REACT_APP_TWITTER_BEARER_TOKEN}` } }
-                )
+            .get(`${corsProxy}https://api.twitter.com/1.1/search/tweets.json?q=${window.location.href.split("/")[6]}&result_type=popular`, { 
+                    headers: { 
+                        Authorization: `Bearer ${process.env.REACT_APP_TWITTER_BEARER_TOKEN}` 
+                    }
+                })
                 .then(res => {
                     setPosts(res.data);
                     setLoaded(true);
