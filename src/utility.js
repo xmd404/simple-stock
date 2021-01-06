@@ -154,6 +154,32 @@ export const showForexChart = (e) => {
 	return chartID;
 };
 
+export let loadVideo = (e) => {
+	e.preventDefault();
+	let g = document.getElementById('news-list');
+	for (var i = 0, len = g.children.length; i < len; i++) {
+		(function(index){
+			g.children[i].onclick = function(){
+				document.getElementById('viewer').src = `https://www.youtube.com/embed/${document.getElementsByTagName('a')[index+1].href.split('=')[1]}`;
+				document.getElementById("player").style.display = "inline-block";
+			}    
+		})(i);
+	}
+};
+
+export let loadVideoChart = (e) => {
+	e.preventDefault();
+	let g = document.getElementById('news-list-chart');
+	for (var i = 0, len = g.children.length; i < len; i++) {
+		(function(index){
+			g.children[i].onclick = function(){
+				document.getElementById('viewer').src = `https://www.youtube.com/embed/${document.getElementsByTagName('a')[index+1].href.split('=')[1]}`;
+				document.getElementById("player").style.display = "inline-block";
+			}    
+		})(i);
+	}
+};
+
 export const getHomePage = () => {
 	mixpanel.track(
 		"Went to HomePage",

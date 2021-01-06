@@ -3,7 +3,7 @@ import { Title, List, NewsCard, Headline, Tint, Thumbnail, Logo } from '../compo
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { far } from '@fortawesome/free-regular-svg-icons';
-import { symbols, Loading } from '../../utility';
+import { symbols, Loading, loadVideoChart } from '../../utility';
 import axios from 'axios';
 
 library.add(far);
@@ -45,6 +45,7 @@ const NewsChart = () => {
 				<List
 					className="list-scroll"
 					ref={scrollRef}
+					id="news-list-chart"
 				>
 					{articles[0].map((article) => (
 						<a
@@ -53,6 +54,7 @@ const NewsChart = () => {
 							href={article.news_url}
 							target="_blank"
 							rel="noopener noreferrer"
+							onClick={loadVideoChart}
 						>
 							<NewsCard article>
 									<Headline>

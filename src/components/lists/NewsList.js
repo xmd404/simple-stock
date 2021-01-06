@@ -3,12 +3,9 @@ import { List, NewsCard, Headline, Tint, Title, Thumbnail, Logo } from '../compo
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import { loadVideo } from '../../utility';
 
 library.add(far);
-
-const NewsLogos = {
-
-}
 
 const NewsList = ({ news }) => {
     // set state
@@ -24,14 +21,15 @@ const NewsList = ({ news }) => {
             <List
                 className="list-scroll"
                 ref={scrollRef}
+                id="news-list"
             >
                 {news[0].map((newsItem) => (
                     <a
                         key={newsItem.date}
                         newsItem={newsItem}
                         href={newsItem.news_url}
-                        target="_blank"
                         rel="noopener noreferrer"
+                        onClick={loadVideo}
                     >
                         <NewsCard newsItem>
                                 <Headline>

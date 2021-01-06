@@ -7,8 +7,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 library.add(fab);
 
-const Viewer = () => 
-    {// setState
+const Viewer = () => {
+    // setState
     const [toggle, setToggle] = useState('Open Playlist')
     const toggleViewer = () => {
         var x = document.getElementById("player");
@@ -37,7 +37,7 @@ const Viewer = () =>
             </div>
             <div id="player">
                 <br/>
-                <ViewerPlayer src="https://www.youtube.com/embed/_PXFVNWINQc" />
+                <ViewerPlayer id="viewer" src={"https://www.youtube.com/embed/_PXFVNWINQc"} />
                 <br/><br/>
             </div>
         </ViewerWindow>
