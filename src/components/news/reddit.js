@@ -19,7 +19,7 @@ const LatestFromReddit = () => {
     // fetch data from api
     useEffect(() => {
         axios
-            .get(`${corsProxy}https://www.reddit.com/r/${window.location.href.split("/")[6]}/hot.json`)
+            .get(`${corsProxy}https://www.reddit.com/search.json?q=${window.location.href.split("/")[7]},${window.location.href.split("/")[6]}&limit=20`)
                 .then(res => {
                     setPosts(res.data.data.children);
                     setLoaded(true);
@@ -46,7 +46,7 @@ const LatestFromReddit = () => {
 					className="list-scroll"
 					ref={scrollRef}
 				>
-                    {posts.map(post =>
+                    {posts.slice(0, 20).map(post =>
                         <a
                             key={post.data.selftext}
                             post={post}
