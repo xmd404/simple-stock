@@ -225,8 +225,8 @@ export const Beta = () =>
   `;
 
   export const ViewerPlayer= styled.iframe`
-    height: auto;
-    width: auto;
+    height: 100%;
+    width: 100%;
     background-color: rgb(14,17,22);
     opacity: 0.9;
     z-index: 100;

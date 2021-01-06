@@ -37,7 +37,7 @@ const Viewer = () => {
             </div>
             <div id="player">
                 <br/>
-                <ViewerPlayer id="viewer" src={"https://www.youtube.com/embed/_PXFVNWINQc"} />
+                <ViewerPlayer id="viewer" src={"https://www.youtube.com/embed/_PXFVNWINQc"}  donotallowfullscreen />
                 <br/><br/>
             </div>
         </ViewerWindow>

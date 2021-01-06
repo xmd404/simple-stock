@@ -52,7 +52,6 @@ const NewsChart = () => {
 							key={article.date}
 							article={article}
 							href={article.news_url}
-							target="_blank"
 							rel="noopener noreferrer"
 							onClick={loadVideoChart}
 						>
