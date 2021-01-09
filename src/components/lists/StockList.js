@@ -27,7 +27,7 @@ const StockList = ({ stocks }) => {
                 </h2>
                 <br/>
                 <p>
-                    Stocks allow you to participate in the growth of companies.
+                    Represents ownership in publicly traded companies.
                 </p>
             </Title>
             <List
