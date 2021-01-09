@@ -211,3 +211,11 @@ select {
     height: 100%;
   }
 }
+
+.tradingview-widget-copyright {
+  display: none;
+}
+
+.label-13XFthDT {
+  display: none;
+}

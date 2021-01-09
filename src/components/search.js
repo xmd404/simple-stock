@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-import { textChangeRangeIsUnchanged } from 'typescript';
+import { TradingViewEmbed, widgetType } from "react-tradingview-embed";
 
 library.add(fas);
 
@@ -28,6 +28,17 @@ const SearchBar = () => {
     
     return (
         <div>
+            <div style={{ height: '50%', padding: '20px' }}>
+                <TradingViewEmbed
+                    widgetType={widgetType.TICKER_TAPE}
+                    widgetConfig={{
+                    colorTheme: "dark",
+                    isTransparent: "true",
+                    width: "100%",
+                    height: "90%",
+                    }}
+                />
+            </div>
             <div style={{ textAlign: 'center', padding: '0 20px' }}>
                 <input 
                     style={BarStyling}
@@ -37,11 +48,6 @@ const SearchBar = () => {
                     id="myInput"
                     onKeyUp={searchFilter}
                 />
-            </div>
-            <div>
-                <div>
-                    
-                </div>
             </div>
         </div>
     );
