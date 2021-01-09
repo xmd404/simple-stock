@@ -217,16 +217,26 @@ export const Beta = () =>
     </BetaMessage>
 
   export const ViewerWindow = styled.div`
-    height: 100%;
-    width: 100%;
+    display: flex; width: 100%; height: 100%; flex-direction: column; background-color: blue; overflow: hidden;
     background-color: rgb(14,17,22);
     opacity: 0.9;
     z-index: 100;
   `;
 
   export const ViewerPlayer= styled.iframe`
+    flex: 1;
     height: 100%;
     width: 100%;
+    background: green url("https://media.giphy.com/media/Ph0oIVQeuvh0k/giphy.gif");
+    border: none
+    opacity: 0.9;
+    z-index: 100;
+  `;
+
+  export const ViewerBrowser= styled.iframe`
+  flex-grow: 1; border: none; margin: 0; padding: 0;
+    height: 70%;
+    width: auto;
     background-color: rgb(14,17,22);
     opacity: 0.9;
     z-index: 100;

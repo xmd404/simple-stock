@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ViewerPlayer, ViewerWindow } from './components';
+import { ViewerBrowser, ViewerPlayer, ViewerWindow } from './components';
 import Iframe from '@trendmicro/react-iframe';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -22,7 +22,8 @@ const Viewer = () => {
     };
     // render to page
     return (
-        <ViewerWindow className="viewer-window">
+        <ViewerWindow>
+            <ViewerBrowser id="browser" src={""} name="browser" />
             <div 
                 onClick={toggleViewer}
                 style={{ 
@@ -36,7 +37,6 @@ const Viewer = () => {
                 </p>
             </div>
             <div id="player">
-                <br/>
                 <ViewerPlayer id="viewer" src={""} />
                 <br/>
                 <br/>

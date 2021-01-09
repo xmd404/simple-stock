@@ -51,7 +51,7 @@ const LatestFromReddit = () => {
                             key={post.data.selftext}
                             post={post}
                             href={post.data.url}
-                            target="_blank"
+                            target="browser"
                             rel="noopener noreferrer"
                         >
                             <NewsCard post>

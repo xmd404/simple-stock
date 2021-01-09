@@ -74,11 +74,13 @@ code {
 }
 
 .navbar {
+  flex-grow: 1;
   text-align: center;
   overflow: hidden;
   background-color: rgb(23, 27, 37);
   position: fixed;
   bottom: 0;
+  height: auto;
   width: 100%;
   border-top: rgb(20, 24, 33) 1px solid;
 }
@@ -149,6 +151,7 @@ code {
 
 #player {
   display: none;
+  flex-grow: 1;
   background-color: rgb(14, 17, 22);
 }
 
@@ -162,6 +165,21 @@ select {
   -webkit-appearance: menulist;
 }
 
+#browser {
+  display: none;
+  color: transparent;
+  z-index: 1;
+}
+
+#player {
+  height: 40%;
+  flex-grow: 1;
+}
+
+.viewer {
+  display: block;
+}
+
 @media screen and (min-width: 992px) {
   .container {
     /* display: flex; */
@@ -170,7 +188,7 @@ select {
   .main {
     display: inline-block;
     width: 60%;
-    border-right: turquoise 1px solid;
+    border-right: rgb(54, 118, 203) 2px solid;
   }
 
   .viewer {
@@ -179,11 +197,13 @@ select {
     height: 100%;
   }
 
-  .viewer-window {
+  .navbar {
     height: 100%;
+    width: 40%;
+    display: inline-block;
   }
 
-  .navbar {
-    width: 40%;
+  #browser {
+    display: block;
   }
 }

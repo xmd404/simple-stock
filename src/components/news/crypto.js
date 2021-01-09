@@ -52,7 +52,7 @@ let CryptoNews = () => {
 							key={news.id}
 							news={news}
 							href={news.url}
-							target="_blank"
+							target="browser"
 							rel="noopener noreferrer"
 						>
 							<NewsCard news>
