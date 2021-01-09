@@ -25,6 +25,10 @@ const StockList = ({ stocks }) => {
                 <h2 style={{ margin: '0', padding: '0' }}>
                     <FontAwesomeIcon icon={["fas", "chart-line"]} /> &nbsp; Stocks
                 </h2>
+                <br/>
+                <p>
+                    Stocks allow you to participate in the growth of companies.
+                </p>
             </Title>
             <List
                 className="list-scroll"

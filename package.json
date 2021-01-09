@@ -17,6 +17,7 @@
     "firebase": "^8.2.0",
     "firebaseui": "^4.7.1",
     "mixpanel-browser": "^2.38.0",
+    "netlify-cli": "^2.71.0",
     "normalize.css": "^8.0.1",
     "qs": "^6.7.0",
     "react": "^16.8.6",

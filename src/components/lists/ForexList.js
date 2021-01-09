@@ -14,9 +14,13 @@ const ForexList = ({ pairs }) => {
     return (
         <div>
             <Title>
-            <h2 style={{ margin: '0', padding: '0' }}>
-                <FontAwesomeIcon icon={["fas", "exchange-alt"]} /> &nbsp; Forex
-            </h2>
+                <h2 style={{ margin: '0', padding: '0' }}>
+                    <FontAwesomeIcon icon={["fas", "exchange-alt"]} /> &nbsp; Forex
+                </h2>
+                <br/>
+                <p>
+                    An exchange for buying and selling currencies.
+                </p>
             </Title>
             <List
                 className="list-scroll"
