@@ -19,7 +19,7 @@ const CryptoList = ({ cryptos }) => {
                 </h2>
                 <br/>
                 <p>
-                    Digital currency not controlled by banks or government.
+                    Digital currency uncontrolled by banks or government.
                 </p>
             </Title>
             <List
