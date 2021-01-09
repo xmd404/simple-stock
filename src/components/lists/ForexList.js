@@ -19,7 +19,7 @@ const ForexList = ({ pairs }) => {
                 </h2>
                 <br/>
                 <p>
-                    An exchange for buying and selling currencies.
+                    An exchange for buying & selling foreign currencies.
                 </p>
             </Title>
             <List
