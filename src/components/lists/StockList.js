@@ -27,7 +27,7 @@ const StockList = ({ stocks }) => {
                 </h2>
                 <br/>
                 <p>
-                    Ownership shares in a publicly traded company.
+                    Shares of ownership in a publicly traded company.
                 </p>
             </Title>
             <List
