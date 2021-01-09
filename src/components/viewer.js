@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ViewerBrowser, ViewerPlayer, ViewerWindow } from './components';
+import { TradingViewEmbed, widgetType } from "react-tradingview-embed";
 import Iframe from '@trendmicro/react-iframe';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -23,14 +24,25 @@ const Viewer = () => {
     // render to page
     return (
         <ViewerWindow>
-            <ViewerBrowser id="browser" src={""} name="browser" />
+            <div id="browser">
+                <TradingViewEmbed
+                    widgetType={widgetType.STOCK_MARKET}
+                    widgetConfig={{
+                    colorTheme: "dark",
+                    isTransparent: "true",
+                    width: "100%",
+                    height: "103%",
+                    }}
+                />
+            </div>
             <div 
                 onClick={toggleViewer}
                 style={{ 
                     backgroundColor: 'rgb(14,17,22)', 
                     cursor: `pointer`, 
                     padding: '10px 0 15px', 
-                    borderTop: `3px solid rgb(54, 118, 203)` }}
+                    borderTop: `3px solid rgb(54, 118, 203)`,
+                    zIndex: '100' }}
             >
                 <p id="toggle">
                     {toggle}
