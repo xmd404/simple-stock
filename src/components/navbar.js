@@ -9,14 +9,9 @@ import Viewer from './viewer';
 library.add(fas);
 
 const Navbar = () => (
-	<>
-		
+	<div className="viewer">
 		<div className="navbar">
 			<Viewer />
-			{/* <Link to="/" onClick={getHomePage}>
-				<FontAwesomeIcon icon={[ 'fas', 'home' ]} size="lg" />
-				<p>Home</p>
-			</Link> */}
 			<Link to="/" onClick={getHomePage}>
 				<FontAwesomeIcon icon={[ 'fas', 'search' ]} size="lg" />
 				<p>Discover</p>
@@ -26,7 +21,7 @@ const Navbar = () => (
 				<p>Signup</p>
 			</Link>
 		</div>
-	</>
+	</div>
 );
 
 export default Navbar;

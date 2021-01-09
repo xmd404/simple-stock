@@ -8,7 +8,7 @@ library.add(fas);
 
 const SearchBar = () => {
     const [text, setText] = useState('')
-    const BarStyling = {width:"100%", maxWidth:"750px", background:"#F2F1F9", border:"none", padding:"1rem 1rem", margin:"0 auto"};
+    const BarStyling = {width:"100%", maxWidth:"1000px", background:"#F2F1F9", border:"none", padding:"1rem 1rem", margin:"0 auto"};
     
     let searchFilter = () => {
         let input, filter, ul, li, a, i, txtValue;
@@ -27,15 +27,22 @@ const SearchBar = () => {
     };
     
     return (
-        <div style={{ textAlign: 'center', padding: '0 20px' }}>
-            <input 
-                style={BarStyling}
-                key="random1"
-                placeholder={'🔍   Search for stocks, crypto, or currencies'}
-                type="search"
-                id="myInput"
-                onKeyUp={searchFilter}
-            />
+        <div>
+            <div style={{ textAlign: 'center', padding: '0 20px' }}>
+                <input 
+                    style={BarStyling}
+                    key="random1"
+                    placeholder={'🔍   Search for stocks, crypto, or currencies'}
+                    type="search"
+                    id="myInput"
+                    onKeyUp={searchFilter}
+                />
+            </div>
+            <div>
+                <div>
+                    
+                </div>
+            </div>
         </div>
     );
 };

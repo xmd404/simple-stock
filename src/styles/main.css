@@ -34,7 +34,7 @@ code {
   transition: 0.2s;
 }
 
-.header-padding {
+.main {
   padding-top: 115px;
 }
 
@@ -160,4 +160,30 @@ input[type="option"] {
 
 select {
   -webkit-appearance: menulist;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    /* display: flex; */
+  }
+
+  .main {
+    display: inline-block;
+    width: 60%;
+    border-right: turquoise 1px solid;
+  }
+
+  .viewer {
+    display: inline-block;
+    width: auto;
+    height: 100%;
+  }
+
+  .viewer-window {
+    height: 100%;
+  }
+
+  .navbar {
+    width: 40%;
+  }
 }

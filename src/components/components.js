@@ -217,7 +217,7 @@ export const Beta = () =>
     </BetaMessage>
 
   export const ViewerWindow = styled.div`
-    height: auto;
+    height: 100%;
     width: 100%;
     background-color: rgb(14,17,22);
     opacity: 0.9;

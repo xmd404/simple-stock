@@ -22,7 +22,7 @@ const Viewer = () => {
     };
     // render to page
     return (
-        <ViewerWindow >
+        <ViewerWindow className="viewer-window">
             <div 
                 onClick={toggleViewer}
                 style={{ 
