@@ -10,7 +10,7 @@ library.add(fab);
 
 const Viewer = () => {
     // setState
-    const [toggle, setToggle] = useState('Items selected from "News" section will play here.')
+    const [toggle, setToggle] = useState('Items selected from "News" section will open here.')
     const toggleViewer = () => {
         const x = document.getElementById("player");
         if (x.style.display == 'none') {
@@ -18,7 +18,7 @@ const Viewer = () => {
           setToggle("Click here to minimize player");
         } else {
           x.style.display = "none";
-          setToggle('Items selected from "News" section will play here.');
+          setToggle('Items selected from "News" section will open here.');
         };
     };
     // render to page
