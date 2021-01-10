@@ -192,12 +192,9 @@ select {
   }
 
   .main {
-    overflow-x: auto;
     display: inline-block;
     width: 60%;
-    border-left: rgb(54, 118, 203) 2px solid;
     border-right: rgb(54, 118, 203) 2px solid;
-    border-bottom: rgb(54, 118, 203) 2px solid;
   }
 
   .viewer {
