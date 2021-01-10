@@ -26,9 +26,11 @@ const StockList = ({ stocks }) => {
                     <FontAwesomeIcon icon={["fas", "chart-line"]} /> &nbsp; Stocks
                 </h2>
                 <br/>
-                <p>
-                    Shares of ownership in a publicly traded company.
-                </p>
+                <div className="asset-description">
+                    <p>
+                        Shares of ownership in a publicly traded company.
+                    </p>
+                </div>
             </Title>
             <List
                 className="list-scroll"

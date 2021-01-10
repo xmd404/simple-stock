@@ -18,9 +18,11 @@ const ForexList = ({ pairs }) => {
                     <FontAwesomeIcon icon={["fas", "exchange-alt"]} /> &nbsp; Forex
                 </h2>
                 <br/>
-                <p>
-                    An exchange for buying & selling foreign currencies.
-                </p>
+                <div className="asset-description">
+                    <p>
+                        An exchange for buying & selling foreign currencies.
+                    </p>
+                </div>
             </Title>
             <List
                 className="list-scroll"

@@ -18,9 +18,11 @@ const CryptoList = ({ cryptos }) => {
                     <FontAwesomeIcon icon={["fas", "coins"]} /> &nbsp; Crypto
                 </h2>
                 <br/>
-                <p>
-                    Digital currency uncontrolled by banks or government.
-                </p>
+                <div className="asset-description">
+                    <p>
+                        Digital currency uncontrolled by banks or government.
+                    </p>
+                </div>
             </Title>
             <List
                 className="list-scroll"
