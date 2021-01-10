@@ -14,14 +14,15 @@ body {
   color: white;
 }
 
-h2,
-p {
+h2 {
   margin: 0;
   padding: 0;
 }
 
 p {
-  font-size: 90%;
+  margin: 0;
+  padding: 0;
+  font-size: 90% !important;
   text-shadow: 1px 1px 5px #000;
 }
 
