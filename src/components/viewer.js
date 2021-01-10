@@ -51,7 +51,6 @@ const Viewer = () => {
             <div id="player">
                 <ViewerPlayer id="viewer" src={`https://www.youtube.com/embed/Y7OAVZto0CQ?&rel=0&controls=0&showinfo=0&playsinline=1`} />
                 <br/>
-                <br/>
             </div>
         </ViewerWindow>
         
