@@ -28,7 +28,7 @@ const SearchBar = () => {
     
     return (
         <div>
-            <div style={{ height: '50%', padding: '20px' }}>
+            <div style={{ height: '50%', padding: '0 20px' }}>
                 <TradingViewEmbed
                     widgetType={widgetType.TICKER_TAPE}
                     widgetConfig={{
