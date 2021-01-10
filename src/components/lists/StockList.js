@@ -28,7 +28,7 @@ const StockList = ({ stocks }) => {
                 <br/>
                 <div className="asset-description">
                     <p>
-                        Shares of ownership in a publicly traded company.
+                        Digital or paper certificates that represent shares of ownership in a publicly traded company.
                     </p>
                 </div>
             </Title>
