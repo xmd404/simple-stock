@@ -211,7 +211,11 @@ select {
   .navbar {
     height: 100%;
     width: 40%;
-    display: inline-block;
+    display: block;
+  }
+
+  #toggle-bar {
+    margin-top: 92px;
   }
 
   #player {
@@ -220,7 +224,6 @@ select {
 
   #browser {
     display: block;
-    margin-top: 100px;
     height: 100%;
     background-color: rgb(23, 27, 37);
   }
@@ -239,4 +242,12 @@ select {
   padding: 16px;
   background-color: rgb(54, 118, 203);
   border-radius: 10px;
+}
+
+#toggle-bar {
+  background-color: rgb(14, 17, 22);
+  cursor: pointer;
+  padding: 10px 0 15px;
+  border-top: 3px solid rgb(54, 118, 203);
+  z-index: 100;
 }

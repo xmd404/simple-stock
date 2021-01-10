@@ -24,6 +24,18 @@ const Viewer = () => {
     // render to page
     return (
         <ViewerWindow>
+            <div 
+                onClick={toggleViewer}
+                id="toggle-bar"
+            >
+                <p id="toggle">
+                    {toggle}
+                </p>
+            </div>
+            <div id="player">
+                <ViewerPlayer id="viewer" src={`https://www.youtube.com/embed/Y7OAVZto0CQ?&rel=0&controls=0&showinfo=0&playsinline=1`} />
+                <br/>
+            </div>
             <div id="browser">
                 <TradingViewEmbed
                     widgetType={widgetType.STOCK_MARKET}
@@ -34,23 +46,6 @@ const Viewer = () => {
                     height: "103%",
                     }}
                 />
-            </div>
-            <div 
-                onClick={toggleViewer}
-                style={{ 
-                    backgroundColor: 'rgb(14,17,22)', 
-                    cursor: `pointer`, 
-                    padding: '10px 0 15px', 
-                    borderTop: `3px solid rgb(54, 118, 203)`,
-                    zIndex: '100' }}
-            >
-                <p id="toggle">
-                    {toggle}
-                </p>
-            </div>
-            <div id="player">
-                <ViewerPlayer id="viewer" src={`https://www.youtube.com/embed/Y7OAVZto0CQ?&rel=0&controls=0&showinfo=0&playsinline=1`} />
-                <br/>
             </div>
         </ViewerWindow>
         
