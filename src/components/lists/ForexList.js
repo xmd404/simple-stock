@@ -20,7 +20,7 @@ const ForexList = ({ pairs }) => {
                 <br/>
                 <div className="asset-description">
                     <p>
-                        Short for <b>for</b>eign <b>ex</b>change, where the buying & selling foreign currencies occur.
+                        Short for <b>for</b>eign <b>ex</b>change, where the buying & selling of foreign currency occurs.
                     </p>
                 </div>
             </Title>
