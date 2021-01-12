@@ -192,6 +192,11 @@ select {
     border-bottom: rgb(54, 118, 203) 2px solid;
   }
 
+  .market-status {
+    margin: 0 20px;
+    border-radius: 20px;
+  }
+
   .asset-description {
     width: 94%;
   }
